@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nhạc Phòng Trà – Cà Phê Chill · Kế hoạch kênh</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;1,500&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <div class="logo" aria-hidden="true">☕</div>
+    <div>
+      <h1>Nhạc Phòng Trà <em>Cà Phê Chill</em></h1>
+      <p class="sub">Kế hoạch kênh · Lịch đăng · Tạo lời với ChatGPT</p>
+    </div>
+  </div>
+  <a class="yt" href="https://www.youtube.com/@nhac-phongtra" target="_blank" rel="noopener">@nhac-phongtra ↗</a>
+</header>
+
+<nav class="tabs" role="tablist">
+  <button role="tab" data-tab="ke-hoach" class="on">Kế hoạch</button>
+  <button role="tab" data-tab="lich">Lịch 15 tuần</button>
+  <button role="tab" data-tab="tao-loi">Tạo lời</button>
+  <button role="tab" data-tab="kho">Kho bài <span id="dem-kho" class="pill">0</span></button>
+</nav>
+
+<main>
+  <!-- KẾ HOẠCH -->
+  <section id="ke-hoach" class="panel on">
+    <div id="tien-do" class="progress-card"></div>
+    <article id="noi-dung-ke-hoach" class="md">Đang tải…</article>
+  </section>
+
+  <!-- LỊCH -->
+  <section id="lich" class="panel">
+    <div class="bar">
+      <p class="hint">Tick từng việc khi xong. Bấm <b>Tạo lời</b> cạnh tên bài để chuyển sang công cụ tạo lời.</p>
+      <label class="chk"><input type="checkbox" id="chi-tuan-nay"> Chỉ xem tuần này và tuần sau</label>
+    </div>
+    <div id="ds-tuan" class="weeks"></div>
+  </section>
+
+  <!-- TẠO LỜI -->
+  <section id="tao-loi" class="panel">
+    <div class="grid2">
+      <form id="form-loi" class="card" autocomplete="off">
+        <div class="seg" role="radiogroup">
+          <label><input type="radio" name="loai" value="bai" checked> Bài đơn</label>
+          <label><input type="radio" name="loai" value="playlist"> Playlist</label>
+        </div>
+
+        <div class="row2">
+          <label>Tuần <select id="f-tuan"></select></label>
+          <label>Series <select id="f-series"></select></label>
+        </div>
+
+        <div class="only-bai">
+          <label>Tên bài / ý tưởng chính
+            <input id="f-ten" placeholder="VD: Mái trường làng ngày ấy">
+          </label>
+          <label>Hình ảnh, chi tiết muốn có trong lời
+            <textarea id="f-chitiet" rows="3" placeholder="VD: tiếng trống trường, cây phượng, bạn cùng bàn, con đường đất đỏ…"></textarea>
+          </label>
+          <div class="row2">
+            <label>Cảm xúc <select id="f-camxuc"></select></label>
+            <label>Nhịp / thể loại <select id="f-nhip"></select></label>
+          </div>
+          <div class="row2">
+            <label>Giọng hát <select id="f-giong"></select></label>
+            <label>Nhạc cụ <select id="f-nhaccu"></select></label>
+          </div>
+        </div>
+
+        <div class="only-playlist" hidden>
+          <label>Tên playlist
+            <input id="f-pl-ten" placeholder="VD: Nhạc Phòng Trà Mở Quán Cà Phê Buổi Sáng | 1 Giờ">
+          </label>
+          <label>Thời lượng
+            <select id="f-pl-gio"><option>1 giờ</option><option selected>2 giờ</option><option>3 giờ</option></select>
+          </label>
+          <div class="pl-pick">
+            <div class="pl-head">Bài trong kho đưa vào playlist <small>(tick để chọn)</small></div>
+            <div id="pl-ds" class="pl-list"></div>
+          </div>
+        </div>
+
+        <label>Ghi chú thêm cho ChatGPT
+          <input id="f-ghichu" placeholder="VD: lời ngắn gọn, có nhắc tên một con sông…">
+        </label>
+      </form>
+
+      <div class="card">
+        <div class="step"><span>1</span> Câu lệnh gửi ChatGPT <small>(sửa được)</small></div>
+        <textarea id="prompt" rows="14" spellcheck="false"></textarea>
+        <div class="btns">
+          <button id="btn-mo-gpt" class="primary" type="button">Sao chép &amp; mở ChatGPT ↗</button>
+          <button id="btn-copy-prompt" type="button">Chỉ sao chép</button>
+        </div>
+        <p class="hint" id="gpt-note">Câu lệnh được sao chép sẵn. Nếu ChatGPT mở ra mà ô chat trống, chỉ cần dán (Ctrl+V) rồi gửi.</p>
+
+        <div class="step"><span>2</span> Dán kết quả ChatGPT trả về</div>
+        <textarea id="ket-qua" rows="10" placeholder="Dán toàn bộ câu trả lời của ChatGPT vào đây…"></textarea>
+        <div class="btns">
+          <button id="btn-luu" class="primary" type="button">Lưu vào Kho bài</button>
+        </div>
+        <p class="hint" id="luu-note"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- KHO -->
+  <section id="kho" class="panel">
+    <div class="bar">
+      <div class="filters">
+        <select id="loc-series"><option value="">Tất cả series</option></select>
+        <select id="loc-tt"><option value="">Mọi trạng thái</option></select>
+        <input id="loc-q" placeholder="Tìm theo tên…">
+      </div>
+      <div class="btns">
+        <button id="btn-xuat-json" type="button">Xuất kho-bai.json</button>
+        <button id="btn-xuat-md" type="button">Xuất lời (.md)</button>
+        <label class="btn-file">Nhập JSON<input type="file" id="nhap-json" accept=".json" hidden></label>
+      </div>
+    </div>
+    <p class="hint">Kho lưu trong trình duyệt này. Để lưu lên GitHub: bấm <b>Xuất kho-bai.json</b> rồi thay file <code>data/kho-bai.json</code> trong repo (hoặc gửi file cho Claude đẩy lên).</p>
+    <div id="ds-kho" class="songs"></div>
+  </section>
+</main>
+
+<dialog id="dlg">
+  <form method="dialog" class="dlg-body">
+    <div class="dlg-head">
+      <input id="d-ten" class="dlg-title">
+      <select id="d-tt"></select>
+    </div>
+    <div class="dlg-grid">
+      <label>Lời bài hát <textarea id="d-loi" rows="16"></textarea></label>
+      <div>
+        <label>Style cho Suno <textarea id="d-style" rows="3"></textarea></label>
+        <label>Tiêu đề YouTube <input id="d-tieude"></label>
+        <label>Mô tả YouTube <textarea id="d-mota" rows="4"></textarea></label>
+        <label>Đoạn cho Shorts <textarea id="d-shorts" rows="4"></textarea></label>
+        <label>Hashtag <input id="d-tag"></label>
+        <label>Link YouTube (sau khi đăng) <input id="d-link" placeholder="https://youtu.be/…"></label>
+      </div>
+    </div>
+    <div class="btns end">
+      <button value="xoa" id="d-xoa" class="danger" type="button">Xóa bài</button>
+      <span class="grow"></span>
+      <button value="huy">Đóng</button>
+      <button value="luu" class="primary" id="d-luu" type="button">Lưu</button>
+    </div>
+  </form>
+</dialog>
+
+<div id="toast" role="status"></div>
+<script src="assets/app.js"></script>
+</body>
+</html>

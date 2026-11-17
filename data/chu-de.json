@@ -1,0 +1,16 @@
+{
+  "series": [
+    {"id": "tuoi-tho", "ten": "Tuổi thơ – quê nhà", "mau": "#C98B4B",
+     "goiY": "cánh diều, bà ngoại, mái trường làng, dòng sông, chợ quê, bếp lửa"},
+    {"id": "dem-mua", "ten": "Phòng trà đêm mưa", "mau": "#6E8CA8",
+     "goiY": "tình xưa, chia ly, phố cũ, Hà Nội mùa đông, Sài Gòn mưa chiều"},
+    {"id": "ca-phe-sang", "ten": "Cà phê sáng", "mau": "#B7A05A",
+     "goiY": "nắng sớm, ly cà phê, hiên nhà, khởi đầu ngày mới, bình yên"},
+    {"id": "mua", "ten": "Theo mùa (Noel, Xuân, Tết)", "mau": "#C0574A",
+     "goiY": "Giáng sinh, cuối năm, mai đào, Tết đoàn viên, mẹ, quê nhà"}
+  ],
+  "camXuc": ["Hoài niệm, man mác", "Ấm áp, bình yên", "Buồn nhẹ, day dứt", "Lãng mạn, dịu dàng", "Vui tươi, rộn ràng"],
+  "nhip": ["Chậm (ballad, 65–75 BPM)", "Bolero (khoảng 70 BPM)", "Slow rock (khoảng 80 BPM)", "Bossa nova (90–100 BPM)", "Valse (3/4)"],
+  "giong": ["Giọng nữ trầm ấm", "Giọng nam trầm ấm", "Song ca nam nữ", "Giọng nữ trong, nhẹ"],
+  "nhacCu": ["Guitar acoustic, piano", "Piano, violin", "Saxophone, piano, contrabass", "Guitar điện tử nhẹ, organ", "Đàn tranh, sáo trúc, guitar"]
+}
