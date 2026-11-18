@@ -1,51 +1,64 @@
-/* Nhạc Phòng Trà – Cà Phê Chill · trang kế hoạch kênh
-   Dữ liệu gốc nằm trong thư mục data/. Tiến độ và kho bài lưu trong trình duyệt (localStorage). */
+/* Nhạc Phòng Trà Studio · giao diện (giai đoạn 1)
+   Dữ liệu và quy tắc nằm trong assets/data.js (window.NPT). Tệp này chỉ lo hiển thị và thao tác. */
 (() => {
   'use strict';
+  const N = window.NPT;
   const $ = (s, el = document) => el.querySelector(s);
   const $$ = (s, el = document) => [...el.querySelectorAll(s)];
-  const KEY_LICH = 'npt-lich-v1', KEY_KHO = 'npt-kho-v1';
-  const TRANG_THAI = ['Nháp lời', 'Đã duyệt lời', 'Đã tạo Suno', 'Đã đăng'];
+  const KEY_LICH = 'npt-lich-v1', KEY_KHO_CU = 'npt-kho-v1', KEY_KHO = 'npt-kho-v2', KEY_DA_CHUYEN = 'npt-kho-v1-da-chuyen', KEY_SNAP = 'npt-snapshots', SNAP_MAX = 8;
   const GPT_URL = 'https://chatgpt.com/';
-  let LICH = null, CHUDE = null, kho = [], tick = {};
+  let LICH = null, CHUDE = null, kho = N.khoRong(), tick = {};
 
   /* ---------- tiện ích ---------- */
   const store = {
-    get(k, d) { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch { return d; } },
-    set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch { toast('Trình duyệt không cho lưu'); } }
+    get(k, d) { try { const v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); } catch { return d; } },
+    set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); return true; } catch { return false; } }
   };
   const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-  const toast = msg => { const t = $('#toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(t._h); t._h = setTimeout(() => t.classList.remove('show'), 2200); };
+  const toast = msg => { const t = $('#toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(t._h); t._h = setTimeout(() => t.classList.remove('show'), 2600); };
   const fmt = d => d.toLocaleDateString('vi-VN', { day: '2-digit', month: '2-digit' });
+  const fmtLuc = iso => { if (!iso) return ''; const d = new Date(iso); return isNaN(d) ? esc(iso) : d.toLocaleString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' }); };
   const addDays = (d, n) => { const x = new Date(d); x.setDate(x.getDate() + n); return x; };
   const seriesOf = id => CHUDE.series.find(s => s.id === id) || { ten: id, mau: '#E8A74A', goiY: '' };
-  const uid = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
+  const ttPill = t => `<span class="tt tt-${t}">${esc(N.TRANG_THAI[t])}</span>`;
+  const linkOk = u => /^https?:\/\//i.test(u || '');
   async function copy(text) {
     try { await navigator.clipboard.writeText(text); return true; }
-    catch {
-      const ta = document.createElement('textarea'); ta.value = text; document.body.appendChild(ta); ta.select();
-      const ok = document.execCommand('copy'); ta.remove(); return ok;
-    }
+    catch { const ta = document.createElement('textarea'); ta.value = text; document.body.appendChild(ta); ta.select(); const ok = document.execCommand('copy'); ta.remove(); return ok; }
   }
   function download(name, text, type = 'application/json') {
     const a = document.createElement('a');
     a.href = URL.createObjectURL(new Blob([text], { type: type + ';charset=utf-8' }));
-    a.download = name; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+    a.download = name; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+  }
+  const homNay = () => new Date().toISOString().slice(0, 10);
+
+  /* ---------- lưu trữ & bản tự lưu ---------- */
+  function luuKho() {
+    kho.capNhat = new Date().toISOString();
+    if (!store.set(KEY_KHO, kho)) { toast('Bộ nhớ trình duyệt đầy! Hãy tải bản sao lưu ngay.'); return false; }
+    $('#dem-kho').textContent = kho.bai.length;
+    renderKho(); renderTienDo();
+    return true;
+  }
+  function snap(lyDo, data = N.goiSaoLuu(kho, tick)) {
+    const ds = store.get(KEY_SNAP, []);
+    ds.unshift({ luc: new Date().toISOString(), lyDo, soBai: data.kho?.bai?.length ?? 0, data });
+    while (ds.length > SNAP_MAX) ds.pop();
+    while (ds.length && !store.set(KEY_SNAP, ds)) ds.pop();   // hết chỗ thì bỏ bản cũ nhất
+    renderSnap();
   }
 
-  /* ---------- markdown tối giản cho kế hoạch ---------- */
+  /* ---------- markdown tối giản ---------- */
   function inline(s) {
-    return esc(s)
-      .replace(/`([^`]+)`/g, '<code>$1</code>')
-      .replace(/\*\*([^*]+)\*\*/g, '<b>$1</b>')
+    return esc(s).replace(/`([^`]+)`/g, '<code>$1</code>').replace(/\*\*([^*]+)\*\*/g, '<b>$1</b>')
       .replace(/\[([^\]]+)\]\((https?:[^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
   }
   function md(src) {
     const L = src.replace(/\r/g, '').split('\n'); let out = '', i = 0;
     while (i < L.length) {
-      const l = L[i];
+      const l = L[i]; let m;
       if (!l.trim()) { i++; continue; }
-      let m;
       if ((m = l.match(/^(#{1,3})\s+(.*)/))) { out += `<h${m[1].length}>${inline(m[2])}</h${m[1].length}>`; i++; continue; }
       if (l.startsWith('|')) {
         const rows = []; while (i < L.length && L[i].startsWith('|')) rows.push(L[i++]);
@@ -54,9 +67,7 @@
           rows.slice(2).map(r => '<tr>' + cells(r).map(c => `<td>${inline(c)}</td>`).join('') + '</tr>').join('') + '</tbody></table>';
         continue;
       }
-      if (/^[-*]\s/.test(l)) {
-        out += '<ul>'; while (i < L.length && /^[-*]\s/.test(L[i])) out += `<li>${inline(L[i++].slice(2))}</li>`; out += '</ul>'; continue;
-      }
+      if (/^[-*]\s/.test(l)) { out += '<ul>'; while (i < L.length && /^[-*]\s/.test(L[i])) out += `<li>${inline(L[i++].slice(2))}</li>`; out += '</ul>'; continue; }
       const p = []; while (i < L.length && L[i].trim() && !/^(#|\||[-*]\s)/.test(L[i])) p.push(L[i++]);
       out += `<p>${inline(p.join(' '))}</p>`;
     }
@@ -66,12 +77,12 @@
   /* ---------- tabs ---------- */
   function showTab(id) {
     $$('.tabs button').forEach(b => b.classList.toggle('on', b.dataset.tab === id));
-    $$('.panel').forEach(p => p.classList.toggle('on', p.id === id));
+    $$('main > .panel').forEach(p => p.classList.toggle('on', p.id === id));
     history.replaceState(null, '', '#' + id);
   }
   $$('.tabs button').forEach(b => b.onclick = () => showTab(b.dataset.tab));
 
-  /* ---------- tuần ---------- */
+  /* ---------- lịch ---------- */
   const tuanStart = n => addDays(new Date(LICH.batDau + 'T00:00:00'), (n - 1) * 7);
   function tuanHienTai() {
     const d = Math.floor((new Date() - new Date(LICH.batDau + 'T00:00:00')) / 864e5);
@@ -84,20 +95,19 @@
     w.viec.forEach((t, k) => it.push({ id: `v${k}`, kind: 'Việc', t }));
     return it;
   }
-
-  /* ---------- tiến độ ---------- */
   function renderTienDo() {
     let tong = 0, xong = 0;
     LICH.tuan.forEach(w => itemsOf(w).forEach(it => { tong++; if (tick[`${w.so}:${it.id}`]) xong++; }));
-    const n = tuanHienTai(), dang = kho.filter(s => s.tt === 3).length;
+    const n = tuanHienTai();
+    const dang = kho.bai.filter(b => b.trangThai === N.TT.DA_DANG).length;
+    const choDuyet = kho.bai.filter(b => b.trangThai === N.TT.DANH_GIA).length;
     $('#tien-do').innerHTML = `
       <div class="stat"><b>Tuần ${n}/15</b><span>${esc(LICH.tuan[n - 1].chuDe)}</span></div>
       <div class="stat"><b>${xong}/${tong}</b><span>việc trong lịch đã xong</span></div>
-      <div class="stat"><b>${kho.length}</b><span>bài trong kho lời</span></div>
+      <div class="stat"><b>${kho.bai.length}</b><span>bài trong kho · ${choDuyet} đang chờ đánh giá</span></div>
       <div class="stat"><b>${dang}</b><span>bài đã đăng YouTube</span></div>`;
   }
-
-  /* ---------- lịch ---------- */
+  function baiCuaLich(ten) { return N.timBaiTrung(kho, ten); }
   function renderLich() {
     const now = tuanHienTai(), chi = $('#chi-tuan-nay').checked;
     $('#ds-tuan').innerHTML = LICH.tuan.filter(w => !chi || (w.so >= now && w.so <= now + 1)).map(w => {
@@ -107,30 +117,32 @@
         <div class="wk-head"><h3>Tuần ${w.so} · ${esc(w.chuDe)}</h3><span class="wk-date">${fmt(st)} – ${fmt(addDays(st, 6))}</span></div>
         <div class="wk-meta"><span class="tag">${esc(w.giaiDoan)}</span><span class="tag">${esc(s.ten)}</span></div>
         <ul class="items">${its.map(it => {
-          const k = `${w.so}:${it.id}`;
+          const k = `${w.so}:${it.id}`, b = it.bai ? baiCuaLich(it.t) : null;
           return `<li class="${tick[k] ? 'xong' : ''}"><input type="checkbox" data-k="${k}" ${tick[k] ? 'checked' : ''}>
-            <span class="t"><span class="kind">${it.kind}</span>${esc(it.t)}</span>
-            ${it.bai ? `<button class="mini" data-tao="${w.so}|${esc(it.t)}">Tạo lời</button>` : ''}</li>`;
+            <span class="t"><span class="kind">${it.kind}</span>${esc(it.t)}${b ? `<br><a href="#" class="mini-link" data-mo="${b.id}">${b.id}</a> ${ttPill(b.trangThai)}` : ''}</span>
+            ${it.bai ? `<button class="mini" data-tao="${w.so}|${esc(it.t)}">Sáng tác</button>` : ''}</li>`;
         }).join('')}</ul></div>`;
     }).join('');
   }
   $('#ds-tuan').addEventListener('change', e => {
     const k = e.target.dataset.k; if (!k) return;
-    tick[k] = e.target.checked; if (!tick[k]) delete tick[k];
+    if (e.target.checked) tick[k] = true; else delete tick[k];
     store.set(KEY_LICH, tick); renderLich(); renderTienDo();
   });
   $('#ds-tuan').addEventListener('click', e => {
+    const mo = e.target.dataset.mo; if (mo) { e.preventDefault(); moBai(mo); return; }
     const v = e.target.dataset.tao; if (!v) return;
     const [so, ten] = v.split('|'); const w = LICH.tuan[+so - 1];
     $('input[name=loai][value=bai]').checked = true; capNhatLoai();
     $('#f-tuan').value = so; $('#f-series').value = w.series; $('#f-ten').value = ten; $('#f-chitiet').value = '';
+    const b = baiCuaLich(ten); $('#f-viet-lai').value = b ? b.id : '';
     buildPrompt(); showTab('tao-loi'); $('#f-chitiet').focus();
   });
   $('#chi-tuan-nay').onchange = renderLich;
 
-  /* ---------- tạo lời ---------- */
+  /* ---------- sáng tác: tạo yêu cầu ---------- */
   const opt = (arr, v = x => x, t = x => x) => arr.map(x => `<option value="${esc(v(x))}">${esc(t(x))}</option>`).join('');
-  function loai() { return $('input[name=loai]:checked').value; }
+  const loai = () => $('input[name=loai]:checked').value;
   function capNhatLoai() {
     const pl = loai() === 'playlist';
     $$('.only-bai').forEach(e => e.hidden = pl); $$('.only-playlist').forEach(e => e.hidden = !pl);
@@ -138,21 +150,46 @@
   }
   function renderPlPick() {
     const sr = $('#f-series').value;
-    const ds = kho.filter(s => s.loai !== 'playlist').sort((a, b) => (b.series === sr) - (a.series === sr));
-    $('#pl-ds').innerHTML = ds.length ? ds.map(s => `<label><input type="checkbox" value="${s.id}" ${s.series === sr ? 'checked' : ''}>${esc(s.ten)} <small class="m">· ${esc(seriesOf(s.series).ten)}</small></label>`).join('')
-      : '<small class="m">Kho chưa có bài. Vẫn tạo được câu lệnh, ChatGPT sẽ gợi ý tên bài.</small>';
+    const ds = kho.bai.filter(b => b.loai !== 'playlist').sort((a, b) => (b.series === sr) - (a.series === sr));
+    $('#pl-ds').innerHTML = ds.length ? ds.map(b => `<label><input type="checkbox" value="${b.id}" ${b.series === sr && b.trangThai >= N.TT.DUYET_PHAT_HANH ? 'checked' : ''}>${esc(b.ten)} <small class="m">· ${b.id} · ${esc(N.TRANG_THAI[b.trangThai])}</small></label>`).join('')
+      : '<small class="m">Kho chưa có bài. Vẫn tạo được yêu cầu, ChatGPT sẽ gợi ý tên bài.</small>';
+  }
+  function renderVietLai() {
+    const cur = $('#f-viet-lai').value;
+    $('#f-viet-lai').innerHTML = '<option value="">— Bài mới —</option>' +
+      kho.bai.filter(b => b.loai === 'bai').map(b => `<option value="${b.id}">${b.id} · ${esc(b.ten)}</option>`).join('');
+    $('#f-viet-lai').value = kho.bai.some(b => b.id === cur) ? cur : '';
   }
 
   const QUY_TAC = `Quy tắc bắt buộc:
 - Lời hoàn toàn mới do bạn sáng tác. Không chép, không mượn câu hay đoạn của bất kỳ bài hát đã có nào (kể cả nhạc xưa, nhạc Trịnh, bolero).
-- Không nhắc tên ca sĩ, nhạc sĩ hay thương hiệu có thật, kể cả trong phần style.
+- Không nhắc tên ca sĩ, nhạc sĩ hay thương hiệu có thật, kể cả trong "style".
 - Tiếng Việt có dấu, câu chữ giản dị, có hình ảnh cụ thể, vần tự nhiên, dễ hát.`;
+  const DINH_DANG = (series, tuan, loaiBai) => `
+ĐỊNH DẠNG TRẢ LỜI: chỉ trả về MỘT khối mã \`\`\`json, không thêm lời bình trước hay sau. Giữ đúng tên trường, xuống dòng trong chuỗi viết là \\n:
+\`\`\`json
+{
+  "loai": "${loaiBai}",
+  "ten": "tên bài",
+  "series": "${series}",
+  "tuan": ${tuan},
+  "loi": "${loaiBai === 'bai' ? '[Intro]\\n...\\n[Verse 1]\\n...\\n[Chorus]\\n...' : 'thứ tự bài đề xuất, mỗi bài một dòng kèm lý do ngắn'}",
+  "style": "${loaiBai === 'bai' ? 'tiếng Anh, dưới 200 ký tự: thể loại, nhịp, nhạc cụ, giọng hát' : ''}",
+  "tieude": "tiêu đề YouTube, tối đa 100 ký tự",
+  "mota": "mô tả YouTube",
+  "shorts": "${loaiBai === 'bai' ? '4 câu điệp khúc hay nhất' : 'câu bình luận ghim hỏi người nghe muốn nghe chủ đề gì tiếp'}",
+  "tag": "#hashtag1 #hashtag2 #hashtag3",
+  "ghiChu": "${loaiBai === 'bai' ? '1–2 câu về ý đồ sáng tác và điểm nhấn cảm xúc' : '2 phương án tiêu đề khác'}"
+}
+\`\`\``;
 
   function promptBai() {
     const w = LICH.tuan[+$('#f-tuan').value - 1], s = seriesOf($('#f-series').value);
-    const ten = $('#f-ten').value.trim() || '(bạn tự đặt tên phù hợp chủ đề)';
+    const goc = kho.bai.find(b => b.id === $('#f-viet-lai').value);
+    const ten = $('#f-ten').value.trim() || goc?.ten || '(bạn tự đặt tên phù hợp chủ đề)';
     const ct = $('#f-chitiet').value.trim(), gc = $('#f-ghichu').value.trim();
-    return `Bạn là nhạc sĩ viết lời nhạc trữ tình phòng trà Việt Nam. Hãy viết một bài hát MỚI cho kênh YouTube "Nhạc Phòng Trà – Cà Phê Chill" (nhạc trữ tình, hoài niệm, nghe thư giãn, mở ở quán cà phê). Nhạc sẽ được tạo bằng Suno.
+    const loiCu = goc ? N.loiHienTai(goc) : null;
+    return `Bạn là nhạc sĩ viết lời nhạc trữ tình phòng trà Việt Nam. Hãy ${goc ? 'VIẾT LẠI (bản mới tốt hơn) lời' : 'viết một bài hát MỚI'} cho kênh YouTube "Nhạc Phòng Trà – Cà Phê Chill" (nhạc trữ tình, hoài niệm, nghe thư giãn, mở ở quán cà phê). Nhạc sẽ được tạo bằng Suno.
 
 Thông tin bài:
 - Tên bài / ý tưởng: ${ten}
@@ -162,30 +199,16 @@ ${ct ? `- Hình ảnh, chi tiết muốn có: ${ct}\n` : ''}- Cảm xúc: ${$('#
 - Nhịp / thể loại: ${$('#f-nhip').value}
 - Giọng hát: ${$('#f-giong').value}
 - Nhạc cụ chính: ${$('#f-nhaccu').value}
-${gc ? `- Ghi chú: ${gc}\n` : ''}
+${gc ? `- Ghi chú: ${gc}\n` : ''}${loiCu ? `\nLời hiện tại (phiên bản ${goc.loiChon}) để bạn viết lại, giữ ý chính nhưng làm điệp khúc cuốn hơn:\n"""\n${loiCu}\n"""\n` : ''}
 ${QUY_TAC}
 - Độ dài khi hát khoảng 3–4 phút. Điệp khúc 4 câu, dễ nhớ, có câu chứa tên bài.
+- Bài phải có một điểm nhấn cảm xúc rõ (một hình ảnh hoặc câu hát khiến người nghe muốn nghe lại).
 - Đặt nhãn cấu trúc cho Suno trên dòng riêng: [Intro], [Verse 1], [Pre-Chorus], [Chorus], [Verse 2], [Chorus], [Bridge], [Final Chorus], [Outro].
-
-Trả lời ĐÚNG theo các mục sau, giữ nguyên tiêu đề mục (dòng bắt đầu bằng ###), không thêm lời bình:
-
-### TÊN BÀI
-### LỜI BÀI HÁT
-### STYLE CHO SUNO
-(tiếng Anh, dưới 200 ký tự, gồm thể loại, nhịp, nhạc cụ, giọng hát, không tên nghệ sĩ)
-### TIÊU ĐỀ YOUTUBE
-(theo mẫu: <Tên bài> | Nhạc Phòng Trà Hoài Niệm – Sáng tác mới)
-### MÔ TẢ YOUTUBE
-(2–3 câu kể câu chuyện của bài hát, giọng gần gũi)
-### ĐOẠN CHO SHORTS
-(4 câu điệp khúc hay nhất)
-### HASHTAG
-(3 hashtag tiếng Việt không dấu)`;
+${DINH_DANG(s.id, w.so, 'bai')}`;
   }
-
   function promptPlaylist() {
     const w = LICH.tuan[+$('#f-tuan').value - 1], s = seriesOf($('#f-series').value);
-    const chon = $$('#pl-ds input:checked').map(i => kho.find(x => x.id === i.value)).filter(Boolean);
+    const chon = $$('#pl-ds input:checked').map(i => kho.bai.find(x => x.id === i.value)).filter(Boolean);
     const gc = $('#f-ghichu').value.trim();
     return `Bạn là người biên tập kênh YouTube "Nhạc Phòng Trà – Cà Phê Chill" (nhạc trữ tình, hoài niệm, lời do kênh tự sáng tác, nhạc tạo bằng AI, hợp mở ở quán cà phê).
 Hãy chuẩn bị nội dung cho một video playlist dài ${$('#f-pl-gio').value}.
@@ -194,23 +217,10 @@ Hãy chuẩn bị nội dung cho một video playlist dài ${$('#f-pl-gio').valu
 - Series: ${s.ten}; chủ đề tuần ${w.so}: ${w.chuDe}
 ${chon.length ? `- Các bài có sẵn trong kho:\n${chon.map((x, k) => `  ${k + 1}. ${x.ten}${x.mota ? ' — ' + x.mota.split('\n')[0].slice(0, 120) : ''}`).join('\n')}\n` : '- Kho chưa có bài: hãy đề xuất 12 tên bài mới hợp chủ đề để kênh sáng tác thêm.\n'}${gc ? `- Ghi chú: ${gc}\n` : ''}
 ${QUY_TAC}
-
-Trả lời ĐÚNG theo các mục sau, giữ nguyên tiêu đề mục (dòng bắt đầu bằng ###):
-
-### TÊN BÀI
-(tên playlist ngắn gọn để lưu kho)
-### TIÊU ĐỀ YOUTUBE
-(3 phương án, mỗi phương án dưới 90 ký tự, từ khóa "nhạc phòng trà", "nhạc cà phê", "nhạc trữ tình" ở nửa đầu, có thời lượng)
-### LỜI BÀI HÁT
-(thứ tự bài đề xuất kèm lý do ngắn: bài mở đầu phải cuốn nhất)
-### MÔ TẢ YOUTUBE
-(đoạn mở 2–3 câu tạo không khí, dòng "Lời do kênh sáng tác, nhạc và giọng hát tạo với sự hỗ trợ của AI", chỗ để điền mốc thời gian dạng 00:00 Tên bài)
-### ĐOẠN CHO SHORTS
-(1 câu bình luận ghim hỏi người nghe muốn nghe chủ đề gì tiếp theo)
-### HASHTAG
-(3 hashtag tiếng Việt không dấu)`;
+- Tiêu đề có từ khóa "nhạc phòng trà", "nhạc cà phê" hoặc "nhạc trữ tình" ở nửa đầu và ghi thời lượng.
+- Mô tả có dòng "Lời do kênh sáng tác, nhạc và giọng hát tạo với sự hỗ trợ của AI" và chỗ điền mốc thời gian dạng 00:00 Tên bài.
+${DINH_DANG(s.id, w.so, 'playlist')}`;
   }
-
   function buildPrompt() { $('#prompt').value = loai() === 'playlist' ? promptPlaylist() : promptBai(); }
   $('#form-loi').addEventListener('input', buildPrompt);
   $('#form-loi').addEventListener('change', e => {
@@ -220,128 +230,367 @@ Trả lời ĐÚNG theo các mục sau, giữ nguyên tiêu đề mục (dòng b
       const w = LICH.tuan[+e.target.value - 1]; $('#f-series').value = w.series;
       if (loai() === 'playlist') { $('#f-pl-ten').value = w.playlist || ''; renderPlPick(); }
     }
+    if (e.target.id === 'f-viet-lai') {
+      const b = kho.bai.find(x => x.id === e.target.value);
+      if (b) { $('#f-ten').value = b.ten; $('#f-series').value = b.series; $('#f-tuan').value = b.tuan; }
+    }
     buildPrompt();
   });
-  $('#btn-copy-prompt').onclick = async () => toast(await copy($('#prompt').value) ? 'Đã sao chép câu lệnh' : 'Không sao chép được, hãy bôi đen và Ctrl+C');
+  $('#btn-copy-prompt').onclick = async () => toast(await copy($('#prompt').value) ? 'Đã sao chép yêu cầu' : 'Không sao chép được, hãy bôi đen và Ctrl+C');
   $('#btn-mo-gpt').onclick = async () => {
     const p = $('#prompt').value; await copy(p);
-    const url = p.length < 3500 ? GPT_URL + '?q=' + encodeURIComponent(p) : GPT_URL;
-    window.open(url, '_blank', 'noopener');
-    toast(p.length < 3500 ? 'Đã mở ChatGPT kèm câu lệnh' : 'Đã sao chép, dán vào ChatGPT');
+    const ngan = p.length < 3500;
+    window.open(ngan ? GPT_URL + '?q=' + encodeURIComponent(p) : GPT_URL, '_blank', 'noopener');
+    toast(ngan ? 'Đã mở ChatGPT kèm yêu cầu' : 'Đã sao chép, dán vào ChatGPT');
   };
 
-  /* ---------- đọc kết quả ChatGPT ---------- */
-  const MUC = { 'TÊN BÀI': 'ten', 'LỜI BÀI HÁT': 'loi', 'STYLE CHO SUNO': 'style', 'TIÊU ĐỀ YOUTUBE': 'tieude', 'MÔ TẢ YOUTUBE': 'mota', 'ĐOẠN CHO SHORTS': 'shorts', 'HASHTAG': 'tag' };
-  const bo = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/đ/gi, 'd').toUpperCase();
-  function parseKetQua(txt) {
-    const out = {}; let cur = null;
-    const keys = Object.entries(MUC).map(([k, v]) => [bo(k), v]);
-    for (const line of txt.replace(/\r/g, '').split('\n')) {
-      const h = line.match(/^\s*(?:#{1,4}\s*|\*\*\s*)?(?:\d+[.)]\s*)?([^:*#]+?)\s*(?:\*\*)?\s*:?\s*$/);
-      const hit = h && keys.find(([k]) => bo(h[1]).trim() === k);
-      if (hit) { cur = hit[1]; out[cur] = ''; continue; }
-      if (cur) out[cur] += line + '\n';
-    }
-    for (const k in out) out[k] = out[k].replace(/^\s*\n|\n\s*$/g, '').replace(/^\*\*(.*)\*\*$/, '$1').trim();
-    if (out.ten) out.ten = out.ten.split('\n')[0].replace(/^["“*]+|["”*]+$/g, '').trim();
-    if (!Object.keys(out).length) out.loi = txt.trim();
-    return out;
-  }
-  $('#btn-luu').onclick = () => {
-    const txt = $('#ket-qua').value.trim();
-    if (!txt) { toast('Chưa dán kết quả'); return; }
-    const p = parseKetQua(txt);
-    const s = {
-      id: uid(), loai: loai(), tuan: +$('#f-tuan').value, series: $('#f-series').value, tt: 0,
-      ten: p.ten || $('#f-ten').value.trim() || $('#f-pl-ten').value.trim() || 'Bài chưa đặt tên',
-      loi: p.loi || '', style: p.style || '', tieude: p.tieude || '', mota: p.mota || '', shorts: p.shorts || '', tag: p.tag || '',
-      link: '', prompt: $('#prompt').value, ngay: new Date().toISOString().slice(0, 10)
-    };
-    kho.unshift(s); saveKho();
-    $('#ket-qua').value = '';
-    $('#luu-note').textContent = `Đã lưu "${s.ten}" vào Kho bài (${p.loi ? 'đã tách đủ các mục' : 'không nhận ra mục, đã lưu nguyên văn vào phần lời'}).`;
-    toast('Đã lưu vào kho');
+  /* ---------- sáng tác: nhập JSON có xem trước ---------- */
+  let nhapTam = null;   // {ketQua:[…], prompt}
+  const NHAN = { style: 'Prompt Suno', tieude: 'Tiêu đề', mota: 'Mô tả', shorts: 'Shorts', tag: 'Hashtag' };
+  const TRUONG_BAI = { style: 'promptSuno', tieude: 'tieude', mota: 'mota', shorts: 'shorts', tag: 'tag' };
+  $('#btn-kiem-tra').onclick = () => {
+    const md = { series: $('#f-series').value, tuan: +$('#f-tuan').value };
+    try { nhapTam = { ketQua: N.phanTichNhap($('#ket-qua').value, md), prompt: $('#prompt').value }; }
+    catch (e) { nhapTam = null; $('#xem-truoc').innerHTML = `<div class="alert err"><b>Không đọc được.</b> ${esc(e.message)}</div>`; return; }
+    renderXemTruoc();
   };
+  function renderXemTruoc() {
+    const box = $('#xem-truoc'); if (!nhapTam) { box.innerHTML = ''; return; }
+    const vietLai = $('#f-viet-lai').value;
+    box.innerHTML = nhapTam.ketQua.map((r, i) => {
+      const d = r.data;
+      const goiY = (i === 0 && vietLai) || N.timBaiTrung(kho, d.ten)?.id || '';
+      const dich = kho.bai.find(b => b.id === goiY);
+      return `<div class="preview ${r.ok ? '' : 'bad'}" data-i="${i}">
+        <div class="pv-head"><b>${esc(d.ten || '(chưa có tên)')}</b> ${r.ok ? '<span class="ok">Hợp lệ</span>' : '<span class="no">Chưa hợp lệ</span>'}</div>
+        ${r.loi.length ? `<div class="alert err"><ul>${r.loi.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>` : ''}
+        ${r.canhBao.length ? `<div class="alert warn"><ul>${r.canhBao.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>` : ''}
+        <table class="pv-table">
+          <tr><th>Series · Tuần</th><td>${esc(seriesOf(d.series).ten)} · Tuần ${esc(d.tuan)}</td></tr>
+          ${d.loi ? `<tr><th>Lời</th><td><pre>${esc(d.loi)}</pre></td></tr>` : ''}
+          ${Object.entries(NHAN).filter(([k]) => d[k]).map(([k, n]) => `<tr><th>${n}</th><td>${esc(d[k]).replace(/\n/g, '<br>')}</td></tr>`).join('')}
+          ${d.ghiChu ? `<tr><th>Ghi chú</th><td>${esc(d.ghiChu)}</td></tr>` : ''}
+        </table>
+        ${r.ok ? `<label>Lưu vào
+          <select class="pv-dich"><option value="">Tạo bài mới</option>${kho.bai.map(b => `<option value="${b.id}" ${b.id === goiY ? 'selected' : ''}>Phiên bản lời mới cho ${b.id} · ${esc(b.ten)}</option>`).join('')}</select></label>
+        <div class="pv-xd">${xungDotHtml(dich, d)}</div>
+        <button type="button" class="primary pv-luu">Xác nhận lưu</button>` : '<p class="hint">Sửa JSON (hoặc nhờ ChatGPT sửa) rồi bấm Kiểm tra lại.</p>'}
+      </div>`;
+    }).join('');
+  }
+  function xungDotHtml(dich, d) {
+    if (!dich) return '';
+    const xd = N.xungDot(dich, d);
+    const dien = Object.entries(TRUONG_BAI).filter(([k, f]) => d[k] && !dich[f]).map(([k]) => NHAN[k]);
+    return `<p class="hint">Lời sẽ thành <b>phiên bản ${(dich.loiVersions.reduce((m, x) => Math.max(m, x.v), 0)) + 1}</b> của ${dich.id}, các bản cũ giữ nguyên.
+      ${dien.length ? `Sẽ điền vào trường đang trống: ${dien.join(', ')}.` : ''}</p>
+      ${xd.length ? `<div class="alert warn">Các trường đã có nội dung khác, mặc định <b>giữ bản cũ</b>. Tick để thay bằng bản mới:
+        ${xd.map(k => `<label class="chk"><input type="checkbox" class="pv-ghi" value="${k}"> ${NHAN[k]}: <i>${esc(dich[TRUONG_BAI[k]]).slice(0, 60)}</i> → <i>${esc(d[k]).slice(0, 60)}</i></label>`).join('')}</div>` : ''}`;
+  }
+  $('#xem-truoc').addEventListener('change', e => {
+    if (!e.target.classList.contains('pv-dich')) return;
+    const box = e.target.closest('.preview'), r = nhapTam.ketQua[+box.dataset.i];
+    box.querySelector('.pv-xd').innerHTML = xungDotHtml(kho.bai.find(b => b.id === e.target.value), r.data);
+  });
+  $('#xem-truoc').addEventListener('click', e => {
+    if (!e.target.classList.contains('pv-luu')) return;
+    const box = e.target.closest('.preview'), r = nhapTam.ketQua[+box.dataset.i];
+    const dich = kho.bai.find(b => b.id === box.querySelector('.pv-dich').value) || null;
+    const ghiDe = $$('.pv-ghi:checked', box).map(x => x.value);
+    const b = N.apNhap(kho, r.data, dich, ghiDe, nhapTam.prompt);
+    if (!luuKho()) return;
+    box.innerHTML = `<div class="alert ok">Đã lưu <b>${b.id} · ${esc(b.ten)}</b> (lời phiên bản ${b.loiChon}). <a href="#" data-mo="${b.id}">Mở bài</a></div>`;
+    renderVietLai(); renderLich(); toast('Đã lưu vào kho');
+  });
+  $('#xem-truoc').addEventListener('click', e => { const id = e.target.dataset.mo; if (id) { e.preventDefault(); moBai(id); } });
 
   /* ---------- kho bài ---------- */
-  function saveKho() { store.set(KEY_KHO, kho); renderKho(); renderTienDo(); $('#dem-kho').textContent = kho.length; }
   function renderKho() {
-    const fs = $('#loc-series').value, ft = $('#loc-tt').value, q = bo($('#loc-q').value.trim());
-    const ds = kho.filter(s => (!fs || s.series === fs) && (ft === '' || s.tt === +ft) && (!q || bo(s.ten).includes(q)));
-    $('#ds-kho').innerHTML = ds.length ? ds.map(s => `
-      <div class="song" data-id="${s.id}" style="--c:${seriesOf(s.series).mau}">
-        <h4>${esc(s.ten)}</h4>
-        <div class="m">${s.loai === 'playlist' ? 'Playlist' : 'Bài đơn'} · Tuần ${s.tuan} · ${esc(seriesOf(s.series).ten)} · <span class="tt tt-${s.tt}">${TRANG_THAI[s.tt]}</span></div>
-        <pre>${esc((s.loi || s.mota || '').slice(0, 300))}</pre>
-      </div>`).join('') : `<div class="empty">${kho.length ? 'Không có bài khớp bộ lọc.' : 'Kho chưa có bài. Vào tab <b>Tạo lời</b> để bắt đầu.'}</div>`;
+    const fs = $('#loc-series').value, ft = $('#loc-tt').value, q = N.boDau($('#loc-q').value);
+    const ds = kho.bai.filter(b => (!fs || b.series === fs) && (ft === '' || b.trangThai === +ft) && (!q || N.boDau(b.ten + ' ' + b.id).includes(q)));
+    $('#dem-tt').innerHTML = N.TRANG_THAI.map((t, k) => {
+      const n = kho.bai.filter(b => b.trangThai === k).length;
+      return `<button class="ttc ${ft === String(k) ? 'on' : ''}" data-tt="${k}">${esc(t)} <b>${n}</b></button>`;
+    }).join('');
+    $('#ds-kho').innerHTML = ds.length ? ds.map(b => {
+      const tong = N.tongDiem(b), loi = N.loiHienTai(b) || '';
+      return `<div class="song" data-id="${b.id}" style="--c:${seriesOf(b.series).mau}">
+        <div class="song-top"><span class="id-pill">${b.id}</span>${ttPill(b.trangThai)}</div>
+        <h4>${esc(b.ten)}</h4>
+        <div class="m">${b.loai === 'playlist' ? 'Playlist' : 'Bài đơn'} · Tuần ${b.tuan} · ${esc(seriesOf(b.series).ten)}</div>
+        <div class="m">Lời: ${b.loiVersions.length} bản · Nhạc: ${b.nhacVersions.length} bản${b.nhacChon ? ` (chọn v${b.nhacChon})` : ''} · Điểm: ${tong === null ? '—' : `<b class="${tong >= N.DIEM_TOI_THIEU ? 'ok' : 'no'}">${tong}/25</b>`}</div>
+        <pre>${esc(loi.slice(0, 220))}</pre>
+      </div>`;
+    }).join('') : `<div class="empty">${kho.bai.length ? 'Không có bài khớp bộ lọc.' : 'Kho chưa có bài. Vào tab <b>Sáng tác</b> để bắt đầu, hoặc bấm <b>+ Ý tưởng mới</b>.'}</div>`;
   }
   ['#loc-series', '#loc-tt', '#loc-q'].forEach(s => $(s).addEventListener('input', renderKho));
-
-  let dangSua = null;
-  const F = ['ten', 'loi', 'style', 'tieude', 'mota', 'shorts', 'tag', 'link'];
-  $('#ds-kho').addEventListener('click', e => {
-    const c = e.target.closest('.song'); if (!c) return;
-    dangSua = kho.find(s => s.id === c.dataset.id); if (!dangSua) return;
-    F.forEach(f => $('#d-' + f).value = dangSua[f] || ''); $('#d-tt').value = dangSua.tt;
-    $('#dlg').showModal();
+  $('#dem-tt').addEventListener('click', e => {
+    const b = e.target.closest('.ttc'); if (!b) return;
+    $('#loc-tt').value = $('#loc-tt').value === b.dataset.tt ? '' : b.dataset.tt; renderKho();
   });
-  $('#d-luu').onclick = () => {
-    F.forEach(f => dangSua[f] = $('#d-' + f).value); dangSua.tt = +$('#d-tt').value;
-    saveKho(); $('#dlg').close(); toast('Đã lưu');
+  $('#ds-kho').addEventListener('click', e => { const c = e.target.closest('.song'); if (c) moBai(c.dataset.id); });
+  $('#btn-bai-moi').onclick = () => {
+    const ten = prompt('Tên ý tưởng bài hát:'); if (!ten || !ten.trim()) return;
+    const w = LICH.tuan[tuanHienTai() - 1];
+    const b = N.taoBai(kho, { ten: ten.trim(), series: w.series, tuan: w.so, trangThai: N.TT.Y_TUONG });
+    luuKho(); renderVietLai(); moBai(b.id);
   };
-  $('#d-xoa').onclick = () => {
-    if (!confirm(`Xóa "${dangSua.ten}" khỏi kho?`)) return;
-    kho = kho.filter(s => s !== dangSua); saveKho(); $('#dlg').close();
+  $('#btn-xuat-md').onclick = () => {
+    const out = kho.bai.filter(b => b.loai !== 'playlist').map(b => {
+      const nhac = b.nhacVersions.find(x => x.v === b.nhacChon);
+      return `# ${b.id} · ${b.ten}\n\n- Series: ${seriesOf(b.series).ten} · Tuần ${b.tuan} · ${N.TRANG_THAI[b.trangThai]}\n- Lời: phiên bản ${b.loiChon ?? '—'} / ${b.loiVersions.length}\n- Prompt Suno: ${b.promptSuno}\n${nhac ? `- Bản nhạc phát hành: v${nhac.v} ${nhac.link}\n` : ''}- Điểm: ${N.tongDiem(b) ?? '—'}/25\n- Tiêu đề YouTube: ${b.tieude}\n${b.linkYoutube ? `- Link: ${b.linkYoutube}\n` : ''}\n## Lời\n\n${N.loiHienTai(b) || ''}\n\n## Mô tả\n\n${b.mota}\n\n${b.tag}\n`;
+    }).join('\n---\n\n');
+    download(`loi-bai-hat-${homNay()}.md`, out || '# Kho trống\n', 'text/markdown');
   };
 
-  $('#btn-xuat-json').onclick = () => download('kho-bai.json', JSON.stringify({ capNhat: new Date().toISOString(), bai: kho }, null, 2));
-  $('#btn-xuat-md').onclick = () => {
-    const md = kho.filter(s => s.loai !== 'playlist').map(s =>
-      `# ${s.ten}\n\n- Series: ${seriesOf(s.series).ten} · Tuần ${s.tuan} · ${TRANG_THAI[s.tt]} · ${s.ngay}\n- Style Suno: ${s.style}\n- Tiêu đề YouTube: ${s.tieude}\n${s.link ? `- Link: ${s.link}\n` : ''}\n## Lời\n\n${s.loi}\n\n## Mô tả\n\n${s.mota}\n\n${s.tag}\n`).join('\n---\n\n');
-    download('loi-bai-hat.md', md || '# Kho trống\n', 'text/markdown');
+  /* ---------- hộp chi tiết bài ---------- */
+  let bai = null, dirty = false, loiDangXem = null;
+  const dlg = $('#dlg');
+  function moBai(id) {
+    bai = kho.bai.find(b => b.id === id); if (!bai) return;
+    dirty = false; $('#d-dirty').textContent = '';
+    $('#d-id').textContent = bai.id;
+    $$('[data-f]', dlg).forEach(el => el.value = bai[el.dataset.f] ?? '');
+    $('#d-tt-ghichu').value = ''; $('#d-loi-ghichu').value = ''; $('#d-diff').innerHTML = '';
+    $('#d-nhac-link').value = ''; $('#d-nhac-ghichu').value = '';
+    loiDangXem = bai.loiChon;
+    dTab('tt'); renderBai();
+    if (!dlg.open) dlg.showModal();
+  }
+  function renderBai() {
+    const b = bai;
+    // trạng thái
+    $('#d-steps').innerHTML = N.TRANG_THAI.map((t, k) => `<div class="stp ${k < b.trangThai ? 'qua' : ''} ${k === b.trangThai ? 'cur' : ''}"><i>${k + 1}</i>${esc(t)}</div>`).join('');
+    $('#d-tt-moi').innerHTML = N.TRANG_THAI.map((t, k) => `<option value="${k}" ${k === Math.min(b.trangThai + 1, 6) ? 'selected' : ''} ${k === b.trangThai ? 'disabled' : ''}>${k + 1}. ${esc(t)}</option>`).join('');
+    renderCanhBao();
+    $('#d-ngay').innerHTML = `Tạo: ${fmtLuc(b.ngayTao)} · Cập nhật: ${fmtLuc(b.ngayCapNhat)}${b.legacyId ? ` · Mã trong kho cũ: ${esc(b.legacyId)}` : ''}`;
+    // lời
+    $('#d-dem-loi').textContent = b.loiVersions.length;
+    $('#d-ds-loi').innerHTML = b.loiVersions.length ? [...b.loiVersions].reverse().map(x => `
+      <div class="vrow ${x.v === loiDangXem ? 'xem' : ''}">
+        <b>v${x.v}</b>${x.v === b.loiChon ? '<span class="chon">đang dùng</span>' : ''}
+        <span class="m">${fmtLuc(x.luc)} · ${esc({ chatgpt: 'ChatGPT', tay: 'sửa tay', 'kho-cu': 'kho cũ' }[x.nguon] || x.nguon)}</span>
+        ${x.ghiChu ? `<div class="m">${esc(x.ghiChu)}</div>` : ''}
+        <span class="vbtn"><button type="button" class="mini" data-xem-loi="${x.v}">Xem</button>${x.v !== b.loiChon ? `<button type="button" class="mini" data-chon-loi="${x.v}">Dùng bản này</button>` : ''}</span>
+      </div>`).join('') : '<p class="hint">Chưa có lời. Viết vào ô bên phải rồi lưu, hoặc nhập từ ChatGPT ở tab Sáng tác.</p>';
+    const xem = b.loiVersions.find(x => x.v === loiDangXem);
+    $('#d-loi-nhan').textContent = xem ? `Lời phiên bản ${xem.v}${xem.v === b.loiChon ? ' (đang dùng)' : ''}` : 'Lời mới';
+    $('#d-loi').value = xem ? xem.loi : '';
+    const vs = [...b.loiVersions].reverse().map(x => `<option value="${x.v}">v${x.v} · ${fmtLuc(x.luc)}</option>`).join('');
+    $('#d-ss-a').innerHTML = vs; $('#d-ss-b').innerHTML = vs;
+    if (b.loiVersions.length > 1) { $('#d-ss-b').value = b.loiVersions.at(-1).v; $('#d-ss-a').value = b.loiVersions.at(-2).v; }
+    // nhạc
+    $('#d-dem-nhac').textContent = b.nhacVersions.length;
+    $('#d-ds-nhac').innerHTML = b.nhacVersions.length ? `<label class="vrow chk"><input type="radio" name="nhac-chon" value="" ${b.nhacChon === null ? 'checked' : ''}> Chưa chọn bản phát hành</label>` +
+      b.nhacVersions.map(x => `<label class="vrow chk"><input type="radio" name="nhac-chon" value="${x.v}" ${x.v === b.nhacChon ? 'checked' : ''}>
+        <span><b>v${x.v}</b> ${linkOk(x.link) ? `<a href="${esc(x.link)}" target="_blank" rel="noopener">${esc(x.link)}</a>` : esc(x.link) || '<i>không có link</i>'}
+        <span class="m">· ${fmtLuc(x.luc)}${x.loiV ? ` · theo lời v${x.loiV}` : ''}</span>${x.ghiChu ? `<br><span class="m">${esc(x.ghiChu)}</span>` : ''}</span></label>`).join('')
+      : '<p class="hint">Chưa có bản nhạc nào. Tạo trên Suno rồi dán link vào đây, mỗi lần tạo là một phiên bản.</p>';
+    // điểm
+    const tong = N.tongDiem(b);
+    $('#d-diem').innerHTML = N.TIEU_CHI.map(([k, t]) => `<label>${esc(t)}<select data-diem="${k}"><option value="">—</option>${[1, 2, 3, 4, 5].map(n => `<option ${b.diem[k] === n ? 'selected' : ''}>${n}</option>`).join('')}</select></label>`).join('') +
+      `<div class="tong ${tong === null ? '' : tong >= N.DIEM_TOI_THIEU ? 'ok' : 'no'}">Tổng <b>${tong ?? '—'}</b>/25<br><small>${tong === null ? 'Chấm đủ 5 tiêu chí' : tong >= N.DIEM_TOI_THIEU ? 'Đạt mức phát hành' : `Dưới ${N.DIEM_TOI_THIEU}: chưa nên đăng`}</small></div>`;
+    // youtube
+    capNhatTieuDe(); capNhatThumb();
+    // lịch sử
+    $('#d-lich-su').innerHTML = `<ol class="ls">${[...b.lichSu].reverse().map(h => `<li><span class="m">${fmtLuc(h.luc)}</span>
+      ${h.tu === null ? '' : `${ttPill(h.tu)} →`} ${ttPill(h.den)}${h.ghiChu ? ` <span>${esc(h.ghiChu)}</span>` : ''}</li>`).join('')}</ol>`;
+  }
+  function renderCanhBao() {
+    const den = +$('#d-tt-moi').value, w = N.canhBaoChuyen(bai, den);
+    $('#d-canh-bao').innerHTML = w.length ? `<div class="alert warn">${w.map(esc).join('<br>')} Vẫn chuyển được nếu ông chủ chắc chắn.</div>` : '';
+  }
+  function dTab(d) { $$('.dtabs button', dlg).forEach(b => b.classList.toggle('on', b.dataset.d === d)); $$('.dpanel', dlg).forEach(p => p.classList.toggle('on', p.dataset.d === d)); }
+  $$('.dtabs button', dlg).forEach(b => b.onclick = () => dTab(b.dataset.d));
+  function capNhatTieuDe() { const n = $('#d-tieude').value.length; $('#d-dem-td').textContent = `${n}/100`; $('#d-dem-td').className = 'cnt' + (n > 90 ? ' no' : ''); }
+  function capNhatThumb() { const u = $('#d-thumb').value.trim(), img = $('#d-thumb-img'); img.hidden = !linkOk(u); if (linkOk(u)) img.src = u; }
+  dlg.addEventListener('input', e => {
+    if (e.target.dataset.f) { dirty = true; $('#d-dirty').textContent = 'Có thay đổi chưa lưu'; }
+    if (e.target.id === 'd-tieude') capNhatTieuDe();
+    if (e.target.id === 'd-thumb') capNhatThumb();
+  });
+  $('#d-tt-moi').onchange = renderCanhBao;
+  function luuTruong() {
+    $$('[data-f]', dlg).forEach(el => { const f = el.dataset.f; bai[f] = f === 'tuan' ? +el.value : el.value; });
+    bai.ten = bai.ten.trim() || 'Bài chưa đặt tên';
+    bai.ngayCapNhat = new Date().toISOString();
+    dirty = false; $('#d-dirty').textContent = '';
+  }
+  $('#d-luu').onclick = () => { luuTruong(); if (luuKho()) { renderBai(); renderLich(); renderVietLai(); toast('Đã lưu'); } };
+  function dong() {
+    if (dirty && !confirm('Có thay đổi chưa lưu ở các ô thông tin/YouTube. Đóng mà không lưu?')) return;
+    dirty = false; dlg.close();
+  }
+  $('#d-dong').onclick = dong;
+  dlg.addEventListener('cancel', e => { e.preventDefault(); dong(); });
+  // trạng thái
+  $('#d-chuyen').onclick = () => {
+    const den = +$('#d-tt-moi').value, w = N.canhBaoChuyen(bai, den);
+    if (w.length && !confirm(w.join('\n') + '\n\nVẫn chuyển sang "' + N.TRANG_THAI[den] + '"?')) return;
+    if (dirty) luuTruong();
+    if (N.doiTrangThai(bai, den, $('#d-tt-ghichu').value.trim())) {
+      $('#d-tt-ghichu').value = '';
+      $$('[data-f="ngayPhatHanh"]', dlg).forEach(el => el.value = bai.ngayPhatHanh);
+      luuKho(); renderBai(); renderLich(); toast('Đã chuyển: ' + N.TRANG_THAI[den]);
+    }
   };
-  $('#nhap-json').onchange = async e => {
-    const f = e.target.files[0]; if (!f) return;
-    try {
-      const d = JSON.parse(await f.text()); const ds = Array.isArray(d) ? d : d.bai || [];
-      const co = new Set(kho.map(s => s.id)); const moi = ds.filter(s => s.id && !co.has(s.id));
-      kho = [...moi, ...kho]; saveKho(); toast(`Đã nhập ${moi.length} bài mới`);
-    } catch { toast('File không đúng định dạng'); }
-    e.target.value = '';
+  // lời
+  $('#d-ds-loi').addEventListener('click', e => {
+    const x = e.target.dataset.xemLoi, c = e.target.dataset.chonLoi;
+    if (x) { loiDangXem = +x; renderBai(); }
+    if (c) { N.chonLoi(bai, +c); loiDangXem = +c; luuKho(); renderBai(); toast(`Đang dùng lời v${c}`); }
+  });
+  $('#d-luu-loi').onclick = () => {
+    const text = $('#d-loi').value.trim();
+    if (!text) { toast('Lời đang trống'); return; }
+    const v = N.themLoi(bai, text, 'tay', $('#d-loi-ghichu').value.trim());
+    if (v === null) { toast('Lời giống hệt bản đang dùng, không tạo bản mới'); return; }
+    if (bai.trangThai === N.TT.Y_TUONG) N.doiTrangThai(bai, N.TT.VIET_LOI, 'Có lời đầu tiên');
+    $('#d-loi-ghichu').value = ''; loiDangXem = v; luuKho(); renderBai(); toast(`Đã lưu lời v${v}`);
   };
+  $('#d-so-sanh').onclick = () => {
+    const a = bai.loiVersions.find(x => x.v === +$('#d-ss-a').value), b = bai.loiVersions.find(x => x.v === +$('#d-ss-b').value);
+    if (!a || !b) { toast('Cần ít nhất hai phiên bản'); return; }
+    const d = N.soSanh(a.loi, b.loi);
+    const them = d.filter(x => x.t === '+').length, bot = d.filter(x => x.t === '-').length;
+    $('#d-diff').innerHTML = `<div class="sub-h">So sánh v${a.v} → v${b.v}: <span class="no">−${bot} dòng</span> <span class="ok">+${them} dòng</span></div>
+      <pre class="diff">${d.map(x => `<span class="d${x.t === '+' ? 'add' : x.t === '-' ? 'del' : ''}">${x.t === '=' ? ' ' : x.t} ${esc(x.s)}</span>`).join('\n')}</pre>`;
+    $('#d-diff').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  };
+  // nhạc
+  $('#d-them-nhac').onclick = () => {
+    const link = $('#d-nhac-link').value.trim(), gc = $('#d-nhac-ghichu').value.trim();
+    if (!link && !gc) { toast('Nhập link Suno hoặc ghi chú'); return; }
+    if (link && !linkOk(link)) { toast('Link phải bắt đầu bằng https://'); return; }
+    const v = N.themNhac(bai, link, gc);
+    if (bai.trangThai <= N.TT.DUYET_LOI) N.doiTrangThai(bai, N.TT.TAO_NHAC, 'Có bản nhạc Suno đầu tiên');
+    $('#d-nhac-link').value = ''; $('#d-nhac-ghichu').value = '';
+    luuKho(); renderBai(); toast(`Đã thêm nhạc v${v}`);
+  };
+  $('#d-ds-nhac').addEventListener('change', e => {
+    if (e.target.name !== 'nhac-chon') return;
+    N.chonNhac(bai, e.target.value === '' ? null : +e.target.value); luuKho(); renderBai();
+  });
+  $('#d-diem').addEventListener('change', e => {
+    const k = e.target.dataset.diem; if (!k) return;
+    N.datDiem(bai, k, e.target.value); luuKho(); renderBai();
+  });
+  $('#d-xoa').onclick = () => {
+    if (!confirm(`Xóa ${bai.id} · "${bai.ten}" khỏi kho?\nTrang sẽ tự lưu một bản trước khi xóa, khôi phục được ở tab Sao lưu.`)) return;
+    snap(`Trước khi xóa ${bai.id} · ${bai.ten}`);
+    kho.bai = kho.bai.filter(b => b !== bai); dirty = false; dlg.close();
+    luuKho(); renderLich(); renderVietLai(); toast('Đã xóa');
+  };
+
+  /* ---------- sao lưu / khôi phục / gộp ---------- */
+  $('#btn-sao-luu').onclick = () => download(`npt-sao-luu-${homNay()}.json`, JSON.stringify(N.goiSaoLuu(kho, tick), null, 2));
+  $('#btn-xuat-json').onclick = () => download('kho-bai.json', JSON.stringify(N.xuatKho(kho), null, 2));
+  async function docFile(input) {
+    const f = input.files[0]; input.value = ''; if (!f) return null;
+    try { return { ten: f.name, data: JSON.parse(await f.text()) }; }
+    catch { toast('File không phải JSON hợp lệ'); return null; }
+  }
+  let kpTam = null, gopTam = null;
+  $('#file-khoi-phuc').onchange = async e => {
+    const f = await docFile(e.target); if (!f) return;
+    try { kpTam = N.docSaoLuu(f.data); }
+    catch (err) { $('#kp-xem-truoc').innerHTML = `<div class="alert err">${esc(err.message)}</div>`; return; }
+    const r = kpTam.baoCao;
+    $('#kp-xem-truoc').innerHTML = `<div class="alert warn"><b>${esc(f.ten)}</b>: ${r.tong} bài${r.tuCu ? ` (${r.tuCu} bài định dạng cũ sẽ được chuyển đổi)` : ''}${kpTam.tienDoLich ? `, ${Object.keys(kpTam.tienDoLich).length} việc đã tick trong lịch` : ''}.
+      ${r.loi.length ? '<br>' + r.loi.map(esc).join('<br>') : ''}<br>Kho hiện tại có ${kho.bai.length} bài sẽ được <b>thay hoàn toàn</b> (đã tự lưu một bản trước).
+      <div class="btns"><button type="button" class="primary" id="kp-xac-nhan">Khôi phục</button><button type="button" id="kp-huy">Hủy</button></div></div>`;
+  };
+  $('#kp-xem-truoc').addEventListener('click', e => {
+    if (e.target.id === 'kp-huy') { kpTam = null; $('#kp-xem-truoc').innerHTML = ''; }
+    if (e.target.id === 'kp-xac-nhan' && kpTam) {
+      snap('Trước khi khôi phục từ file');
+      kho = kpTam.kho; if (kpTam.tienDoLich) { tick = kpTam.tienDoLich; store.set(KEY_LICH, tick); }
+      kpTam = null; $('#kp-xem-truoc').innerHTML = '<div class="alert ok">Đã khôi phục.</div>';
+      luuKho(); renderLich(); renderVietLai(); toast('Đã khôi phục');
+    }
+  });
+  $('#file-gop').onchange = async e => {
+    const f = await docFile(e.target); if (!f) return;
+    let thu;
+    try { thu = N.khoRong(); thu.bai = JSON.parse(JSON.stringify(kho.bai)); thu.nextId = kho.nextId; gopTam = { data: f.data, kq: N.gopKho(thu, f.data) }; }
+    catch (err) { $('#gop-xem-truoc').innerHTML = `<div class="alert err">${esc(err.message)}</div>`; return; }
+    const kq = gopTam.kq;
+    $('#gop-xem-truoc').innerHTML = `<div class="alert warn"><b>${esc(f.ten)}</b>: sẽ thêm ${kq.them} bài mới, bỏ qua ${kq.boQua.length} bài đã có.
+      ${kq.boQua.length ? `<details><summary>Bài bỏ qua</summary>${kq.boQua.map(esc).join('<br>')}</details>` : ''}
+      <div class="btns"><button type="button" class="primary" id="gop-xac-nhan" ${kq.them ? '' : 'disabled'}>Gộp ${kq.them} bài</button><button type="button" id="gop-huy">Hủy</button></div></div>`;
+  };
+  $('#gop-xem-truoc').addEventListener('click', e => {
+    if (e.target.id === 'gop-huy') { gopTam = null; $('#gop-xem-truoc').innerHTML = ''; }
+    if (e.target.id === 'gop-xac-nhan' && gopTam) {
+      snap('Trước khi gộp kho');
+      const kq = N.gopKho(kho, gopTam.data); gopTam = null;
+      $('#gop-xem-truoc').innerHTML = `<div class="alert ok">Đã thêm ${kq.them} bài.</div>`;
+      luuKho(); renderLich(); renderVietLai(); toast(`Đã gộp ${kq.them} bài`);
+    }
+  });
+  function renderSnap() {
+    const ds = store.get(KEY_SNAP, []);
+    $('#ds-snap').innerHTML = ds.length ? `<table class="snap"><tr><th>Lúc</th><th>Lý do</th><th>Số bài</th><th></th></tr>${ds.map((s, i) => `<tr><td>${fmtLuc(s.luc)}</td><td>${esc(s.lyDo)}</td><td>${s.soBai}</td>
+      <td><button type="button" class="mini" data-snap-tai="${i}">Tải</button> <button type="button" class="mini" data-snap-kp="${i}">Khôi phục</button></td></tr>`).join('')}</table>`
+      : '<p class="hint">Chưa có bản tự lưu nào.</p>';
+  }
+  $('#ds-snap').addEventListener('click', e => {
+    const ds = store.get(KEY_SNAP, []);
+    const t = e.target.dataset.snapTai, k = e.target.dataset.snapKp;
+    if (t !== undefined) download(`npt-tu-luu-${ds[t].luc.slice(0, 16).replace(/[:T]/g, '-')}.json`, JSON.stringify(ds[t].data, null, 2));
+    if (k !== undefined) {
+      const s = ds[k]; if (!confirm(`Khôi phục bản tự lưu lúc ${fmtLuc(s.luc)} (${s.soBai} bài)? Kho hiện tại sẽ được tự lưu trước.`)) return;
+      const r = N.docSaoLuu(s.data); snap('Trước khi khôi phục bản tự lưu');
+      kho = r.kho; if (r.tienDoLich) { tick = r.tienDoLich; store.set(KEY_LICH, tick); }
+      luuKho(); renderLich(); renderVietLai(); toast('Đã khôi phục bản tự lưu');
+    }
+  });
 
   /* ---------- khởi động ---------- */
   async function load(path, asText) {
     const r = await fetch(path, { cache: 'no-cache' }); if (!r.ok) throw new Error(path);
     return asText ? r.text() : r.json();
   }
+  async function napKho() {
+    const v2 = store.get(KEY_KHO, null);
+    let k = v2 ? N.chuanHoaKho(v2).kho
+      : N.chuanHoaKho(await load('data/kho-bai.json').catch(() => null)).kho;
+    // Kho cũ (trang trước nâng cấp): gộp vào đúng một lần, KHÔNG xóa khóa cũ, bài đã có thì bỏ qua.
+    const v1 = store.get(KEY_KHO_CU, null);
+    if (Array.isArray(v1) && v1.length && !store.get(KEY_DA_CHUYEN, false)) {
+      snap('Trước khi nâng cấp cấu trúc dữ liệu (kho cũ)', { loai: 'npt-sao-luu', schema: 1, luc: new Date().toISOString(), kho: { bai: v1 }, tienDoLich: tick });
+      const kq = N.gopKho(k, v1);
+      store.set(KEY_DA_CHUYEN, new Date().toISOString());
+      setTimeout(() => toast(`Đã nâng cấp ${kq.them} bài từ kho cũ sang cấu trúc mới, kho cũ vẫn giữ nguyên`), 400);
+    }
+    store.set(KEY_KHO, k);
+    return k;
+  }
   async function init() {
-    try {
-      [LICH, CHUDE] = await Promise.all([load('data/lich.json'), load('data/chu-de.json')]);
-    } catch {
+    try { [LICH, CHUDE] = await Promise.all([load('data/lich.json'), load('data/chu-de.json')]); }
+    catch {
       document.querySelector('main').innerHTML = '<div class="empty">Không tải được dữ liệu. Hãy mở trang qua GitHub Pages hoặc một máy chủ web (không mở trực tiếp file).</div>';
       return;
     }
     load('data/ke-hoach.md', true).then(t => $('#noi-dung-ke-hoach').innerHTML = md(t)).catch(() => $('#noi-dung-ke-hoach').textContent = 'Không tải được kế hoạch.');
     tick = store.get(KEY_LICH, {});
-    kho = store.get(KEY_KHO, null);
-    if (!kho) { // lần đầu: lấy kho đã lưu trong repo (nếu có)
-      kho = await load('data/kho-bai.json').then(d => d.bai || []).catch(() => []);
-      store.set(KEY_KHO, kho);
-    }
+    kho = await napKho();
+    const snaps = store.get(KEY_SNAP, []);
+    if (!snaps.length || Date.now() - new Date(snaps[0].luc) > 864e5) if (kho.bai.length) snap('Tự lưu hằng ngày');
 
     $('#f-tuan').innerHTML = LICH.tuan.map(w => `<option value="${w.so}">Tuần ${w.so} · ${esc(w.chuDe)}</option>`).join('');
+    $('#d-tuan').innerHTML = LICH.tuan.map(w => `<option value="${w.so}">Tuần ${w.so} · ${esc(w.chuDe)}</option>`).join('');
     $('#f-series').innerHTML = opt(CHUDE.series, s => s.id, s => s.ten);
+    $('#d-series').innerHTML = opt(CHUDE.series, s => s.id, s => s.ten);
     $('#f-camxuc').innerHTML = opt(CHUDE.camXuc); $('#f-nhip').innerHTML = opt(CHUDE.nhip);
     $('#f-giong').innerHTML = opt(CHUDE.giong); $('#f-nhaccu').innerHTML = opt(CHUDE.nhacCu);
     $('#loc-series').innerHTML += opt(CHUDE.series, s => s.id, s => s.ten);
-    $('#loc-tt').innerHTML += TRANG_THAI.map((t, k) => `<option value="${k}">${t}</option>`).join('');
-    $('#d-tt').innerHTML = TRANG_THAI.map((t, k) => `<option value="${k}">${t}</option>`).join('');
+    $('#loc-tt').innerHTML += N.TRANG_THAI.map((t, k) => `<option value="${k}">${k + 1}. ${esc(t)}</option>`).join('');
 
     const n = tuanHienTai(); $('#f-tuan').value = n; $('#f-series').value = LICH.tuan[n - 1].series;
-    $('#dem-kho').textContent = kho.length;
-    renderTienDo(); renderLich(); renderKho(); buildPrompt();
-    const h = location.hash.slice(1); if (h && $('#' + h)?.classList.contains('panel')) showTab(h);
+    $('#dem-kho').textContent = kho.bai.length;
+    renderVietLai(); renderTienDo(); renderLich(); renderKho(); renderSnap(); buildPrompt();
+    const h = location.hash.slice(1); if (h && document.getElementById(h)?.classList.contains('panel')) showTab(h);
   }
   init();
 })();

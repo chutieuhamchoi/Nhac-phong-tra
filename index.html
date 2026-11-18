@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nhạc Phòng Trà – Cà Phê Chill · Kế hoạch kênh</title>
+<title>Nhạc Phòng Trà Studio · Kế hoạch & sản xuất</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;1,500&display=swap">
 <link rel="stylesheet" href="assets/style.css">
@@ -13,8 +13,8 @@
   <div class="brand">
     <div class="logo" aria-hidden="true">☕</div>
     <div>
-      <h1>Nhạc Phòng Trà <em>Cà Phê Chill</em></h1>
-      <p class="sub">Kế hoạch kênh · Lịch đăng · Tạo lời với ChatGPT</p>
+      <h1>Nhạc Phòng Trà <em>Studio</em></h1>
+      <p class="sub">Kế hoạch kênh · Lịch đăng · Sáng tác với ChatGPT · Quản lý sản xuất</p>
     </div>
   </div>
   <a class="yt" href="https://www.youtube.com/@nhac-phongtra" target="_blank" rel="noopener">@nhac-phongtra ↗</a>
@@ -23,8 +23,9 @@
 <nav class="tabs" role="tablist">
   <button role="tab" data-tab="ke-hoach" class="on">Kế hoạch</button>
   <button role="tab" data-tab="lich">Lịch 15 tuần</button>
-  <button role="tab" data-tab="tao-loi">Tạo lời</button>
+  <button role="tab" data-tab="tao-loi">Sáng tác</button>
   <button role="tab" data-tab="kho">Kho bài <span id="dem-kho" class="pill">0</span></button>
+  <button role="tab" data-tab="sao-luu">Sao lưu</button>
 </nav>
 
 <main>
@@ -37,13 +38,13 @@
   <!-- LỊCH -->
   <section id="lich" class="panel">
     <div class="bar">
-      <p class="hint">Tick từng việc khi xong. Bấm <b>Tạo lời</b> cạnh tên bài để chuyển sang công cụ tạo lời.</p>
+      <p class="hint">Tick từng việc khi xong. Bấm <b>Sáng tác</b> cạnh tên bài để soạn yêu cầu gửi ChatGPT.</p>
       <label class="chk"><input type="checkbox" id="chi-tuan-nay"> Chỉ xem tuần này và tuần sau</label>
     </div>
     <div id="ds-tuan" class="weeks"></div>
   </section>
 
-  <!-- TẠO LỜI -->
+  <!-- SÁNG TÁC -->
   <section id="tao-loi" class="panel">
     <div class="grid2">
       <form id="form-loi" class="card" autocomplete="off">
@@ -51,19 +52,14 @@
           <label><input type="radio" name="loai" value="bai" checked> Bài đơn</label>
           <label><input type="radio" name="loai" value="playlist"> Playlist</label>
         </div>
-
         <div class="row2">
           <label>Tuần <select id="f-tuan"></select></label>
           <label>Series <select id="f-series"></select></label>
         </div>
-
         <div class="only-bai">
-          <label>Tên bài / ý tưởng chính
-            <input id="f-ten" placeholder="VD: Mái trường làng ngày ấy">
-          </label>
+          <label>Tên bài / ý tưởng chính <input id="f-ten" placeholder="VD: Mái trường làng ngày ấy"></label>
           <label>Hình ảnh, chi tiết muốn có trong lời
-            <textarea id="f-chitiet" rows="3" placeholder="VD: tiếng trống trường, cây phượng, bạn cùng bàn, con đường đất đỏ…"></textarea>
-          </label>
+            <textarea id="f-chitiet" rows="3" placeholder="VD: tiếng trống trường, cây phượng, bạn cùng bàn…"></textarea></label>
           <div class="row2">
             <label>Cảm xúc <select id="f-camxuc"></select></label>
             <label>Nhịp / thể loại <select id="f-nhip"></select></label>
@@ -72,41 +68,31 @@
             <label>Giọng hát <select id="f-giong"></select></label>
             <label>Nhạc cụ <select id="f-nhaccu"></select></label>
           </div>
+          <label>Viết lại cho bài đã có <small>(để trống nếu là bài mới)</small>
+            <select id="f-viet-lai"><option value="">— Bài mới —</option></select></label>
         </div>
-
         <div class="only-playlist" hidden>
-          <label>Tên playlist
-            <input id="f-pl-ten" placeholder="VD: Nhạc Phòng Trà Mở Quán Cà Phê Buổi Sáng | 1 Giờ">
-          </label>
-          <label>Thời lượng
-            <select id="f-pl-gio"><option>1 giờ</option><option selected>2 giờ</option><option>3 giờ</option></select>
-          </label>
-          <div class="pl-pick">
-            <div class="pl-head">Bài trong kho đưa vào playlist <small>(tick để chọn)</small></div>
-            <div id="pl-ds" class="pl-list"></div>
-          </div>
+          <label>Tên playlist <input id="f-pl-ten"></label>
+          <label>Thời lượng <select id="f-pl-gio"><option>1 giờ</option><option selected>2 giờ</option><option>3 giờ</option></select></label>
+          <div class="pl-head">Bài trong kho đưa vào playlist <small>(tick để chọn)</small></div>
+          <div id="pl-ds" class="pl-list"></div>
         </div>
-
-        <label>Ghi chú thêm cho ChatGPT
-          <input id="f-ghichu" placeholder="VD: lời ngắn gọn, có nhắc tên một con sông…">
-        </label>
+        <label>Ghi chú thêm cho ChatGPT <input id="f-ghichu" placeholder="VD: lời ngắn gọn, có nhắc tên một con sông…"></label>
       </form>
 
       <div class="card">
-        <div class="step"><span>1</span> Câu lệnh gửi ChatGPT <small>(sửa được)</small></div>
-        <textarea id="prompt" rows="14" spellcheck="false"></textarea>
+        <div class="step"><span>1</span> Yêu cầu gửi ChatGPT <small>(sửa được)</small></div>
+        <textarea id="prompt" rows="12" spellcheck="false"></textarea>
         <div class="btns">
           <button id="btn-mo-gpt" class="primary" type="button">Sao chép &amp; mở ChatGPT ↗</button>
           <button id="btn-copy-prompt" type="button">Chỉ sao chép</button>
         </div>
-        <p class="hint" id="gpt-note">Câu lệnh được sao chép sẵn. Nếu ChatGPT mở ra mà ô chat trống, chỉ cần dán (Ctrl+V) rồi gửi.</p>
+        <p class="hint">Nếu ChatGPT mở ra mà ô chat trống, dán (Ctrl+V) rồi gửi. ChatGPT sẽ trả về một khối JSON.</p>
 
-        <div class="step"><span>2</span> Dán kết quả ChatGPT trả về</div>
-        <textarea id="ket-qua" rows="10" placeholder="Dán toàn bộ câu trả lời của ChatGPT vào đây…"></textarea>
-        <div class="btns">
-          <button id="btn-luu" class="primary" type="button">Lưu vào Kho bài</button>
-        </div>
-        <p class="hint" id="luu-note"></p>
+        <div class="step"><span>2</span> Dán JSON ChatGPT trả về</div>
+        <textarea id="ket-qua" rows="8" spellcheck="false" placeholder='Dán cả câu trả lời hoặc chỉ khối ```json … ```'></textarea>
+        <div class="btns"><button id="btn-kiem-tra" class="primary" type="button">Kiểm tra &amp; xem trước</button></div>
+        <div id="xem-truoc"></div>
       </div>
     </div>
   </section>
@@ -117,46 +103,152 @@
       <div class="filters">
         <select id="loc-series"><option value="">Tất cả series</option></select>
         <select id="loc-tt"><option value="">Mọi trạng thái</option></select>
-        <input id="loc-q" placeholder="Tìm theo tên…">
+        <input id="loc-q" placeholder="Tìm theo tên hoặc mã NPT…">
       </div>
       <div class="btns">
-        <button id="btn-xuat-json" type="button">Xuất kho-bai.json</button>
+        <button id="btn-bai-moi" type="button">+ Ý tưởng mới</button>
         <button id="btn-xuat-md" type="button">Xuất lời (.md)</button>
-        <label class="btn-file">Nhập JSON<input type="file" id="nhap-json" accept=".json" hidden></label>
       </div>
     </div>
-    <p class="hint">Kho lưu trong trình duyệt này. Để lưu lên GitHub: bấm <b>Xuất kho-bai.json</b> rồi thay file <code>data/kho-bai.json</code> trong repo (hoặc gửi file cho Claude đẩy lên).</p>
+    <div id="dem-tt" class="tt-strip"></div>
     <div id="ds-kho" class="songs"></div>
+  </section>
+
+  <!-- SAO LƯU -->
+  <section id="sao-luu" class="panel">
+    <div class="backup-grid">
+      <div class="card">
+        <h3>Sao lưu đầy đủ</h3>
+        <p class="hint">Một file gồm toàn bộ kho bài (mọi phiên bản, điểm, lịch sử) và tiến độ lịch 15 tuần. Nên tải về mỗi tuần.</p>
+        <button id="btn-sao-luu" class="primary" type="button">Tải bản sao lưu</button>
+      </div>
+      <div class="card">
+        <h3>Khôi phục từ bản sao lưu</h3>
+        <p class="hint">Thay toàn bộ dữ liệu trong trình duyệt bằng file đã chọn. Trước khi thay, trang tự lưu một bản hiện tại.</p>
+        <label class="btn-file">Chọn file sao lưu…<input type="file" id="file-khoi-phuc" accept=".json" hidden></label>
+        <div id="kp-xem-truoc"></div>
+      </div>
+      <div class="card">
+        <h3>Đồng bộ với GitHub</h3>
+        <p class="hint">Trang <b>không tự ghi</b> lên GitHub. Muốn lưu kho lên repo: tải file dưới đây rồi thay <code>data/kho-bai.json</code> trong repo (hoặc gửi cho Claude).</p>
+        <div class="btns">
+          <button id="btn-xuat-json" type="button">Xuất kho-bai.json</button>
+          <label class="btn-file">Gộp từ kho-bai.json…<input type="file" id="file-gop" accept=".json" hidden></label>
+        </div>
+        <p class="hint">Gộp: chỉ thêm bài chưa có, bài trùng mã được bỏ qua, không ghi đè. Nhận cả file kho cũ.</p>
+        <div id="gop-xem-truoc"></div>
+      </div>
+      <div class="card">
+        <h3>Bản tự lưu trong trình duyệt</h3>
+        <p class="hint">Trang tự lưu trước khi nâng cấp dữ liệu, khôi phục, gộp, xóa bài và mỗi ngày một lần. Giữ 8 bản gần nhất.</p>
+        <div id="ds-snap"></div>
+      </div>
+    </div>
   </section>
 </main>
 
+<!-- HỘP CHI TIẾT BÀI -->
 <dialog id="dlg">
-  <form method="dialog" class="dlg-body">
+  <div class="dlg-body">
     <div class="dlg-head">
-      <input id="d-ten" class="dlg-title">
-      <select id="d-tt"></select>
+      <span id="d-id" class="id-pill"></span>
+      <input id="d-ten" data-f="ten" class="dlg-title" aria-label="Tên bài">
+      <button type="button" class="x" id="d-dong" aria-label="Đóng">✕</button>
     </div>
-    <div class="dlg-grid">
-      <label>Lời bài hát <textarea id="d-loi" rows="16"></textarea></label>
-      <div>
-        <label>Style cho Suno <textarea id="d-style" rows="3"></textarea></label>
-        <label>Tiêu đề YouTube <input id="d-tieude"></label>
-        <label>Mô tả YouTube <textarea id="d-mota" rows="4"></textarea></label>
-        <label>Đoạn cho Shorts <textarea id="d-shorts" rows="4"></textarea></label>
-        <label>Hashtag <input id="d-tag"></label>
-        <label>Link YouTube (sau khi đăng) <input id="d-link" placeholder="https://youtu.be/…"></label>
+    <nav class="dtabs">
+      <button data-d="tt" class="on">Trạng thái</button>
+      <button data-d="loi">Lời <span id="d-dem-loi" class="pill sm"></span></button>
+      <button data-d="nhac">Nhạc &amp; điểm <span id="d-dem-nhac" class="pill sm"></span></button>
+      <button data-d="yt">YouTube</button>
+      <button data-d="ls">Lịch sử</button>
+    </nav>
+
+    <section class="dpanel on" data-d="tt">
+      <div id="d-steps" class="steps"></div>
+      <div class="row3">
+        <label>Series <select data-f="series" id="d-series"></select></label>
+        <label>Tuần <select data-f="tuan" id="d-tuan"></select></label>
+        <label>Loại <select data-f="loai"><option value="bai">Bài đơn</option><option value="playlist">Playlist</option></select></label>
       </div>
-    </div>
+      <div class="card inset">
+        <div class="row-chuyen">
+          <label>Chuyển sang <select id="d-tt-moi"></select></label>
+          <label class="grow">Ghi chú <input id="d-tt-ghichu" placeholder="Lý do / nhận xét (không bắt buộc)"></label>
+          <button type="button" id="d-chuyen" class="primary">Chuyển trạng thái</button>
+        </div>
+        <div id="d-canh-bao"></div>
+      </div>
+      <label>Ghi chú của bài <textarea data-f="ghiChu" rows="3"></textarea></label>
+      <p class="hint" id="d-ngay"></p>
+    </section>
+
+    <section class="dpanel" data-d="loi">
+      <div class="grid-loi">
+        <div>
+          <div class="sub-h">Các phiên bản lời</div>
+          <div id="d-ds-loi" class="vlist"></div>
+          <div class="sub-h">So sánh hai phiên bản</div>
+          <div class="row2"><select id="d-ss-a"></select><select id="d-ss-b"></select></div>
+          <button type="button" id="d-so-sanh">So sánh</button>
+        </div>
+        <div>
+          <div class="sub-h" id="d-loi-nhan">Lời</div>
+          <textarea id="d-loi" rows="18" spellcheck="false"></textarea>
+          <div class="btns">
+            <input id="d-loi-ghichu" placeholder="Ghi chú phiên bản (VD: sửa điệp khúc)">
+            <button type="button" id="d-luu-loi" class="primary">Lưu thành phiên bản mới</button>
+          </div>
+          <p class="hint">Sửa lời không ghi đè bản cũ: mỗi lần lưu tạo một phiên bản mới.</p>
+        </div>
+      </div>
+      <div id="d-diff"></div>
+    </section>
+
+    <section class="dpanel" data-d="nhac">
+      <label>Prompt Suno (style) <textarea data-f="promptSuno" rows="2"></textarea></label>
+      <div class="sub-h">Phiên bản nhạc Suno <small>(chọn ● cho bản phát hành)</small></div>
+      <div id="d-ds-nhac" class="vlist"></div>
+      <div class="row-them">
+        <input id="d-nhac-link" placeholder="Link Suno (https://suno.com/song/…)">
+        <input id="d-nhac-ghichu" placeholder="Ghi chú: giọng, nhịp, cảm nhận…">
+        <button type="button" id="d-them-nhac">Thêm phiên bản</button>
+      </div>
+      <div class="sub-h">Đánh giá chất lượng <small>(chấm sau khi nghe bản Suno, 1–5 mỗi tiêu chí)</small></div>
+      <div id="d-diem" class="score"></div>
+    </section>
+
+    <section class="dpanel" data-d="yt">
+      <div class="row2">
+        <label>Tiêu đề YouTube <span id="d-dem-td" class="cnt"></span><input data-f="tieude" id="d-tieude" maxlength="100"></label>
+        <label>Link ảnh minh họa / thumbnail <input data-f="thumbnail" id="d-thumb" placeholder="https://…"></label>
+      </div>
+      <img id="d-thumb-img" alt="" hidden>
+      <label>Mô tả YouTube <textarea data-f="mota" rows="5"></textarea></label>
+      <div class="row2">
+        <label>Đoạn cho Shorts <textarea data-f="shorts" rows="4"></textarea></label>
+        <div>
+          <label>Hashtag <input data-f="tag"></label>
+          <label>Link YouTube <input data-f="linkYoutube" placeholder="https://youtu.be/…"></label>
+          <label>Ngày phát hành <input data-f="ngayPhatHanh" type="date"></label>
+        </div>
+      </div>
+    </section>
+
+    <section class="dpanel" data-d="ls">
+      <div id="d-lich-su"></div>
+    </section>
+
     <div class="btns end">
-      <button value="xoa" id="d-xoa" class="danger" type="button">Xóa bài</button>
+      <button type="button" id="d-xoa" class="danger">Xóa bài</button>
       <span class="grow"></span>
-      <button value="huy">Đóng</button>
-      <button value="luu" class="primary" id="d-luu" type="button">Lưu</button>
+      <span id="d-dirty" class="hint"></span>
+      <button type="button" id="d-luu" class="primary">Lưu thay đổi</button>
     </div>
-  </form>
+  </div>
 </dialog>
 
 <div id="toast" role="status"></div>
+<script src="assets/data.js"></script>
 <script src="assets/app.js"></script>
 </body>
 </html>
