@@ -569,7 +569,6 @@ ${DINH_DANG(s.id, w.so, 'playlist')}`;
       const remote = await load('data/kho-bai.json');
       const kq = N.dongBoTuGitHub(k, remote);
       if (kq.them) {
-        snap('Trước khi tự đồng bộ GitHub');
         store.set(KEY_KHO, k);
         setTimeout(() => toast('Đã tự đồng bộ ' + kq.them + ' bài mới từ GitHub'), 450);
       }
