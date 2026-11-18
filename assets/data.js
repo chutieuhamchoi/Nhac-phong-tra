@@ -281,7 +281,7 @@
   function dongBoTuGitHub(kho, raw) {
     if (!raw || typeof raw !== 'object' || !Array.isArray(raw.bai)) throw new Error('File kho trên GitHub không hợp lệ (thiếu danh sách "bai").');
     if (raw.schema !== SCHEMA) throw new Error(`File kho trên GitHub có schema ${raw.schema}, trang cần schema ${SCHEMA}.`);
-    const kq = { tong: raw.bai.length, them: 0, trung: 0, capNhat: 0, doiMa: 0, boQua: [], xungDot: [], doi: false };
+    const kq = { tong: raw.bai.length, them: 0, trung: 0, capNhat: 0, doiMa: 0, boQua: [], trungMa: [], xungDot: [], doi: false };
     const daGap = new Set();
     for (const r0 of raw.bai) {
       if (!r0 || typeof r0 !== 'object' || !isNptId(r0.id)) { kq.boQua.push(`Mục không có mã NPT hợp lệ (${str(r0?.id) || 'trống'})`); continue; }
@@ -296,7 +296,7 @@
         if (kho.bai.some(x => x.id === r.id)) {
           const cu = kho.bai.find(x => x.id === r.id);
           r.id = capId(kho); kq.doiMa++;
-          kq.xungDot.push(`Mã ${r.remoteId} trên GitHub ("${r.ten}") trùng với bài "${cu.ten}" trong trình duyệt. Đã giữ cả hai: bài GitHub mang mã ${r.id}.`);
+          kq.trungMa.push(`Mã ${r.remoteId} trên GitHub ("${r.ten}") trùng với bài "${cu.ten}" trong trình duyệt. Đã giữ cả hai: bài GitHub mang mã ${r.id}.`);
         }
         kho.bai.push(r); kq.them++; kq.doi = true; continue;
       }

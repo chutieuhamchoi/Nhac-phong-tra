@@ -138,6 +138,7 @@ test('tự đồng bộ GitHub giữ bài cục bộ khi trùng ID khác tên', 
   const r = N.dongBoTuGitHub(local, remote);
   assert.equal(r.them, 1);
   assert.equal(r.doiMa, 1);
+  assert.equal(r.trungMa.length, 1);
   assert.equal(local.bai.length, 2);
   assert.equal(local.bai[0].ten, 'Bài trên máy');
   assert.equal(local.bai[1].remoteId, 'NPT-0001');

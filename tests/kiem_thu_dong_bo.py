@@ -119,7 +119,8 @@ async def main():
         k = await lsKho()
         ten = {x['id']: x['ten'] for x in k['bai']}
         check(ten.get('NPT-0001') == 'Bài riêng trên máy' and ten.get('NPT-0002') == 'Có Những Ngày Chỉ Muốn Về Nhà', 'giữ cả hai: bài GitHub mang mã NPT-0002')
-        check('trùng với bài' in await pg.inner_text('#db-trang-thai'), 'cảnh báo trùng mã rõ ràng')
+        t = await pg.inner_text('#db-trang-thai')
+        check('Trùng mã bài' in t and 'trùng với bài' in t and 'Lịch sử' not in t, 'cảnh báo trùng mã rõ ràng, không bảo chọn bản')
         await mo()
         check(len((await lsKho())['bai']) == 2, 'tải lại vẫn 2 bài')
 

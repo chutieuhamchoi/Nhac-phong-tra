@@ -595,7 +595,7 @@ ${DINH_DANG(s.id, w.so, 'playlist')}`;
     if (!dbTT) return;
     if (!dbTT.ok) { toast('Không đồng bộ được với GitHub. Đang dùng kho trong trình duyệt.'); return; }
     const { them, capNhat, xungDot } = dbTT.kq;
-    if (xungDot.length) toast(`Đồng bộ GitHub: ${xungDot.length} xung đột, xem tab Kho bài`);
+    if (xungDot.length || dbTT.kq.trungMa.length) toast(`Đồng bộ GitHub: có ${xungDot.length + dbTT.kq.trungMa.length} cảnh báo, xem tab Kho bài`);
     else if (them || capNhat) toast(`Đã đồng bộ GitHub: ${them} bài mới, ${capNhat} bài cập nhật`);
     else toast('Đã đồng bộ GitHub: kho đã khớp, không có gì mới');
   }
@@ -611,6 +611,7 @@ ${DINH_DANG(s.id, w.so, 'playlist')}`;
     }
     const k = dbTT.kq;
     box.innerHTML = `<div class="sync ok-line">Đã đồng bộ GitHub lúc ${gio} · GitHub có ${k.tong} bài${k.them || k.capNhat ? ` · vừa nhận <b>${k.them} bài mới</b>, <b>${k.capNhat} bài cập nhật</b>` : ' · không có gì mới'}. ${nut}</div>` +
+      (k.trungMa.length ? `<div class="alert warn"><b>Trùng mã bài (đã giữ cả hai bài):</b><ul>${k.trungMa.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>` : '') +
       (k.xungDot.length ? `<div class="alert warn"><b>Xung đột dữ liệu (đã giữ cả hai bản):</b><ul>${k.xungDot.map(x => `<li>${esc(x)}</li>`).join('')}</ul>Mở bài, mục <b>Lịch sử</b> để chọn bản muốn dùng.</div>` : '') +
       (k.boQua.length ? `<div class="alert warn">Bỏ qua trong file GitHub: ${k.boQua.map(esc).join('; ')}</div>` : '');
   }
@@ -622,7 +623,7 @@ ${DINH_DANG(s.id, w.so, 'playlist')}`;
     $('#dem-kho').textContent = kho.bai.length;
     renderDongBo(); renderKho(); renderTienDo(); renderLich(); renderVietLai();
     if (bai && dlg.open) { bai = kho.bai.find(b => b.id === bai.id) || bai; if (!dirty) renderBai(); }
-    if (!imLang || (dbTT.ok && (dbTT.kq.them || dbTT.kq.capNhat || dbTT.kq.xungDot.length)) || !dbTT.ok) thongBaoDongBo();
+    if (!imLang || !dbTT.ok || dbTT.kq.them || dbTT.kq.capNhat || dbTT.kq.xungDot.length || dbTT.kq.trungMa.length) thongBaoDongBo();
   }
   document.addEventListener('click', e => { if (e.target.id === 'btn-dong-bo') dongBoLai(); });
   // Quay lại tab trình duyệt sau một lúc: tự kiểm tra bài mới (không làm khi đang sửa dở trong hộp bài).
