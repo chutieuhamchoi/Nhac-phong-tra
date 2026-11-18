@@ -1,6 +1,60 @@
 {
   "schema": 2,
-  "capNhat": "2026-11-18T00:00:00.000Z",
-  "nextId": 1,
-  "bai": []
+  "capNhat": "2026-11-18T15:06:07.306Z",
+  "nextId": 2,
+  "bai": [
+    {
+      "id": "NPT-0001",
+      "loai": "bai",
+      "ten": "Có Những Ngày Chỉ Muốn Về Nhà",
+      "series": "tuoi-tho",
+      "tuan": 1,
+      "ngayTao": "2026-11-18T15:06:07.306Z",
+      "ngayCapNhat": "2026-11-18T15:06:07.306Z",
+      "trangThai": 2,
+      "lichSu": [
+        {
+          "tu": null,
+          "den": 1,
+          "luc": "2026-11-18T15:06:07.306Z",
+          "ghiChu": "Tạo bài từ ChatGPT"
+        },
+        {
+          "tu": 1,
+          "den": 2,
+          "luc": "2026-11-18T15:06:07.306Z",
+          "ghiChu": "Ông chủ duyệt lời V1"
+        }
+      ],
+      "loiVersions": [
+        {
+          "v": 1,
+          "loi": "[Verse 1]\nCó những ngày chẳng muốn nói với ai\nChỉ lặng im giữa dòng người qua lại\nCười với đời, bảo rằng mình vẫn ổn\nMà trong lòng... mệt mỏi chẳng thành tên.\n\nCó những chiều tan sở muộn hơn xưa\nĐường vẫn đông, trời bất chợt đổ mưa\nTa đứng nép dưới hiên nhà xa lạ\nBỗng nhớ nhà... đến nghẹn cả trong tim.\n\n[Pre-Chorus]\nĐã bao lâu chưa gọi về cho mẹ?\nChưa hỏi cha hôm nay có khỏe không?\nMải miết đi tìm một điều gì đó\nĐể quên rằng... nhà vẫn đợi ta mong.\n\n[Chorus]\nChỉ muốn về nhà... ăn một bữa cơm thôi\nNghe mẹ hỏi: \"Hôm nay con có mệt?\"\nNghe tiếng cha ho khẽ ngoài hiên vắng\nMà thấy lòng... bình yên đến lạ thường.\n\nChỉ muốn về nhà... chẳng cần phải mạnh mẽ\nĐược làm đứa con bé nhỏ ngày xưa\nDẫu ngoài kia bao nhiêu điều giông bão\nVề đến nhà... là hết những ngày mưa.\n\n[Verse 2]\nCó những lần nhìn điện thoại rất lâu\nThấy tên mẹ mà chẳng dám gọi đâu\nSợ mẹ hỏi: \"Dạo này con thế nào?\"\nRồi nước mắt... lại chẳng thể giấu đi.\n\nCó những đêm thành phố ngủ yên rồi\nTa vẫn thức nghe lòng mình chênh vênh\nBao ước mơ từng nghĩ là tất cả\nGiờ chỉ mong... một bữa tối sum vầy.\n\n[Bridge]\nNếu một ngày... cha không còn ngồi đó\nNếu một ngày... mẹ chẳng đợi bên hiên\nThì những điều ta mải mê theo đuổi\nCó đổi được... một lần gọi \"mẹ ơi\"?\n\n[Final Chorus]\nCon muốn về nhà... ngay lúc này mẹ ơi\nMuốn ôm mẹ như ngày còn thơ bé\nMuốn nghe cha nói đôi lời trách nhẹ\n\"Đi đâu mà... lâu quá chẳng về thăm?\"\n\nCon muốn về nhà... khi vẫn còn có thể\nKhi mái đầu cha chưa bạc thêm nhiều\nKhi bàn tay mẹ vẫn còn hơi ấm\nĐể nói rằng... con thương mẹ biết bao.\n\n[Outro]\nGiữa cuộc đời rộng lớn đến bao nhiêu\nCó một nơi... chẳng cần ta thành đạt\nChỉ cần về... và gọi một tiếng \"Mẹ\"\nLà đủ rồi... cho một kiếp người đi.",
+          "nguon": "chatgpt",
+          "luc": "2026-11-18T15:06:07.306Z",
+          "ghiChu": "Bản V1 đã duyệt"
+        }
+      ],
+      "loiChon": 1,
+      "promptSuno": "Vietnamese acoustic ballad, 72 BPM, warm male baritone, fingerstyle guitar, soft piano and cello, intimate storytelling, expressive chorus, emotional bridge, powerful final chorus.",
+      "nhacVersions": [],
+      "nhacChon": null,
+      "diem": {
+        "loi": null,
+        "giaiDieu": null,
+        "caoTrao": null,
+        "camXuc": null,
+        "thuHut": null
+      },
+      "thumbnail": "",
+      "tieude": "Có Những Ngày Chỉ Muốn Về Nhà | Acoustic Ballad Phòng Trà",
+      "mota": "Một ca khúc tự sự về những ngày mệt mỏi giữa cuộc sống và mong ước giản dị được trở về bên cha mẹ. Nhạc Phòng Trà – Cà Phê Chill.",
+      "shorts": "Chỉ muốn về nhà... ăn một bữa cơm thôi\nNghe mẹ hỏi: \"Hôm nay con có mệt?\"\nNghe tiếng cha ho khẽ ngoài hiên vắng\nMà thấy lòng... bình yên đến lạ thường.",
+      "tag": "#nhacphongtra #acousticballad #nhacviet #giadinh #venha",
+      "linkYoutube": "",
+      "ngayPhatHanh": "",
+      "ghiChu": "Bài thử nghiệm đồng bộ GitHub; lời V1 đã duyệt, chưa tạo Suno.",
+      "promptChatGPT": ""
+    }
+  ]
 }
