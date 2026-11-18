@@ -201,6 +201,34 @@
     return kq;
   }
 
+  /* ---------- tự đồng bộ bài mới từ GitHub (không ghi đè dữ liệu cục bộ) ---------- */
+  function dongBoTuGitHub(kho, raw) {
+    if (!raw || raw.schema !== SCHEMA || !Array.isArray(raw.bai)) throw new Error('Kho GitHub không hợp lệ.');
+    const kq = { them: 0, trung: 0, doiMa: 0 };
+    for (const remote of raw.bai) {
+      if (!remote || typeof remote !== 'object' || !isNptId(remote.id)) continue;
+      const idNguon = remote.id;
+      // Đã nhập bài này: giữ nguyên mọi chỉnh sửa, trạng thái và phiên bản tại máy.
+      if (kho.bai.some(b => b.remoteId === idNguon || (b.id === idNguon && b.ten === remote.ten))) {
+        kq.trung++; continue;
+      }
+      const b = clone(remote);
+      if (kho.bai.some(x => x.id === idNguon)) {
+        // Bài khác trùng mã do tạo độc lập ở trình duyệt: giữ cả hai.
+        b.id = capId(kho);
+        b.remoteId = idNguon;
+        kq.doiMa++;
+      } else {
+        b.remoteId = idNguon;
+      }
+      kho.bai.push(b);
+      kq.them++;
+    }
+    kho.nextId = Math.max(kho.nextId || 1, raw.nextId || 1,
+      kho.bai.reduce((m, b) => Math.max(m, idNum(b.id)), 0) + 1);
+    return kq;
+  }
+
   /* ---------- nhập kết quả ChatGPT ---------- */
   const TRUONG_NHAP = {
     loai: 'Loại', ten: 'Tên bài', series: 'Series', tuan: 'Tuần', loi: 'Lời bài hát', style: 'Prompt Suno',
@@ -325,7 +353,7 @@
   root.NPT = {
     SCHEMA, TRANG_THAI, TT, SERIES, TIEU_CHI, DIEM_TOI_THIEU, SO_TUAN, TRUONG_NHAP,
     khoRong, taoBai, themLoi, loiHienTai, chonLoi, themNhac, chonNhac, doiTrangThai, canhBaoChuyen,
-    datDiem, tongDiem, chuanHoaKho, gopKho, tachJson, kiemTraNhap, phanTichNhap, timBaiTrung, apNhap, xungDot,
+    datDiem, tongDiem, chuanHoaKho, gopKho, dongBoTuGitHub, tachJson, kiemTraNhap, phanTichNhap, timBaiTrung, apNhap, xungDot,
     soSanh, goiSaoLuu, docSaoLuu, xuatKho, boDau, fmtId
   };
 })(typeof window !== 'undefined' ? window : globalThis);
