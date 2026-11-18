@@ -41,6 +41,9 @@ async def main():
     async with async_playwright() as p:
         br = await p.chromium.launch()
         ctx = await br.new_context(viewport={'width': 1280, 'height': 900}, accept_downloads=True)
+        # Giả lập kho GitHub rỗng để kết quả không phụ thuộc bài thật trong repo
+        await ctx.route('**/data/kho-bai.json*', lambda r: r.fulfill(status=200, content_type='application/json',
+                        body='{"schema":2,"nextId":1,"bai":[]}'))
         pg = await ctx.new_page()
         errs = []
         pg.on('pageerror', lambda e: errs.append(str(e)))

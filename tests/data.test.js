@@ -144,3 +144,85 @@ test('tự đồng bộ GitHub giữ bài cục bộ khi trùng ID khác tên', 
   assert.notEqual(local.bai[0].id, local.bai[1].id);
   assert.equal(N.dongBoTuGitHub(local, remote).them, 0);
 });
+
+/* ---- đồng bộ GitHub: các lỗi phát hiện ngày 18/11/2026 ---- */
+const khoGitHub = (...bai) => ({ schema: 2, nextId: bai.length + 1, bai });
+const baiGitHub = (o = {}) => Object.assign({
+  id: 'NPT-0001', loai: 'bai', ten: 'Có Những Ngày Chỉ Muốn Về Nhà', series: 'tuoi-tho', tuan: 1,
+  ngayTao: '2026-11-18T15:06:07.306Z', ngayCapNhat: '2026-11-18T15:06:07.306Z', trangThai: 2,
+  lichSu: [{ tu: null, den: 1, luc: '2026-11-18T15:00:00.000Z', ghiChu: 'Tạo bài' }, { tu: 1, den: 2, luc: '2026-11-18T15:06:07.306Z', ghiChu: 'Duyệt' }],
+  loiVersions: [{ v: 1, loi: '[Verse 1]\nV1', nguon: 'chatgpt', luc: '2026-11-18T15:06:07.306Z', ghiChu: '' }], loiChon: 1,
+  promptSuno: 'ballad', nhacVersions: [], nhacChon: null, diem: {}, tieude: 'Tiêu đề', mota: 'Mô tả', tag: '#a'
+}, o);
+const json = o => JSON.parse(JSON.stringify(o));
+
+test('đồng bộ: trình duyệt mới nạp từ repo rồi đổi tên bài, tải lại không nhân đôi', () => {
+  const remote = khoGitHub(baiGitHub());
+  const k = N.chuanHoaKho(json(remote)).kho;     // đường nạp ban đầu cũ: không có remoteId
+  N.dongBoTuGitHub(k, json(remote));
+  k.bai[0].ten = 'Tên mới đặt trong trình duyệt';
+  const r = N.dongBoTuGitHub(k, json(remote));
+  assert.equal(r.them, 0); assert.equal(k.bai.length, 1);
+  assert.equal(k.bai[0].ten, 'Tên mới đặt trong trình duyệt');
+});
+
+test('đồng bộ: bài GitHub thiếu trường hoặc ghi lời dạng phẳng vẫn dùng được', () => {
+  const k = N.khoRong();
+  N.dongBoTuGitHub(k, khoGitHub({ id: 'NPT-0001', ten: 'Bài thiếu', loi: '[Verse] x', style: 'bolero' }));
+  const b = k.bai[0];
+  assert.equal(N.loiHienTai(b), '[Verse] x'); assert.equal(b.promptSuno, 'bolero');
+  assert.equal(N.tongDiem(b), null); assert.ok(Array.isArray(b.lichSu) && Array.isArray(b.nhacVersions));
+});
+
+test('đồng bộ: tải lại nhiều lần không thay đổi gì', () => {
+  const k = N.khoRong(); const remote = khoGitHub(baiGitHub());
+  assert.equal(N.dongBoTuGitHub(k, json(remote)).them, 1);
+  const r2 = N.dongBoTuGitHub(k, json(remote));
+  assert.equal(r2.them + r2.capNhat, 0); assert.equal(r2.doi, false); assert.equal(k.bai.length, 1);
+});
+
+test('đồng bộ: ChatGPT cập nhật bài (lời V2, trạng thái) được nhận, phiên bản cũ còn nguyên', () => {
+  const k = N.khoRong();
+  N.dongBoTuGitHub(k, khoGitHub(baiGitHub()));
+  const moi = baiGitHub({
+    ngayCapNhat: '2026-11-19T10:00:00.000Z', trangThai: 3, loiChon: 2, tieude: 'Tiêu đề mới',
+    loiVersions: [...baiGitHub().loiVersions, { v: 2, loi: '[Verse 1]\nV2', nguon: 'chatgpt', luc: '2026-11-19T09:00:00.000Z', ghiChu: 'sửa' }],
+    lichSu: [...baiGitHub().lichSu, { tu: 2, den: 3, luc: '2026-11-19T10:00:00.000Z', ghiChu: 'Tạo nhạc' }]
+  });
+  const r = N.dongBoTuGitHub(k, khoGitHub(moi));
+  const b = k.bai[0];
+  assert.equal(r.capNhat, 1); assert.equal(r.xungDot.length, 0);
+  assert.equal(b.loiVersions.length, 2); assert.equal(b.loiVersions[0].loi, '[Verse 1]\nV1');
+  assert.equal(N.loiHienTai(b), '[Verse 1]\nV2'); assert.equal(b.trangThai, 3); assert.equal(b.tieude, 'Tiêu đề mới');
+  assert.equal(b.lichSu.filter(h => h.den === 3).length, 1);
+});
+
+test('đồng bộ: cả hai cùng sửa một trường thì giữ bản trình duyệt, lưu bản GitHub và cảnh báo', () => {
+  const k = N.khoRong();
+  N.dongBoTuGitHub(k, khoGitHub(baiGitHub()));
+  const b = k.bai[0];
+  b.tieude = 'Tiêu đề sửa trong trình duyệt'; b.mota = 'Mô tả sửa trong trình duyệt';
+  N.themLoi(b, '[Verse 1]\nSửa tay', 'tay');
+  const r = N.dongBoTuGitHub(k, khoGitHub(baiGitHub({ ngayCapNhat: '2026-11-19T10:00:00.000Z', tieude: 'Tiêu đề GitHub', mota: 'Mô tả' })));
+  assert.equal(b.tieude, 'Tiêu đề sửa trong trình duyệt');
+  assert.equal(b.mota, 'Mô tả sửa trong trình duyệt');      // GitHub không đổi mô tả → giữ bản trình duyệt, không cảnh báo
+  assert.equal(b.xungDotGitHub.tieude.github, 'Tiêu đề GitHub');
+  assert.equal(r.xungDot.length, 1); assert.match(r.xungDot[0], /tiêu đề/);
+  assert.equal(N.loiHienTai(b), '[Verse 1]\nSửa tay');
+  assert.equal(N.dongBoTuGitHub(k, khoGitHub(baiGitHub({ ngayCapNhat: '2026-11-19T10:00:00.000Z', tieude: 'Tiêu đề GitHub', mota: 'Mô tả' }))).xungDot.length, 0);
+});
+
+test('đồng bộ: GitHub để trống một trường không xóa dữ liệu trình duyệt', () => {
+  const k = N.khoRong();
+  N.dongBoTuGitHub(k, khoGitHub(baiGitHub()));
+  N.dongBoTuGitHub(k, khoGitHub(baiGitHub({ ngayCapNhat: '2026-11-19T10:00:00.000Z', tieude: '', mota: '' })));
+  assert.equal(k.bai[0].tieude, 'Tiêu đề'); assert.equal(k.bai[0].mota, 'Mô tả');
+});
+
+test('đồng bộ: file GitHub hỏng hoặc sai schema báo lỗi rõ, trùng mã trong file thì bỏ qua', () => {
+  assert.throws(() => N.dongBoTuGitHub(N.khoRong(), { schema: 1, bai: [] }), /schema 1/);
+  assert.throws(() => N.dongBoTuGitHub(N.khoRong(), null), /không hợp lệ/);
+  const k = N.khoRong();
+  const r = N.dongBoTuGitHub(k, khoGitHub(baiGitHub(), baiGitHub({ ten: 'Trùng' }), { ten: 'không mã' }));
+  assert.equal(r.them, 1); assert.equal(r.boQua.length, 2);
+});

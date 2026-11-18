@@ -158,6 +158,9 @@
     b.lichSu = Array.isArray(b.lichSu) ? b.lichSu : [];
     b.loiVersions = Array.isArray(b.loiVersions) ? b.loiVersions : [];
     b.nhacVersions = Array.isArray(b.nhacVersions) ? b.nhacVersions : [];
+    if (!b.loiVersions.length && typeof o.loi === 'string' && o.loi.trim())   // dạng phẳng {"loi": "..."}
+      b.loiVersions = [{ v: 1, loi: o.loi.replace(/\r/g, ''), nguon: 'github', luc: b.ngayTao || now(), ghiChu: '' }];
+    if (!b.promptSuno && typeof o.style === 'string') b.promptSuno = o.style;
     if (b.loiChon == null && b.loiVersions.length) b.loiChon = b.loiVersions[b.loiVersions.length - 1].v;
     if (b.nhacChon === undefined) b.nhacChon = null;
     b.diem = Object.assign(diemRong(), b.diem || {});
@@ -201,31 +204,125 @@
     return kq;
   }
 
-  /* ---------- tự đồng bộ bài mới từ GitHub (không ghi đè dữ liệu cục bộ) ---------- */
-  function dongBoTuGitHub(kho, raw) {
-    if (!raw || raw.schema !== SCHEMA || !Array.isArray(raw.bai)) throw new Error('Kho GitHub không hợp lệ.');
-    const kq = { them: 0, trung: 0, doiMa: 0 };
-    for (const remote of raw.bai) {
-      if (!remote || typeof remote !== 'object' || !isNptId(remote.id)) continue;
-      const idNguon = remote.id;
-      // Đã nhập bài này: giữ nguyên mọi chỉnh sửa, trạng thái và phiên bản tại máy.
-      if (kho.bai.some(b => b.remoteId === idNguon || (b.id === idNguon && b.ten === remote.ten))) {
-        kq.trung++; continue;
+  /* ---------- tự đồng bộ GitHub → trình duyệt ----------
+     Mỗi bài từ GitHub được nhận diện qua remoteId (mã trên GitHub).
+     - Bài mới: thêm vào kho (trùng mã với bài khác trong trình duyệt thì cấp mã mới, giữ cả hai).
+     - Bài đã có: gộp kiểu ba chiều theo từng trường, dựa trên bản GitHub lần đồng bộ trước (gocGitHub):
+         GitHub đổi, trình duyệt chưa đổi  → nhận bản GitHub
+         trình duyệt đổi, GitHub chưa đổi  → giữ bản trình duyệt
+         cả hai đổi khác nhau              → giữ bản trình duyệt, lưu bản GitHub vào xungDotGitHub và cảnh báo
+       Phiên bản lời, phiên bản nhạc, lịch sử chỉ được THÊM, không bao giờ xóa hay sửa. */
+  const TRUONG_DB = ['ten', 'loai', 'series', 'tuan', 'trangThai', 'promptSuno', 'thumbnail', 'tieude', 'mota', 'shorts',
+    'tag', 'linkYoutube', 'ngayPhatHanh', 'ghiChu', 'diem', 'loiChonText', 'nhacChonLink'];
+  const NHAN_DB = { ten: 'tên bài', loai: 'loại', series: 'series', tuan: 'tuần', trangThai: 'trạng thái', promptSuno: 'prompt Suno',
+    thumbnail: 'thumbnail', tieude: 'tiêu đề', mota: 'mô tả', shorts: 'Shorts', tag: 'hashtag', linkYoutube: 'link YouTube',
+    ngayPhatHanh: 'ngày phát hành', ghiChu: 'ghi chú', diem: 'điểm', loiChonText: 'lời đang dùng', nhacChonLink: 'bản nhạc phát hành' };
+  function giaTriDB(b, f) {
+    if (f === 'loiChonText') return loiHienTai(b) ?? '';
+    if (f === 'nhacChonLink') return b.nhacVersions.find(x => x.v === b.nhacChon)?.link ?? '';
+    if (f === 'diem') return JSON.stringify(b.diem);
+    return b[f] ?? '';
+  }
+  function ganDB(l, f, v) {
+    if (f === 'loiChonText') { const x = l.loiVersions.find(x => x.loi === v); if (x) l.loiChon = x.v; return; }
+    if (f === 'nhacChonLink') { const x = l.nhacVersions.find(x => x.link === v); l.nhacChon = x ? x.v : null; return; }
+    if (f === 'diem') { l.diem = Object.assign(diemRong(), JSON.parse(v)); return; }
+    if (f === 'trangThai') {
+      if (l.trangThai !== v) {
+        const daCo = l.lichSu.some(h => h.den === v && h.nguon === 'github');
+        if (!daCo) l.lichSu.push({ tu: l.trangThai, den: v, luc: now(), ghiChu: 'Cập nhật từ GitHub', nguon: 'github' });
+        l.trangThai = v;
       }
-      const b = clone(remote);
-      if (kho.bai.some(x => x.id === idNguon)) {
-        // Bài khác trùng mã do tạo độc lập ở trình duyệt: giữ cả hai.
-        b.id = capId(kho);
-        b.remoteId = idNguon;
-        kq.doiMa++;
-      } else {
-        b.remoteId = idNguon;
-      }
-      kho.bai.push(b);
-      kq.them++;
+      return;
     }
-    kho.nextId = Math.max(kho.nextId || 1, raw.nextId || 1,
-      kho.bai.reduce((m, b) => Math.max(m, idNum(b.id)), 0) + 1);
+    l[f] = v;
+  }
+  const thoiGian = s => { const t = Date.parse(s); return isNaN(t) ? 0 : t; };
+  function themPhanBoSung(l, r) {        // chỉ thêm, không xóa
+    let them = 0;
+    const coLoi = new Set(l.loiVersions.map(x => x.loi));
+    for (const x of r.loiVersions) {
+      if (!str(x.loi).trim() || coLoi.has(x.loi)) continue;
+      const v = l.loiVersions.reduce((m, y) => Math.max(m, y.v), 0) + 1;
+      l.loiVersions.push({ v, loi: x.loi, nguon: 'github', luc: x.luc || now(), ghiChu: `Từ GitHub (bản v${x.v} của ${r.id})${x.ghiChu ? ': ' + x.ghiChu : ''}` });
+      coLoi.add(x.loi); them++;
+    }
+    if (l.loiChon == null && l.loiVersions.length) l.loiChon = l.loiVersions[l.loiVersions.length - 1].v;
+    const coNhac = new Set(l.nhacVersions.map(x => x.link + '|' + x.ghiChu));
+    for (const x of r.nhacVersions) {
+      if (coNhac.has(x.link + '|' + x.ghiChu)) continue;
+      const v = l.nhacVersions.reduce((m, y) => Math.max(m, y.v), 0) + 1;
+      l.nhacVersions.push({ v, link: str(x.link), ghiChu: str(x.ghiChu), luc: x.luc || now(), loiV: null, nguon: 'github' });
+      coNhac.add(x.link + '|' + x.ghiChu); them++;
+    }
+    const coLs = new Set(l.lichSu.map(h => h.luc + '|' + h.den));
+    for (const h of r.lichSu) {
+      if (!h || coLs.has(h.luc + '|' + h.den)) continue;
+      l.lichSu.push(Object.assign({}, h, { nguon: 'github' })); coLs.add(h.luc + '|' + h.den); them++;
+    }
+    l.lichSu.sort((a, b) => thoiGian(a.luc) - thoiGian(b.luc));
+    return them;
+  }
+  function chupGoc(r) { const g = {}; TRUONG_DB.forEach(f => g[f] = giaTriDB(r, f)); return g; }
+
+  /** Chọn bản cho một trường đang xung đột: dungGitHub=true lấy bản GitHub, false giữ bản trình duyệt. */
+  function giaiXungDot(b, f, dungGitHub) {
+    const x = b.xungDotGitHub?.[f]; if (!x) return;
+    if (dungGitHub) { ganDB(b, f, x.github); cham(b); }
+    b.lichSu.push({ tu: b.trangThai, den: b.trangThai, luc: now(), ghiChu: `Xung đột "${NHAN_DB[f] || f}": ${dungGitHub ? 'dùng bản GitHub' : 'giữ bản trình duyệt'}` });
+    delete b.xungDotGitHub[f];
+    if (!Object.keys(b.xungDotGitHub).length) delete b.xungDotGitHub;
+  }
+  function hienGiaTriDB(f, v) {
+    if (f === 'trangThai') return TRANG_THAI[v] ?? str(v);
+    if (f === 'diem') { try { const d = JSON.parse(v); return TIEU_CHI.map(([k, t]) => `${t}: ${d[k] ?? '—'}`).join(', '); } catch { return str(v); } }
+    return str(v) || '(trống)';
+  }
+  function dongBoTuGitHub(kho, raw) {
+    if (!raw || typeof raw !== 'object' || !Array.isArray(raw.bai)) throw new Error('File kho trên GitHub không hợp lệ (thiếu danh sách "bai").');
+    if (raw.schema !== SCHEMA) throw new Error(`File kho trên GitHub có schema ${raw.schema}, trang cần schema ${SCHEMA}.`);
+    const kq = { tong: raw.bai.length, them: 0, trung: 0, capNhat: 0, doiMa: 0, boQua: [], xungDot: [], doi: false };
+    const daGap = new Set();
+    for (const r0 of raw.bai) {
+      if (!r0 || typeof r0 !== 'object' || !isNptId(r0.id)) { kq.boQua.push(`Mục không có mã NPT hợp lệ (${str(r0?.id) || 'trống'})`); continue; }
+      if (daGap.has(r0.id)) { kq.boQua.push(`${r0.id} xuất hiện hai lần trong file GitHub, chỉ lấy lần đầu`); continue; }
+      daGap.add(r0.id);
+      const r = chuanBaiV2(clone(r0), khoRong());            // bổ sung trường thiếu, giữ nguyên mã
+      const l = kho.bai.find(b => b.remoteId === r.id)
+        || kho.bai.find(b => !b.remoteId && b.id === r.id && (boDau(b.ten) === boDau(r.ten)
+          || (b.ngayTao === r.ngayTao && str(b.loiVersions[0]?.loi) === str(r.loiVersions[0]?.loi))));   // đổi tên nhưng cùng bài
+      if (!l) {                                                // bài mới
+        r.remoteId = r.id; r.gocGitHub = chupGoc(r); r.remoteNgayCapNhat = r.ngayCapNhat;
+        if (kho.bai.some(x => x.id === r.id)) {
+          const cu = kho.bai.find(x => x.id === r.id);
+          r.id = capId(kho); kq.doiMa++;
+          kq.xungDot.push(`Mã ${r.remoteId} trên GitHub ("${r.ten}") trùng với bài "${cu.ten}" trong trình duyệt. Đã giữ cả hai: bài GitHub mang mã ${r.id}.`);
+        }
+        kho.bai.push(r); kq.them++; kq.doi = true; continue;
+      }
+      kq.trung++;
+      if (!l.remoteId) { l.remoteId = r.id; kq.doi = true; }
+      if (l.remoteNgayCapNhat === r.ngayCapNhat && l.gocGitHub) continue;   // GitHub chưa đổi gì
+      let doi = themPhanBoSung(l, r) > 0;
+      if (!l.gocGitHub) {
+        // Lần đầu ghép: nếu bản trong trình duyệt mới hơn thì coi bản GitHub làm gốc, không đổi gì thêm.
+        l.gocGitHub = thoiGian(r.ngayCapNhat) > thoiGian(l.ngayCapNhat) ? {} : chupGoc(r);
+      }
+      const goc = l.gocGitHub, xd = [];
+      for (const f of TRUONG_DB) {
+        const vr = giaTriDB(r, f), vl = giaTriDB(l, f), vg = goc[f];
+        if (vr === vl || vr === vg) continue;                  // không có gì mới từ GitHub
+        if (vr === '' || (f === 'diem' && vr === JSON.stringify(diemRong()))) continue;   // GitHub để trống: không xóa dữ liệu trình duyệt
+        if (vl === vg || vl === '' || vl === undefined || (f === 'diem' && vl === JSON.stringify(diemRong()))) { ganDB(l, f, vr); doi = true; continue; }
+        xd.push(f);
+        (l.xungDotGitHub = l.xungDotGitHub || {})[f] = { github: vr, trinhDuyet: vl, luc: now() };
+      }
+      if (xd.length) kq.xungDot.push(`${l.id} "${l.ten}": ${xd.map(f => NHAN_DB[f]).join(', ')} khác nhau giữa GitHub và trình duyệt. Đang giữ bản trong trình duyệt; bản GitHub được lưu kèm trong bài.`);
+      l.gocGitHub = chupGoc(r); l.remoteNgayCapNhat = r.ngayCapNhat;
+      if (doi) { kq.capNhat++; cham(l); }
+      kq.doi = true;
+    }
+    kho.nextId = Math.max(kho.nextId || 1, raw.nextId || 1, kho.bai.reduce((m, b) => Math.max(m, idNum(b.id)), 0) + 1);
     return kq;
   }
 
@@ -353,7 +450,7 @@
   root.NPT = {
     SCHEMA, TRANG_THAI, TT, SERIES, TIEU_CHI, DIEM_TOI_THIEU, SO_TUAN, TRUONG_NHAP,
     khoRong, taoBai, themLoi, loiHienTai, chonLoi, themNhac, chonNhac, doiTrangThai, canhBaoChuyen,
-    datDiem, tongDiem, chuanHoaKho, gopKho, dongBoTuGitHub, tachJson, kiemTraNhap, phanTichNhap, timBaiTrung, apNhap, xungDot,
+    datDiem, tongDiem, chuanHoaKho, gopKho, dongBoTuGitHub, giaiXungDot, hienGiaTriDB, NHAN_DB, tachJson, kiemTraNhap, phanTichNhap, timBaiTrung, apNhap, xungDot,
     soSanh, goiSaoLuu, docSaoLuu, xuatKho, boDau, fmtId
   };
 })(typeof window !== 'undefined' ? window : globalThis);

@@ -186,3 +186,9 @@ ol.ls .m{color:var(--mute);font-size:12px;min-width:130px}
 details summary{cursor:pointer;margin-top:6px}
 button:disabled{opacity:.5;cursor:not-allowed}
 @media(max-width:600px){.top{padding:16px}.logo{display:none}h1{font-size:22px}.sub{display:none}.yt{font-size:12px;padding:5px 10px}}
+.sync{font-size:13px;color:var(--mute);margin:4px 0 8px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.sync.ok-line b{color:var(--ink)}
+.xd{border-top:1px dashed #e8a74a55;padding:8px 0}
+.xd2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:6px 0}
+.xd2 pre{white-space:pre-wrap;font-family:inherit;font-size:12.5px;margin:2px 0 0;max-height:160px;overflow:auto;background:#0003;padding:6px;border-radius:6px}
+@media(max-width:700px){.xd2{grid-template-columns:1fr}}

@@ -393,7 +393,13 @@ ${DINH_DANG(s.id, w.so, 'playlist')}`;
     // youtube
     capNhatTieuDe(); capNhatThumb();
     // lịch sử
-    $('#d-lich-su').innerHTML = `<ol class="ls">${[...b.lichSu].reverse().map(h => `<li><span class="m">${fmtLuc(h.luc)}</span>
+    const xd = Object.entries(b.xungDotGitHub || {});
+    $('#d-lich-su').innerHTML = (xd.length ? `<div class="alert warn"><b>Xung đột với GitHub</b>: cả trình duyệt và GitHub đều sửa các mục dưới đây. Đang dùng bản trình duyệt.
+      ${xd.map(([f, x]) => `<div class="xd"><b>${esc(N.NHAN_DB[f] || f)}</b>
+        <div class="xd2"><div><small>Trình duyệt (đang dùng)</small><pre>${esc(N.hienGiaTriDB(f, x.trinhDuyet))}</pre></div>
+        <div><small>GitHub</small><pre>${esc(N.hienGiaTriDB(f, x.github))}</pre></div></div>
+        <button type="button" class="mini" data-xd-github="${f}">Dùng bản GitHub</button> <button type="button" class="mini" data-xd-giu="${f}">Giữ bản trình duyệt</button></div>`).join('')}</div>` : '') +
+      `<ol class="ls">${[...b.lichSu].reverse().map(h => `<li><span class="m">${fmtLuc(h.luc)}</span>
       ${h.tu === null ? '' : `${ttPill(h.tu)} →`} ${ttPill(h.den)}${h.ghiChu ? ` <span>${esc(h.ghiChu)}</span>` : ''}</li>`).join('')}</ol>`;
   }
   function renderCanhBao() {
@@ -475,6 +481,13 @@ ${DINH_DANG(s.id, w.so, 'playlist')}`;
     const k = e.target.dataset.diem; if (!k) return;
     N.datDiem(bai, k, e.target.value); luuKho(); renderBai();
   });
+  $('#d-lich-su').addEventListener('click', e => {
+    const g = e.target.dataset.xdGithub, k = e.target.dataset.xdGiu;
+    if (!g && !k) return;
+    N.giaiXungDot(bai, g || k, !!g); luuKho(); renderBai();
+    $$('[data-f]', dlg).forEach(el => el.value = bai[el.dataset.f] ?? '');
+    toast(g ? 'Đã dùng bản GitHub' : 'Đã giữ bản trình duyệt');
+  });
   $('#d-xoa').onclick = () => {
     if (!confirm(`Xóa ${bai.id} · "${bai.ten}" khỏi kho?\nTrang sẽ tự lưu một bản trước khi xóa, khôi phục được ở tab Sao lưu.`)) return;
     snap(`Trước khi xóa ${bai.id} · ${bai.ten}`);
@@ -551,10 +564,76 @@ ${DINH_DANG(s.id, w.so, 'playlist')}`;
     const r = await fetch(path, { cache: 'no-cache' }); if (!r.ok) throw new Error(path);
     return asText ? r.text() : r.json();
   }
+  /* ---------- tự đồng bộ GitHub → trình duyệt ---------- */
+  const NGUON_GITHUB = 'data/kho-bai.json';
+  let dbTT = null;                 // {luc, ok, kq?, loi?}
+  let dangDongBo = false;
+  async function taiKhoGitHub() {
+    let r;
+    try { r = await fetch(`${NGUON_GITHUB}?t=${Date.now()}`, { cache: 'no-store' }); }   // tránh cache trình duyệt và CDN
+    catch { throw new Error('Không kết nối được GitHub Pages (mất mạng hoặc bị chặn).'); }
+    if (!r.ok) throw new Error(`GitHub Pages trả lỗi ${r.status} khi tải ${NGUON_GITHUB}.`);
+    const text = await r.text();
+    try { return JSON.parse(text); } catch { throw new Error(`File ${NGUON_GITHUB} trên GitHub không phải JSON hợp lệ.`); }
+  }
+  /** Đồng bộ vào kho k. Không bao giờ ném lỗi: lỗi được ghi vào dbTT để hiển thị. */
+  async function dongBo(k) {
+    const luc = new Date().toISOString();
+    let raw;
+    try { raw = await taiKhoGitHub(); }
+    catch (e) { dbTT = { luc, ok: false, loi: e.message }; return dbTT; }
+    const truoc = N.goiSaoLuu(k, tick);                 // ảnh chụp trước khi đồng bộ
+    let kq;
+    try { kq = N.dongBoTuGitHub(k, raw); }
+    catch (e) { dbTT = { luc, ok: false, loi: e.message }; return dbTT; }
+    if (kq.them || kq.capNhat) snap('Trước khi tự đồng bộ GitHub', truoc);
+    if (kq.doi && !store.set(KEY_KHO, k)) { dbTT = { luc, ok: false, loi: 'Bộ nhớ trình duyệt đầy, không lưu được kết quả đồng bộ.' }; return dbTT; }
+    dbTT = { luc, ok: true, kq };
+    return dbTT;
+  }
+  function thongBaoDongBo() {
+    if (!dbTT) return;
+    if (!dbTT.ok) { toast('Không đồng bộ được với GitHub. Đang dùng kho trong trình duyệt.'); return; }
+    const { them, capNhat, xungDot } = dbTT.kq;
+    if (xungDot.length) toast(`Đồng bộ GitHub: ${xungDot.length} xung đột, xem tab Kho bài`);
+    else if (them || capNhat) toast(`Đã đồng bộ GitHub: ${them} bài mới, ${capNhat} bài cập nhật`);
+    else toast('Đã đồng bộ GitHub: kho đã khớp, không có gì mới');
+  }
+  function renderDongBo() {
+    const box = $('#db-trang-thai'); if (!box) return;
+    const nut = '<button type="button" class="mini" id="btn-dong-bo">Đồng bộ lại</button>';
+    if (dangDongBo) { box.innerHTML = '<div class="sync">Đang đồng bộ với GitHub…</div>'; return; }
+    if (!dbTT) { box.innerHTML = `<div class="sync">Chưa đồng bộ với GitHub. ${nut}</div>`; return; }
+    const gio = fmtLuc(dbTT.luc);
+    if (!dbTT.ok) {
+      box.innerHTML = `<div class="alert err"><b>Không đồng bộ được với GitHub</b> (${gio}): ${esc(dbTT.loi)}<br>Đang dùng kho trong trình duyệt (${kho.bai.length} bài), dữ liệu không bị ảnh hưởng. ${nut}</div>`;
+      return;
+    }
+    const k = dbTT.kq;
+    box.innerHTML = `<div class="sync ok-line">Đã đồng bộ GitHub lúc ${gio} · GitHub có ${k.tong} bài${k.them || k.capNhat ? ` · vừa nhận <b>${k.them} bài mới</b>, <b>${k.capNhat} bài cập nhật</b>` : ' · không có gì mới'}. ${nut}</div>` +
+      (k.xungDot.length ? `<div class="alert warn"><b>Xung đột dữ liệu (đã giữ cả hai bản):</b><ul>${k.xungDot.map(x => `<li>${esc(x)}</li>`).join('')}</ul>Mở bài, mục <b>Lịch sử</b> để chọn bản muốn dùng.</div>` : '') +
+      (k.boQua.length ? `<div class="alert warn">Bỏ qua trong file GitHub: ${k.boQua.map(esc).join('; ')}</div>` : '');
+  }
+  async function dongBoLai(imLang = false) {
+    if (dangDongBo) return;
+    dangDongBo = true; renderDongBo();
+    await dongBo(kho);
+    dangDongBo = false;
+    $('#dem-kho').textContent = kho.bai.length;
+    renderDongBo(); renderKho(); renderTienDo(); renderLich(); renderVietLai();
+    if (bai && dlg.open) { bai = kho.bai.find(b => b.id === bai.id) || bai; if (!dirty) renderBai(); }
+    if (!imLang || (dbTT.ok && (dbTT.kq.them || dbTT.kq.capNhat || dbTT.kq.xungDot.length)) || !dbTT.ok) thongBaoDongBo();
+  }
+  document.addEventListener('click', e => { if (e.target.id === 'btn-dong-bo') dongBoLai(); });
+  // Quay lại tab trình duyệt sau một lúc: tự kiểm tra bài mới (không làm khi đang sửa dở trong hộp bài).
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState !== 'visible' || !dbTT || dirty) return;
+    if (Date.now() - Date.parse(dbTT.luc) > 60e3) dongBoLai(true);
+  });
+
   async function napKho() {
     const v2 = store.get(KEY_KHO, null);
-    let k = v2 ? N.chuanHoaKho(v2).kho
-      : N.chuanHoaKho(await load('data/kho-bai.json').catch(() => null)).kho;
+    const k = v2 ? N.chuanHoaKho(v2).kho : N.khoRong();
     // Kho cũ (trang trước nâng cấp): gộp vào đúng một lần, KHÔNG xóa khóa cũ, bài đã có thì bỏ qua.
     const v1 = store.get(KEY_KHO_CU, null);
     if (Array.isArray(v1) && v1.length && !store.get(KEY_DA_CHUYEN, false)) {
@@ -563,19 +642,9 @@ ${DINH_DANG(s.id, w.so, 'playlist')}`;
       store.set(KEY_DA_CHUYEN, new Date().toISOString());
       setTimeout(() => toast(`Đã nâng cấp ${kq.them} bài từ kho cũ sang cấu trúc mới, kho cũ vẫn giữ nguyên`), 400);
     }
-    // Luôn kiểm tra bài mới trên GitHub, kể cả khi đã có localStorage.
-    // Không ghi đè bài trùng mã và tên; giữ nguyên dữ liệu đã chỉnh sửa tại máy.
-    try {
-      const remote = await load('data/kho-bai.json');
-      const kq = N.dongBoTuGitHub(k, remote);
-      if (kq.them) {
-        store.set(KEY_KHO, k);
-        setTimeout(() => toast('Đã tự đồng bộ ' + kq.them + ' bài mới từ GitHub'), 450);
-      }
-    } catch (err) {
-      console.warn('Không thể đồng bộ GitHub; tiếp tục dùng kho cục bộ:', err);
-    }
     store.set(KEY_KHO, k);
+    // Luôn đồng bộ GitHub khi mở trang, kể cả khi trình duyệt đã có kho.
+    await dongBo(k);
     return k;
   }
   async function init() {
@@ -587,6 +656,7 @@ ${DINH_DANG(s.id, w.so, 'playlist')}`;
     load('data/ke-hoach.md', true).then(t => $('#noi-dung-ke-hoach').innerHTML = md(t)).catch(() => $('#noi-dung-ke-hoach').textContent = 'Không tải được kế hoạch.');
     tick = store.get(KEY_LICH, {});
     kho = await napKho();
+    setTimeout(thongBaoDongBo, 700);
     const snaps = store.get(KEY_SNAP, []);
     if (!snaps.length || Date.now() - new Date(snaps[0].luc) > 864e5) if (kho.bai.length) snap('Tự lưu hằng ngày');
 
@@ -601,7 +671,7 @@ ${DINH_DANG(s.id, w.so, 'playlist')}`;
 
     const n = tuanHienTai(); $('#f-tuan').value = n; $('#f-series').value = LICH.tuan[n - 1].series;
     $('#dem-kho').textContent = kho.bai.length;
-    renderVietLai(); renderTienDo(); renderLich(); renderKho(); renderSnap(); buildPrompt();
+    renderVietLai(); renderTienDo(); renderLich(); renderKho(); renderSnap(); renderDongBo(); buildPrompt();
     const h = location.hash.slice(1); if (h && document.getElementById(h)?.classList.contains('panel')) showTab(h);
   }
   init();
