@@ -119,3 +119,28 @@ test('so sánh hai phiên bản lời', () => {
   const d = N.soSanh('a\nb\nc', 'a\nx\nc\nd');
   assert.deepEqual(d.map(x => x.t + x.s), ['=a', '-b', '+x', '=c', '+d']);
 });
+
+test('tự đồng bộ GitHub thêm bài mới và không nhân đôi khi tải lại', () => {
+  const local = N.khoRong();
+  const remote = N.khoRong();
+  N.taoBai(remote, { ten: 'Có Những Ngày Chỉ Muốn Về Nhà', loi: '[Verse] Nhà' });
+  assert.equal(N.dongBoTuGitHub(local, remote).them, 1);
+  assert.equal(local.bai[0].ten, 'Có Những Ngày Chỉ Muốn Về Nhà');
+  assert.equal(N.dongBoTuGitHub(local, remote).them, 0);
+  assert.equal(local.bai.length, 1);
+});
+
+test('tự đồng bộ GitHub giữ bài cục bộ khi trùng ID khác tên', () => {
+  const local = N.khoRong();
+  N.taoBai(local, { ten: 'Bài trên máy', loi: '[Verse] Cũ' });
+  const remote = N.khoRong();
+  N.taoBai(remote, { ten: 'Bài trên GitHub', loi: '[Verse] Mới' });
+  const r = N.dongBoTuGitHub(local, remote);
+  assert.equal(r.them, 1);
+  assert.equal(r.doiMa, 1);
+  assert.equal(local.bai.length, 2);
+  assert.equal(local.bai[0].ten, 'Bài trên máy');
+  assert.equal(local.bai[1].remoteId, 'NPT-0001');
+  assert.notEqual(local.bai[0].id, local.bai[1].id);
+  assert.equal(N.dongBoTuGitHub(local, remote).them, 0);
+});
