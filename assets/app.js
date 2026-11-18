@@ -563,6 +563,19 @@ ${DINH_DANG(s.id, w.so, 'playlist')}`;
       store.set(KEY_DA_CHUYEN, new Date().toISOString());
       setTimeout(() => toast(`Đã nâng cấp ${kq.them} bài từ kho cũ sang cấu trúc mới, kho cũ vẫn giữ nguyên`), 400);
     }
+    // Luôn kiểm tra bài mới trên GitHub, kể cả khi đã có localStorage.
+    // Không ghi đè bài trùng mã và tên; giữ nguyên dữ liệu đã chỉnh sửa tại máy.
+    try {
+      const remote = await load('data/kho-bai.json');
+      const kq = N.dongBoTuGitHub(k, remote);
+      if (kq.them) {
+        snap('Trước khi tự đồng bộ GitHub');
+        store.set(KEY_KHO, k);
+        setTimeout(() => toast('Đã tự đồng bộ ' + kq.them + ' bài mới từ GitHub'), 450);
+      }
+    } catch (err) {
+      console.warn('Không thể đồng bộ GitHub; tiếp tục dùng kho cục bộ:', err);
+    }
     store.set(KEY_KHO, k);
     return k;
   }
