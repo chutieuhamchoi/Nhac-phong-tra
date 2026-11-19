@@ -193,7 +193,7 @@
           <button type="button" id="d-so-sanh">So sánh</button>
         </div>
         <div>
-          <div class="sub-h" id="d-loi-nhan">Lời</div>
+          <div class="sub-h hang-copy"><span id="d-loi-nhan">Lời</span><button type="button" class="mini copy-btn" id="d-copy-loi" title="Sao chép toàn bộ lời đang hiển thị">⧉ Copy lời</button></div>
           <textarea id="d-loi" rows="18" spellcheck="false"></textarea>
           <div class="btns">
             <input id="d-loi-ghichu" placeholder="Ghi chú phiên bản (VD: sửa điệp khúc)">
@@ -206,7 +206,8 @@
     </section>
 
     <section class="dpanel" data-d="nhac">
-      <label>Prompt Suno (style) <textarea data-f="promptSuno" rows="2"></textarea></label>
+      <div class="sub-h hang-copy"><span>Prompt Suno (style)</span><button type="button" class="mini copy-btn" id="d-copy-style" title="Sao chép prompt Suno">⧉ Copy style</button></div>
+      <textarea data-f="promptSuno" rows="2" aria-label="Prompt Suno (style)"></textarea>
       <div class="sub-h">Phiên bản nhạc Suno <small>(chọn ● cho bản phát hành)</small></div>
       <div id="d-ds-nhac" class="vlist"></div>
       <div class="row-them">
@@ -249,7 +250,7 @@
 </dialog>
 
 <div id="toast" role="status"></div>
-<script src="assets/data.js?v=20261119-diem20"></script>
-<script src="assets/app.js?v=20261119-diem20"></script>
+<script src="assets/data.js?v=20261120-copy"></script>
+<script src="assets/app.js?v=20261120-copy"></script>
 </body>
 </html>

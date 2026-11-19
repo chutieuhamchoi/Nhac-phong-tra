@@ -324,6 +324,10 @@ ${DINH_DANG(s.id, w.so, 'playlist')}`;
         <div class="m">${b.loai === 'playlist' ? 'Playlist' : 'Bài đơn'} · Tuần ${b.tuan} · ${esc(seriesOf(b.series).ten)}</div>
         <div class="m">Lời: ${b.loiVersions.length} bản · Nhạc: ${b.nhacVersions.length} bản${b.nhacChon ? ` (chọn v${b.nhacChon})` : ''} · Điểm: ${tong === null ? '—' : `<b class="${lopDiem(tong)}" title="${N.xepLoai(tong).nhan}">${tong}/${N.diemToiDa()}</b>`}</div>
         <pre>${esc(loi.slice(0, 220))}</pre>
+        ${b.loai === 'playlist' ? '' : `<div class="song-copy">
+          <button type="button" class="mini copy-btn" data-copy="loi" ${loi.trim() ? '' : 'disabled'} title="Sao chép toàn bộ lời đang dùng">⧉ Copy lời</button>
+          <button type="button" class="mini copy-btn" data-copy="style" ${b.promptSuno.trim() ? '' : 'disabled'} title="Sao chép prompt Suno">⧉ Copy style</button>
+        </div>`}
       </div>`;
     }).join('') : `<div class="empty">${kho.bai.length ? 'Không có bài khớp bộ lọc.' : 'Kho chưa có bài. Vào tab <b>Sáng tác</b> để bắt đầu, hoặc bấm <b>+ Ý tưởng mới</b>.'}</div>`;
   }
@@ -332,7 +336,22 @@ ${DINH_DANG(s.id, w.so, 'playlist')}`;
     const b = e.target.closest('.ttc'); if (!b) return;
     $('#loc-tt').value = $('#loc-tt').value === b.dataset.tt ? '' : b.dataset.tt; renderKho();
   });
-  $('#ds-kho').addEventListener('click', e => { const c = e.target.closest('.song'); if (c) moBai(c.dataset.id); });
+  // Copy nhanh lời / prompt Suno để dán vào ô Lyrics và Style của Suno
+  async function copyCo(text, ten) {
+    if (!text || !text.trim()) return toast(`Bài chưa có ${ten}`);
+    toast(await copy(text) ? `Đã sao chép ${ten} (${text.length} ký tự)` : 'Không sao chép được, hãy bôi đen và Ctrl+C');
+  }
+  $('#ds-kho').addEventListener('click', e => {
+    const nut = e.target.closest('[data-copy]');
+    if (nut) {
+      e.stopPropagation();
+      const b = kho.bai.find(x => x.id === nut.closest('.song').dataset.id); if (!b) return;
+      return nut.dataset.copy === 'loi' ? copyCo(N.loiHienTai(b) || '', 'lời') : copyCo(b.promptSuno, 'prompt Suno');
+    }
+    const c = e.target.closest('.song'); if (c) moBai(c.dataset.id);
+  });
+  $('#d-copy-loi').onclick = () => copyCo($('#d-loi').value, 'lời');
+  $('#d-copy-style').onclick = () => copyCo($('[data-f=promptSuno]').value, 'prompt Suno');
   $('#btn-bai-moi').onclick = () => {
     const ten = prompt('Tên ý tưởng bài hát:'); if (!ten || !ten.trim()) return;
     const w = LICH.tuan[tuanHienTai() - 1];
