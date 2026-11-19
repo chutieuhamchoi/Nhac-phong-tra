@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "capNhat": "2026-11-18T15:06:07.306Z",
+  "capNhat": "2026-11-19T08:42:00.000Z",
   "nextId": 2,
   "bai": [
     {
@@ -10,8 +10,8 @@
       "series": "tuoi-tho",
       "tuan": 1,
       "ngayTao": "2026-11-18T15:06:07.306Z",
-      "ngayCapNhat": "2026-11-18T15:06:07.306Z",
-      "trangThai": 2,
+      "ngayCapNhat": "2026-11-19T08:42:00.000Z",
+      "trangThai": 6,
       "lichSu": [
         {
           "tu": null,
@@ -24,6 +24,12 @@
           "den": 2,
           "luc": "2026-11-18T15:06:07.306Z",
           "ghiChu": "Ông chủ duyệt lời V1"
+        },
+        {
+          "tu": 2,
+          "den": 6,
+          "luc": "2026-11-19T08:42:00.000Z",
+          "ghiChu": "Đã đăng YouTube công khai: https://www.youtube.com/watch?v=aV9Z0ukc9vo (Claude xác nhận qua YouTube Studio)"
         }
       ],
       "loiVersions": [
@@ -51,8 +57,8 @@
       "mota": "Một ca khúc tự sự về những ngày mệt mỏi giữa cuộc sống và mong ước giản dị được trở về bên cha mẹ. Nhạc Phòng Trà – Cà Phê Chill.",
       "shorts": "Chỉ muốn về nhà... ăn một bữa cơm thôi\nNghe mẹ hỏi: \"Hôm nay con có mệt?\"\nNghe tiếng cha ho khẽ ngoài hiên vắng\nMà thấy lòng... bình yên đến lạ thường.",
       "tag": "#nhacphongtra #acousticballad #nhacviet #giadinh #venha",
-      "linkYoutube": "",
-      "ngayPhatHanh": "",
+      "linkYoutube": "https://www.youtube.com/watch?v=aV9Z0ukc9vo",
+      "ngayPhatHanh": "2026-11-19",
       "ghiChu": "Bài thử nghiệm đồng bộ GitHub; lời V1 đã duyệt, chưa tạo Suno.",
       "promptChatGPT": ""
     }
