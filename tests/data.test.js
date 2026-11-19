@@ -227,3 +227,36 @@ test('đồng bộ: file GitHub hỏng hoặc sai schema báo lỗi rõ, trùng 
   const r = N.dongBoTuGitHub(k, khoGitHub(baiGitHub(), baiGitHub({ ten: 'Trùng' }), { ten: 'không mã' }));
   assert.equal(r.them, 1); assert.equal(r.boQua.length, 2);
 });
+
+/* ---------- cấu hình đa sắc (19/11/2026): series lấy từ data/chu-de.json ---------- */
+const fs = require('node:fs');
+const path = require('node:path');
+const docJson = f => JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', f), 'utf8'));
+
+test('series mới trong chu-de.json được nhận khi nhập JSON và tạo bài, không bị đổi về tuoi-tho', () => {
+  const macDinh = [...N.SERIES];
+  try {
+    N.datSeries(docJson('chu-de.json').series.map(s => s.id));
+    const r = N.kiemTraNhap({ loai: 'bai', ten: 'Yêu Nhau Lại Từ Đầu', series: 'tinh-yeu', tuan: 2, loi: '[Verse 1]\nx\n[Chorus]\ny' }, { series: 'tinh-yeu', tuan: 2 });
+    assert.equal(r.ok, true, r.loi.join('; '));
+    const k = N.khoRong();
+    assert.equal(N.taoBai(k, { ten: 'A', series: 'tinh-yeu', tuan: 2 }).series, 'tinh-yeu');
+    const { kho } = N.chuanHoaKho({ schema: 2, bai: [{ id: 'NPT-0009', loai: 'bai', ten: 'B', series: 'do-thi', tuan: 5, loiVersions: [] }] });
+    assert.equal(kho.bai[0].series, 'do-thi');
+    assert.equal(N.kiemTraNhap({ ten: 'C', series: 'khong-co', loi: '[Verse 1]\nx' }, { tuan: 1 }).ok, false);
+    N.datSeries([]);                                      // cấu hình rỗng không xóa danh sách
+    assert.ok(N.SERIES.includes('tinh-yeu'));
+  } finally { N.datSeries(macDinh); }
+});
+
+test('lịch 15 tuần và kho bài chỉ dùng series có trong chu-de.json', () => {
+  const ids = new Set(docJson('chu-de.json').series.map(s => s.id));
+  const lich = docJson('lich.json');
+  assert.equal(lich.tuan.length, N.SO_TUAN);
+  lich.tuan.forEach((w, i) => {
+    assert.equal(w.so, i + 1);
+    assert.ok(ids.has(w.series), `tuần ${w.so}: series "${w.series}" không có trong chu-de.json`);
+    assert.ok(Array.isArray(w.baiDon) && Array.isArray(w.viec));
+  });
+  docJson('kho-bai.json').bai.forEach(b => assert.ok(ids.has(b.series), `${b.id}: series "${b.series}" không có trong chu-de.json`));
+});

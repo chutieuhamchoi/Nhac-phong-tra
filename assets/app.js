@@ -161,6 +161,8 @@
     $('#f-viet-lai').value = kho.bai.some(b => b.id === cur) ? cur : '';
   }
 
+  const DINH_VI = () => CHUDE.dinhViKenh || 'Nhạc Phòng Trà – Mỗi bài hát, một câu chuyện đáng nghe.';
+  const NGUYEN_TAC = () => (CHUDE.nguyenTacSangTac || []).length ? `\nNguyên tắc sáng tác của kênh:\n${CHUDE.nguyenTacSangTac.map(x => '- ' + x).join('\n')}\n` : '';
   const QUY_TAC = `Quy tắc bắt buộc:
 - Lời hoàn toàn mới do bạn sáng tác. Không chép, không mượn câu hay đoạn của bất kỳ bài hát đã có nào (kể cả nhạc xưa, nhạc Trịnh, bolero).
 - Không nhắc tên ca sĩ, nhạc sĩ hay thương hiệu có thật, kể cả trong "style".
@@ -189,7 +191,7 @@
     const ten = $('#f-ten').value.trim() || goc?.ten || '(bạn tự đặt tên phù hợp chủ đề)';
     const ct = $('#f-chitiet').value.trim(), gc = $('#f-ghichu').value.trim();
     const loiCu = goc ? N.loiHienTai(goc) : null;
-    return `Bạn là nhạc sĩ viết lời nhạc trữ tình phòng trà Việt Nam. Hãy ${goc ? 'VIẾT LẠI (bản mới tốt hơn) lời' : 'viết một bài hát MỚI'} cho kênh YouTube "Nhạc Phòng Trà – Cà Phê Chill" (nhạc trữ tình, hoài niệm, nghe thư giãn, mở ở quán cà phê). Nhạc sẽ được tạo bằng Suno.
+    return `Bạn là nhạc sĩ viết lời cho kênh YouTube Nhạc Phòng Trà. Hãy ${goc ? 'VIẾT LẠI (bản mới tốt hơn) lời' : 'viết một bài hát MỚI'} cho kênh. Định vị kênh: ${DINH_VI()} Nhạc sẽ được tạo bằng Suno.
 
 Thông tin bài:
 - Tên bài / ý tưởng: ${ten}
@@ -200,6 +202,7 @@ ${ct ? `- Hình ảnh, chi tiết muốn có: ${ct}\n` : ''}- Cảm xúc: ${$('#
 - Giọng hát: ${$('#f-giong').value}
 - Nhạc cụ chính: ${$('#f-nhaccu').value}
 ${gc ? `- Ghi chú: ${gc}\n` : ''}${loiCu ? `\nLời hiện tại (phiên bản ${goc.loiChon}) để bạn viết lại, giữ ý chính nhưng làm điệp khúc cuốn hơn:\n"""\n${loiCu}\n"""\n` : ''}
+${NGUYEN_TAC()}
 ${QUY_TAC}
 - Độ dài khi hát khoảng 3–4 phút. Điệp khúc 4 câu, dễ nhớ, có câu chứa tên bài.
 - Bài phải có một điểm nhấn cảm xúc rõ (một hình ảnh hoặc câu hát khiến người nghe muốn nghe lại).
@@ -210,14 +213,14 @@ ${DINH_DANG(s.id, w.so, 'bai')}`;
     const w = LICH.tuan[+$('#f-tuan').value - 1], s = seriesOf($('#f-series').value);
     const chon = $$('#pl-ds input:checked').map(i => kho.bai.find(x => x.id === i.value)).filter(Boolean);
     const gc = $('#f-ghichu').value.trim();
-    return `Bạn là người biên tập kênh YouTube "Nhạc Phòng Trà – Cà Phê Chill" (nhạc trữ tình, hoài niệm, lời do kênh tự sáng tác, nhạc tạo bằng AI, hợp mở ở quán cà phê).
+    return `Bạn là người biên tập kênh YouTube Nhạc Phòng Trà (lời do kênh tự sáng tác, nhạc tạo bằng AI). Định vị kênh: ${DINH_VI()}
 Hãy chuẩn bị nội dung cho một video playlist dài ${$('#f-pl-gio').value}.
 
 - Tên dự kiến: ${$('#f-pl-ten').value.trim() || '(bạn đề xuất)'}
 - Series: ${s.ten}; chủ đề tuần ${w.so}: ${w.chuDe}
 ${chon.length ? `- Các bài có sẵn trong kho:\n${chon.map((x, k) => `  ${k + 1}. ${x.ten}${x.mota ? ' — ' + x.mota.split('\n')[0].slice(0, 120) : ''}`).join('\n')}\n` : '- Kho chưa có bài: hãy đề xuất 12 tên bài mới hợp chủ đề để kênh sáng tác thêm.\n'}${gc ? `- Ghi chú: ${gc}\n` : ''}
 ${QUY_TAC}
-- Tiêu đề có từ khóa "nhạc phòng trà", "nhạc cà phê" hoặc "nhạc trữ tình" ở nửa đầu và ghi thời lượng.
+- Tiêu đề có từ khóa "nhạc phòng trà" hoặc từ khóa thể loại của playlist ở nửa đầu và ghi thời lượng.
 - Mô tả có dòng "Lời do kênh sáng tác, nhạc và giọng hát tạo với sự hỗ trợ của AI" và chỗ điền mốc thời gian dạng 00:00 Tên bài.
 ${DINH_DANG(s.id, w.so, 'playlist')}`;
   }
@@ -649,7 +652,7 @@ ${DINH_DANG(s.id, w.so, 'playlist')}`;
     return k;
   }
   async function init() {
-    try { [LICH, CHUDE] = await Promise.all([load('data/lich.json'), load('data/chu-de.json')]); }
+    try { [LICH, CHUDE] = await Promise.all([load('data/lich.json'), load('data/chu-de.json')]); N.datSeries(CHUDE.series.map(x => x.id)); }   // series hợp lệ lấy từ chu-de.json, trước khi nạp kho
     catch {
       document.querySelector('main').innerHTML = '<div class="empty">Không tải được dữ liệu. Hãy mở trang qua GitHub Pages hoặc một máy chủ web (không mở trực tiếp file).</div>';
       return;

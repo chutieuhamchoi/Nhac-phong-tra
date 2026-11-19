@@ -32,8 +32,9 @@ assets/app.js            giao diện
 assets/style.css         giao diện
 data/ke-hoach.md         kế hoạch chiến dịch (sửa file này để cập nhật tab Kế hoạch)
 data/lich.json           lịch 15 tuần
-data/chu-de.json         series, cảm xúc, nhịp, giọng, nhạc cụ
+data/chu-de.json         series, cảm xúc, nhịp, giọng, nhạc cụ, định vị, nguyên tắc sáng tác (website đọc series từ đây)
 data/kho-bai.json        kho bài đã xuất (nạp khi trình duyệt chưa có dữ liệu)
+docs/PHOI-HOP-CHATGPT-CLAUDE.md  phân công, quy trình một bài, quy tắc tránh ghi đè
 docs/NANG-CAP-GD1.md     bàn giao giai đoạn 1: cấu trúc JSON, nâng cấp dữ liệu, kiểm thử, triển khai
 tests/                   kiểm thử tự động
 loi/                     lời bài hát dạng Markdown

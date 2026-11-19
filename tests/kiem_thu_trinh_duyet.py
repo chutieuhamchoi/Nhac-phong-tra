@@ -79,9 +79,14 @@ async def main():
         check('NPT-0001' in txt, 'tuần 1 hiện NPT-0001 cạnh "Mái trường làng ngày ấy"')
 
         print('3. Sáng tác: yêu cầu JSON, kiểm tra, xem trước, lưu bài mới')
-        await pg.click('button[data-tao^="1|Bà ngoại"]')
+        await pg.click('button[data-tao^="2|Yêu Nhau Lại Từ Đầu"]')   # lịch đa sắc 19/11/2026: tuần 2, series tinh-yeu
         pr = await pg.input_value('#prompt')
-        check('```json' in pr and '"series": "tuoi-tho"' in pr and '"tuan": 1' in pr, 'yêu cầu có khuôn JSON điền sẵn series và tuần')
+        check('```json' in pr and '"series": "tinh-yeu"' in pr and '"tuan": 2' in pr, 'yêu cầu có khuôn JSON điền sẵn series mới và tuần')
+        check('Mỗi bài hát, một câu chuyện đáng nghe' in pr and 'Nguyên tắc sáng tác của kênh' in pr, 'yêu cầu dùng định vị và nguyên tắc từ chu-de.json')
+        check('trữ tình, hoài niệm' not in pr, 'không còn ép phong cách trữ tình hoài niệm')
+        await pg.fill('#ket-qua', JSON_MOI.replace('"series":"tuoi-tho","tuan":1', '"series":"tinh-yeu","tuan":2'))
+        await pg.click('#btn-kiem-tra')
+        check(await pg.locator('.preview .ok').count() == 1, 'JSON series tinh-yeu được chấp nhận')
         await pg.fill('#ket-qua', '{ten: sai}')
         await pg.click('#btn-kiem-tra')
         check('JSON không hợp lệ' in await pg.inner_text('#xem-truoc'), 'báo lỗi JSON hỏng')

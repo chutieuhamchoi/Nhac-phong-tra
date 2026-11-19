@@ -7,7 +7,14 @@
   const SCHEMA = 2;
   const TRANG_THAI = ['Ý tưởng', 'Đang viết lời', 'Đã duyệt lời', 'Đang tạo nhạc', 'Đang đánh giá', 'Đã duyệt phát hành', 'Đã đăng YouTube'];
   const TT = { Y_TUONG: 0, VIET_LOI: 1, DUYET_LOI: 2, TAO_NHAC: 3, DANH_GIA: 4, DUYET_PHAT_HANH: 5, DA_DANG: 6 };
+  // Danh sách mặc định; trang gọi datSeries() với id trong data/chu-de.json khi tải xong.
   const SERIES = ['tuoi-tho', 'dem-mua', 'ca-phe-sang', 'mua'];
+  /** Cập nhật danh sách series hợp lệ từ cấu hình (giữ nguyên tham chiếu mảng). Bỏ qua nếu cấu hình rỗng. */
+  function datSeries(ids) {
+    const ds = (Array.isArray(ids) ? ids : []).map(x => str(x).trim()).filter(Boolean);
+    if (ds.length) SERIES.splice(0, SERIES.length, ...new Set(ds));
+    return SERIES;
+  }
   const TIEU_CHI = [['loi', 'Lời ca'], ['giaiDieu', 'Giai điệu'], ['caoTrao', 'Cao trào'], ['camXuc', 'Cảm xúc'], ['thuHut', 'Khả năng thu hút']];
   const DIEM_TOI_THIEU = 18;          // trên tổng 25
   const SO_TUAN = 15;
@@ -448,7 +455,7 @@
   function xuatKho(kho) { return Object.assign(clone(kho), { schema: SCHEMA, capNhat: now() }); }
 
   root.NPT = {
-    SCHEMA, TRANG_THAI, TT, SERIES, TIEU_CHI, DIEM_TOI_THIEU, SO_TUAN, TRUONG_NHAP,
+    SCHEMA, TRANG_THAI, TT, SERIES, datSeries, TIEU_CHI, DIEM_TOI_THIEU, SO_TUAN, TRUONG_NHAP,
     khoRong, taoBai, themLoi, loiHienTai, chonLoi, themNhac, chonNhac, doiTrangThai, canhBaoChuyen,
     datDiem, tongDiem, chuanHoaKho, gopKho, dongBoTuGitHub, giaiXungDot, hienGiaTriDB, NHAN_DB, tachJson, kiemTraNhap, phanTichNhap, timBaiTrung, apNhap, xungDot,
     soSanh, goiSaoLuu, docSaoLuu, xuatKho, boDau, fmtId
