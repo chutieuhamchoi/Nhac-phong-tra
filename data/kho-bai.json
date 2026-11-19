@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "capNhat": "2026-11-19T08:42:00.000Z",
-  "nextId": 2,
+  "capNhat": "2026-11-19T16:58:35.936Z",
+  "nextId": 3,
   "bai": [
     {
       "id": "NPT-0001",
@@ -60,6 +60,58 @@
       "linkYoutube": "https://www.youtube.com/watch?v=aV9Z0ukc9vo",
       "ngayPhatHanh": "2026-11-19",
       "ghiChu": "Bài thử nghiệm đồng bộ GitHub; lời V1 đã duyệt, chưa tạo Suno.",
+      "promptChatGPT": ""
+    },
+    {
+      "id": "NPT-0002",
+      "loai": "bai",
+      "ten": "Yêu Nhau Lại Từ Đầu",
+      "series": "tinh-yeu",
+      "tuan": 2,
+      "ngayTao": "2026-11-19T16:58:35.936Z",
+      "ngayCapNhat": "2026-11-19T16:58:35.936Z",
+      "trangThai": 2,
+      "lichSu": [
+        {
+          "tu": null,
+          "den": 1,
+          "luc": "2026-11-19T16:58:35.936Z",
+          "ghiChu": "Tạo bài V2 sau khi chỉnh sửa lời theo góp ý của Ông chủ"
+        },
+        {
+          "tu": 1,
+          "den": 2,
+          "luc": "2026-11-19T16:58:35.936Z",
+          "ghiChu": "Ông chủ xác nhận lời V2 ổn và yêu cầu tạo prompt Suno, cập nhật website"
+        }
+      ],
+      "loiVersions": [
+        {
+          "v": 2,
+          "loi": "[Verse 1]\nĐã bao lâu mình chẳng hẹn hò\nChẳng cùng nhau đi hết một chiều mưa\nNgày cứ trôi qua trong vội vã\nQuên mất ngày xưa mình đã yêu thế nào\n\nAnh vẫn bên em như mọi ngày\nVẫn thương em, chỉ ít nói ra thôi\nGiữa những bộn bề quen thuộc ấy\nCó đôi khi mình quên mất nhau rồi\n\n[Pre-Chorus]\nChiều nay nhìn em, anh chợt thấy\nNụ cười ngày ấy vẫn còn đây\nChỉ cần anh đưa tay ra trước\nLiệu em có nắm như ngày đầu?\n\n[Chorus]\nHay là mình yêu nhau lại từ đầu\nLại hẹn hò như ngày xưa em nhé\nLại nắm tay qua từng con phố\nLại thấy tim mình bối rối vì nhau\n\nHay là mình yêu nhau lại từ đầu\nBỏ sau lưng những lo toan thường nhật\nChẳng cần điều gì xa xôi lắm\nChỉ cần em cười, và nói: “Đi thôi anh!”\n\n[Verse 2]\nTối nay anh đón em tan làm\nMình ghé quán quen đã lâu không tới\nAnh sẽ kể em nghe chuyện cũ\nNhư hai người vừa mới biết yêu thôi\n\n[Chorus]\nHay là mình yêu nhau lại từ đầu\nLại hẹn hò như ngày xưa em nhé\nLại nắm tay qua từng con phố\nLại thấy tim mình bối rối vì nhau\n\nHay là mình yêu nhau lại từ đầu\nBỏ sau lưng những lo toan thường nhật\nChẳng cần điều gì xa xôi lắm\nChỉ cần em cười, và nói: “Đi thôi anh!”\n\n[Bridge]\nMai này tóc có bạc màu\nAnh vẫn muốn được đón em hẹn hò\nGiữa bao đổi thay của cuộc đời\nNgười anh chọn vẫn là em thôi\n\n[Final Chorus]\nHay là mình yêu nhau lại từ đầu\nKhông phải vì tình yêu xưa đã hết\nMà vì sau bao nhiêu năm tháng\nAnh vẫn muốn em rung động vì anh\n\nHay là mình yêu nhau lại từ đầu\nĐể mỗi ngày đều là ngày đáng nhớ\nDẫu mai này mình già đi nữa\nAnh vẫn muốn hẹn hò cùng em\n\n[Outro]\nEm ơi, tối nay mình đi nhé\nYêu nhau thêm một lần... từ đầu.",
+          "nguon": "chatgpt",
+          "luc": "2026-11-19T16:58:35.936Z",
+          "ghiChu": "Bản V2 được Ông chủ chấp thuận; V1 từng trao đổi trong chat, chưa lưu vào kho"
+        }
+      ],
+      "loiChon": 2,
+      "promptSuno": "Vietnamese romantic pop soul, soft modern R&B groove, 90 BPM, warm expressive male baritone, intimate conversational verses, catchy uplifting chorus, Rhodes piano, clean electric guitar, melodic bass, subtle live drums, tasteful harmonies. Strong soaring hook on 'Hay là mình yêu nhau lại từ đầu', dynamic bridge and final chorus. Natural Vietnamese diction, warm organic studio sound, joyful mature love. Avoid monotonous melody, sad ballad, EDM, robotic vocals and excessive runs.",
+      "nhacVersions": [],
+      "nhacChon": null,
+      "diem": {
+        "cauChuyen": null,
+        "diemCham": null,
+        "giaiDieu": null,
+        "banSac": null
+      },
+      "thumbnail": "",
+      "tieude": "Yêu Nhau Lại Từ Đầu | Pop Soul R&B Việt – Nhạc Phòng Trà",
+      "mota": "Một lời hẹn hò mới dành cho người đã ở bên ta bao năm. Yêu Nhau Lại Từ Đầu – ca khúc pop soul/R&B về tình yêu trưởng thành. Nhạc Phòng Trà – Mỗi bài hát, một câu chuyện đáng nghe.",
+      "shorts": "Hay là mình yêu nhau lại từ đầu\nLại hẹn hò như ngày xưa em nhé\nLại nắm tay qua từng con phố\nLại thấy tim mình bối rối vì nhau",
+      "tag": "#YeuNhauLaiTuDau #NhacPhongTra #PopSoul #RnBViet #TinhYeuTruongThanh",
+      "linkYoutube": "",
+      "ngayPhatHanh": "",
+      "ghiChu": "Lời V2 đã duyệt; chờ tạo nhạc Suno và chọn bản phối. Chưa phát hành.",
       "promptChatGPT": ""
     }
   ]
