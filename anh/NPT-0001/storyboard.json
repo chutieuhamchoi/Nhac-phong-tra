@@ -1,0 +1,141 @@
+{
+  "baiId": "NPT-0001",
+  "nhacChon": null,
+  "timeline": "du-kien",
+  "thoiLuongDuKien": "04:32.64",
+  "ghiChu": "Mỗi ảnh tối đa 25 giây; mốc dự kiến chưa căn theo âm thanh thực tế. Ảnh chỉ được coi là có sẵn sau khi xác minh file PNG tương ứng trên GitHub.",
+  "canh": [
+    {
+      "so": 1,
+      "batDau": "00:00",
+      "ketThuc": "00:25",
+      "doanLoi": "Intro / Verse 1",
+      "anh": "canh-01.png",
+      "moTa": "Người con rời nơi làm việc, bước một mình trên phố Hà Nội sau mưa.",
+      "promptAnh": "A single Vietnamese man seen from behind, navy jacket, brown trousers, weathered brown crossbody bag, walking alone on a wet old Hanoi street at amber dusk, cinematic nostalgic painterly realism, subtle film grain, 16:9, empty space on right, no text, no logos",
+      "hieuUng": "slow zoom in",
+      "lopPhu": "film grain",
+      "chuyenCanh": "cross dissolve"
+    },
+    {
+      "so": 2,
+      "batDau": "00:25",
+      "ketThuc": "00:50",
+      "doanLoi": "Verse 1",
+      "anh": "canh-02.png",
+      "moTa": "Người con ngồi dưới mái hiên quán cà phê nhìn mưa rơi.",
+      "promptAnh": "Same Vietnamese man from behind, navy jacket brown trousers brown crossbody bag, seated at a small wooden cafe table under an awning, rainy old Hanoi street, steaming phin coffee, amber lanterns, cinematic nostalgic painterly realism, 16:9, no text no logos",
+      "hieuUng": "slow pan right",
+      "lopPhu": "rain",
+      "chuyenCanh": "cross dissolve"
+    },
+    {
+      "so": 3,
+      "batDau": "00:50",
+      "ketThuc": "01:15",
+      "doanLoi": "Pre-Chorus",
+      "anh": "canh-03.png",
+      "moTa": "Hồi tưởng ngôi nhà mái ngói cũ, cửa sổ hắt ánh đèn vàng.",
+      "promptAnh": "Old Vietnamese countryside family house with tiled roof, weathered yellow walls, warm lamplight from wooden windows, lush courtyard and bougainvillea, no people, cinematic nostalgic painterly realism, 16:9, no text no logos",
+      "hieuUng": "slow zoom in",
+      "lopPhu": "film grain",
+      "chuyenCanh": "cross dissolve"
+    },
+    {
+      "so": 4,
+      "batDau": "01:15",
+      "ketThuc": "01:40",
+      "doanLoi": "Chorus",
+      "anh": "canh-04.png",
+      "moTa": "Cha mẹ già ngồi bên mâm cơm quê, còn một chiếc ghế trống.",
+      "promptAnh": "Two elderly Vietnamese parents seen from behind at a simple wooden dinner table with steamed rice and soup, an empty third chair, warm yellow lamp, old countryside home, cinematic nostalgic painterly realism, 16:9, no text no logos",
+      "hieuUng": "slow pan left",
+      "lopPhu": "light flicker",
+      "chuyenCanh": "cross dissolve"
+    },
+    {
+      "so": 5,
+      "batDau": "01:40",
+      "ketThuc": "02:05",
+      "doanLoi": "Chorus",
+      "anh": "canh-05.png",
+      "moTa": "Ký ức bữa cơm sum vầy: người con ngồi cùng cha mẹ.",
+      "promptAnh": "Three Vietnamese family members seen entirely from behind at a cozy wooden dinner table, adult son wearing navy jacket and brown trousers, elderly parents, steaming homestyle dishes, golden lamp, cinematic nostalgic painterly realism, 16:9, no text no logos",
+      "hieuUng": "slow zoom in",
+      "lopPhu": "film grain",
+      "chuyenCanh": "cross dissolve"
+    },
+    {
+      "so": 6,
+      "batDau": "02:05",
+      "ketThuc": "02:30",
+      "doanLoi": "Verse 2",
+      "anh": "canh-06.png",
+      "moTa": "Đêm thành phố, người con nhìn chiếc điện thoại trên bàn bên cửa sổ mưa.",
+      "promptAnh": "Same man from behind in navy jacket and brown trousers seated at a modest apartment desk, smartphone glowing with an unreadable screen, rain on window and distant city bokeh, amber desk lamp, cinematic nostalgic painterly realism, 16:9, no legible text or logos",
+      "hieuUng": "slow pan right",
+      "lopPhu": "rain",
+      "chuyenCanh": "cross dissolve"
+    },
+    {
+      "so": 7,
+      "batDau": "02:30",
+      "ketThuc": "02:55",
+      "doanLoi": "Verse 2",
+      "anh": "canh-07.png",
+      "moTa": "Một mình nhìn thành phố từ ban công, cảm giác trống vắng.",
+      "promptAnh": "Same man from behind in navy jacket brown trousers and brown crossbody bag, alone on a dim apartment balcony overlooking Vietnamese city lights at night, wistful silhouette, warm indoor light contrasting cool night, cinematic nostalgic painterly realism, 16:9, no text no logos",
+      "hieuUng": "static",
+      "lopPhu": "film grain",
+      "chuyenCanh": "cross dissolve"
+    },
+    {
+      "so": 8,
+      "batDau": "02:55",
+      "ketThuc": "03:20",
+      "doanLoi": "Bridge",
+      "anh": "canh-08.png",
+      "moTa": "Chiếc ghế gỗ của cha bên hiên, gợi nỗi lo thời gian trôi.",
+      "promptAnh": "Empty weathered wooden chair on a traditional Vietnamese house porch under a leafy tree, old teacup, warm evening light and gentle rain, poignantly quiet, cinematic nostalgic painterly realism, 16:9, no people no text no logos",
+      "hieuUng": "slow zoom in",
+      "lopPhu": "rain",
+      "chuyenCanh": "cross dissolve"
+    },
+    {
+      "so": 9,
+      "batDau": "03:20",
+      "ketThuc": "03:45",
+      "doanLoi": "Final Chorus",
+      "anh": "canh-09.png",
+      "moTa": "Người con trở về theo con đường làng lúc hoàng hôn.",
+      "promptAnh": "Same Vietnamese man from behind, navy jacket brown trousers weathered brown crossbody bag, walking toward a warmly lit old Vietnamese countryside home along a narrow garden path at sunset, cinematic nostalgic painterly realism, 16:9, no text no logos",
+      "hieuUng": "slow pan left",
+      "lopPhu": "film grain",
+      "chuyenCanh": "cross dissolve"
+    },
+    {
+      "so": 10,
+      "batDau": "03:45",
+      "ketThuc": "04:10",
+      "doanLoi": "Final Chorus",
+      "anh": "canh-10.png",
+      "moTa": "Mẹ già đứng đợi trước cửa, người con bước đến gần.",
+      "promptAnh": "Elderly Vietnamese mother seen from behind at the open doorway of a warmly lit rustic home, same adult son approaching from behind wearing navy jacket brown trousers and brown crossbody bag, emotional reunion without visible faces, bougainvillea, cinematic nostalgic painterly realism, 16:9, no text no logos",
+      "hieuUng": "slow zoom in",
+      "lopPhu": "light flicker",
+      "chuyenCanh": "cross dissolve"
+    },
+    {
+      "so": 11,
+      "batDau": "04:10",
+      "ketThuc": "04:32.64",
+      "doanLoi": "Outro",
+      "anh": "canh-11.png",
+      "moTa": "Căn nhà sáng đèn, gia đình sum vầy bên mâm cơm nhìn từ ngoài sân.",
+      "promptAnh": "Wide view from a quiet Vietnamese courtyard toward the warm interior of an old tiled-roof home, silhouettes of adult son and elderly parents around a dinner table seen only from behind, golden lamplight, gentle night rain, cinematic nostalgic painterly realism, 16:9, no text no logos",
+      "hieuUng": "slow zoom in",
+      "lopPhu": "rain",
+      "chuyenCanh": "fade black"
+    }
+  ]
+}
