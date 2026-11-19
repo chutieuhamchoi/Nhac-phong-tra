@@ -4,7 +4,7 @@
       "id": "tuoi-tho",
       "ten": "Tuổi thơ – quê nhà",
       "mau": "#C98B4B",
-      "goiY": "tuổi thơ, bà ngoại, cha mẹ, ký ức nghèo khó, những lần về muộn, tình thân"
+      "goiY": "tuổi thơ, bà ngoại, cha mẹ, ký ức nghèo khó, những lần về muộn, tình thân (tạm dừng sản xuất mới; giữ dữ liệu đã phát hành)"
     },
     {
       "id": "dem-mua",
@@ -23,6 +23,36 @@
       "ten": "Theo mùa (Noel, Xuân, Tết)",
       "mau": "#C0574A",
       "goiY": "Giáng sinh, cuối năm, xa nhà, Tết đoàn viên, mẹ, bữa cơm gia đình"
+    },
+    {
+      "id": "tinh-yeu",
+      "ten": "Tình yêu và những mối quan hệ",
+      "mau": "#C27C9C",
+      "goiY": "hôn nhân, tình yêu trưởng thành, rung động, chia tay, yêu lại"
+    },
+    {
+      "id": "truong-thanh",
+      "ten": "Tâm sự người trưởng thành",
+      "mau": "#6F8A8E",
+      "goiY": "công việc, lựa chọn, áp lực, bản lĩnh, chữa lành"
+    },
+    {
+      "id": "do-thi",
+      "ten": "Chuyện kể đô thị",
+      "mau": "#7589B8",
+      "goiY": "thành phố, quán quen, gặp gỡ, phố đêm, nhịp sống"
+    },
+    {
+      "id": "tich-cuc",
+      "ten": "Sống vui và tự do",
+      "mau": "#D0A35A",
+      "goiY": "niềm vui, tình bạn, tự do, chuyến đi, sống tích cực"
+    },
+    {
+      "id": "sang-tao",
+      "ten": "Sáng tạo và thử nghiệm",
+      "mau": "#9A81B5",
+      "goiY": "hài hước, đối thoại, bất ngờ, giao thoa thể loại"
     }
   ],
   "camXuc": [
@@ -30,34 +60,62 @@
     "Ấm áp, bình yên",
     "Buồn nhẹ, day dứt",
     "Lãng mạn, dịu dàng",
-    "Vui tươi, rộn ràng"
+    "Vui tươi, rộn ràng",
+    "Tự tin, phóng khoáng",
+    "Hài hước, dí dỏm",
+    "Mạnh mẽ, bứt phá",
+    "Sâu lắng, chiêm nghiệm"
   ],
   "nhip": [
     "Chậm (ballad, 65–75 BPM)",
     "Bolero (khoảng 70 BPM)",
     "Slow rock (khoảng 80 BPM)",
-    "Bossa nova (90–100 BPM)",
-    "Valse (3/4)"
+    "Bossa nova (90–110 BPM)",
+    "Valse (3/4)",
+    "Pop / indie pop (85–120 BPM)",
+    "R&B / neo-soul (70–105 BPM)",
+    "City pop / funk (95–125 BPM)",
+    "Jazz / swing (80–150 BPM)",
+    "Soft rock / blues rock (75–125 BPM)",
+    "Disco pop / dance pop (105–130 BPM)",
+    "Tự do theo ý tưởng"
   ],
   "giong": [
     "Giọng nữ trầm ấm",
     "Giọng nam trầm ấm",
     "Song ca nam nữ",
-    "Giọng nữ trong, nhẹ"
+    "Giọng nữ trong, nhẹ",
+    "Giọng nam sáng, giàu năng lượng",
+    "Giọng nữ cá tính, giàu nội lực",
+    "Giọng khàn, blues/soul",
+    "Hòa giọng / nhóm hát",
+    "Không lời (instrumental)"
   ],
   "nhacCu": [
     "Guitar acoustic, piano",
     "Piano, violin",
     "Saxophone, piano, contrabass",
     "Guitar điện tử nhẹ, organ",
-    "Đàn tranh, sáo trúc, guitar"
+    "Đàn tranh, sáo trúc, guitar",
+    "Rhodes, bass điện, trống jazz",
+    "Guitar funk, synth, bass",
+    "Guitar điện, trống live, bass",
+    "Piano jazz, trumpet, contrabass",
+    "Synth pad, drum machine, guitar",
+    "Dàn nhạc linh hoạt theo ý tưởng"
   ],
-  "dinhViKenh": "Nhạc Phòng Trà – Những bài hát dành cho người đã đi qua nhiều chuyện.",
+  "dinhViKenh": "Nhạc Phòng Trà – Mỗi bài hát, một câu chuyện đáng nghe. Phòng trà là trải nghiệm nghe gần gũi, có gu; không giới hạn chủ đề, cảm xúc hay thể loại.",
   "nguyenTacSangTac": [
     "Bắt đầu từ nhân vật, tình huống và chuyển biến cảm xúc, không chỉ mô tả phong cảnh",
     "Có câu hát điểm chạm và đoạn cao trào đáng nhớ",
     "Đa dạng hòa âm, tiết tấu, giọng hát; tránh nhiều bài cùng một công thức ballad",
-    "Không mặc định duyệt chỉ vì đã có tên trong lịch; bài không đạt được sửa hoặc thay thế"
+    "Không mặc định duyệt chỉ vì đã có tên trong lịch; bài không đạt được sửa hoặc thay thế",
+    "Tạm dừng bài mới thuộc Tuổi thơ – quê nhà; giữ nguyên bài đã phát hành",
+    "Mỗi bài cần một hook hoặc khoảnh khắc âm nhạc đáng nhớ; tránh giai điệu đều đều",
+    "Đa dạng hình ảnh; không lặp liên tục người quay lưng dưới mưa",
+    "Mỗi bài chuẩn bị tiêu đề, mô tả, hashtag và 10–15 YouTube tags phân cách dấu phẩy, tổng dưới 500 ký tự",
+    "Ưu tiên một bài chất lượng mỗi tuần và 2–3 Shorts; playlist chỉ khi đủ bài phù hợp",
+    "Không đưa Anh Có Thấy Em Mệt Không? vào lịch ưu tiên; giữ ở trạng thái tạm hoãn"
   ],
   "tieuChiDuyet": [
     {
@@ -82,11 +140,11 @@
     "canChinhSua": 14
   },
   "baiChuLuc": [
-    "Ngoại Ơi, Con Về Muộn Quá",
-    "Người Cũ Có Còn Nghe Mưa?",
-    "Anh Có Thấy Em Mệt Không?",
-    "Bố Mẹ Già Đi Từ Bao Giờ?",
-    "Mùi Tết Trong Căn Bếp Cũ",
-    "Tết Này Mẹ Đừng Chờ Cơm"
+    "Yêu Nhau Lại Từ Đầu",
+    "Cà Phê Đắng, Em Ngọt",
+    "Ngày Mai Xin Nghỉ Một Hôm",
+    "Em Không Cần Một Người Hoàn Hảo",
+    "Đêm Nay Đừng Nói Chia Tay",
+    "Tháng Mười Hai Có Hẹn"
   ]
 }
