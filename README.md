@@ -1,6 +1,6 @@
 # Nhạc Phòng Trà Studio
 
-Trang kế hoạch và quản lý sản xuất cho kênh YouTube [@nhac-phongtra](https://www.youtube.com/@nhac-phongtra), gồm: kế hoạch chiến dịch 15 tuần (17/11/2026 – 28/02/2027), lịch đăng, sáng tác lời với ChatGPT, kho bài có phiên bản, chấm điểm và quy trình duyệt.
+Trang kế hoạch và quản lý sản xuất cho kênh YouTube [@nhac-phongtra](https://www.youtube.com/@nhac-phongtra), gồm: kế hoạch chiến dịch 15 tuần (16/11/2026 – 28/02/2027), lịch đăng, sáng tác lời với ChatGPT, kho bài có phiên bản, chấm điểm và quy trình duyệt.
 
 Trang: **https://chutieuhamchoi.github.io/Nhac-phong-tra/**. Chạy trên GitHub Pages, không cần máy chủ hay API key.
 
@@ -19,7 +19,7 @@ Trang: **https://chutieuhamchoi.github.io/Nhac-phong-tra/**. Chạy trên GitHub
 1. **Ý tưởng** → **Đang viết lời**: Lịch → bấm **Sáng tác** → gửi ChatGPT → dán JSON → **Xác nhận lưu**.
 2. **Đã duyệt lời**: đọc lời trong Kho bài; sửa thì bấm **Lưu thành phiên bản mới** (bản cũ không mất).
 3. **Đang tạo nhạc**: tạo trên Suno, dán từng link vào **Nhạc & điểm**.
-4. **Đang đánh giá**: nghe, chấm 5 tiêu chí (1–5). Dưới 18/25 thì chưa nên đăng.
+4. **Đang đánh giá**: nghe, chấm phiếu 20 điểm (Câu chuyện, Điểm chạm, Giai điệu, Bản sắc; mỗi mục 1–5). Từ 17: đề xuất duyệt; 14–16: cần chỉnh sửa; dưới 14: viết lại. Phiếu lấy từ `data/chu-de.json`.
 5. **Đã duyệt phát hành**: chọn bản nhạc phát hành.
 6. **Đã đăng YouTube**: dán link YouTube.
 

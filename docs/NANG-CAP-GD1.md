@@ -57,7 +57,7 @@ Không đổi: `data/ke-hoach.md`, `data/lich.json`, `data/chu-de.json`.
     { "v": 1, "link": "https://suno.com/song/…", "ghiChu": "giọng nữ", "luc": "…", "loiV": 2 }
   ],
   "nhacChon": 1,
-  "diem": { "loi": 4, "giaiDieu": 4, "caoTrao": 3, "camXuc": 4, "thuHut": 4 },
+  "diem": { "cauChuyen": 4, "diemCham": 4, "giaiDieu": 5, "banSac": 4 },
   "thumbnail": "https://…",
   "tieude": "Mái Trường Làng Ngày Ấy | Nhạc Phòng Trà Hoài Niệm – Sáng tác mới",
   "mota": "…",
@@ -79,7 +79,8 @@ Không đổi: `data/ke-hoach.md`, `data/lich.json`, `data/chu-de.json`.
 | `lichSu` | Mọi lần đổi trạng thái: từ, đến, lúc, ghi chú. Chỉ thêm, không sửa. |
 | `loiVersions` / `loiChon` | Các phiên bản lời (không bao giờ ghi đè) và số phiên bản đang dùng. Lời hiện tại = phiên bản `loiChon`. |
 | `nhacVersions` / `nhacChon` | Các bản Suno (link, ghi chú, theo lời phiên bản nào) và bản được chọn phát hành (`null` = chưa chọn). |
-| `diem` | 5 tiêu chí, mỗi tiêu chí 1–5 hoặc `null`. Tổng dưới 18/25 thì trang cảnh báo khi duyệt phát hành. |
+| `diem` | Phiếu duyệt theo `tieuChiDuyet` trong `data/chu-de.json` (từ 19/11/2026: `cauChuyen`, `diemCham`, `giaiDieu`, `banSac`, mỗi mục 1–5 hoặc `null`, tổng 20). Dưới `nguongDuyet.deXuatDuyet` (17) thì trang cảnh báo khi duyệt phát hành. Khóa sinh từ tên tiêu chí bỏ dấu, viết kiểu camelCase. |
+| `diemCu` | Chỉ có ở bài từng chấm theo phiếu cũ 5 tiêu chí/25 điểm (`loi`, `giaiDieu`, `caoTrao`, `camXuc`, `thuHut`): trang chuyển điểm cũ sang đây một lần, không xóa. |
 | `series` | `tuoi-tho`, `dem-mua`, `ca-phe-sang`, `mua` |
 | `legacyId`, `_v1` | Mã cũ và bản gốc của bài chuyển từ kho cũ. Giữ để không mất dữ liệu. |
 

@@ -43,9 +43,9 @@ Bài thiếu trường vẫn dùng được, trang tự bổ sung giá trị m�
 ## Kiểm thử
 
 ```bash
-node --test tests/data.test.js                  # 22 bài, gồm 7 bài cho đồng bộ và 2 bài kiểm tra cấu hình series
+node --test tests/data.test.js                  # 25 bài, gồm đồng bộ, cấu hình series và phiếu điểm 20
 python3 -m http.server 8765 &
-python3 tests/kiem_thu_trinh_duyet.py           # 46 bước
+python3 tests/kiem_thu_trinh_duyet.py           # 48 bước
 python3 tests/kiem_thu_dong_bo.py               # 34 bước, giả lập file GitHub
 NPT_URL=https://chutieuhamchoi.github.io/Nhac-phong-tra/ python3 tests/kiem_thu_dong_bo.py   # chạy thẳng trên trang thật
 ```

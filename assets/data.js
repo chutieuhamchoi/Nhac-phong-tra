@@ -15,8 +15,30 @@
     if (ds.length) SERIES.splice(0, SERIES.length, ...new Set(ds));
     return SERIES;
   }
-  const TIEU_CHI = [['loi', 'Lời ca'], ['giaiDieu', 'Giai điệu'], ['caoTrao', 'Cao trào'], ['camXuc', 'Cảm xúc'], ['thuHut', 'Khả năng thu hút']];
-  const DIEM_TOI_THIEU = 18;          // trên tổng 25
+  // Phiếu duyệt (đa sắc, 19/11/2026): mặc định 4 tiêu chí × 5 điểm; trang gọi datTieuChi() với data/chu-de.json.
+  // Mỗi mục: [khóa, tên, điểm tối đa]. Khóa sinh từ tên (Câu chuyện → cauChuyen) để dữ liệu ổn định.
+  const TIEU_CHI = [['cauChuyen', 'Câu chuyện', 5], ['diemCham', 'Điểm chạm', 5], ['giaiDieu', 'Giai điệu', 5], ['banSac', 'Bản sắc', 5]];
+  const NGUONG = { deXuatDuyet: 17, canChinhSua: 14 };   // ≥17 đề xuất duyệt · 14–16 cần chỉnh sửa · <14 viết lại
+  // Thang cũ (trước 19/11/2026, 5 tiêu chí / 25 điểm): điểm đã chấm được chuyển sang trường diemCu, không xóa.
+  const TIEU_CHI_CU = { loi: 'Lời ca', caoTrao: 'Cao trào', camXuc: 'Cảm xúc', thuHut: 'Khả năng thu hút' };
+  const khoaTieuChi = ten => boDau(ten).replace(/[^a-z0-9]+(.)?/g, (_, c) => c ? c.toUpperCase() : '');
+  /** Đặt phiếu duyệt từ chu-de.json (tieuChiDuyet, nguongDuyet). Giữ nguyên tham chiếu mảng/đối tượng. */
+  function datTieuChi(ds, nguong) {
+    const moi = (Array.isArray(ds) ? ds : []).map(x => [khoaTieuChi(x && x.ten), str(x && x.ten).trim(), parseInt(x && x.diemToiDa, 10) || 5])
+      .filter(([k, t]) => k && t);
+    if (moi.length) TIEU_CHI.splice(0, TIEU_CHI.length, ...moi);
+    if (nguong && Number.isFinite(+nguong.deXuatDuyet)) NGUONG.deXuatDuyet = +nguong.deXuatDuyet;
+    if (nguong && Number.isFinite(+nguong.canChinhSua)) NGUONG.canChinhSua = +nguong.canChinhSua;
+    return TIEU_CHI;
+  }
+  const diemToiDa = () => TIEU_CHI.reduce((a, [, , m]) => a + m, 0);
+  /** Xếp loại theo tổng điểm: {muc: 'duyet'|'sua'|'viet-lai'|null, nhan}. */
+  function xepLoai(t) {
+    if (t === null || t === undefined) return { muc: null, nhan: `Chấm đủ ${TIEU_CHI.length} tiêu chí` };
+    if (t >= NGUONG.deXuatDuyet) return { muc: 'duyet', nhan: 'Đề xuất duyệt' };
+    if (t >= NGUONG.canChinhSua) return { muc: 'sua', nhan: 'Cần chỉnh sửa' };
+    return { muc: 'viet-lai', nhan: 'Viết lại' };
+  }
   const SO_TUAN = 15;
   // trạng thái kho cũ (v1): 0 Nháp lời, 1 Đã duyệt lời, 2 Đã tạo Suno, 3 Đã đăng
   const TT_CU = ['Nháp lời', 'Đã duyệt lời', 'Đã tạo Suno', 'Đã đăng'];
@@ -103,8 +125,8 @@
     const w = [];
     if (den >= TT.DUYET_PHAT_HANH && b.loai !== 'playlist') {
       const t = tongDiem(b);
-      if (t === null) w.push('Bài chưa được chấm đủ 5 tiêu chí.');
-      else if (t < DIEM_TOI_THIEU) w.push(`Tổng điểm ${t}/25, dưới mức tối thiểu ${DIEM_TOI_THIEU}/25.`);
+      if (t === null) w.push(`Bài chưa được chấm đủ ${TIEU_CHI.length} tiêu chí.`);
+      else if (t < NGUONG.deXuatDuyet) w.push(`Tổng điểm ${t}/${diemToiDa()}, dưới mức đề xuất duyệt ${NGUONG.deXuatDuyet}/${diemToiDa()} (${xepLoai(t).nhan.toLowerCase()}).`);
       if (b.nhacVersions.length && b.nhacChon === null) w.push('Chưa chọn phiên bản nhạc để phát hành.');
       if (!b.nhacVersions.length) w.push('Chưa có phiên bản nhạc Suno nào.');
     }
@@ -114,15 +136,25 @@
 
   /* ---------- điểm ---------- */
   function datDiem(b, k, v) {
-    if (!TIEU_CHI.some(([x]) => x === k)) return;
+    const tc = TIEU_CHI.find(([x]) => x === k); if (!tc) return;
     const n = v === '' || v == null ? null : parseInt(v, 10);
-    b.diem[k] = n >= 1 && n <= 5 ? n : null; cham(b);
+    b.diem[k] = n >= 1 && n <= tc[2] ? n : null; cham(b);
   }
   function tongDiem(b) {
     const vals = TIEU_CHI.map(([k]) => b.diem?.[k]);
     return vals.every(x => Number.isInteger(x)) ? vals.reduce((a, c) => a + c, 0) : null;
   }
   function cham(b) { b.ngayCapNhat = now(); }
+  /** Đưa điểm về phiếu hiện tại. Điểm thang cũ đã chấm (khác null) được chuyển sang b.diemCu một lần, không mất. */
+  function chuanDiem(b) {
+    const goc = b.diem && typeof b.diem === 'object' ? b.diem : {}, d = diemRong(), cu = {};
+    Object.keys(goc).forEach(k => {
+      if (k in d) d[k] = Number.isInteger(goc[k]) ? goc[k] : null;
+      else if (goc[k] != null) cu[k] = goc[k];
+    });
+    if (Object.keys(cu).length && !b.diemCu) b.diemCu = Object.assign({ thang: 25, ghiChu: 'Điểm theo phiếu cũ 5 tiêu chí (trước 19/11/2026)' }, cu);
+    return d;
+  }
 
   /* ---------- chuyển đổi dữ liệu cũ ---------- */
   function laBaiCu(o) { return o && typeof o === 'object' && !Array.isArray(o.loiVersions); }
@@ -170,7 +202,7 @@
     if (!b.promptSuno && typeof o.style === 'string') b.promptSuno = o.style;
     if (b.loiChon == null && b.loiVersions.length) b.loiChon = b.loiVersions[b.loiVersions.length - 1].v;
     if (b.nhacChon === undefined) b.nhacChon = null;
-    b.diem = Object.assign(diemRong(), b.diem || {});
+    b.diem = chuanDiem(b);
     ['promptSuno', 'thumbnail', 'tieude', 'mota', 'shorts', 'tag', 'linkYoutube', 'ngayPhatHanh', 'ghiChu', 'promptChatGPT']
       .forEach(k => b[k] = str(b[k]));
     return b;
@@ -455,7 +487,7 @@
   function xuatKho(kho) { return Object.assign(clone(kho), { schema: SCHEMA, capNhat: now() }); }
 
   root.NPT = {
-    SCHEMA, TRANG_THAI, TT, SERIES, datSeries, TIEU_CHI, DIEM_TOI_THIEU, SO_TUAN, TRUONG_NHAP,
+    SCHEMA, TRANG_THAI, TT, SERIES, datSeries, TIEU_CHI, TIEU_CHI_CU, NGUONG, datTieuChi, diemToiDa, xepLoai, SO_TUAN, TRUONG_NHAP,
     khoRong, taoBai, themLoi, loiHienTai, chonLoi, themNhac, chonNhac, doiTrangThai, canhBaoChuyen,
     datDiem, tongDiem, chuanHoaKho, gopKho, dongBoTuGitHub, giaiXungDot, hienGiaTriDB, NHAN_DB, tachJson, kiemTraNhap, phanTichNhap, timBaiTrung, apNhap, xungDot,
     soSanh, goiSaoLuu, docSaoLuu, xuatKho, boDau, fmtId

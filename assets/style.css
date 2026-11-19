@@ -112,7 +112,7 @@ dialog::backdrop{background:#000a}
 #toast.show{transform:translateX(-50%);opacity:1}
 
 /* ---- giai đoạn 1 ---- */
-.ok{color:var(--ok)}.no{color:var(--danger)}
+.ok{color:var(--ok)}.no{color:var(--danger)}.sua{color:#e0b04a}
 .pill.sm{font-size:10.5px;padding:0 6px}
 .id-pill{font:600 11.5px ui-monospace,Menlo,Consolas,monospace;background:#0004;border:1px solid var(--line);border-radius:6px;padding:1px 7px;color:var(--accent2);white-space:nowrap}
 .mini-link{font-size:12px}
@@ -169,11 +169,12 @@ table.snap th{color:var(--mute);font-weight:500}
 .vrow a{word-break:break-all}
 #d-loi{font-size:14px;line-height:1.55}
 .btns input{flex:1;min-width:180px}
-.score{display:grid;grid-template-columns:repeat(5,1fr) 1.2fr;gap:10px;align-items:end}
+.score{display:grid;grid-template-columns:repeat(4,1fr) 1.6fr;gap:10px;align-items:end}
 @media(max-width:760px){.score{grid-template-columns:repeat(2,1fr)}}
 .score label{margin:0}
 .tong{background:var(--bg2);border:1px solid var(--line);border-radius:9px;padding:8px 12px;font-size:13px}
-.tong b{font-size:22px}.tong.ok{border-color:#7fb77e88}.tong.no{border-color:#d9685a88}
+.tong b{font-size:22px}.tong.ok{border-color:#7fb77e88}.tong.no{border-color:#d9685a88}.tong.sua{border-color:#e0b04a88}
+.diem-cu{grid-column:1/-1;font-size:12px}
 .tong small{color:var(--mute)}
 pre.diff{background:var(--bg2);border:1px solid var(--line);border-radius:9px;padding:10px;white-space:pre-wrap;font:13px/1.55 ui-monospace,Menlo,Consolas,monospace;max-height:380px;overflow:auto}
 pre.diff .dadd{background:#7fb77e26;color:#cfe8cf;display:inline-block;width:100%}

@@ -60,10 +60,10 @@ test('phiên bản nhạc và chọn phát hành', () => {
 test('trạng thái có lịch sử và cảnh báo điểm', () => {
   const kho = N.khoRong(); const b = N.taoBai(kho, { ten: 'A', loi: 'x' });
   assert.ok(N.canhBaoChuyen(b, N.TT.DUYET_PHAT_HANH).some(s => s.includes('chưa được chấm')));
-  N.TIEU_CHI.forEach(([k]) => N.datDiem(b, k, 3));
-  assert.equal(N.tongDiem(b), 15);
-  assert.ok(N.canhBaoChuyen(b, N.TT.DUYET_PHAT_HANH).some(s => s.includes('15/25')));
-  N.TIEU_CHI.forEach(([k]) => N.datDiem(b, k, 4)); N.themNhac(b, 'l'); N.chonNhac(b, 1);
+  N.TIEU_CHI.forEach(([k]) => N.datDiem(b, k, 4));
+  assert.equal(N.tongDiem(b), 16);
+  assert.ok(N.canhBaoChuyen(b, N.TT.DUYET_PHAT_HANH).some(s => s.includes('16/20') && s.includes('cần chỉnh sửa')));
+  N.datDiem(b, 'cauChuyen', 5); N.themNhac(b, 'l'); N.chonNhac(b, 1);
   assert.deepEqual(N.canhBaoChuyen(b, N.TT.DUYET_PHAT_HANH), []);
   assert.ok(N.doiTrangThai(b, N.TT.DA_DANG, 'đăng'));
   assert.equal(b.lichSu.at(-1).tu, N.TT.VIET_LOI);
@@ -259,4 +259,41 @@ test('lịch 15 tuần và kho bài chỉ dùng series có trong chu-de.json', (
     assert.ok(Array.isArray(w.baiDon) && Array.isArray(w.viec));
   });
   docJson('kho-bai.json').bai.forEach(b => assert.ok(ids.has(b.series), `${b.id}: series "${b.series}" không có trong chu-de.json`));
+});
+
+test('phiếu duyệt 20 điểm đọc từ chu-de.json: khóa, ngưỡng, xếp loại', () => {
+  const cfg = docJson('chu-de.json');
+  N.datTieuChi(cfg.tieuChiDuyet, cfg.nguongDuyet);
+  assert.deepEqual(N.TIEU_CHI.map(([k]) => k), ['cauChuyen', 'diemCham', 'giaiDieu', 'banSac']);
+  assert.equal(N.diemToiDa(), 20);
+  assert.equal(N.xepLoai(17).muc, 'duyet'); assert.equal(N.xepLoai(16).muc, 'sua');
+  assert.equal(N.xepLoai(14).muc, 'sua'); assert.equal(N.xepLoai(13).muc, 'viet-lai'); assert.equal(N.xepLoai(null).muc, null);
+  const b = N.taoBai(N.khoRong(), { ten: 'A' });
+  N.datDiem(b, 'banSac', 6); assert.equal(b.diem.banSac, null);          // vượt điểm tối đa
+  N.datDiem(b, 'loi', 3); assert.equal(b.diem.loi, undefined);           // tiêu chí cũ không còn chấm được
+  N.datTieuChi([], null); assert.equal(N.TIEU_CHI.length, 4);           // cấu hình rỗng không xóa phiếu
+});
+
+test('điểm thang 25 cũ được chuyển sang diemCu, không mất; điểm trống không tạo diemCu', () => {
+  const { kho } = N.chuanHoaKho({ schema: 2, bai: [
+    { id: 'NPT-0001', loai: 'bai', ten: 'A', series: 'tuoi-tho', tuan: 1, loiVersions: [], diem: { loi: 4, giaiDieu: 3, caoTrao: 5, camXuc: 4, thuHut: 2 } },
+    { id: 'NPT-0002', loai: 'bai', ten: 'B', series: 'tuoi-tho', tuan: 1, loiVersions: [], diem: { loi: null, giaiDieu: null, caoTrao: null, camXuc: null, thuHut: null } }] });
+  const [a, b] = kho.bai;
+  assert.deepEqual(a.diem, { cauChuyen: null, diemCham: null, giaiDieu: 3, banSac: null });
+  assert.deepEqual([a.diemCu.thang, a.diemCu.loi, a.diemCu.caoTrao, a.diemCu.camXuc, a.diemCu.thuHut], [25, 4, 5, 4, 2]);
+  assert.equal(b.diemCu, undefined);
+  assert.equal(N.tongDiem(a), null);
+  const lan2 = N.chuanHoaKho(kho).kho.bai[0];                             // chuẩn hóa lại không mất diemCu
+  assert.equal(lan2.diemCu.loi, 4);
+});
+
+test('đồng bộ: bài GitHub còn khóa điểm cũ (null) không gây xung đột hay ghi đè điểm mới', () => {
+  const k = N.khoRong();
+  const goc = { id: 'NPT-0001', loai: 'bai', ten: 'A', series: 'tuoi-tho', tuan: 1, ngayCapNhat: '2026-11-19T08:42:00.000Z', loiVersions: [],
+    diem: { loi: null, giaiDieu: null, caoTrao: null, camXuc: null, thuHut: null } };
+  N.dongBoTuGitHub(k, { schema: 2, bai: [goc] });
+  N.datDiem(k.bai[0], 'cauChuyen', 5);
+  N.dongBoTuGitHub(k, { schema: 2, bai: [Object.assign({}, goc, { ngayCapNhat: '2026-11-20T00:00:00.000Z', tieude: 'mới' })] });
+  assert.equal(k.bai[0].diem.cauChuyen, 5);
+  assert.ok(!k.bai[0].xungDotGitHub || !('diem' in k.bai[0].xungDotGitHub));
 });

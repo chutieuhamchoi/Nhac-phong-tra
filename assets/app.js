@@ -19,6 +19,7 @@
   const fmt = d => d.toLocaleDateString('vi-VN', { day: '2-digit', month: '2-digit' });
   const fmtLuc = iso => { if (!iso) return ''; const d = new Date(iso); return isNaN(d) ? esc(iso) : d.toLocaleString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' }); };
   const addDays = (d, n) => { const x = new Date(d); x.setDate(x.getDate() + n); return x; };
+  const lopDiem = t => ({ duyet: 'ok', sua: 'sua', 'viet-lai': 'no' })[N.xepLoai(t).muc] || '';
   const seriesOf = id => CHUDE.series.find(s => s.id === id) || { ten: id, mau: '#E8A74A', goiY: '' };
   const ttPill = t => `<span class="tt tt-${t}">${esc(N.TRANG_THAI[t])}</span>`;
   const linkOk = u => /^https?:\/\//i.test(u || '');
@@ -321,7 +322,7 @@ ${DINH_DANG(s.id, w.so, 'playlist')}`;
         <div class="song-top"><span class="id-pill">${b.id}</span>${ttPill(b.trangThai)}</div>
         <h4>${esc(b.ten)}</h4>
         <div class="m">${b.loai === 'playlist' ? 'Playlist' : 'Bài đơn'} · Tuần ${b.tuan} · ${esc(seriesOf(b.series).ten)}</div>
-        <div class="m">Lời: ${b.loiVersions.length} bản · Nhạc: ${b.nhacVersions.length} bản${b.nhacChon ? ` (chọn v${b.nhacChon})` : ''} · Điểm: ${tong === null ? '—' : `<b class="${tong >= N.DIEM_TOI_THIEU ? 'ok' : 'no'}">${tong}/25</b>`}</div>
+        <div class="m">Lời: ${b.loiVersions.length} bản · Nhạc: ${b.nhacVersions.length} bản${b.nhacChon ? ` (chọn v${b.nhacChon})` : ''} · Điểm: ${tong === null ? '—' : `<b class="${lopDiem(tong)}" title="${N.xepLoai(tong).nhan}">${tong}/${N.diemToiDa()}</b>`}</div>
         <pre>${esc(loi.slice(0, 220))}</pre>
       </div>`;
     }).join('') : `<div class="empty">${kho.bai.length ? 'Không có bài khớp bộ lọc.' : 'Kho chưa có bài. Vào tab <b>Sáng tác</b> để bắt đầu, hoặc bấm <b>+ Ý tưởng mới</b>.'}</div>`;
@@ -341,7 +342,7 @@ ${DINH_DANG(s.id, w.so, 'playlist')}`;
   $('#btn-xuat-md').onclick = () => {
     const out = kho.bai.filter(b => b.loai !== 'playlist').map(b => {
       const nhac = b.nhacVersions.find(x => x.v === b.nhacChon);
-      return `# ${b.id} · ${b.ten}\n\n- Series: ${seriesOf(b.series).ten} · Tuần ${b.tuan} · ${N.TRANG_THAI[b.trangThai]}\n- Lời: phiên bản ${b.loiChon ?? '—'} / ${b.loiVersions.length}\n- Prompt Suno: ${b.promptSuno}\n${nhac ? `- Bản nhạc phát hành: v${nhac.v} ${nhac.link}\n` : ''}- Điểm: ${N.tongDiem(b) ?? '—'}/25\n- Tiêu đề YouTube: ${b.tieude}\n${b.linkYoutube ? `- Link: ${b.linkYoutube}\n` : ''}\n## Lời\n\n${N.loiHienTai(b) || ''}\n\n## Mô tả\n\n${b.mota}\n\n${b.tag}\n`;
+      return `# ${b.id} · ${b.ten}\n\n- Series: ${seriesOf(b.series).ten} · Tuần ${b.tuan} · ${N.TRANG_THAI[b.trangThai]}\n- Lời: phiên bản ${b.loiChon ?? '—'} / ${b.loiVersions.length}\n- Prompt Suno: ${b.promptSuno}\n${nhac ? `- Bản nhạc phát hành: v${nhac.v} ${nhac.link}\n` : ''}- Điểm: ${N.tongDiem(b) ?? '—'}/${N.diemToiDa()}\n- Tiêu đề YouTube: ${b.tieude}\n${b.linkYoutube ? `- Link: ${b.linkYoutube}\n` : ''}\n## Lời\n\n${N.loiHienTai(b) || ''}\n\n## Mô tả\n\n${b.mota}\n\n${b.tag}\n`;
     }).join('\n---\n\n');
     download(`loi-bai-hat-${homNay()}.md`, out || '# Kho trống\n', 'text/markdown');
   };
@@ -391,8 +392,9 @@ ${DINH_DANG(s.id, w.so, 'playlist')}`;
       : '<p class="hint">Chưa có bản nhạc nào. Tạo trên Suno rồi dán link vào đây, mỗi lần tạo là một phiên bản.</p>';
     // điểm
     const tong = N.tongDiem(b);
-    $('#d-diem').innerHTML = N.TIEU_CHI.map(([k, t]) => `<label>${esc(t)}<select data-diem="${k}"><option value="">—</option>${[1, 2, 3, 4, 5].map(n => `<option ${b.diem[k] === n ? 'selected' : ''}>${n}</option>`).join('')}</select></label>`).join('') +
-      `<div class="tong ${tong === null ? '' : tong >= N.DIEM_TOI_THIEU ? 'ok' : 'no'}">Tổng <b>${tong ?? '—'}</b>/25<br><small>${tong === null ? 'Chấm đủ 5 tiêu chí' : tong >= N.DIEM_TOI_THIEU ? 'Đạt mức phát hành' : `Dưới ${N.DIEM_TOI_THIEU}: chưa nên đăng`}</small></div>`;
+    $('#d-diem').innerHTML = N.TIEU_CHI.map(([k, t, max]) => `<label>${esc(t)}<select data-diem="${k}"><option value="">—</option>${Array.from({ length: max }, (_, i) => i + 1).map(n => `<option ${b.diem[k] === n ? 'selected' : ''}>${n}</option>`).join('')}</select></label>`).join('') +
+      `<div class="tong ${lopDiem(tong)}">Tổng <b>${tong ?? '—'}</b>/${N.diemToiDa()}<br><small>${esc(N.xepLoai(tong).nhan)}${tong === null ? '' : ` · duyệt từ ${N.NGUONG.deXuatDuyet}, sửa ${N.NGUONG.canChinhSua}–${N.NGUONG.deXuatDuyet - 1}`}</small></div>` +
+      (b.diemCu ? `<div class="m diem-cu">Điểm phiếu cũ (thang ${b.diemCu.thang}): ${Object.entries(N.TIEU_CHI_CU).filter(([k]) => b.diemCu[k] != null).map(([k, t]) => `${esc(t)} ${b.diemCu[k]}`).join(', ') || '—'}</div>` : '');
     // youtube
     capNhatTieuDe(); capNhatThumb();
     // lịch sử
@@ -652,7 +654,7 @@ ${DINH_DANG(s.id, w.so, 'playlist')}`;
     return k;
   }
   async function init() {
-    try { [LICH, CHUDE] = await Promise.all([load('data/lich.json'), load('data/chu-de.json')]); N.datSeries(CHUDE.series.map(x => x.id)); }   // series hợp lệ lấy từ chu-de.json, trước khi nạp kho
+    try { [LICH, CHUDE] = await Promise.all([load('data/lich.json'), load('data/chu-de.json')]); N.datSeries(CHUDE.series.map(x => x.id)); N.datTieuChi(CHUDE.tieuChiDuyet, CHUDE.nguongDuyet); }   // series hợp lệ lấy từ chu-de.json, trước khi nạp kho
     catch {
       document.querySelector('main').innerHTML = '<div class="empty">Không tải được dữ liệu. Hãy mở trang qua GitHub Pages hoặc một máy chủ web (không mở trực tiếp file).</div>';
       return;
