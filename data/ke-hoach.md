@@ -1,10 +1,10 @@
 # Chiến dịch xây kênh Nhạc Phòng Trà – Cà Phê Chill
 
-Cập nhật định hướng sáng tác 19/11/2026 · Kênh: [youtube.com/@nhac-phongtra](https://www.youtube.com/@nhac-phongtra) · Giai đoạn: 17/11/2026 – 28/02/2027 (15 tuần)
+Cập nhật định hướng sáng tác và quy trình sản xuất 19/11/2026 · Kênh: [youtube.com/@nhac-phongtra](https://www.youtube.com/@nhac-phongtra) · Giai đoạn: 17/11/2026 – 28/02/2027 (15 tuần)
 
 ## 1. Tình hình và mốc quan trọng
 
-Kênh mới bắt đầu từ tháng 11/2026, đã có video đầu tiên "Cánh diều tuổi thơ", đã đổi tên kênh, mô tả và ảnh bìa. Ba điều quyết định cách làm:
+Kênh mới bắt đầu từ tháng 11/2026, đã đăng 2 video: "Cánh diều tuổi thơ" (17/11/2026) và NPT-0001 "Có Những Ngày Chỉ Muốn Về Nhà" (19/11/2026, [xem trên YouTube](https://www.youtube.com/watch?v=aV9Z0ukc9vo)), video đầu tiên làm theo quy trình sản xuất ở mục 8; đã đổi tên kênh, mô tả và ảnh bìa. Ba điều quyết định cách làm:
 
 **Ngưỡng bật kiếm tiền quảng cáo sắp tăng gấp đôi.** Hiện tại cần 1.000 người đăng ký và 4.000 giờ xem trong 12 tháng. Từ 01/02/2027, kênh mới cần 1.000 người đăng ký và 8.000 giờ xem trong 365 ngày (hoặc 20 triệu lượt xem Shorts trong 90 ngày). Kênh mình không thể đạt 4.000 giờ trước 01/02/2027, nên cứ tính theo mốc 8.000 giờ, tức trung bình khoảng 22 giờ xem mỗi ngày trong cả năm. Thời gian xem (không phải lượt xem) là thứ quan trọng nhất.
 
@@ -15,10 +15,10 @@ Kênh mới bắt đầu từ tháng 11/2026, đã có video đầu tiên "Cánh
 ## 2. Việc bắt buộc làm ngay
 
 - **Dùng gói Suno Pro trở lên.** Bài tạo bằng gói miễn phí không được dùng để kiếm tiền, nâng cấp sau cũng không chuyển bài cũ thành bài thương mại. Kiểm tra "Cánh diều tuổi thơ" được tạo bằng gói nào.
-- **Gắn nhãn nội dung có dùng AI** cho mọi video trong YouTube Studio.
+- **Gắn nhãn nội dung có dùng AI** cho mọi video trong YouTube Studio. *NPT-0001: đã gắn (Claude kiểm tra 19/11/2026). Cánh diều tuổi thơ: cần kiểm tra.*
 - **Chỉ dùng lời tự viết.** Không đưa lời bài hát của nhạc sĩ khác vào Suno, không ghi tên ca sĩ thật trong câu lệnh.
 - Hoàn thiện video "Cánh diều tuổi thơ": bật bình luận, sửa tiêu đề, thêm thẻ, cho vào danh sách phát.
-- Lưu file gốc của mỗi bài (lời, câu lệnh Suno, ngày tạo, gói đang dùng) để làm bằng chứng khi bị khiếu nại bản quyền.
+- Lưu file gốc của mỗi bài (lời, câu lệnh Suno, ngày tạo, gói đang dùng) để làm bằng chứng khi bị khiếu nại bản quyền. *NPT-0001 còn thiếu bản Suno được chọn (`nhacChon`) và gói Suno đã dùng.*
 
 ## 3. Định vị biên tập và tiêu chuẩn sáng tác (đã duyệt 19/11/2026)
 
@@ -69,18 +69,51 @@ Bốn series hiện có là nhóm playlist, không giới hạn chủ đề sán
 | Thứ Bảy | Đăng playlist dài (sáng sớm), bài đơn 2 buổi tối |
 | Chủ Nhật | Xem số liệu tuần |
 
-## 8. Rủi ro
+## 8. Phân công và quy trình sản xuất (chốt 19/11/2026)
+
+**Phân công**
+
+| Ai | Việc |
+|---|---|
+| ChatGPT | Lời bài hát, câu lệnh Suno, `storyboard.json`, ảnh AI, tải ảnh lên Drive, đề xuất metadata (tiêu đề, mô tả, hashtag, 10–15 thẻ), cập nhật `kho-bai.json` |
+| Claude | Kiểm tra ảnh và MP3, dựng video bằng FFmpeg, ghi video vào Drive; sau khi đăng: vào YouTube Studio kiểm tra, thêm thẻ, sửa mô tả, lấy link; phát triển website và công cụ |
+| Chủ kênh | Duyệt lời, chọn bản Suno, bỏ MP3 vào Drive, duyệt video, tải video lên YouTube |
+
+**Quy trình mỗi bài**
+
+1. ChatGPT sáng tác lời và câu lệnh Suno → chủ kênh duyệt lời, chọn bản Suno.
+2. ChatGPT làm `anh/<MA_BAI>/storyboard.json` theo thời lượng MP3 thật, commit lên GitHub.
+3. ChatGPT tạo ảnh, tải vào Drive `Nhac_Phong_Tra/<MA_BAI>/anh/`; MP3 đặt tại `<MA_BAI>/nhac/nhac-chinh.mp3`.
+4. Claude kiểm tra đủ ảnh, kích thước, MP3; đối chiếu từng ảnh với storyboard.
+5. Claude dựng `preview.mp4` vào `<MA_BAI>/video/` → chủ kênh duyệt → đổi tên thành `final.mp4`.
+6. Chủ kênh tải lên YouTube → Claude vào Studio kiểm tra, thêm thẻ, lấy link → ghi `linkYoutube`, `ngayPhatHanh`, `trangThai` vào `kho-bai.json`.
+
+**Nơi lưu trữ**
+
+- GitHub (repo này): mã, dữ liệu, storyboard, mô tả bài.
+- Google Drive, thư mục `Nhac_Phong_Tra`: ảnh, nhạc, video theo cấu trúc `<MA_BAI>/anh`, `/nhac`, `/video`. Công cụ dựng: `Nhac_Phong_Tra/cong-cu/dung_video.py`.
+
+**Quy tắc storyboard và dựng video**
+
+- Mỗi ảnh tối đa 25 giây; ảnh 16:9, ưu tiên từ 1920×1080; nhân vật quay từ phía sau, không lộ mặt; không lặp bố cục giữa các cảnh.
+- Trường mỗi cảnh: `so`, `batDau`, `ketThuc`, `doanLoi`, `anh`, `moTa`, `promptAnh`, `hieuUng`, `lopPhu`, `chuyenCanh`.
+- `hieuUng`: slow zoom in, slow zoom out, slow pan left, slow pan right, static. `lopPhu`: film grain (mặc định), light flicker (chưa hỗ trợ mưa). `chuyenCanh`: cross dissolve 2 giây; cảnh cuối "fade black" 4 giây.
+- MP3 dài khác storyboard: công cụ tự co giãn các cảnh; cảnh nào vượt 25 giây thì dừng, báo cần thêm cảnh.
+- Video xuất ra: MP4 H.264 1920×1080, 30 fps, âm thanh AAC 256 kbps.
+
+## 9. Rủi ro
 
 | Rủi ro | Cách phòng |
 |---|---|
 | Bị đánh giá "nội dung không chân thực" | Lời tự viết, mô tả câu chuyện riêng, không quá 2–3 video dài mỗi tuần |
 | Bài tạo bằng gói miễn phí | Chỉ dùng bài tạo khi đang có gói Pro |
 | Trùng bài có bản quyền | Không nhắc tên ca sĩ, nhạc sĩ thật; nghe kỹ trước khi đăng |
+| Ảnh AI lệch storyboard, lộ mặt nhân vật, sai tỉ lệ | ChatGPT bám sát `moTa`/`promptAnh`, xuất 16:9; Claude đối chiếu từng cảnh trước khi dựng |
 | Mất động lực | Đánh giá theo giờ xem hằng tuần; dự kiến 9–12 tháng mới bật kiếm tiền |
 
 **Lưu ý kiểm chứng:** Các nhận định về ngưỡng kiếm tiền YouTube trong bản kế hoạch gốc cần được đối chiếu lại với chính sách YouTube chính thức trước khi dùng để ra quyết định.
 
-## 9. Nguồn
+## 10. Nguồn
 
 - [Ngưỡng YPP mới từ 01/02/2027 – PPC Land](https://ppc.land/new-youtube-creators-face-8-000-hour-bar-for-ad-revenue-from-february-2027/)
 - [Ngưỡng YPP hiện tại – 1of10](https://1of10.com/blog/youtube-partner-program/)
