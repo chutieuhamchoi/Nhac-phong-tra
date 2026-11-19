@@ -3,19 +3,22 @@
 Thư mục tài nguyên hình ảnh/video cho bài hát NPT-0001 của kênh Nhạc Phòng Trà – Cà Phê Chill.
 
 ## Thông tin nguồn
-- Chủ kênh đã gửi file nhạc Suno: `Có Những Ngày Chỉ Muốn Về Nhà.mp3` trong cuộc trò chuyện ChatGPT.
-- Thời lượng file MP3 đã kiểm tra: **04:32.640** (272,64 giây).
-- File MP3 **chưa được upload vào GitHub**; Claude cần nhận bản nhạc từ chủ kênh hoặc nguồn được cấp quyền truy cập.
-- Lời bài hát đã duyệt nằm trong `data/kho-bai.json`; đọc phiên bản `loiChon`.
+- Chủ kênh đã gửi bản nhạc Suno `Có Những Ngày Chỉ Muốn Về Nhà.mp3` trong cuộc trò chuyện ChatGPT.
+- Thời lượng bản MP3 được cung cấp: **04:32.640** (272,64 giây).
+- **MP3 chưa được upload lên GitHub.** Claude cần nhận MP3 từ chủ kênh.
+- Lời bài hát đã duyệt ở `data/kho-bai.json`; đọc phiên bản có `v = loiChon`.
+- `nhacChon: null` trong storyboard là trạng thái hiện tại; không tự suy đoán mã phiên bản nhạc đã chọn.
 
-## Quy ước đầu ra
-- `storyboard.json`: danh sách 6–8 cảnh, thời gian bắt đầu/kết thúc, mô tả, prompt ảnh, hiệu ứng và chuyển cảnh.
-- `mo-ta.md`: định hướng hình ảnh, tóm tắt các cảnh.
-- `canh-01.png` ... `canh-08.png`: ảnh minh họa theo thứ tự cảnh, 16:9, không chữ/logo/watermark.
-- `versions/`: lưu bản cũ trước khi làm lại storyboard.
+## Storyboard và quy ước ảnh
+- `storyboard.json`: **đã có**, gồm **11 cảnh**, 10 cảnh × 25 giây và cảnh cuối 22,64 giây, thời gian dự kiến; mỗi cảnh có prompt ảnh, hiệu ứng và chuyển cảnh.
+- `mo-ta.md`: **đã có**, định hướng hình ảnh và bảng tóm tắt 11 cảnh.
+- `canh-01.png` đến `canh-11.png`: **chưa upload lên GitHub**; cần tạo 11 ảnh độc lập theo đúng thứ tự storyboard.
+- Ảnh ngang 16:9; phong cách điện ảnh hoài niệm, không chữ, logo, watermark; chủ thể tránh sát mép trên/dưới để có thể crop khi cần.
+- `versions/`: lưu storyboard cũ trước khi thay đổi lớn, nếu được yêu cầu.
 
-## Trạng thái
-- Thư mục đã được chuẩn bị để Claude nhận biết.
-- **Chưa có storyboard hoặc ảnh cảnh chính thức được xác nhận** trong lần cập nhật README này.
-- `kiem-tra-ket-noi.png` chỉ là ảnh PNG 1×1 kiểm thử GitHub, **không dùng để dựng video**.
-- ChatGPT phụ trách storyboard và ảnh; Claude phụ trách ghép ảnh với nhạc. Không được suy diễn ảnh hay MP3 đã có trên GitHub khi chưa kiểm chứng.
+## Trạng thái thực tế
+- Đã có: `README.md`, `storyboard.json`, `mo-ta.md`.
+- Chưa có: 11 ảnh cảnh chính thức và MP3 trên GitHub.
+- `kiem-tra-ket-noi.png` chỉ là PNG 1×1, 68 byte dùng kiểm thử GitHub; **không dùng để dựng video**.
+- ChatGPT tạo ảnh và đóng gói ZIP nếu môi trường cho phép; chủ kênh chuyển ZIP cùng MP3 cho Claude; Claude kiểm tra, commit ảnh, dựng video.
+- Không xem tên ảnh được tham chiếu trong storyboard là bằng chứng ảnh đã tồn tại. Kiểm tra file thực tế trước khi dựng.
