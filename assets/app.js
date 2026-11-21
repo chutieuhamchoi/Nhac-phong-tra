@@ -446,7 +446,11 @@ ${DINH_DANG(s.id, w.so, 'playlist')}`;
     bai.ngayCapNhat = new Date().toISOString();
     dirty = false; $('#d-dirty').textContent = '';
   }
-  $('#d-luu').onclick = () => { luuTruong(); if (luuKho()) { renderBai(); renderLich(); renderVietLai(); toast('Đã lưu'); } };
+  $('#d-luu').onclick = () => {
+    const v = themNhacTuO();                                 // link Suno còn nằm trong ô: thêm luôn, không để mất
+    if (v < 0) return;
+    luuTruong(); if (luuKho()) { renderBai(); renderLich(); renderVietLai(); toast(v ? `Đã lưu (thêm nhạc v${v})` : 'Đã lưu'); }
+  };
   function dong() {
     if (dirty && !confirm('Có thay đổi chưa lưu ở các ô thông tin/YouTube. Đóng mà không lưu?')) return;
     dirty = false; dlg.close();
@@ -488,15 +492,27 @@ ${DINH_DANG(s.id, w.so, 'playlist')}`;
     $('#d-diff').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   };
   // nhạc
-  $('#d-them-nhac').onclick = () => {
+  // Thêm bản nhạc từ ô link/ghi chú. Trả về số phiên bản, 0 nếu ô trống, -1 nếu link sai.
+  function themNhacTuO() {
     const link = $('#d-nhac-link').value.trim(), gc = $('#d-nhac-ghichu').value.trim();
-    if (!link && !gc) { toast('Nhập link Suno hoặc ghi chú'); return; }
-    if (link && !linkOk(link)) { toast('Link phải bắt đầu bằng https://'); return; }
+    if (!link && !gc) return 0;
+    if (link && !linkOk(link)) { toast('Link phải bắt đầu bằng https://'); return -1; }
+    if (link && bai.nhacVersions.some(x => x.link === link)) { $('#d-nhac-link').value = ''; $('#d-nhac-ghichu').value = ''; toast('Link này đã có trong danh sách'); return -1; }
     const v = N.themNhac(bai, link, gc);
     if (bai.trangThai <= N.TT.DUYET_LOI) N.doiTrangThai(bai, N.TT.TAO_NHAC, 'Có bản nhạc Suno đầu tiên');
+    if (bai.nhacChon == null) N.chonNhac(bai, v);          // bản đầu tiên tự được chọn làm bản phát hành
     $('#d-nhac-link').value = ''; $('#d-nhac-ghichu').value = '';
+    return v;
+  }
+  $('#d-them-nhac').onclick = () => {
+    const v = themNhacTuO();
+    if (v === 0) { toast('Nhập link Suno hoặc ghi chú'); return; }
+    if (v < 0) return;
     luuKho(); renderBai(); toast(`Đã thêm nhạc v${v}`);
   };
+  ['#d-nhac-link', '#d-nhac-ghichu'].forEach(s => $(s).addEventListener('keydown', e => {
+    if (e.key === 'Enter' && !e.isComposing) { e.preventDefault(); $('#d-them-nhac').click(); }
+  }));
   $('#d-ds-nhac').addEventListener('change', e => {
     if (e.target.name !== 'nhac-chon') return;
     N.chonNhac(bai, e.target.value === '' ? null : +e.target.value); luuKho(); renderBai();
