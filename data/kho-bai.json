@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "capNhat": "2026-11-19T16:58:35.936Z",
+  "capNhat": "2026-11-21T16:39:22.188Z",
   "nextId": 3,
   "bai": [
     {
@@ -69,7 +69,7 @@
       "series": "tinh-yeu",
       "tuan": 2,
       "ngayTao": "2026-11-19T16:58:35.936Z",
-      "ngayCapNhat": "2026-11-19T16:58:35.936Z",
+      "ngayCapNhat": "2026-11-21T16:39:22.188Z",
       "trangThai": 2,
       "lichSu": [
         {
@@ -83,6 +83,12 @@
           "den": 2,
           "luc": "2026-11-19T16:58:35.936Z",
           "ghiChu": "Ông chủ xác nhận lời V2 ổn và yêu cầu tạo prompt Suno, cập nhật website"
+        },
+        {
+          "tu": 2,
+          "den": 2,
+          "luc": "2026-11-21T16:39:22.188Z",
+          "ghiChu": "Cập nhật lời V3 và prompt Suno; giữ trạng thái đã duyệt lời"
         }
       ],
       "loiVersions": [
@@ -92,10 +98,17 @@
           "nguon": "chatgpt",
           "luc": "2026-11-19T16:58:35.936Z",
           "ghiChu": "Bản V2 được Ông chủ chấp thuận; V1 từng trao đổi trong chat, chưa lưu vào kho"
+        },
+        {
+          "v": 3,
+          "loi": "[Verse 1]\nĐã bao lâu mình chẳng hẹn hò\nChẳng cùng nhau đi hết một chiều mưa\nNgày cứ trôi qua trong vội vã\nQuên mất ngày xưa mình đã yêu thế nào\n\nAnh vẫn bên em như mọi ngày\nVẫn thương em, chỉ ít nói ra thôi\nGiữa những bộn bề quen thuộc ấy\nCó đôi khi mình quên mất nhau rồi\n\n[Pre-Chorus]\nChiều nay nhìn em, anh chợt thấy\nNụ cười ngày ấy vẫn còn đây\nChỉ cần anh đưa tay ra trước\nLiệu em có nắm như ngày đầu?\n\n[Chorus]\nHay là mình yêu nhau lại từ đầu\nLại hẹn hò như ngày xưa em nhé\nLại nắm tay qua từng con phố\nLại thấy tim mình bối rối vì nhau\n\nHay là mình yêu nhau lại từ đầu\nBỏ sau lưng những lo toan thường nhật\nChẳng cần điều gì xa xôi lắm\nChỉ cần em cười, và nói: “Đi thôi anh!”\n\n[Verse 2]\nTối nay anh đón em tan làm\nMình ghé quán quen đã lâu không tới\nAnh sẽ kể em nghe chuyện cũ\nNhư hai người vừa mới biết yêu thôi\n\n[Chorus]\nHay là mình yêu nhau lại từ đầu\nLại hẹn hò như ngày xưa em nhé\nLại nắm tay qua từng con phố\nLại thấy tim mình bối rối vì nhau\n\nHay là mình yêu nhau lại từ đầu\nBỏ sau lưng những lo toan thường nhật\nChẳng cần điều gì xa xôi lắm\nChỉ cần em cười, và nói: “Đi thôi anh!”\n\n[Bridge]\nNếu thời gian quay về ngày ấy\nGiữa bao người, anh vẫn nhận ra em\nVà nếu được yêu thêm lần nữa\nAnh vẫn muốn... bắt đầu từ em.\n\n[Final Chorus]\nHay là mình yêu nhau lại từ đầu\nKhông phải vì tình yêu xưa đã hết\nMà vì sau bao nhiêu năm tháng\nAnh vẫn muốn em rung động vì anh\n\nHay là mình yêu nhau lại từ đầu\nĐể mỗi ngày đều là ngày đáng nhớ\nDẫu mai này mình già đi nữa\nAnh vẫn muốn hẹn hò cùng em\n\n[Outro]\nEm ơi, tối nay mình đi nhé\nYêu nhau thêm một lần... từ đầu.",
+          "nguon": "chatgpt",
+          "luc": "2026-11-21T16:39:22.188Z",
+          "ghiChu": "Thay Bridge bằng phương án C đã chốt; giữ nguyên các phần còn lại"
         }
       ],
-      "loiChon": 2,
-      "promptSuno": "Vietnamese romantic pop soul, soft modern R&B groove, 90 BPM, warm expressive male baritone, intimate conversational verses, catchy uplifting chorus, Rhodes piano, clean electric guitar, melodic bass, subtle live drums, tasteful harmonies. Strong soaring hook on 'Hay là mình yêu nhau lại từ đầu', dynamic bridge and final chorus. Natural Vietnamese diction, warm organic studio sound, joyful mature love. Avoid monotonous melody, sad ballad, EDM, robotic vocals and excessive runs.",
+      "loiChon": 3,
+      "promptSuno": "Vietnamese romantic pop soul with a warm modern R&B groove, 90 BPM, expressive intimate male baritone, natural Vietnamese diction. Conversational tender verses with spacious Rhodes piano, clean electric guitar, melodic bass and restrained live drums. Pre-chorus gradually builds anticipation; chorus opens into a memorable soaring melodic hook on 'Hay là mình yêu nhau lại từ đầu', with tasteful harmonies and clear dynamic contrast. Bridge strips back to piano and soft guitar, becomes vulnerable and reflective, with a gentle pause before 'bắt đầu từ em', then a rising emotional lift into the final chorus with fuller instrumentation and heartfelt vocals. Mature, hopeful, affectionate, organic studio warmth. Avoid flat repetitive melody, overly sad ballad, EDM, robotic vocals, excessive vocal runs.",
       "nhacVersions": [],
       "nhacChon": null,
       "diem": {
@@ -111,7 +124,7 @@
       "tag": "#YeuNhauLaiTuDau #NhacPhongTra #PopSoul #RnBViet #TinhYeuTruongThanh",
       "linkYoutube": "",
       "ngayPhatHanh": "",
-      "ghiChu": "Lời V2 đã duyệt; chờ tạo nhạc Suno và chọn bản phối. Chưa phát hành.",
+      "ghiChu": "Lời V3: Bridge phương án C đã duyệt; prompt Suno cập nhật theo cao trào Bridge → Final Chorus. Chờ tạo nhạc Suno.",
       "promptChatGPT": ""
     }
   ]
