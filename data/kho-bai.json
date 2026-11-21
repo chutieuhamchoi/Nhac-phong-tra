@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "capNhat": "2026-11-21T16:39:22.188Z",
+  "capNhat": "2026-11-21T17:09:57.091Z",
   "nextId": 3,
   "bai": [
     {
@@ -69,7 +69,7 @@
       "series": "tinh-yeu",
       "tuan": 2,
       "ngayTao": "2026-11-19T16:58:35.936Z",
-      "ngayCapNhat": "2026-11-21T16:39:22.188Z",
+      "ngayCapNhat": "2026-11-21T17:09:57.091Z",
       "trangThai": 2,
       "lichSu": [
         {
@@ -89,6 +89,12 @@
           "den": 2,
           "luc": "2026-11-21T16:39:22.188Z",
           "ghiChu": "Cập nhật lời V3 và prompt Suno; giữ trạng thái đã duyệt lời"
+        },
+        {
+          "tu": 2,
+          "den": 2,
+          "luc": "2026-11-21T17:09:57.091Z",
+          "ghiChu": "Chốt Style V4 Romantic Acoustic Pop Rock, 84 BPM; bỏ phương án Rap; giữ nguyên lời V3."
         }
       ],
       "loiVersions": [
@@ -108,7 +114,7 @@
         }
       ],
       "loiChon": 3,
-      "promptSuno": "Vietnamese romantic pop soul with a warm modern R&B groove, 90 BPM, expressive intimate male baritone, natural Vietnamese diction. Conversational tender verses with spacious Rhodes piano, clean electric guitar, melodic bass and restrained live drums. Pre-chorus gradually builds anticipation; chorus opens into a memorable soaring melodic hook on 'Hay là mình yêu nhau lại từ đầu', with tasteful harmonies and clear dynamic contrast. Bridge strips back to piano and soft guitar, becomes vulnerable and reflective, with a gentle pause before 'bắt đầu từ em', then a rising emotional lift into the final chorus with fuller instrumentation and heartfelt vocals. Mature, hopeful, affectionate, organic studio warmth. Avoid flat repetitive melody, overly sad ballad, EDM, robotic vocals, excessive vocal runs.",
+      "promptSuno": "Vietnamese romantic acoustic pop rock, 84 BPM, warm slightly raspy male tenor, natural Vietnamese diction, expressive live-band sound. Intimate storytelling verses with fingerpicked acoustic guitar, short vocal phrases and meaningful pauses. Pre-chorus rises in pitch and tension with building drums. Chorus opens wide: instantly catchy, soaring hook on \"Hay là mình yêu nhau lại từ đầu\", melodic leap and held note on \"đầu\", followed by a contrasting descending phrase. Bright acoustic strums, punchy live drums, warm bass, tasteful electric guitar. Verse 2 pulls back into a playful groove. Bridge drops to sparse piano and vulnerable near-whispered vocals; pause after \"Anh vẫn muốn...\" before a powerful final chorus with lifted melody, layered harmonies and full-band climax. Tender acoustic outro. Strong melodic variation and clear emotional peaks; hopeful, romantic, organic. No flat repetitive melody, sleepy ballad, R&B, EDM or heavy distortion.",
       "nhacVersions": [],
       "nhacChon": null,
       "diem": {
