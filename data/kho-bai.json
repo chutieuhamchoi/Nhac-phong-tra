@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "capNhat": "2026-11-21T17:09:57.091Z",
+  "capNhat": "2026-11-21T17:15:00.000Z",
   "nextId": 3,
   "bai": [
     {
@@ -69,8 +69,8 @@
       "series": "tinh-yeu",
       "tuan": 2,
       "ngayTao": "2026-11-19T16:58:35.936Z",
-      "ngayCapNhat": "2026-11-21T17:09:57.091Z",
-      "trangThai": 2,
+      "ngayCapNhat": "2026-11-21T17:15:00.000Z",
+      "trangThai": 3,
       "lichSu": [
         {
           "tu": null,
@@ -95,6 +95,12 @@
           "den": 2,
           "luc": "2026-11-21T17:09:57.091Z",
           "ghiChu": "Chốt Style V4 Romantic Acoustic Pop Rock, 84 BPM; bỏ phương án Rap; giữ nguyên lời V3."
+        },
+        {
+          "tu": 2,
+          "den": 3,
+          "luc": "2026-11-21T17:15:00.000Z",
+          "ghiChu": "Ông chủ gửi link bản Suno v1; Claude ghi vào kho"
         }
       ],
       "loiVersions": [
@@ -115,8 +121,16 @@
       ],
       "loiChon": 3,
       "promptSuno": "Vietnamese romantic acoustic pop rock, 84 BPM, warm slightly raspy male tenor, natural Vietnamese diction, expressive live-band sound. Intimate storytelling verses with fingerpicked acoustic guitar, short vocal phrases and meaningful pauses. Pre-chorus rises in pitch and tension with building drums. Chorus opens wide: instantly catchy, soaring hook on \"Hay là mình yêu nhau lại từ đầu\", melodic leap and held note on \"đầu\", followed by a contrasting descending phrase. Bright acoustic strums, punchy live drums, warm bass, tasteful electric guitar. Verse 2 pulls back into a playful groove. Bridge drops to sparse piano and vulnerable near-whispered vocals; pause after \"Anh vẫn muốn...\" before a powerful final chorus with lifted melody, layered harmonies and full-band climax. Tender acoustic outro. Strong melodic variation and clear emotional peaks; hopeful, romantic, organic. No flat repetitive melody, sleepy ballad, R&B, EDM or heavy distortion.",
-      "nhacVersions": [],
-      "nhacChon": null,
+      "nhacVersions": [
+        {
+          "v": 1,
+          "link": "https://suno.com/song/508646d9-ae7c-4360-985b-c66803c53419",
+          "ghiChu": "Bản Suno ông chủ gửi (lời V3)",
+          "luc": "2026-11-21T17:15:00.000Z",
+          "loiV": 3
+        }
+      ],
+      "nhacChon": 1,
       "diem": {
         "cauChuyen": null,
         "diemCham": null,
