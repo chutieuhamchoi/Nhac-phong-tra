@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "capNhat": "2026-11-21T17:15:00.000Z",
+  "capNhat": "2026-11-21T17:29:29.210Z",
   "nextId": 3,
   "bai": [
     {
@@ -69,7 +69,7 @@
       "series": "tinh-yeu",
       "tuan": 2,
       "ngayTao": "2026-11-19T16:58:35.936Z",
-      "ngayCapNhat": "2026-11-21T17:15:00.000Z",
+      "ngayCapNhat": "2026-11-21T17:29:29.210Z",
       "trangThai": 3,
       "lichSu": [
         {
@@ -101,6 +101,12 @@
           "den": 3,
           "luc": "2026-11-21T17:15:00.000Z",
           "ghiChu": "Ông chủ gửi link bản Suno v1; Claude ghi vào kho"
+        },
+        {
+          "tu": 3,
+          "den": 3,
+          "luc": "2026-11-21T17:29:29.210Z",
+          "ghiChu": "Sản xuất MV nháp: 16 ảnh Drive, storyboard GitHub, roughcut video Drive, thumbnail, metadata YouTube. Chưa duyệt phát hành."
         }
       ],
       "loiVersions": [
@@ -137,15 +143,15 @@
         "giaiDieu": null,
         "banSac": null
       },
-      "thumbnail": "",
-      "tieude": "Yêu Nhau Lại Từ Đầu | Pop Soul R&B Việt – Nhạc Phòng Trà",
-      "mota": "Một lời hẹn hò mới dành cho người đã ở bên ta bao năm. Yêu Nhau Lại Từ Đầu – ca khúc pop soul/R&B về tình yêu trưởng thành. Nhạc Phòng Trà – Mỗi bài hát, một câu chuyện đáng nghe.",
+      "thumbnail": "https://drive.google.com/file/d/1hI-vG6IrEu2lX_GtKI9t9C4HlVwjR_J2/view",
+      "tieude": "Yêu Nhau Lại Từ Đầu | Acoustic Pop Rock Việt | Nhạc Phòng Trà",
+      "mota": "Có bao lâu rồi mình chưa hẹn hò như ngày đầu? “Yêu Nhau Lại Từ Đầu” là lời rủ rê dịu dàng dành cho người đã ở bên ta qua những ngày bận rộn. Một ca khúc Acoustic Pop Rock ấm áp về tình yêu trưởng thành, về việc chọn yêu nhau thêm một lần nữa.\n\nNhạc Phòng Trà – Mỗi bài hát, một câu chuyện đáng nghe.\n\n#YeuNhauLaiTuDau #NhacPhongTra #AcousticPopRock #TinhYeuTruongThanh",
       "shorts": "Hay là mình yêu nhau lại từ đầu\nLại hẹn hò như ngày xưa em nhé\nLại nắm tay qua từng con phố\nLại thấy tim mình bối rối vì nhau",
-      "tag": "#YeuNhauLaiTuDau #NhacPhongTra #PopSoul #RnBViet #TinhYeuTruongThanh",
+      "tag": "#YeuNhauLaiTuDau #NhacPhongTra #AcousticPopRock #NhacViet #TinhYeuTruongThanh",
       "linkYoutube": "",
       "ngayPhatHanh": "",
-      "ghiChu": "Lời V3: Bridge phương án C đã duyệt; prompt Suno cập nhật theo cao trào Bridge → Final Chorus. Chờ tạo nhạc Suno.",
-      "promptChatGPT": ""
+      "ghiChu": "Đã lưu nhạc chính trên Drive; đã dựng storyboard 16 cảnh, tạo 16 ảnh nháp và video roughcut v1; chờ duyệt nhạc theo phiếu 4 tiêu chí và hoàn thiện MV. Không thay đổi trạng thái duyệt phát hành.",
+      "promptChatGPT": "MV storyboard: storyboard/NPT-0002.md; ảnh Google Drive Nhac_Phong_Tra/NPT-0002/anh/canh-01.png...canh-16.png; video roughcut Nhac_Phong_Tra/NPT-0002/video/NPT-0002-MV-roughcut-v1.mp4. Ảnh 06–16 tách từ storyboard tổng, cần tạo lại ảnh chất lượng cao trước khi xuất bản. Timeline chỉ là ước lượng."
     }
   ]
 }
