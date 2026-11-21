@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "capNhat": "2026-11-21T17:35:01.246Z",
+  "capNhat": "2026-11-21T18:06:02.840Z",
   "nextId": 3,
   "bai": [
     {
@@ -69,7 +69,7 @@
       "series": "tinh-yeu",
       "tuan": 2,
       "ngayTao": "2026-11-19T16:58:35.936Z",
-      "ngayCapNhat": "2026-11-21T17:35:01.246Z",
+      "ngayCapNhat": "2026-11-21T18:06:02.840Z",
       "trangThai": 3,
       "lichSu": [
         {
@@ -113,6 +113,12 @@
           "den": 3,
           "luc": "2026-11-21T17:35:01.246Z",
           "ghiChu": "Bổ sung thông báo AI trong mô tả YouTube theo rà soát Claude."
+        },
+        {
+          "tu": 3,
+          "den": 3,
+          "luc": "2026-11-21T18:06:02.840Z",
+          "ghiChu": "QC Claude: thay 11 ảnh cảnh 06–16 và thumbnail trên Drive, cập nhật storyboard theo bản Suno V1 dài 216,384 giây. Mốc vào lời còn chờ xác nhận khi nghe bản nhạc. Mô tả YouTube đã có thông báo sử dụng AI."
         }
       ],
       "loiVersions": [
@@ -156,8 +162,8 @@
       "tag": "#YeuNhauLaiTuDau #NhacPhongTra #AcousticPopRock #NhacViet #TinhYeuTruongThanh",
       "linkYoutube": "",
       "ngayPhatHanh": "",
-      "ghiChu": "Đã lưu nhạc chính trên Drive; đã dựng storyboard 16 cảnh, tạo 16 ảnh nháp và video roughcut v1; chờ duyệt nhạc theo phiếu 4 tiêu chí và hoàn thiện MV. Không thay đổi trạng thái duyệt phát hành.",
-      "promptChatGPT": "MV storyboard: storyboard/NPT-0002.md; ảnh Google Drive Nhac_Phong_Tra/NPT-0002/anh/canh-01.png...canh-16.png; video roughcut Nhac_Phong_Tra/NPT-0002/video/NPT-0002-MV-roughcut-v1.mp4. Ảnh 06–16 tách từ storyboard tổng, cần tạo lại ảnh chất lượng cao trước khi xuất bản. Timeline chỉ là ước lượng."
+      "ghiChu": "Đã lưu nhạc chính trên Drive, đã thay ảnh cảnh 06–16 và thumbnail; storyboard 16 cảnh có timeline sơ bộ theo Suno V1. Chờ xác nhận mốc vào lời, duyệt nhạc theo phiếu 4 tiêu chí và hoàn thiện MV.",
+      "promptChatGPT": "MV storyboard: storyboard/NPT-0002.md; ảnh Google Drive Nhac_Phong_Tra/NPT-0002/anh/canh-01.png...canh-16.png; video roughcut Nhac_Phong_Tra/NPT-0002/video/NPT-0002-MV-roughcut-v1.mp4. Ảnh 06–16 đã được tạo độc lập và xuất PNG 1920×1080. Timeline đã căn sơ bộ theo MP3 Suno V1; cần nghe xác nhận các mốc vào lời."
     }
   ]
 }
