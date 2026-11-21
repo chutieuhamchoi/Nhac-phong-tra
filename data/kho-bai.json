@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "capNhat": "2026-11-21T17:29:29.210Z",
+  "capNhat": "2026-11-21T17:35:01.246Z",
   "nextId": 3,
   "bai": [
     {
@@ -69,7 +69,7 @@
       "series": "tinh-yeu",
       "tuan": 2,
       "ngayTao": "2026-11-19T16:58:35.936Z",
-      "ngayCapNhat": "2026-11-21T17:29:29.210Z",
+      "ngayCapNhat": "2026-11-21T17:35:01.246Z",
       "trangThai": 3,
       "lichSu": [
         {
@@ -107,6 +107,12 @@
           "den": 3,
           "luc": "2026-11-21T17:29:29.210Z",
           "ghiChu": "Sản xuất MV nháp: 16 ảnh Drive, storyboard GitHub, roughcut video Drive, thumbnail, metadata YouTube. Chưa duyệt phát hành."
+        },
+        {
+          "tu": 3,
+          "den": 3,
+          "luc": "2026-11-21T17:35:01.246Z",
+          "ghiChu": "Bổ sung thông báo AI trong mô tả YouTube theo rà soát Claude."
         }
       ],
       "loiVersions": [
@@ -145,7 +151,7 @@
       },
       "thumbnail": "https://drive.google.com/file/d/1hI-vG6IrEu2lX_GtKI9t9C4HlVwjR_J2/view",
       "tieude": "Yêu Nhau Lại Từ Đầu | Acoustic Pop Rock Việt | Nhạc Phòng Trà",
-      "mota": "Có bao lâu rồi mình chưa hẹn hò như ngày đầu? “Yêu Nhau Lại Từ Đầu” là lời rủ rê dịu dàng dành cho người đã ở bên ta qua những ngày bận rộn. Một ca khúc Acoustic Pop Rock ấm áp về tình yêu trưởng thành, về việc chọn yêu nhau thêm một lần nữa.\n\nNhạc Phòng Trà – Mỗi bài hát, một câu chuyện đáng nghe.\n\n#YeuNhauLaiTuDau #NhacPhongTra #AcousticPopRock #TinhYeuTruongThanh",
+      "mota": "Có bao lâu rồi mình chưa hẹn hò như ngày đầu? “Yêu Nhau Lại Từ Đầu” là lời rủ rê dịu dàng dành cho người đã ở bên ta qua những ngày bận rộn. Một ca khúc Acoustic Pop Rock ấm áp về tình yêu trưởng thành, về việc chọn yêu nhau thêm một lần nữa.\n\nNhạc Phòng Trà – Mỗi bài hát, một câu chuyện đáng nghe.\n\nLời do kênh sáng tác. Nhạc và hình ảnh được tạo với sự hỗ trợ của AI.\n\n#YeuNhauLaiTuDau #NhacPhongTra #AcousticPopRock #TinhYeuTruongThanh",
       "shorts": "Hay là mình yêu nhau lại từ đầu\nLại hẹn hò như ngày xưa em nhé\nLại nắm tay qua từng con phố\nLại thấy tim mình bối rối vì nhau",
       "tag": "#YeuNhauLaiTuDau #NhacPhongTra #AcousticPopRock #NhacViet #TinhYeuTruongThanh",
       "linkYoutube": "",
