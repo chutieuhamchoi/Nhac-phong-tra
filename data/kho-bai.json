@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "capNhat": "2026-11-22T06:27:01.567Z",
+  "capNhat": "2026-11-22T11:55:00.544Z",
   "nextId": 33,
   "bai": [
     {
@@ -237,7 +237,7 @@
       "series": "tinh-yeu",
       "tuan": 1,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T11:55:00.544Z",
       "trangThai": 1,
       "lichSu": [
         {
@@ -245,6 +245,12 @@
           "den": 1,
           "luc": "2026-11-22T06:27:01.567Z",
           "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 13. Chờ Ông chủ duyệt."
+        },
+        {
+          "tu": 1,
+          "den": 1,
+          "luc": "2026-11-22T11:55:00.544Z",
+          "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
         }
       ],
       "loiVersions": [
@@ -254,9 +260,16 @@
           "nguon": "chatgpt",
           "luc": "2026-11-22T06:27:01.567Z",
           "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 13. Chờ Ông chủ duyệt."
+        },
+        {
+          "v": 2,
+          "loi": "[Verse 1 - Female]\nEm mặc chiếc váy anh khen\nVừa ra đầu ngõ nghe chuông\nAnh nhắn tối nay lại bận\nEm đứng bên đường một lúc\nQuán quen kê bàn sát cửa\nEm xin bàn cho một người\nAnh nhắn cuối tuần bù nhé\nEm nhắn lại một mặt cười\n[Verse 2 - Male]\nAnh cứ nghĩ còn Chủ nhật\nCòn một bữa tối tuần sau\nMỗi lần em nói được mà\nAnh tin em chẳng buồn lâu\nTối nay anh tan làm sớm\nGọi hai ly ở quán quen\nCô phục vụ mang thêm ghế\nAnh chợt nghe mình gọi em\n[Chorus - Duet]\n(Nữ) Lúc nào anh cũng bận\nLúc nào em cũng chờ\n(Nam) Anh cứ dành em cho ngày mai\n(Nữ) Em đã thôi dành chỗ\n(Nam) Anh có cả buổi tối nay\n(Nữ) Em có một đời phải sống\n(Cả hai) Mình để lỡ nhau từng chút\nĐến khi rảnh thì mất nhau\n[Bridge - Duet]\n(Nam) Anh xin lỗi vì về muộn\n(Nữ) Em đợi câu đó lâu rồi\n(Nam) Vậy mình còn gì để nói?\n(Nữ) Ngồi uống hết ly đi thôi\n[Final Chorus - Duet]\n(Nữ) Lúc nào anh cũng bận\nEm đã từng chờ rất lâu\n(Nam) Anh có cả buổi tối nay\nMà chẳng còn cách nào bù\n(Cả hai) Mình để lỡ nhau từng chút\nĐến khi rảnh thì mất nhau",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T11:55:00.544Z",
+          "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
         }
       ],
-      "loiChon": 1,
+      "loiChon": 2,
       "styleVersions": [
         {
           "v": 1,
@@ -293,7 +306,7 @@
       "series": "tinh-yeu",
       "tuan": 1,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T11:55:00.544Z",
       "trangThai": 1,
       "lichSu": [
         {
@@ -301,6 +314,12 @@
           "den": 1,
           "luc": "2026-11-22T06:27:01.567Z",
           "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 29. Chờ Ông chủ duyệt."
+        },
+        {
+          "tu": 1,
+          "den": 1,
+          "luc": "2026-11-22T11:55:00.544Z",
+          "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
         }
       ],
       "loiVersions": [
@@ -310,9 +329,16 @@
           "nguon": "chatgpt",
           "luc": "2026-11-22T06:27:01.567Z",
           "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 29. Chờ Ông chủ duyệt."
+        },
+        {
+          "v": 2,
+          "loi": "[Verse 1]\nBạn hỏi dạo này em sao\nEm kể vừa thay rèm cửa\nKể chỗ làm có mèo hoang\nNgày nào cũng nằm ngoài cửa\nKể em học bơi tháng trước\nĐã bơi tới bờ bên kia\nBạn cười, bảo lâu lắm rồi\nMới nghe em nói say sưa\n[Chorus]\nEm đã thôi kể về anh\nTừ bao giờ em chẳng nhớ\nMột buổi chiều qua rất nhanh\nEm kể bao điều nho nhỏ\nĐến khi đứng chờ đèn xanh\nEm mới nhận ra trên phố\nEm đã thôi kể về anh\nMà còn bao điều để nói\n[Verse 2]\nEm vẫn nhớ anh sợ lạnh\nVẫn nhớ nhà anh nuôi chim\nHôm qua ai mở bài cũ\nEm nghe từ đầu tới cuối\nRồi em về tưới mấy chậu\nCây húng vừa nhú thêm hoa\nLần đầu em chụp một tấm\nChỉ vì nhìn thấy nó xinh\n[Chorus]\nEm đã thôi kể về anh\nTừ bao giờ em chẳng nhớ\nMột buổi chiều qua rất nhanh\nEm kể bao điều nho nhỏ\nĐến khi đứng chờ đèn xanh\nEm mới nhận ra trên phố\nEm đã thôi kể về anh\nMà còn bao điều để nói\n[Final Chorus]\nEm đã thôi kể về anh\nTừ bao giờ em chẳng nhớ\nNgày mai nếu bạn ghé ngang\nEm có chuyện vui muốn kể\nEm bơi tới bờ bên kia\nLần này không cần nghỉ giữa",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T11:55:00.544Z",
+          "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
         }
       ],
-      "loiChon": 1,
+      "loiChon": 2,
       "styleVersions": [
         {
           "v": 1,
@@ -349,7 +375,7 @@
       "series": "do-thi",
       "tuan": 2,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T11:55:00.544Z",
       "trangThai": 1,
       "lichSu": [
         {
@@ -357,6 +383,12 @@
           "den": 1,
           "luc": "2026-11-22T06:27:01.567Z",
           "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 03. Chờ Ông chủ duyệt."
+        },
+        {
+          "tu": 1,
+          "den": 1,
+          "luc": "2026-11-22T11:55:00.544Z",
+          "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
         }
       ],
       "loiVersions": [
@@ -366,9 +398,16 @@
           "nguon": "chatgpt",
           "luc": "2026-11-22T06:27:01.567Z",
           "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 03. Chờ Ông chủ duyệt."
+        },
+        {
+          "v": 2,
+          "loi": "[Verse 1 - Female]\nEm khoanh ngày mười hai\nTrên tờ lịch cạnh bếp\nTháng này trời trở rét\nEm mua rau anh thích\n[Verse 2 - Male]\nAnh đếm qua từng ga\nQua một vùng sương trắng\nLoa vừa báo sắp đến\nAnh lấy khăn quàng ra\n[Chorus - Duet]\nTháng Mười Hai có hẹn\nEm đợi ngoài cửa ga\nAnh kéo va-li tới\nĐã thấy em từ xa\nMình đã nói qua máy\nĐủ chuyện nhỏ trong nhà\nGặp nhau câu đầu tiên\nLại là em lạnh à\n[Bridge - Duet]\n(Nữ) Em mang theo ngô nướng\n(Nam) Còn ấm trong tay này\n(Cả hai) Mình chia nhau một bắp\nRồi đi bộ về nhà\n[Final Chorus - Duet]\nTháng Mười Hai có hẹn\nTàu vừa dừng sân ga\nTrời còn nguyên cái rét\nMình đi bộ về nhà",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T11:55:00.544Z",
+          "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
         }
       ],
-      "loiChon": 1,
+      "loiChon": 2,
       "styleVersions": [
         {
           "v": 1,
@@ -405,7 +444,7 @@
       "series": "truong-thanh",
       "tuan": 2,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T11:55:00.544Z",
       "trangThai": 1,
       "lichSu": [
         {
@@ -413,6 +452,12 @@
           "den": 1,
           "luc": "2026-11-22T06:27:01.567Z",
           "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 04. Chờ Ông chủ duyệt."
+        },
+        {
+          "tu": 1,
+          "den": 1,
+          "luc": "2026-11-22T11:55:00.544Z",
+          "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
         }
       ],
       "loiVersions": [
@@ -422,9 +467,16 @@
           "nguon": "chatgpt",
           "luc": "2026-11-22T06:27:01.567Z",
           "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 04. Chờ Ông chủ duyệt."
+        },
+        {
+          "v": 2,
+          "loi": "[Verse 1]\nSố cậu còn trong máy\nTên lưu từ lớp mười\nTớ tập câu lâu quá\nBấm gọi lại quên rồi\nMẹ tớ vừa thay kính\nCầu cũ họ sơn xanh\nTớ có bao chuyện nhỏ\nChưa kể cậu nghe lần nào\n[Chorus]\nBạn cũ ơi, kể từ đâu?\nTừ hôm mưa ngập tới đầu gối\nHay từ hôm cả hai giận nhau\nĐứa nào cũng mong bên kia gọi\nBạn cũ ơi, cậu cứ kể\nTớ còn thức, cứ nói cho lâu\nMấy năm qua nói trong một tối\nMai mình còn gọi được cho nhau\n[Verse 2]\nCậu gọi tớ là Tép\nTớ cười vang cả phòng\nBiệt danh từ hồi bé\nLâu lắm chẳng ai dùng\nCon cậu đang tập nói\nCứ chen vào: «Chào cô!»\nCậu bảo lớn thêm chút\nCho nó sang nhà tớ\n[Chorus]\nBạn cũ ơi, kể từ đâu?\nTừ hôm mưa ngập tới đầu gối\nHay từ hôm cả hai giận nhau\nĐứa nào cũng mong bên kia gọi\nBạn cũ ơi, cậu cứ kể\nTớ còn thức, cứ nói cho lâu\nMấy năm qua nói trong một tối\nMai mình còn gọi được cho nhau\n[Outro]\nBạn cũ ơi, mai gọi nhé\nLần này tới lượt tớ kể đầu",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T11:55:00.544Z",
+          "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
         }
       ],
-      "loiChon": 1,
+      "loiChon": 2,
       "styleVersions": [
         {
           "v": 1,
@@ -461,7 +513,7 @@
       "series": "tinh-yeu",
       "tuan": 3,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T11:55:00.544Z",
       "trangThai": 1,
       "lichSu": [
         {
@@ -469,6 +521,12 @@
           "den": 1,
           "luc": "2026-11-22T06:27:01.567Z",
           "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 05. Chờ Ông chủ duyệt."
+        },
+        {
+          "tu": 1,
+          "den": 1,
+          "luc": "2026-11-22T11:55:00.544Z",
+          "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
         }
       ],
       "loiVersions": [
@@ -478,9 +536,16 @@
           "nguon": "chatgpt",
           "luc": "2026-11-22T06:27:01.567Z",
           "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 05. Chờ Ông chủ duyệt."
+        },
+        {
+          "v": 2,
+          "loi": "[Verse 1]\nEm đặt máy lên bàn\nBảo anh xem hộ nhé\nNhắn người ta thế này\nCó lộ là thích quá?\nAnh sửa một dấu câu\nRồi dặn đừng xóa nữa\nEm gửi đi rất nhanh\nAnh nhìn đá tan dần\n[Chorus]\nEm có biết đâu\nAnh thuộc giờ em hay nhắn\nEm có biết đâu\nAnh để chuông riêng tên em\nCâu em sắp gửi người ấy\nAnh đã tập nói bao lần\nGiờ anh còn ngồi đây chọn\nMột lời chúc em gặp may\n[Verse 2]\nEm hỏi anh có ai\nMà rành mấy chuyện thế\nAnh nói cũng có người\nEm bảo kể nghe đi\nAnh nhìn em một lúc\nRồi bảo để hôm nào\nEm cười: «Anh giấu kỹ»\nAnh cúi đầu khuấy đá\n[Chorus]\nEm có biết đâu\nAnh thuộc giờ em hay nhắn\nEm có biết đâu\nAnh để chuông riêng tên em\nCâu em sắp gửi người ấy\nAnh đã tập nói bao lần\nGiờ anh còn ngồi đây chọn\nMột lời chúc em gặp may\n[Outro]\nEm có biết đâu\nCâu khó nhất anh chưa gửi",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T11:55:00.544Z",
+          "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
         }
       ],
-      "loiChon": 1,
+      "loiChon": 2,
       "styleVersions": [
         {
           "v": 1,
@@ -517,7 +582,7 @@
       "series": "sang-tao",
       "tuan": 3,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T11:55:00.544Z",
       "trangThai": 1,
       "lichSu": [
         {
@@ -525,6 +590,12 @@
           "den": 1,
           "luc": "2026-11-22T06:27:01.567Z",
           "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 06. Chờ Ông chủ duyệt."
+        },
+        {
+          "tu": 1,
+          "den": 1,
+          "luc": "2026-11-22T11:55:00.544Z",
+          "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
         }
       ],
       "loiVersions": [
@@ -534,9 +605,16 @@
           "nguon": "chatgpt",
           "luc": "2026-11-22T06:27:01.567Z",
           "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 06. Chờ Ông chủ duyệt."
+        },
+        {
+          "v": 2,
+          "loi": "[Verse 1]\nCha ngồi vá tấm lưới\nCon giữ đèn cho cha\nMùi dầu bám lên áo\nTheo con tới trường xa\nNgày người ta hỏi lớn\nCon định đi nơi nào\nCon vẽ một đường nước\nQua tận mũi đất cao\n[Chorus]\nEm thuộc về biển\nTừ lúc biết nhìn mây\nTừ hôm tự cầm lái\nVà đưa thuyền qua vịnh\nEm thuộc về biển\nBàn tay em đã chai\nMai khi con nước lên\nEm đi chuyến của mình\n[Verse 2]\nCha tiễn con ra bến\nĐưa con bình nước đầy\nDặn về, ghé qua chợ\nMẹ còn chờ cá tươi\nLần đầu qua đèn cảng\nCon nghe tim đập nhanh\nRồi gọi về bến nhỏ\nCha ơi, con qua rồi\n[Chorus]\nEm thuộc về biển\nTừ lúc biết nhìn mây\nTừ hôm tự cầm lái\nVà đưa thuyền qua vịnh\nEm thuộc về biển\nBàn tay em đã chai\nMai khi con nước lên\nEm đi chuyến của mình\n[Final Chorus]\nEm thuộc về biển\nQua cả ngày gió ngược\nVà lúc quay đầu lại\nEm tự đưa thuyền về",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T11:55:00.544Z",
+          "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
         }
       ],
-      "loiChon": 1,
+      "loiChon": 2,
       "styleVersions": [
         {
           "v": 1,
@@ -685,7 +763,7 @@
       "series": "mua",
       "tuan": 5,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T11:55:00.544Z",
       "trangThai": 1,
       "lichSu": [
         {
@@ -693,6 +771,12 @@
           "den": 1,
           "luc": "2026-11-22T06:27:01.567Z",
           "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 09. Chờ Ông chủ duyệt."
+        },
+        {
+          "tu": 1,
+          "den": 1,
+          "luc": "2026-11-22T11:55:00.544Z",
+          "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
         }
       ],
       "loiVersions": [
@@ -702,9 +786,16 @@
           "nguon": "chatgpt",
           "luc": "2026-11-22T06:27:01.567Z",
           "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 09. Chờ Ông chủ duyệt."
+        },
+        {
+          "v": 2,
+          "loi": "[Verse 1]\nBạn kéo em ra phố\nChỗ nhà thờ vừa lên đèn\nKhói ngô nướng bên đường\nBạn rủ dừng chụp ảnh\nEm đứng vào chỗ cũ\nTheo phản xạ nhìn sang\nMột đôi chờ chụp ảnh\nEm nhích qua nhường phần\n[Chorus]\nĐêm Noel anh ở đâu?\nBên đó trời có lạnh?\nEm gõ một câu rất ngắn\nMà đèn đổi màu ba lần\nĐêm Noel anh ở đâu?\nPhố mình đông như mọi năm\nBạn bè đang gọi em lại\nEm cất điện thoại vào túi\n[Verse 2]\nBạn em nhìn màn hình\nRồi làm như chưa thấy\nKéo em vào giữa đám\nBảo đứng sát vào đây\nTấm hình về tới máy\nEm cười hơi nghiêng vai\nPhía sau ngôi sao sáng\nSoi rõ cả nhóm mình\n[Chorus]\nĐêm Noel anh ở đâu?\nBên đó trời có lạnh?\nEm gõ một câu rất ngắn\nMà đèn đổi màu ba lần\nĐêm Noel anh ở đâu?\nPhố mình đông như mọi năm\nBạn bè đang gọi em lại\nEm cất điện thoại vào túi\n[Outro]\nĐêm Noel anh ở đâu?\nCâu đó em để lại",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T11:55:00.544Z",
+          "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
         }
       ],
-      "loiChon": 1,
+      "loiChon": 2,
       "styleVersions": [
         {
           "v": 1,
@@ -741,7 +832,7 @@
       "series": "do-thi",
       "tuan": 5,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T11:55:00.544Z",
       "trangThai": 1,
       "lichSu": [
         {
@@ -749,6 +840,12 @@
           "den": 1,
           "luc": "2026-11-22T06:27:01.567Z",
           "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 10. Chờ Ông chủ duyệt."
+        },
+        {
+          "tu": 1,
+          "den": 1,
+          "luc": "2026-11-22T11:55:00.544Z",
+          "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
         }
       ],
       "loiVersions": [
@@ -758,9 +855,16 @@
           "nguon": "chatgpt",
           "luc": "2026-11-22T06:27:01.567Z",
           "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 10. Chờ Ông chủ duyệt."
+        },
+        {
+          "v": 2,
+          "loi": "[Verse 1]\nĐêm nay trên sóng nhỏ\nCó người xin một bài\nAnh vừa qua Xuân Thủy\nCòn phải lái đường dài\nChị ở tầng năm nhắn\nPhòng trực còn đèn xanh\nChờ người sang ca sáng\nChị xin nghe gì nhanh\n[Chorus]\nĐêm nay còn ai thức?\nTôi gửi bạn bài này\nNgười đang ngồi một mình\nNgười còn tay làm việc\nĐêm nay còn ai thức?\nMở vừa đủ nghe thôi\nMai gặp nhau ngoài phố\nCó khi chẳng nhận người\n[Verse 2]\nAnh xuống xe mua bánh\nTiệm vừa lấy mẻ đầu\nCô bán hàng khe khẽ\nNgân đúng bài anh nghe\nBài tôi vừa phát đó\nCòn đi qua mấy đường\nTrời gần lên màu sáng\nTôi đọc lời chào sớm\n[Chorus]\nĐêm nay còn ai thức?\nTôi gửi bạn bài này\nNgười đang ngồi một mình\nNgười còn tay làm việc\nĐêm nay còn ai thức?\nMở vừa đủ nghe thôi\nMai gặp nhau ngoài phố\nCó khi chẳng nhận người\n[Outro]\nĐêm nay còn ai thức?\nTrời lên rồi, chào nhau",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T11:55:00.544Z",
+          "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
         }
       ],
-      "loiChon": 1,
+      "loiChon": 2,
       "styleVersions": [
         {
           "v": 1,
@@ -797,7 +901,7 @@
       "series": "mua",
       "tuan": 6,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T11:55:00.544Z",
       "trangThai": 1,
       "lichSu": [
         {
@@ -805,6 +909,12 @@
           "den": 1,
           "luc": "2026-11-22T06:27:01.567Z",
           "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 11. Chờ Ông chủ duyệt."
+        },
+        {
+          "tu": 1,
+          "den": 1,
+          "luc": "2026-11-22T11:55:00.544Z",
+          "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
         }
       ],
       "loiVersions": [
@@ -814,9 +924,16 @@
           "nguon": "chatgpt",
           "luc": "2026-11-22T06:27:01.567Z",
           "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 11. Chờ Ông chủ duyệt."
+        },
+        {
+          "v": 2,
+          "loi": "[Verse 1 - Male]\nAnh ngồi ngoài hiên quán\nNghe nhạc vọng ra sân\nNhạc lên qua mấy lượt\nAnh vẫn làm thinh\n[Verse 2 - Female]\nEm qua bàn anh ngồi\nHỏi sao anh ngồi riêng\nCòn một bài trước lúc\nĐón năm mới, nhảy không?\n[Chorus - Duet]\nCòn kịp yêu nhau\nCòn kịp một bài\nAnh bước nhầm chân\nEm đếm lại hai\nCòn kịp yêu nhau\nCó gì phải vội\nNhạc hết bài này\nMình xin bài mới\n[Bridge - Duet]\n(Nam) Anh tưởng qua tuổi biết run\n(Nữ) Em cũng tưởng mình thôi đợi\n(Cả hai) Vừa chạm tay nhau một lần\nNgoài sân ai đếm tới ba\n[Final Chorus - Duet]\nCòn kịp yêu nhau\nĐồng hồ điểm rồi\nAnh giữ tay em\nChào năm mới thôi",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T11:55:00.544Z",
+          "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
         }
       ],
-      "loiChon": 1,
+      "loiChon": 2,
       "styleVersions": [
         {
           "v": 1,
@@ -853,7 +970,7 @@
       "series": "truong-thanh",
       "tuan": 6,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T11:55:00.544Z",
       "trangThai": 1,
       "lichSu": [
         {
@@ -861,6 +978,12 @@
           "den": 1,
           "luc": "2026-11-22T06:27:01.567Z",
           "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 12. Chờ Ông chủ duyệt."
+        },
+        {
+          "tu": 1,
+          "den": 1,
+          "luc": "2026-11-22T11:55:00.544Z",
+          "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
         }
       ],
       "loiVersions": [
@@ -870,9 +993,16 @@
           "nguon": "chatgpt",
           "luc": "2026-11-22T06:27:01.567Z",
           "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 12. Chờ Ông chủ duyệt."
+        },
+        {
+          "v": 2,
+          "loi": "[Verse 1]\nCả ngày tôi nghe hỏi\nDạo này có vui không\nTôi trả lời như thể\nĐã học thuộc từ lâu\nBạn dọn giùm hai chén\nChừa lại bình nước ấm\nHỏi tôi muốn kể hết\nHay cứ ngồi thế này\n[Chorus]\nCho tôi buồn một lát\nĐể tôi thở thật dài\nBạn cứ ngồi bên cạnh\nĐèn cứ để như vầy\nCho tôi buồn một lát\nMai còn nhiều việc thôi\nĐêm nay tôi mệt quá\nTựa vào vai bạn ngồi\n[Verse 2]\nTôi nói điều đã giấu\nTới nửa câu thì ngưng\nBạn ngồi đan dở áo\nĐợi tôi tự nói xong\nNước trong bình nguội bớt\nTôi rót ra hai ly\nLần đầu trong ngày ấy\nTôi biết mình cần gì\n[Chorus]\nCho tôi buồn một lát\nĐể tôi thở thật dài\nBạn cứ ngồi bên cạnh\nĐèn cứ để như vầy\nCho tôi buồn một lát\nMai còn nhiều việc thôi\nĐêm nay tôi mệt quá\nTựa vào vai bạn ngồi\n[Outro]\nCho tôi buồn một lát\nBạn ở đây là được",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T11:55:00.544Z",
+          "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
         }
       ],
-      "loiChon": 1,
+      "loiChon": 2,
       "styleVersions": [
         {
           "v": 1,
@@ -909,7 +1039,7 @@
       "series": "ca-phe-sang",
       "tuan": 7,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T11:55:00.544Z",
       "trangThai": 1,
       "lichSu": [
         {
@@ -917,6 +1047,12 @@
           "den": 1,
           "luc": "2026-11-22T06:27:01.567Z",
           "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 01. Chờ Ông chủ duyệt."
+        },
+        {
+          "tu": 1,
+          "den": 1,
+          "luc": "2026-11-22T11:55:00.544Z",
+          "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
         }
       ],
       "loiVersions": [
@@ -926,9 +1062,16 @@
           "nguon": "chatgpt",
           "luc": "2026-11-22T06:27:01.567Z",
           "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 01. Chờ Ông chủ duyệt."
+        },
+        {
+          "v": 2,
+          "loi": "[Verse 1]\nEm gọi ly đen đá\nAnh gọi giống em luôn\nHai người nâng ly rất lịch sự\nRồi nhăn mặt cùng lúc\nEm đẩy gói đường qua\nAnh vờ bảo anh quen\nEm nhấp thêm một ngụm nhỏ\nChẳng ai nhịn cười thêm\n[Chorus]\nCà phê đắng, em ngọt\nThôi, đừng thêm đường\nAnh còn chưa uống hết\nĐã muốn ngồi thêm\nCà phê đắng, em ngọt\nEm cứ cười đi\nLần sau anh gọi nâu\nĐể em khỏi nhường\n[Verse 2]\nBàn bên vừa tính tiền\nNgoài hiên nắng lên đầy\nEm hỏi mai anh bận chứ\nAnh bảo bận chỗ này\nEm gõ muỗng lên đĩa\nMột tiếng nghe trong veo\nVậy mai em tới trước nhé\nEm gọi gì anh theo?\n[Chorus]\nCà phê đắng, em ngọt\nThôi, đừng thêm đường\nAnh còn chưa uống hết\nĐã muốn ngồi thêm\nCà phê đắng, em ngọt\nEm cứ cười đi\nLần sau anh gọi nâu\nĐể em khỏi nhường\n[Outro]\nCà phê đắng, em ngọt\nMai cho anh ly nâu",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T11:55:00.544Z",
+          "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
         }
       ],
-      "loiChon": 1,
+      "loiChon": 2,
       "styleVersions": [
         {
           "v": 1,
@@ -1021,7 +1164,7 @@
       "series": "tinh-yeu",
       "tuan": 8,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T11:55:00.544Z",
       "trangThai": 1,
       "lichSu": [
         {
@@ -1029,6 +1172,12 @@
           "den": 1,
           "luc": "2026-11-22T06:27:01.567Z",
           "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 15. Chờ Ông chủ duyệt."
+        },
+        {
+          "tu": 1,
+          "den": 1,
+          "luc": "2026-11-22T11:55:00.544Z",
+          "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
         }
       ],
       "loiVersions": [
@@ -1038,9 +1187,16 @@
           "nguon": "chatgpt",
           "luc": "2026-11-22T06:27:01.567Z",
           "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 15. Chờ Ông chủ duyệt."
+        },
+        {
+          "v": 2,
+          "loi": "[Verse 1]\nEm hỏi anh còn nhớ\nTiệm bánh sát cầu thang\nAnh nhớ ngày quán đóng\nNhớ cả bàn ngoài sân\nEm cười, anh hay thật\nĐến giờ còn nhớ sao\nAnh kéo ghế cho em\nMắt nhìn người qua cầu\n[Chorus]\nĐừng đợi anh quên\nRồi mới yên lòng em nhé\nAnh giữ một chiều đẹp\nNhư giữ tấm hình xưa\nĐừng đợi anh quên\nĐể biết mình đi được\nMai anh còn có hẹn\nỞ nơi em chưa qua\n[Verse 2]\nAnh kể đã chuyển chỗ\nPhòng mới nhìn ra sông\nEm kể nuôi con chó\nSợ nhất lúc trời giông\nTới ngã tư hai đứa\nEm nói xe em kia\nAnh đợi em lên xe\nRồi quay về phía sông\n[Chorus]\nĐừng đợi anh quên\nRồi mới yên lòng em nhé\nAnh giữ một chiều đẹp\nNhư giữ tấm hình xưa\nĐừng đợi anh quên\nĐể biết mình đi được\nMai anh còn có hẹn\nỞ nơi em chưa qua\n[Outro]\nĐừng đợi anh quên\nEm về cẩn thận nhé",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T11:55:00.544Z",
+          "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
         }
       ],
-      "loiChon": 1,
+      "loiChon": 2,
       "styleVersions": [
         {
           "v": 1,
@@ -1133,7 +1289,7 @@
       "series": "truong-thanh",
       "tuan": 9,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T11:55:00.544Z",
       "trangThai": 1,
       "lichSu": [
         {
@@ -1141,6 +1297,12 @@
           "den": 1,
           "luc": "2026-11-22T06:27:01.567Z",
           "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 17. Chờ Ông chủ duyệt."
+        },
+        {
+          "tu": 1,
+          "den": 1,
+          "luc": "2026-11-22T11:55:00.544Z",
+          "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
         }
       ],
       "loiVersions": [
@@ -1150,9 +1312,16 @@
           "nguon": "chatgpt",
           "luc": "2026-11-22T06:27:01.567Z",
           "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 17. Chờ Ông chủ duyệt."
+        },
+        {
+          "v": 2,
+          "loi": "[Verse 1]\nBa quay lưng bên cửa\nĐưa tay chùi ngang mi\nCon đứng ôm quả bóng\nChờ ba nói điều gì\nBa bảo bụi bay đấy\nCon biết nhà vừa lau\nCon kéo ghế ngồi xuống\nCạnh ba, chẳng hỏi đâu\n[Chorus]\nĐàn ông cũng biết khóc\nBa ơi, khóc cũng được\nHồi con trầy đầu gối\nBa ngồi với con lâu\nĐàn ông cũng biết khóc\nHôm nay đến lượt con\nBa cứ ngồi thêm chút\nCon để bóng ngoài sân\n[Verse 2]\nBa nói bà vừa gọi\nBảo nhớ ba hồi nhỏ\nBa đi học xa nhà\nBà hay ngồi chờ cửa\nCon đưa ba cốc nước\nHỏi mai mình sang thăm?\nBa ôm con một chút\nRồi nói ừ, đi sớm\n[Chorus]\nĐàn ông cũng biết khóc\nBa ơi, khóc cũng được\nHồi con trầy đầu gối\nBa ngồi với con lâu\nĐàn ông cũng biết khóc\nHôm nay đến lượt con\nBa cứ ngồi thêm chút\nCon để bóng ngoài sân\n[Final Chorus]\nĐàn ông cũng biết khóc\nBa ơi, khóc cũng được\nHồi con buồn ba đợi\nGiờ con ngồi với ba",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T11:55:00.544Z",
+          "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
         }
       ],
-      "loiChon": 1,
+      "loiChon": 2,
       "styleVersions": [
         {
           "v": 1,
@@ -1189,7 +1358,7 @@
       "series": "do-thi",
       "tuan": 9,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T11:55:00.544Z",
       "trangThai": 1,
       "lichSu": [
         {
@@ -1197,6 +1366,12 @@
           "den": 1,
           "luc": "2026-11-22T06:27:01.567Z",
           "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 18. Chờ Ông chủ duyệt."
+        },
+        {
+          "tu": 1,
+          "den": 1,
+          "luc": "2026-11-22T11:55:00.544Z",
+          "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
         }
       ],
       "loiVersions": [
@@ -1206,9 +1381,16 @@
           "nguon": "chatgpt",
           "luc": "2026-11-22T06:27:01.567Z",
           "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 18. Chờ Ông chủ duyệt."
+        },
+        {
+          "v": 2,
+          "loi": "[Verse 1]\nTôi quẹt thẻ ra cổng\nLúc bốn giờ ba mươi\nĐường còn in đèn đỏ\nTiệm bánh đã lên hơi\nChị quét ngang đầu ngõ\nGom mấy chiếc lá me\nTôi mua hai ổ nóng\nMột ổ mời chị ăn\n[Chorus]\nThành phố thức cùng tôi\nTừ khi trời còn tối\nNgười bật lò, người quét phố\nNgười vừa hết một ca\nThành phố thức cùng tôi\nMột hàng đèn vừa tắt\nTôi nhìn ô xe buýt\nThấy một ngày chạy qua\n[Verse 2]\nQua cầu mùi sông mới\nTrời đỏ sau thùng xe\nCô bán xôi dọn ghế\nBảo hôm nay về khuya?\nTôi nói hôm nay sớm\nCô cười, xới thêm xôi\nPhố mở từng ô cửa\nTôi đi giữa trời xanh\n[Chorus]\nThành phố thức cùng tôi\nTừ khi trời còn tối\nNgười bật lò, người quét phố\nNgười vừa hết một ca\nThành phố thức cùng tôi\nMột hàng đèn vừa tắt\nTôi nhìn ô xe buýt\nThấy một ngày chạy qua\n[Outro]\nThành phố thức cùng tôi\nTôi về, phố đi làm",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T11:55:00.544Z",
+          "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
         }
       ],
-      "loiChon": 1,
+      "loiChon": 2,
       "styleVersions": [
         {
           "v": 1,
@@ -1245,7 +1427,7 @@
       "series": "mua",
       "tuan": 10,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T11:55:00.544Z",
       "trangThai": 1,
       "lichSu": [
         {
@@ -1253,6 +1435,12 @@
           "den": 1,
           "luc": "2026-11-22T06:27:01.567Z",
           "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 19. Chờ Ông chủ duyệt."
+        },
+        {
+          "tu": 1,
+          "den": 1,
+          "luc": "2026-11-22T11:55:00.544Z",
+          "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
         }
       ],
       "loiVersions": [
@@ -1262,9 +1450,16 @@
           "nguon": "chatgpt",
           "luc": "2026-11-22T06:27:01.567Z",
           "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 19. Chờ Ông chủ duyệt."
+        },
+        {
+          "v": 2,
+          "loi": "[Verse 1]\nMẹ hỏi về hôm mấy\nCon về hăm ba Chạp\nMẹ bảo ráng về sớm\nKịp ăn cơm với nhà\nXe tới vừa qua chợ\nMẹ xách giỏ đi ngang\nCon nắm quai bên kia\nMẹ quay lại nhìn con\n[Chorus]\nTết này con về sớm\nĐể đi chợ cùng mẹ\nĐể lau từng lá dong\nVà nghe mẹ mặc cả\nTết này con về sớm\nCơm chiều đừng dọn vội\nCon còn nhiều chuyện nhỏ\nMuốn kể mẹ nghe thôi\n[Verse 2]\nMẹ ngồi bên rổ lá\nChỉ con cách gói bánh\nMẹ buộc lạt rất nhanh\nCon gấp hoài vẫn lệch\nMẹ cười, còn vụng lắm\nCon bảo vậy năm sau\nCon về sớm thêm bữa\nMẹ chỉ con từ đầu\n[Chorus]\nTết này con về sớm\nĐể đi chợ cùng mẹ\nĐể lau từng lá dong\nVà nghe mẹ mặc cả\nTết này con về sớm\nCơm chiều đừng dọn vội\nCon còn nhiều chuyện nhỏ\nMuốn kể mẹ nghe thôi\n[Outro]\nTết này con về sớm\nMẹ để con làm nhé",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T11:55:00.544Z",
+          "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
         }
       ],
-      "loiChon": 1,
+      "loiChon": 2,
       "styleVersions": [
         {
           "v": 1,
@@ -1301,7 +1496,7 @@
       "series": "mua",
       "tuan": 10,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T11:55:00.544Z",
       "trangThai": 1,
       "lichSu": [
         {
@@ -1309,6 +1504,12 @@
           "den": 1,
           "luc": "2026-11-22T06:27:01.567Z",
           "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 20. Chờ Ông chủ duyệt."
+        },
+        {
+          "tu": 1,
+          "den": 1,
+          "luc": "2026-11-22T11:55:00.544Z",
+          "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
         }
       ],
       "loiVersions": [
@@ -1318,9 +1519,16 @@
           "nguon": "chatgpt",
           "luc": "2026-11-22T06:27:01.567Z",
           "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 20. Chờ Ông chủ duyệt."
+        },
+        {
+          "v": 2,
+          "loi": "[Verse 1]\nPhòng đầu mang bánh tét\nPhòng cuối dọn dưa hành\nCậu mới thuê tháng trước\nMang nồi canh khổ qua\nNhà trọ kê bàn nhựa\nDài tới chỗ để xe\nCó ai vừa tan sở\nChạy lên thay áo lẹ\n[Chorus]\nTết ở phòng trọ\nMỗi người một món thôi\nThêm đôi đũa nữa\nAi gõ cửa thì mời\nTết ở phòng trọ\nNgười xa quê ngồi chung\nGắp đi, đừng khách sáo\nHết cơm thì xới thêm\n[Verse 2]\nBà chủ vừa ra nhắc\nKhuya rồi nhớ vặn nhỏ\nRồi quay vào trong bếp\nLấy thêm bánh mang ra\nCậu ở phòng sát ngõ\nGọi về cho mẹ nghe\nMẹ hỏi đông người quá\nCậu xoay máy một vòng\n[Chorus]\nTết ở phòng trọ\nMỗi người một món thôi\nThêm đôi đũa nữa\nAi gõ cửa thì mời\nTết ở phòng trọ\nNgười xa quê ngồi chung\nGắp đi, đừng khách sáo\nHết cơm thì xới thêm\n[Final Chorus]\nTết ở phòng trọ\nMỗi người một món thôi\nThêm đôi đũa nữa\nCho ai vừa về tới",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T11:55:00.544Z",
+          "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
         }
       ],
-      "loiChon": 1,
+      "loiChon": 2,
       "styleVersions": [
         {
           "v": 1,
@@ -1357,7 +1565,7 @@
       "series": "tinh-yeu",
       "tuan": 11,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T11:55:00.544Z",
       "trangThai": 1,
       "lichSu": [
         {
@@ -1365,6 +1573,12 @@
           "den": 1,
           "luc": "2026-11-22T06:27:01.567Z",
           "ghiChu": "Tí lưu lời nháp V1 cho bài số 21. Chờ Ông chủ duyệt."
+        },
+        {
+          "tu": 1,
+          "den": 1,
+          "luc": "2026-11-22T11:55:00.544Z",
+          "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
         }
       ],
       "loiVersions": [
@@ -1374,9 +1588,16 @@
           "nguon": "chatgpt",
           "luc": "2026-11-22T06:27:01.567Z",
           "ghiChu": "Tí lưu lời nháp V1 cho bài số 21. Chờ Ông chủ duyệt."
+        },
+        {
+          "v": 2,
+          "loi": "[Verse 1]\nÔng mở ngăn tủ dưới\nTìm bản đồ hồi mới cưới\nCác đường gấp bạc màu\nCòn vòng tròn bà vẽ\nBà xỏ đôi giày vải\nÔng mang hai chai nước\nCon cháu hỏi đi đâu\nBà bảo đi hẹn hò\n[Chorus]\nHẹn nhau ở tuổi sáu mươi\nChỗ ngày xưa mình chưa kịp tới\nĐường vòng thì mình đi chậm thôi\nBà ngắm mây, tôi nhìn bà cười\nHẹn nhau ở tuổi sáu mươi\nTôi vẫn tới sớm mười phút\nBà cứ sửa tóc thong thả\nChuyến này mình có cả ngày\n[Verse 2]\nQuán ngày xưa đã dẹp\nĐường mới chạy ven sông\nBà xin dừng một chút\nChụp tấm hình cho ông\nÔng lấy tay vuốt tóc\nBà bảo cứ để bay\nRồi tựa vào vai ấy\nBảo chụp thêm tấm nữa\n[Chorus]\nHẹn nhau ở tuổi sáu mươi\nChỗ ngày xưa mình chưa kịp tới\nĐường vòng thì mình đi chậm thôi\nBà ngắm mây, tôi nhìn bà cười\nHẹn nhau ở tuổi sáu mươi\nTôi vẫn tới sớm mười phút\nBà cứ sửa tóc thong thả\nChuyến này mình có cả ngày\n[Outro]\nHẹn nhau ở tuổi sáu mươi\nLần sau mình đi đâu nữa?",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T11:55:00.544Z",
+          "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
         }
       ],
-      "loiChon": 1,
+      "loiChon": 2,
       "styleVersions": [],
       "styleChon": null,
       "promptSuno": "",
@@ -1405,7 +1626,7 @@
       "series": "mua",
       "tuan": 11,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T11:55:00.544Z",
       "trangThai": 1,
       "lichSu": [
         {
@@ -1413,6 +1634,12 @@
           "den": 1,
           "luc": "2026-11-22T06:27:01.567Z",
           "ghiChu": "Tí lưu lời nháp V1 cho bài số 22. Chờ Ông chủ duyệt."
+        },
+        {
+          "tu": 1,
+          "den": 1,
+          "luc": "2026-11-22T11:55:00.544Z",
+          "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
         }
       ],
       "loiVersions": [
@@ -1422,9 +1649,16 @@
           "nguon": "chatgpt",
           "luc": "2026-11-22T06:27:01.567Z",
           "ghiChu": "Tí lưu lời nháp V1 cho bài số 22. Chờ Ông chủ duyệt."
+        },
+        {
+          "v": 2,
+          "loi": "[Verse 1]\nTết đầu tiên xa nhà\nCon gọi về lúc giao thừa\nMẹ ở đầu dây hỏi\nCó kiếm được bánh chưng?\nCon đang hâm cơm hộp\nNghe gõ cửa hai lần\nBà hàng xóm đứng đợi\nMời con sang ăn cơm\n[Chorus]\nMùa xuân từ bên kia cửa\nCó người chừa sẵn ghế cho con\nBà nói một câu con nghe chưa rõ\nRồi gắp thêm miếng nữa vào chén con\nMùa xuân từ bên kia cửa\nBữa cơm lạ mà cử chỉ quen\nCon nhớ mẹ hay chờ con ăn hết\nMới chịu ngồi ăn phần của mình\n[Verse 2]\nCon chạy về lấy mứt\nMẹ gửi sang hôm kia\nBà nếm rồi hỏi nhỏ\nTên món này là gì?\nCon nói chậm từng tiếng\nBà tập nói theo con\nNgoài hiên tuyết vẫn rơi\nTrên bàn trà còn nóng\n[Chorus]\nMùa xuân từ bên kia cửa\nCó người chừa sẵn ghế cho con\nBà nói một câu con nghe chưa rõ\nRồi gắp thêm miếng nữa vào chén con\nMùa xuân từ bên kia cửa\nBữa cơm lạ mà cử chỉ quen\nCon nhớ mẹ hay chờ con ăn hết\nMới chịu ngồi ăn phần của mình\n[Outro]\nMùa xuân từ bên kia cửa\nMẹ ơi, con ăn Tết rồi",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T11:55:00.544Z",
+          "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
         }
       ],
-      "loiChon": 1,
+      "loiChon": 2,
       "styleVersions": [],
       "styleChon": null,
       "promptSuno": "",
@@ -1501,7 +1735,7 @@
       "series": "tinh-yeu",
       "tuan": 12,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T11:55:00.544Z",
       "trangThai": 1,
       "lichSu": [
         {
@@ -1509,6 +1743,12 @@
           "den": 1,
           "luc": "2026-11-22T06:27:01.567Z",
           "ghiChu": "Tí lưu lời nháp V1 cho bài số 24. Chờ Ông chủ duyệt."
+        },
+        {
+          "tu": 1,
+          "den": 1,
+          "luc": "2026-11-22T11:55:00.544Z",
+          "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
         }
       ],
       "loiVersions": [
@@ -1518,9 +1758,16 @@
           "nguon": "chatgpt",
           "luc": "2026-11-22T06:27:01.567Z",
           "ghiChu": "Tí lưu lời nháp V1 cho bài số 24. Chờ Ông chủ duyệt."
+        },
+        {
+          "v": 2,
+          "loi": "[Verse 1]\nAnh nói nếu đời khác\nMình sẽ gặp sớm hơn\nSẽ đưa em đi biển\nVào hôm không có giông\nEm nghe anh nói hết\nRồi mở cuốn lịch bàn\nCuối tuần này em rảnh\nAnh xem được tối nào?\n[Chorus]\nĐừng hẹn em kiếp sau\nTối thứ Bảy anh có rảnh không?\nĐường nhà em qua hai ngã rẽ\nAnh từng đi thuộc cả vòng\nĐừng hẹn em kiếp sau\nEm chỉ xin một tối thôi\nAnh để điện thoại trong túi áo\nMình ngồi nói chuyện với nhau\n[Verse 2]\nAnh bảo để anh tính\nRồi nhìn em rất lâu\nEm tự khoanh thứ Bảy\nViết tên mình vào ô\nEm vẫn đi ăn tối\nVẫn gọi món em mê\nAnh đến, mình ăn chung\nEm đến giờ thì gọi món\n[Chorus]\nĐừng hẹn em kiếp sau\nTối thứ Bảy anh có rảnh không?\nĐường nhà em qua hai ngã rẽ\nAnh từng đi thuộc cả vòng\nĐừng hẹn em kiếp sau\nEm chỉ xin một tối thôi\nAnh để điện thoại trong túi áo\nMình ngồi nói chuyện với nhau\n[Final Chorus]\nĐừng hẹn em kiếp sau\nTối thứ Bảy anh có rảnh không?\nNếu hôm đó anh còn chưa biết\nEm có lịch của em rồi",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T11:55:00.544Z",
+          "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
         }
       ],
-      "loiChon": 1,
+      "loiChon": 2,
       "styleVersions": [],
       "styleChon": null,
       "promptSuno": "",
@@ -1597,7 +1844,7 @@
       "series": "do-thi",
       "tuan": 13,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T11:55:00.544Z",
       "trangThai": 1,
       "lichSu": [
         {
@@ -1605,6 +1852,12 @@
           "den": 1,
           "luc": "2026-11-22T06:27:01.567Z",
           "ghiChu": "Tí lưu lời nháp V1 cho bài số 26. Chờ Ông chủ duyệt."
+        },
+        {
+          "tu": 1,
+          "den": 1,
+          "luc": "2026-11-22T11:55:00.544Z",
+          "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
         }
       ],
       "loiVersions": [
@@ -1614,9 +1867,16 @@
           "nguon": "chatgpt",
           "luc": "2026-11-22T06:27:01.567Z",
           "ghiChu": "Tí lưu lời nháp V1 cho bài số 26. Chờ Ông chủ duyệt."
+        },
+        {
+          "v": 2,
+          "loi": "[Verse 1]\nAi để thùng xốp cũ\nTrên sân thượng tầng năm?\nCó người xúc đất vào\nCó người cắm que tre\nCô phòng bên nhắn tôi\nMai cô về hơi trễ\nNhờ tưới giùm luống nhỏ\nTừ đó tôi biết tên\n[Chorus]\nVườn trên sân thượng\nMỗi nhà một bàn tay\nNgười đem theo hạt giống\nNgười quên ngày tưới cây\nVườn trên sân thượng\nCà chua chín vài trái\nChia ra mỗi nhà một ít\nRồi ngồi thêm đến khuya\n[Verse 2]\nHôm nọ tôi lên sốt\nNằm im sau cánh cửa\nCô mang sang tô canh\nGõ cửa rồi đi ngay\nTôi lên sân vài bữa\nThấy ghế mình kê sẵn\nKế bên một bình nước\nVà cả luống rau xanh\n[Chorus]\nVườn trên sân thượng\nMỗi nhà một bàn tay\nNgười đem theo hạt giống\nNgười quên ngày tưới cây\nVườn trên sân thượng\nCà chua chín vài trái\nChia ra mỗi nhà một ít\nRồi ngồi thêm đến khuya\n[Outro]\nVườn trên sân thượng\nNgày mai tôi tưới giùm",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T11:55:00.544Z",
+          "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
         }
       ],
-      "loiChon": 1,
+      "loiChon": 2,
       "styleVersions": [],
       "styleChon": null,
       "promptSuno": "",
@@ -1741,7 +2001,7 @@
       "series": "tich-cuc",
       "tuan": 15,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T11:55:00.544Z",
       "trangThai": 1,
       "lichSu": [
         {
@@ -1749,6 +2009,12 @@
           "den": 1,
           "luc": "2026-11-22T06:27:01.567Z",
           "ghiChu": "Tí lưu lời nháp V1 cho bài số 02. Chờ Ông chủ duyệt."
+        },
+        {
+          "tu": 1,
+          "den": 1,
+          "luc": "2026-11-22T11:55:00.544Z",
+          "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
         }
       ],
       "loiVersions": [
@@ -1758,9 +2024,16 @@
           "nguon": "chatgpt",
           "luc": "2026-11-22T06:27:01.567Z",
           "ghiChu": "Tí lưu lời nháp V1 cho bài số 02. Chờ Ông chủ duyệt."
+        },
+        {
+          "v": 2,
+          "loi": "[Verse 1]\nTôi may áo cho bạn\nAi cũng giục nhận đơn\nTôi cứ hẹn tháng tới\nRồi để dành trong ngăn\nHôm nay tay tôi đặt\nTrên cái nút gửi đi\nTôi đăng chiếc áo mẫu\nKèm số máy của mình\n[Chorus]\nCứ sai đi, lần này mình chọn\nTrật một đường thì tính đường sau\nTôi đã đứng bên lề quá lâu\nĐợi người khác gật đầu hộ mình\nCứ sai đi, tay còn đang run\nCứ để nó run thêm một chút\nTôi muốn biết nếu đi đến cùng\nThì mình sẽ trở thành người nào\n[Verse 2]\nĐơn đầu tôi may lệch\nMột bên tay áo dài\nTôi về nhà tự viết\nMai làm khác chỗ nào\nCó người nghe rồi bảo\nThấy chưa, tôi nói mà\nTôi dọn bàn làm lại\nTới khi trời sáng ra\n[Chorus]\nCứ sai đi, lần này mình chọn\nTrật một đường thì tính đường sau\nTôi đã đứng bên lề quá lâu\nĐợi người khác gật đầu hộ mình\nCứ sai đi, tay còn đang run\nCứ để nó run thêm một chút\nTôi muốn biết nếu đi đến cùng\nThì mình sẽ trở thành người nào\n[Final Chorus]\nCứ sai đi, lần này mình chọn\nTrật một đường thì tính đường sau\nTôi muốn biết nếu đi đến cùng\nThì mình sẽ trở thành người nào",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T11:55:00.544Z",
+          "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
         }
       ],
-      "loiChon": 1,
+      "loiChon": 2,
       "styleVersions": [],
       "styleChon": null,
       "promptSuno": "",
