@@ -108,8 +108,8 @@ Nhac_Phong_Tra/
   4. Hát hoặc đọc thử riêng hook. Kiểm tra người nghe có thể nhớ và nhắc lại sau một lượt, trọng âm rơi tự nhiên, câu hát gắn với tình huống trung tâm và có chỗ nâng giai điệu. Verse dựng tình huống, Bridge hoặc Final Chorus cần có chuyển biến để lần trở lại của hook có thêm ý nghĩa.
 
 ### Bước 3. Tạo nhạc (ông chủ)
-- Ông chủ tạo trên Suno bằng **gói trả phí**, dùng nút Copy lời và Copy style trên web, rồi chỉnh mục Advanced theo ô **Thông số Suno** ở tab Nhạc & điểm.
-- **Chốt 22/11/2026:** nếu đổi thông số khi tạo, sửa ô Thông số Suno cho đúng **trước** khi bấm Thêm phiên bản. Mỗi bản nhạc tự lưu kèm thông số lúc thêm (`nhacVersions[].caiDat`) để so bản nào ra hay vì thông số nào.
+- Ông chủ tạo trên Suno bằng **gói trả phí**, dùng nút Copy lời và Copy style trên web, rồi chỉnh mục Advanced theo dòng **Thông số Suno đề xuất** ở tab Nhạc & điểm (chỉ hiển thị, Tí ghi vào `caiDatSuno`).
+- **Chốt 22/11/2026:** mỗi bản nhạc tự lưu kèm thông số đề xuất lúc thêm (`nhacVersions[].caiDat`). Nếu Ông chủ đổi thông số khi tạo, ghi vào ô Ghi chú của bản nhạc hoặc báo Tí sửa `caiDatSuno`.
 - Chọn bản ưng ý rồi:
   1. dán link Suno vào thẻ bài trên web, bấm Lưu hoặc Thêm phiên bản (cả hai đều lưu được);
   2. đặt MP3 vào `NPT-xxxx/nhac/nhac-chinh.mp3`, hoặc gửi file cho Tèo đẩy lên.

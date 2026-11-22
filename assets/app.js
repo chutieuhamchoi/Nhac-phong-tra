@@ -444,19 +444,13 @@ ${DINH_DANG(s.id, w.so, 'playlist')}`;
       `<ol class="ls">${[...b.lichSu].reverse().map(h => `<li><span class="m">${fmtLuc(h.luc)}</span>
       ${h.tu === null ? '' : `${ttPill(h.tu)} →`} ${ttPill(h.den)}${h.ghiChu ? ` <span>${esc(h.ghiChu)}</span>` : ''}</li>`).join('')}</ol>`;
   }
-  function renderCaiDat() {
-    const cd = N.chuanCaiDat(bai.caiDatSuno), bat = (k, v) => `<option value="" ${cd[k] === null ? 'selected' : ''}>—</option><option value="off" ${cd[k] === false ? 'selected' : ''}>Off</option><option value="on" ${cd[k] === true ? 'selected' : ''}>On</option>`;
-    const pt = k => `<span class="cd-pt"><input type="range" min="0" max="100" step="1" data-cd="${k}" value="${cd[k] ?? 50}" class="${cd[k] === null ? 'chua' : ''}"><input type="number" min="0" max="100" data-cd="${k}" value="${cd[k] ?? ''}" placeholder="—">%</span>`;
-    $('#d-cai-dat').innerHTML = `
-      <label>Model<input data-cd="model" list="dl-model" value="${esc(cd.model)}" placeholder="v6"></label>
-      <label>Vocal Gender<select data-cd="giong"><option value="">—</option><option value="nam" ${cd.giong === 'nam' ? 'selected' : ''}>Male (nam)</option><option value="nu" ${cd.giong === 'nu' ? 'selected' : ''}>Female (nữ)</option></select></label>
-      <label>Duration<input data-cd="thoiLuong" list="dl-thoi-luong" value="${esc(cd.thoiLuong === 'auto' ? 'Auto' : cd.thoiLuong)}" placeholder="Auto hoặc 3:45"></label>
-      <label>Max Mode<select data-cd="maxMode">${bat('maxMode')}</select></label>
-      <label>Weirdness${pt('weirdness')}</label>
-      <label>Style Influence${pt('styleInfluence')}</label>
-      <label>Variety<input data-cd="variety" list="dl-variety" value="${esc(cd.variety)}" placeholder="Normal"></label>
-      <label>Personalize<select data-cd="personalize">${bat('personalize')}</select></label>`;
-    $('#d-cd-tt').textContent = N.tomTatCaiDat(cd) || 'chưa nhập';
+  function renderCaiDat() {               // chỉ hiển thị thông số Tí đề xuất (gọn, 22/11/2026)
+    const cd = N.chuanCaiDat(bai.caiDatSuno), bat = v => v === null ? '—' : v ? 'On' : 'Off', pt = v => v === null ? '—' : v + '%';
+    const o = [['Model', cd.model || '—'], ['Vocal', cd.giong ? (cd.giong === 'nam' ? 'Male' : 'Female') : '—'],
+      ['Duration', cd.thoiLuong ? (cd.thoiLuong === 'auto' ? 'Auto' : cd.thoiLuong) : '—'], ['Max Mode', bat(cd.maxMode)],
+      ['Weirdness', pt(cd.weirdness)], ['Style Influence', pt(cd.styleInfluence)], ['Variety', cd.variety || '—'], ['Personalize', bat(cd.personalize)]];
+    $('#d-cai-dat').innerHTML = N.tomTatCaiDat(cd) ? o.map(([t, v]) => `<span class="cd-o"><small>${t}</small><b>${esc(v)}</b></span>`).join('')
+      : '<span class="hint">Chưa có đề xuất từ Tí.</span>';
   }
   function renderCanhBao() {
     const den = +$('#d-tt-moi').value, w = N.canhBaoChuyen(bai, den);
@@ -552,17 +546,6 @@ ${DINH_DANG(s.id, w.so, 'playlist')}`;
   $('#d-ds-style').addEventListener('change', e => {
     if (e.target.name !== 'style-chon') return;
     N.chonStyle(bai, +e.target.value); $('[data-f=promptSuno]', dlg).value = bai.promptSuno; luuKho(); renderBai(); toast(`Đang dùng Style v${bai.styleChon}`);
-  });
-  // thông số Suno: lưu ngay khi đổi (giống ô điểm)
-  $('#d-cai-dat').addEventListener('input', e => {
-    const k = e.target.dataset.cd; if (!k || e.target.type !== 'range') return;
-    const so = $(`input[type=number][data-cd="${k}"]`, dlg); if (so) so.value = e.target.value;
-  });
-  $('#d-cai-dat').addEventListener('change', e => {
-    const k = e.target.dataset.cd; if (!k) return;
-    const v = e.target.value.trim();
-    N.datCaiDat(bai, { [k]: v });
-    luuKho(); renderCaiDat();
   });
   $('#d-copy-cd').onclick = () => copyCo(N.tomTatCaiDat(bai.caiDatSuno), 'thông số Suno');
   $('#d-ds-nhac').addEventListener('change', e => {
