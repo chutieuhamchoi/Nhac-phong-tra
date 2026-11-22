@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "capNhat": "2026-11-22T16:39:28.549Z",
+  "capNhat": "2026-11-22T17:16:54.894Z",
   "nextId": 33,
   "bai": [
     {
@@ -386,8 +386,8 @@
       "series": "tinh-yeu",
       "tuan": 1,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-22T11:55:00.544Z",
-      "trangThai": 1,
+      "ngayCapNhat": "2026-11-22T17:16:54.894Z",
+      "trangThai": 2,
       "lichSu": [
         {
           "tu": null,
@@ -400,6 +400,12 @@
           "den": 1,
           "luc": "2026-11-22T11:55:00.544Z",
           "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
+        },
+        {
+          "tu": 1,
+          "den": 2,
+          "luc": "2026-11-22T17:16:54.894Z",
+          "ghiChu": "Ông chủ chốt lời V3. Tí lưu Style V2 và thông số Suno đề xuất."
         }
       ],
       "loiVersions": [
@@ -416,9 +422,16 @@
           "nguon": "chatgpt",
           "luc": "2026-11-22T11:55:00.544Z",
           "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
+        },
+        {
+          "v": 3,
+          "loi": "[Chorus]\nEm đã thôi kể về anh\nTừ bao giờ em chẳng nhớ\nCó hôm nhắc chuyện ngày xưa\nEm cười như vừa nghe kể\n\nEm đã thôi kể về anh\nMà còn bao điều để nói\nDạo này em thấy mình vui\nVậy thôi mà em muốn kể\n\n[Verse]\nCó lần nghe lại bài hát\nAnh từng hát sai mấy lời\nEm nhớ, rồi cười một mình\nNghe hết bài, thế là thôi\n\nNgày trước em hay tự hỏi\nAnh có còn nhớ em không\nGiờ đôi khi em vẫn nhớ\nRồi ngày của em lại tiếp\n\n[Chorus]\nEm đã thôi kể về anh\nTừ bao giờ em chẳng nhớ\nCó hôm nhắc chuyện ngày xưa\nEm cười như vừa nghe kể\n\nEm đã thôi kể về anh\nMà còn bao điều để nói\nDạo này em thấy mình vui\nVậy thôi mà em muốn kể\n\n[Bridge]\nEm từng nghĩ đến một ngày\nNghe tên anh lòng chẳng đau\nHóa ra ngày ấy tới rồi\nBình thường như bao ngày khác\n\n[Final Chorus]\nEm đã thôi kể về anh\nTừ bao giờ em chẳng nhớ\nMình từng thương nhau nhiều lắm\nNhắc lại em vẫn thấy vui\n\nMai nếu ai hỏi em sao\nEm còn bao điều muốn kể\nVề những ngày em đang sống\nVà những ngày em mong tới\n\n[Outro]\nEm đã thôi kể về anh",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T17:16:54.894Z",
+          "ghiChu": "Ông chủ chốt lời mở bằng điệp khúc, giữ một câu ở Outro."
         }
       ],
-      "loiChon": 2,
+      "loiChon": 3,
       "styleVersions": [
         {
           "v": 1,
@@ -426,10 +439,17 @@
           "nguon": "chatgpt",
           "luc": "2026-11-22T06:27:01.567Z",
           "ghiChu": "Tí soạn Style nháp V1."
+        },
+        {
+          "v": 2,
+          "style": "Vietnamese acoustic soul ballad, 82 BPM, solo female mezzo, intimate and gently buoyant. Open directly with the chorus hook over felt piano and light nylon guitar; no long intro. Use clear Vietnamese diction, soft syncopation and short breaths. Keep the verse conversational, with guitar answering the vocal. No sub-bass, kick loops or repeating bass pattern. Strip back to piano for the bridge, then brighten the harmony and add a light string layer for the final chorus. Let the emotion move from wistful to quietly relieved. At the outro, sing “Em đã thôi kể về anh” once, nearly alone, then end with two bars of fading piano. Follow the lyric order; add no extra lines or vocal ad-libs.",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T17:16:54.894Z",
+          "ghiChu": "Tí đề xuất acoustic soul giọng nữ, vào ngay hook và kết bằng piano."
         }
       ],
-      "styleChon": 1,
-      "promptSuno": "Vietnamese acoustic soul, 82 BPM. Female mezzo with a relaxed conversational delivery. Nylon guitar, upright bass and brushes. Keep the verse lightly syncopated; lift the title into a gentle sustained melody. Let the room sound open up on the second chorus. End simply on guitar and voice, with warmth and relief.",
+      "styleChon": 2,
+      "promptSuno": "Vietnamese acoustic soul ballad, 82 BPM, solo female mezzo, intimate and gently buoyant. Open directly with the chorus hook over felt piano and light nylon guitar; no long intro. Use clear Vietnamese diction, soft syncopation and short breaths. Keep the verse conversational, with guitar answering the vocal. No sub-bass, kick loops or repeating bass pattern. Strip back to piano for the bridge, then brighten the harmony and add a light string layer for the final chorus. Let the emotion move from wistful to quietly relieved. At the outro, sing “Em đã thôi kể về anh” once, nearly alone, then end with two bars of fading piano. Follow the lyric order; add no extra lines or vocal ad-libs.",
       "nhacVersions": [],
       "nhacChon": null,
       "diem": {
@@ -446,7 +466,17 @@
       "linkYoutube": "",
       "ngayPhatHanh": "",
       "ghiChu": "Bài số 29 · Acoustic soul. Cô nhận ra mình đã thôi nhắc người cũ khi kể về đời mình.",
-      "promptChatGPT": ""
+      "promptChatGPT": "",
+      "caiDatSuno": {
+        "model": "v6",
+        "giong": "nu",
+        "thoiLuong": "auto",
+        "maxMode": false,
+        "weirdness": 45,
+        "styleInfluence": 80,
+        "variety": "Normal",
+        "personalize": false
+      }
     },
     {
       "id": "NPT-0005",
