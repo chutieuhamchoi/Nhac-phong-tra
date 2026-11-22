@@ -96,9 +96,16 @@
     w.viec.forEach((t, k) => it.push({ id: `v${k}`, kind: 'Việc', t }));
     return it;
   }
+  // Việc coi là xong: đã tích trên trình duyệt này, hoặc là bài đơn/playlist đã đăng YouTube trong kho (đồng bộ mọi máy).
+  function daXong(w, it) {
+    if (tick[`${w.so}:${it.id}`]) return true;
+    if (it.bai) { const b = baiCuaLich(it.t); return !!b && b.trangThai === N.TT.DA_DANG; }
+    if (it.id === 'pl') return kho.bai.some(b => b.loai === 'playlist' && b.trangThai === N.TT.DA_DANG && N.boDau(b.ten) === N.boDau(it.t));
+    return false;
+  }
   function renderTienDo() {
     let tong = 0, xong = 0;
-    LICH.tuan.forEach(w => itemsOf(w).forEach(it => { tong++; if (tick[`${w.so}:${it.id}`]) xong++; }));
+    LICH.tuan.forEach(w => itemsOf(w).forEach(it => { tong++; if (daXong(w, it)) xong++; }));
     const n = tuanHienTai();
     const dang = kho.bai.filter(b => b.trangThai === N.TT.DA_DANG).length;
     const choDuyet = kho.bai.filter(b => b.trangThai === N.TT.DANH_GIA).length;
@@ -113,13 +120,14 @@
     const now = tuanHienTai(), chi = $('#chi-tuan-nay').checked;
     $('#ds-tuan').innerHTML = LICH.tuan.filter(w => !chi || (w.so >= now && w.so <= now + 1)).map(w => {
       const s = seriesOf(w.series), st = tuanStart(w.so), its = itemsOf(w);
-      const done = its.every(it => tick[`${w.so}:${it.id}`]);
+      const done = its.every(it => daXong(w, it));
       return `<div class="week ${w.so === now ? 'now' : ''} ${done ? 'done' : ''}" style="--c:${s.mau}">
         <div class="wk-head"><h3>Tuần ${w.so} · ${esc(w.chuDe)}</h3><span class="wk-date">${fmt(st)} – ${fmt(addDays(st, 6))}</span></div>
         <div class="wk-meta"><span class="tag">${esc(w.giaiDoan)}</span><span class="tag">${esc(s.ten)}</span></div>
         <ul class="items">${its.map(it => {
           const k = `${w.so}:${it.id}`, b = it.bai ? baiCuaLich(it.t) : null;
-          return `<li class="${tick[k] ? 'xong' : ''}"><input type="checkbox" data-k="${k}" ${tick[k] ? 'checked' : ''}>
+          const x = daXong(w, it);
+          return `<li class="${x ? 'xong' : ''}"><input type="checkbox" data-k="${k}" ${x ? 'checked' : ''}>
             <span class="t"><span class="kind">${it.kind}</span>${esc(it.t)}${b ? `<br><a href="#" class="mini-link" data-mo="${b.id}">${b.id}</a> ${ttPill(b.trangThai)}` : ''}</span>
             ${it.bai ? `<button class="mini" data-tao="${w.so}|${esc(it.t)}">Sáng tác</button>` : ''}</li>`;
         }).join('')}</ul></div>`;

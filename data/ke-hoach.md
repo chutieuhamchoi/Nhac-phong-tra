@@ -4,7 +4,7 @@ Cập nhật 19/11/2026 theo phương án **A – Phòng trà đa sắc** (chủ
 
 ## 1. Tình hình và mốc quan trọng
 
-Kênh bắt đầu từ tháng 11/2026. Đến 19/11/2026 kênh có 4 người đăng ký và 2 video công khai: "Cánh Diều Tuổi Thơ" (16/11/2026) và NPT-0001 "Có Những Ngày Chỉ Muốn Về Nhà" (19/11/2026, [xem trên YouTube](https://www.youtube.com/watch?v=aV9Z0ukc9vo)). NPT-0001 là video đầu tiên làm theo quy trình ở mục 8. Từ tuần 2 kênh chuyển sang định hướng đa sắc. Ba điều quyết định cách làm:
+Kênh bắt đầu từ tháng 11/2026. Đến 19/11/2026 kênh có 4 người đăng ký và 2 video công khai: "Cánh Diều Tuổi Thơ" (16/11/2026) và NPT-0001 "Có Những Ngày Chỉ Muốn Về Nhà" (19/11/2026, [xem trên YouTube](https://www.youtube.com/watch?v=aV9Z0ukc9vo)). NPT-0001 là video đầu tiên làm theo quy trình ở mục 8. Ngày 22/11/2026 kênh đăng thêm NPT-0002 "Yêu Nhau Lại Từ Đầu" ([xem trên YouTube](https://www.youtube.com/watch?v=gM4ctyrqMK4)), bài đầu tiên theo định hướng đa sắc, nâng số video công khai lên 3. Từ tuần 2 kênh chuyển sang định hướng đa sắc. Ba điều quyết định cách làm:
 
 **Ngưỡng bật kiếm tiền quảng cáo sắp tăng gấp đôi.** Hiện tại cần 1.000 người đăng ký và 4.000 giờ xem trong 12 tháng. Từ 01/02/2027, kênh mới cần 1.000 người đăng ký và 8.000 giờ xem trong 365 ngày (hoặc 20 triệu lượt xem Shorts trong 90 ngày). Kênh mình không thể đạt 4.000 giờ trước 01/02/2027, nên cứ tính theo mốc 8.000 giờ, tức trung bình khoảng 22 giờ xem mỗi ngày trong cả năm. Thời gian xem (không phải lượt xem) là thứ quan trọng nhất.
 
@@ -15,9 +15,9 @@ Kênh bắt đầu từ tháng 11/2026. Đến 19/11/2026 kênh có 4 người �
 ## 2. Việc bắt buộc
 
 - **Dùng gói Suno Pro trở lên.** Bài tạo bằng gói miễn phí không được dùng để kiếm tiền, nâng cấp sau cũng không chuyển bài cũ thành bài thương mại. Kiểm tra "Cánh Diều Tuổi Thơ" được tạo bằng gói nào.
-- **Gắn nhãn nội dung có dùng AI** cho mọi video trong YouTube Studio. *NPT-0001: đã gắn (Claude kiểm tra 19/11/2026). Cánh Diều Tuổi Thơ: mô tả đã ghi có dùng AI, cần kiểm tra nhãn trong Studio.*
+- **Gắn nhãn nội dung có dùng AI** cho mọi video trong YouTube Studio. *NPT-0001: đã gắn (Claude kiểm tra 19/11/2026). NPT-0002: đã gắn khi đăng 22/11/2026. Cánh Diều Tuổi Thơ: mô tả đã ghi có dùng AI, cần kiểm tra nhãn trong Studio.*
 - **Chỉ dùng lời tự viết.** Không đưa lời bài hát của nhạc sĩ khác vào Suno, không ghi tên ca sĩ thật trong câu lệnh.
-- Lưu file gốc của mỗi bài (lời, câu lệnh Suno, ngày tạo, gói đang dùng) để làm bằng chứng khi bị khiếu nại bản quyền. *NPT-0001 còn thiếu bản Suno được chọn (`nhacChon`) và gói Suno đã dùng.*
+- Lưu file gốc của mỗi bài (lời, câu lệnh Suno, ngày tạo, gói đang dùng) để làm bằng chứng khi bị khiếu nại bản quyền. *Ông chủ xác nhận 22/11/2026: NPT-0001 và NPT-0002 đều tạo bằng gói Suno trả phí. NPT-0001 còn thiếu link bản Suno được chọn (`nhacChon`).*
 
 ## 3. Định vị và tiêu chuẩn sáng tác (duyệt 19/11/2026)
 
@@ -34,7 +34,7 @@ Kênh bắt đầu từ tháng 11/2026. Đến 19/11/2026 kênh có 4 người �
 
 1. Tạm dừng bài mới thuộc chủ đề "Tuổi thơ – quê nhà". Giữ nguyên các bài đã phát hành.
 2. Bài "Anh Có Thấy Em Mệt Không?" ra khỏi danh sách ưu tiên, giữ ở trạng thái tạm hoãn.
-3. Bài tuần 2 là "Yêu Nhau Lại Từ Đầu", thử pop soul/R&B.
+3. Bài tuần 2 là "Yêu Nhau Lại Từ Đầu". Dự kiến pop soul/R&B, khi sản xuất đổi sang acoustic pop rock; đã phát hành 22/11/2026 (NPT-0002).
 4. Giữ nguyên toàn bộ dữ liệu và lịch sử của các bài đã phát hành.
 
 **Chín series** (khai báo trong `data/chu-de.json`, website đọc trực tiếp): Tuổi thơ – quê nhà (tạm dừng bài mới), Phòng trà đêm mưa, Cà phê sáng, Theo mùa (Noel, Xuân, Tết), Tình yêu và những mối quan hệ, Tâm sự người trưởng thành, Chuyện kể đô thị, Sống vui và tự do, Sáng tạo và thử nghiệm.
@@ -58,7 +58,7 @@ Chi tiết từng tuần ở tab **Lịch 15 tuần** (`data/lich.json`). Mỗi 
 | Tuần | Giai đoạn | Bài | Hướng thử |
 |---|---|---|---|
 | 1 | Nền móng | Có Những Ngày Chỉ Muốn Về Nhà (NPT-0001, đã phát hành) | Chạy thử quy trình Drive → Claude → YouTube |
-| 2 | Thử nghiệm đa sắc | Yêu Nhau Lại Từ Đầu | Pop soul/R&B, hook rõ |
+| 2 | Thử nghiệm đa sắc | Yêu Nhau Lại Từ Đầu (NPT-0002, đã phát hành 22/11/2026) | Acoustic pop rock (đổi từ pop soul/R&B), hook rõ; danh sách phát YouTube "Tình Yêu – Nhạc Phòng Trà" |
 | 3 | Thử nghiệm đa sắc | Cà Phê Đắng, Em Ngọt | Bossa nova vui, thumbnail sáng |
 | 4 | Thử nghiệm đa sắc | Chúng Ta Đã Quên Hẹn Hò | Dự phòng; chỉ phát hành nếu khác rõ với tuần 2 |
 | 5 | Thử nghiệm đa sắc | Tháng Mười Hai Có Hẹn | Pop jazz |
