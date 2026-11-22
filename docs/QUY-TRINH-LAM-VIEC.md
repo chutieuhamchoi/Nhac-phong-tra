@@ -67,20 +67,31 @@ Nhac_Phong_Tra/
 | 5 | Duyệt phát hành | Ông chủ duyệt video và metadata |
 | 6 | Đã đăng YouTube | Tèo đã xác minh video công khai trên YouTube |
 
-*[Tí bổ sung: thống nhất khi nào chuyển 3 → 4 → 5; lần NPT-0002 đi thẳng từ 3 lên 6.]*
+- **3 → 4 · Đang đánh giá.** Khi Ông chủ đã chọn bản Suno để đánh giá và MP3 đúng phiên bản đã có tại `nhac/nhac-chinh.mp3`, ghi bản được chọn vào kho rồi chuyển sang 4. Tí có thể chuẩn bị storyboard, ảnh và metadata trong giai đoạn này để Tèo dựng preview.
+- **4 → 5 · Duyệt phát hành.** Tèo gửi preview và kết quả kiểm tra cho Ông chủ. Chấm 4 tiêu chí theo `data/chu-de.json`, tối đa 20 điểm. Từ 17 điểm trở lên là mức đề xuất duyệt. Điểm đánh giá hỗ trợ quyết định của Ông chủ. Chỉ chuyển sang 5 sau khi Ông chủ duyệt bản nhạc, video và metadata, gồm cả thumbnail. Nếu còn yêu cầu sửa, giữ ở 4.
+- **5 → 6 · Đã đăng YouTube.** Tèo xác minh video đã công khai và phát được rồi ghi URL, ngày phát hành và cách xác minh. Video đang riêng tư hoặc chờ lịch công khai vẫn ở 5.
+- Mỗi lần chuyển, cập nhật `ngayCapNhat` và thêm một dòng `lichSu` với `tu`, `den`, `luc`, `ghiChu` nêu người thực hiện và căn cứ. NPT-0002 từng đi từ 3 lên 6. Từ bài sau, ghi từng mốc 3 → 4 → 5 → 6 khi đủ điều kiện.
 
 ## 4. Quy trình một bài
 
 ### Bước 1. Chọn ý tưởng (Tí, ông chủ duyệt)
 - Tí đề xuất theo lịch tuần trong `lich.json` và series trong `chu-de.json`, rồi kiểm tra không trùng bài đã có.
 - Chưa tạo mã NPT khi ông chủ chưa chọn.
+- Tí đối chiếu cả tên bài, tình huống, chủ đề và câu hook với kho bài để tránh trùng ý. Mỗi đề xuất nêu nhân vật, tình huống, chuyển biến cảm xúc và hướng hook để Ông chủ chọn. Chỉ tạo bản ghi khi Ông chủ yêu cầu sau khi chọn.
 
 ### Bước 2. Lời và prompt Suno (Tí, ông chủ duyệt)
 - Lời có nhãn cấu trúc `[Verse 1]`, `[Pre-Chorus]`, `[Chorus]`, `[Bridge]`, `[Final Chorus]`, `[Outro]`.
+  - **Tí đề xuất:** chọn các nhãn phù hợp cấu trúc thực tế của bài. Chỉ dùng các phần giúp câu chuyện tiến triển và tạo cao trào.
 - Prompt Suno (Style) bằng tiếng Anh, tả thể loại, tempo, giọng, nhạc cụ và cao trào từng đoạn.
+  - Tí kiểm tra Style tối đa **1.000 ký tự**, tính cả khoảng trắng và dấu câu, trước khi gửi. Giữ trọng tâm vào nhịp, cách hát và các điểm chuyển năng lượng.
 - Mỗi lần sửa thì ghi một phiên bản mới trong `loiVersions`, giữ bản cũ. Bản đã duyệt ghi vào `loiChon`.
+  - **Tí đề xuất:** khi chỉ sửa Style, ghi nhận phiên bản Style và nội dung thay đổi trong kho bài. Chỉ thêm `loiVersions` khi lời thực sự thay đổi. Ví dụ NPT-0002 chốt Style V4 và tiếp tục dùng lời V3.
 - Nếu đổi thể loại so với lịch (NPT-0002 đổi từ pop soul/R&B sang acoustic pop rock), ghi lại lý do vào kho bài và báo Tèo để cập nhật kế hoạch.
-- *[Tí bổ sung: tiêu chí tự kiểm tra lời trước khi gửi ông chủ: số âm tiết, vần, câu lặp, hook.]*
+- **Tự kiểm tra lời trước khi gửi Ông chủ**
+  1. Đếm âm tiết từng dòng, đọc thành tiếng và gõ nhịp theo tempo dự kiến. So các câu có mô-típ tương ứng, rà chỗ dồn chữ, thiếu nhịp lấy hơi hoặc ngắt giữa một cụm ý. Linh hoạt số âm tiết nếu câu vẫn hát tự nhiên.
+  2. Đọc các tiếng cuối câu theo cặp để kiểm tra vần và sự tự nhiên của từ ngữ. Ưu tiên đúng ý và dễ hát. Nếu phải đảo từ hoặc chèn từ đệm để ép vần, viết lại câu.
+  3. Rà câu và cụm từ lặp ở cả các đoạn cách xa nhau. Giữ lần lặp có chủ đích trong hook hoặc điệp khúc. Nếu cụm “Anh vẫn muốn” xuất hiện ba lần, thử giữ ở câu đắt nhất, viết các câu còn lại bằng ý hoặc hành động cụ thể rồi đọc lại cả đoạn.
+  4. Hát hoặc đọc thử riêng hook. Kiểm tra người nghe có thể nhớ và nhắc lại sau một lượt, trọng âm rơi tự nhiên, câu hát gắn với tình huống trung tâm và có chỗ nâng giai điệu. Verse dựng tình huống, Bridge hoặc Final Chorus cần có chuyển biến để lần trở lại của hook có thêm ý nghĩa.
 
 ### Bước 3. Tạo nhạc (ông chủ)
 - Ông chủ tạo trên Suno bằng **gói trả phí**, dùng nút Copy lời và Copy style trên web.
@@ -93,6 +104,7 @@ Nhac_Phong_Tra/
 
 **Storyboard**
 - Tí đọc độ dài thật của MP3 rồi viết `storyboard/NPT-xxxx.md`. Mỗi cảnh có số thứ tự, tên cảnh, đoạn lời, mô tả, prompt ảnh, prompt chuyển động.
+  - **Tí đề xuất:** có thể phác cảnh từ lời đã duyệt trước khi có MP3. Ghi rõ mốc đang ước lượng. Khi có đúng bản MP3 đã chọn, đo thời lượng, cập nhật mốc sơ bộ và ghi các câu hát cần khớp hình để Tèo chốt.
 - Ghi rõ cảnh nào phải rơi vào câu hát nào. Ví dụ ở NPT-0002: cảnh 10 vào câu "Tối nay anh đón em tan làm".
 - Mốc thời gian của Tí chỉ là bản sơ bộ. **Tèo chốt mốc theo lời hát thật** ở bước 5, vì Suno hay đổi cấu trúc: kéo dài nhạc dạo, chèn đoạn không lời, rút gọn điệp khúc.
 - Mỗi cảnh tối đa 25 giây. Bài khoảng 3,5 phút thì cần ít nhất 9 cảnh; NPT-0002 dùng 16 cảnh.
@@ -104,6 +116,7 @@ Nhac_Phong_Tra/
 - Nhân vật nhất quán ở mọi cảnh: cùng khuôn mặt, kiểu tóc, trang phục. Lấy một hai ảnh làm chuẩn để đối chiếu.
 - Không lặp bố cục giữa các cảnh. Cảnh hồi tưởng phải có dấu hiệu nhận ra là hồi tưởng, ví dụ trẻ hơn hoặc tông màu cũ.
 - Tải ảnh vào `NPT-xxxx/anh/` với tên `canh-01.png`, `canh-02.png`…, ghi đè đúng tên khi làm lại.
+  - Sau khi tải, kiểm tra lại trên Drive đủ tên cảnh, đúng kích thước và mở được. So trực quan cả loạt với ảnh chuẩn, chú ý số cảnh ở góc ảnh, biển hiệu, nét mặt và trang phục.
 
 **Thumbnail**
 - 1280×720, có nhân vật chính, cảm xúc rõ.
@@ -112,7 +125,21 @@ Nhac_Phong_Tra/
 
 **Tí không cần dựng video nháp.** Tèo dựng bản chính thức.
 
-*[Tí bổ sung: mẫu prompt ảnh giữ nhân vật nhất quán, cách đặt tông màu theo từng series.]*
+**Mẫu prompt ảnh cho một cảnh**
+
+```text
+Create one standalone cinematic still for [scene description, location and time].
+Use [reference image 1] and [reference image 2] as strict identity references for
+the same characters: [age, facial traits, hairstyle, wardrobe colors].
+Show [action and emotion] in [framing and viewpoint]. Preserve recognizable
+facial features and hair across scenes. Use [series palette], with natural
+skin tones and [lighting appropriate to the story].
+Output a sharp, full-frame 16:9 PNG at 1920×1080 or higher.
+No text, digits, logos, watermarks, borders or storyboard panels.
+```
+
+- **Tông màu theo series.** Tra series và màu gợi ý trong `data/chu-de.json`, chọn một tông chủ đạo và một màu nhấn phù hợp câu chuyện. Dùng chúng qua ánh sáng, đạo cụ hoặc hậu cảnh, giữ da người tự nhiên. Ví dụ Tình yêu dùng kem, hổ phách và hồng trầm. Phòng trà đêm mưa dùng xanh xám và ánh đèn vàng. Cà phê sáng dùng kem, vàng nhạt và ánh sáng tự nhiên.
+- **Cảnh hồi tưởng.** Dùng cùng ảnh chuẩn, giữ đường nét khuôn mặt và đặc điểm nhận diện. Có thể cho nhân vật trẻ hơn vừa phải. Dùng thêm dấu hiệu như đạo cụ kỷ niệm, ánh sáng mềm hoặc tông phim ấm hơn hiện tại. Nếu cảnh là hình dung về tuổi già, đổi tuổi và màu tóc nhưng vẫn giữ các nét nhận diện của cùng nhân vật.
 
 ### Bước 5. Kiểm tra ảnh, chốt timeline, dựng preview (Tèo)
 1. **Kiểm tra ảnh:** đủ số cảnh, kích thước, độ nét, không chữ hoặc số, nhân vật nhất quán, khớp storyboard. Nếu chưa đạt, Tèo gửi ông chủ một đoạn yêu cầu sửa trong một khung để chuyển cho Tí.
@@ -149,10 +176,14 @@ Nhac_Phong_Tra/
 ## 5. Metadata YouTube
 
 - **Tiêu đề:** chưa thống nhất mẫu. Kế hoạch ghi `<Tên bài> | <Thể loại> – Nhạc Phòng Trà`; NPT-0002 dùng "Yêu Nhau Lại Từ Đầu | Acoustic Pop Rock Việt | Nhạc Phòng Trà". *[Ông chủ chọn một mẫu, Tí áp dụng từ bài sau.]*
+  - **Phương án A – Theo kế hoạch.** `<Tên bài> | <Thể loại> – Nhạc Phòng Trà`. Ví dụ: `Yêu Nhau Lại Từ Đầu | Acoustic Pop Rock – Nhạc Phòng Trà`. Gọn hơn, dễ áp dụng cho nhiều thể loại và đỡ chiếm chỗ trên điện thoại. Ngôn ngữ ca khúc không hiện ngay trong tiêu đề.
+  - **Phương án B – Theo NPT-0002.** `<Tên bài> | <Thể loại> Việt | Nhạc Phòng Trà`. Ví dụ: `Yêu Nhau Lại Từ Đầu | Acoustic Pop Rock Việt | Nhạc Phòng Trà`. Nêu rõ đây là nhạc Việt và tách rõ ba phần. Tiêu đề dài hơn, tên kênh dễ bị khuất khi tên bài hoặc thể loại dài. Cần cân nhắc chữ “Việt” với bài song ngữ hoặc không lời.
 - **Mô tả:** đoạn giới thiệu câu chuyện, khẩu hiệu kênh, câu khai báo AI, 3–5 hashtag.
 - **Thẻ:** 10–15 thẻ gồm tên bài, thể loại, chủ đề, "nhạc phòng trà", "nhạc phòng trà cà phê chill".
+  - Tí chuẩn bị thẻ phân cách bằng dấu phẩy, tổng dưới 500 ký tự. Hashtag nằm riêng trong mô tả.
 - **Danh sách phát YouTube theo series:** "Tuổi Thơ – Quê Nhà | Nhạc Phòng Trà Hoài Niệm", "Tình Yêu – Nhạc Phòng Trà". Series mới thì tạo danh sách mới. Danh sách cá nhân của ông chủ để Riêng tư.
-- *[Tí bổ sung: nội dung Shorts từ đoạn hook, mẫu tiêu đề Shorts.]*
+- **Shorts từ hook.** Tí chọn câu hook và 1–3 câu liền kề đủ ý, ghi vào `shorts` trong kho bài. Đề xuất trích đoạn dọc khoảng 30–60 giây, gồm đoạn vào câu và điểm kết tự nhiên. Gửi kèm câu mở, câu kết và gợi ý cảnh để Tèo xác nhận mốc trên bản nhạc đã chọn và dựng clip. Nếu dùng phụ đề, chép đúng lời thực tế trên bản Suno.
+- **Mẫu tiêu đề Shorts.** `<Câu hook ngắn> | <Tên bài> #Shorts`. Nếu hook trùng tên bài, dùng `<Tên bài> | <Cụm tạo bối cảnh> #Shorts`. Ví dụ: `Yêu Nhau Lại Từ Đầu | Hẹn hò như ngày xưa #Shorts`.
 
 ## 6. Quy tắc phối hợp trên GitHub
 
