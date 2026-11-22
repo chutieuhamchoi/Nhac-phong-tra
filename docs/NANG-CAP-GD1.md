@@ -53,8 +53,10 @@ Không đổi: `data/ke-hoach.md`, `data/lich.json`, `data/chu-de.json`.
   ],
   "loiChon": 2,
   "promptSuno": "Vietnamese nostalgic ballad, 70 BPM, piano, warm female vocal",
+  "caiDatSuno": { "model": "v6", "giong": "nu", "thoiLuong": "auto", "maxMode": false, "weirdness": 58, "styleInfluence": 46, "variety": "Normal", "personalize": false },
   "nhacVersions": [
-    { "v": 1, "link": "https://suno.com/song/…", "ghiChu": "giọng nữ", "luc": "…", "loiV": 2 }
+    { "v": 1, "link": "https://suno.com/song/…", "ghiChu": "giọng nữ", "luc": "…", "loiV": 2, "styleV": 1,
+      "caiDat": { "model": "v6", "giong": "nu", "thoiLuong": "auto", "maxMode": false, "weirdness": 58, "styleInfluence": 46, "variety": "Normal", "personalize": false } }
   ],
   "nhacChon": 1,
   "diem": { "cauChuyen": 4, "diemCham": 4, "giaiDieu": 5, "banSac": 4 },
@@ -78,7 +80,8 @@ Không đổi: `data/ke-hoach.md`, `data/lich.json`, `data/chu-de.json`.
 | `trangThai` | 0 Ý tưởng · 1 Đang viết lời · 2 Đã duyệt lời · 3 Đang tạo nhạc · 4 Đang đánh giá · 5 Đã duyệt phát hành · 6 Đã đăng YouTube |
 | `lichSu` | Mọi lần đổi trạng thái: từ, đến, lúc, ghi chú. Chỉ thêm, không sửa. |
 | `loiVersions` / `loiChon` | Các phiên bản lời (không bao giờ ghi đè) và số phiên bản đang dùng. Lời hiện tại = phiên bản `loiChon`. |
-| `nhacVersions` / `nhacChon` | Các bản Suno (link, ghi chú, theo lời phiên bản nào) và bản được chọn phát hành (`null` = chưa chọn). |
+| `nhacVersions` / `nhacChon` | Các bản Suno (link, ghi chú, theo lời phiên bản nào) và bản được chọn phát hành (`null` = chưa chọn). Từ 22/11/2026 mỗi bản có thêm `caiDat`: ảnh chụp thông số Suno lúc thêm bản đó (`null` nếu không ghi). |
+| `caiDatSuno` | (22/11/2026) Thông số Suno Advanced đang dùng/đề xuất cho bài: `model` (chữ, vd `"v6"`), `giong` (`"nam"`/`"nu"`/`""` = Vocal Gender), `thoiLuong` (`"auto"` hoặc `"m:ss"` = Duration), `maxMode` (true/false/null), `weirdness` (0–100/null), `styleInfluence` (0–100/null), `variety` (chữ đúng như Suno hiện, vd `"Normal"`), `personalize` (true/false/null). Không biết thì để null/`""`, không đoán. |
 | `diem` | Phiếu duyệt theo `tieuChiDuyet` trong `data/chu-de.json` (từ 19/11/2026: `cauChuyen`, `diemCham`, `giaiDieu`, `banSac`, mỗi mục 1–5 hoặc `null`, tổng 20). Dưới `nguongDuyet.deXuatDuyet` (17) thì trang cảnh báo khi duyệt phát hành. Khóa sinh từ tên tiêu chí bỏ dấu, viết kiểu camelCase. |
 | `diemCu` | Chỉ có ở bài từng chấm theo phiếu cũ 5 tiêu chí/25 điểm (`loi`, `giaiDieu`, `caoTrao`, `camXuc`, `thuHut`): trang chuyển điểm cũ sang đây một lần, không xóa. |
 | `series` | `tuoi-tho`, `dem-mua`, `ca-phe-sang`, `mua` |

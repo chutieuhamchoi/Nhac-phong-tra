@@ -281,6 +281,7 @@ ${DINH_DANG(s.id, w.so, 'playlist')}`;
           <tr><th>Series · Tuần</th><td>${esc(seriesOf(d.series).ten)} · Tuần ${esc(d.tuan)}</td></tr>
           ${d.loi ? `<tr><th>Lời</th><td><pre>${esc(d.loi)}</pre></td></tr>` : ''}
           ${Object.entries(NHAN).filter(([k]) => d[k]).map(([k, n]) => `<tr><th>${n}</th><td>${esc(d[k]).replace(/\n/g, '<br>')}</td></tr>`).join('')}
+          ${d.caiDatSuno ? `<tr><th>Thông số Suno</th><td>${esc(N.tomTatCaiDat(d.caiDatSuno))}</td></tr>` : ''}
           ${d.ghiChu ? `<tr><th>Ghi chú</th><td>${esc(d.ghiChu)}</td></tr>` : ''}
         </table>
         ${r.ok ? `<label>Lưu vào
@@ -294,10 +295,12 @@ ${DINH_DANG(s.id, w.so, 'playlist')}`;
     if (!dich) return '';
     const xd = N.xungDot(dich, d);
     const dien = Object.entries(TRUONG_BAI).filter(([k, f]) => d[k] && !dich[f]).map(([k]) => NHAN[k]);
+    if (d.caiDatSuno && !N.tomTatCaiDat(dich.caiDatSuno)) dien.push('Thông số Suno');
+    const ht = (k, o) => k === 'caiDatSuno' ? N.tomTatCaiDat(o.caiDatSuno) : (o === d ? d[k] : o[TRUONG_BAI[k]]);
     return `<p class="hint">Lời sẽ thành <b>phiên bản ${(dich.loiVersions.reduce((m, x) => Math.max(m, x.v), 0)) + 1}</b> của ${dich.id}, các bản cũ giữ nguyên.
       ${dien.length ? `Sẽ điền vào trường đang trống: ${dien.join(', ')}.` : ''}</p>
       ${xd.length ? `<div class="alert warn">Các trường đã có nội dung khác, mặc định <b>giữ bản cũ</b>. Tick để thay bằng bản mới:
-        ${xd.map(k => `<label class="chk"><input type="checkbox" class="pv-ghi" value="${k}"> ${NHAN[k]}: <i>${esc(dich[TRUONG_BAI[k]]).slice(0, 60)}</i> → <i>${esc(d[k]).slice(0, 60)}</i></label>`).join('')}</div>` : ''}`;
+        ${xd.map(k => `<label class="chk"><input type="checkbox" class="pv-ghi" value="${k}"> ${k === 'caiDatSuno' ? 'Thông số Suno' : NHAN[k]}: <i>${esc(ht(k, dich)).slice(0, 90)}</i> → <i>${esc(ht(k, d)).slice(0, 90)}</i></label>`).join('')}</div>` : ''}`;
   }
   $('#xem-truoc').addEventListener('change', e => {
     if (!e.target.classList.contains('pv-dich')) return;
@@ -369,7 +372,7 @@ ${DINH_DANG(s.id, w.so, 'playlist')}`;
   $('#btn-xuat-md').onclick = () => {
     const out = kho.bai.filter(b => b.loai !== 'playlist').map(b => {
       const nhac = b.nhacVersions.find(x => x.v === b.nhacChon);
-      return `# ${b.id} · ${b.ten}\n\n- Series: ${seriesOf(b.series).ten} · Tuần ${b.tuan} · ${N.TRANG_THAI[b.trangThai]}\n- Lời: phiên bản ${b.loiChon ?? '—'} / ${b.loiVersions.length}\n- Prompt Suno (Style v${b.styleChon ?? '—'} / ${b.styleVersions.length}): ${b.promptSuno}\n${nhac ? `- Bản nhạc phát hành: v${nhac.v} ${nhac.link}\n` : ''}- Điểm: ${N.tongDiem(b) ?? '—'}/${N.diemToiDa()}\n- Tiêu đề YouTube: ${b.tieude}\n${b.linkYoutube ? `- Link: ${b.linkYoutube}\n` : ''}\n## Lời\n\n${N.loiHienTai(b) || ''}\n\n## Mô tả\n\n${b.mota}\n\n${b.tag}\n`;
+      return `# ${b.id} · ${b.ten}\n\n- Series: ${seriesOf(b.series).ten} · Tuần ${b.tuan} · ${N.TRANG_THAI[b.trangThai]}\n- Lời: phiên bản ${b.loiChon ?? '—'} / ${b.loiVersions.length}\n- Prompt Suno (Style v${b.styleChon ?? '—'} / ${b.styleVersions.length}): ${b.promptSuno}\n${N.tomTatCaiDat(b.caiDatSuno) ? `- Thông số Suno: ${N.tomTatCaiDat(b.caiDatSuno)}\n` : ''}${nhac ? `- Bản nhạc phát hành: v${nhac.v} ${nhac.link}${nhac.caiDat ? ` (${N.tomTatCaiDat(nhac.caiDat)})` : ''}\n` : ''}- Điểm: ${N.tongDiem(b) ?? '—'}/${N.diemToiDa()}\n- Tiêu đề YouTube: ${b.tieude}\n${b.linkYoutube ? `- Link: ${b.linkYoutube}\n` : ''}\n## Lời\n\n${N.loiHienTai(b) || ''}\n\n## Mô tả\n\n${b.mota}\n\n${b.tag}\n`;
     }).join('\n---\n\n');
     download(`loi-bai-hat-${homNay()}.md`, out || '# Kho trống\n', 'text/markdown');
   };
@@ -415,12 +418,14 @@ ${DINH_DANG(s.id, w.so, 'playlist')}`;
     $('#d-ds-style').innerHTML = b.styleVersions.length ? [...b.styleVersions].reverse().map(x => `<label class="vrow chk"><input type="radio" name="style-chon" value="${x.v}" ${x.v === b.styleChon ? 'checked' : ''}>
         <span><b>Style v${x.v}</b>${x.v === b.styleChon ? '<span class="chon">đang dùng</span>' : ''} <span class="m">· ${fmtLuc(x.luc)}${x.ghiChu ? ' · ' + esc(x.ghiChu) : ''}</span><br><span class="m">${esc(x.style)}</span></span></label>`).join('')
       : '<p class="hint">Chưa có Style.</p>';
+    // thông số Suno
+    renderCaiDat();
     // nhạc
     $('#d-dem-nhac').textContent = b.nhacVersions.length;
     $('#d-ds-nhac').innerHTML = b.nhacVersions.length ? `<label class="vrow chk"><input type="radio" name="nhac-chon" value="" ${b.nhacChon === null ? 'checked' : ''}> Chưa chọn bản phát hành</label>` +
       b.nhacVersions.map(x => `<label class="vrow chk"><input type="radio" name="nhac-chon" value="${x.v}" ${x.v === b.nhacChon ? 'checked' : ''}>
         <span><b>v${x.v}</b> ${linkOk(x.link) ? `<a href="${esc(x.link)}" target="_blank" rel="noopener">${esc(x.link)}</a>` : esc(x.link) || '<i>không có link</i>'}
-        <span class="m">· ${fmtLuc(x.luc)}${x.loiV ? ` · theo lời v${x.loiV}` : ''}${x.styleV ? ` · Style v${x.styleV}` : ''}</span>${x.ghiChu ? `<br><span class="m">${esc(x.ghiChu)}</span>` : ''}</span></label>`).join('')
+        <span class="m">· ${fmtLuc(x.luc)}${x.loiV ? ` · theo lời v${x.loiV}` : ''}${x.styleV ? ` · Style v${x.styleV}` : ''}</span>${x.caiDat ? `<br><span class="m cd-tt">⚙ ${esc(N.tomTatCaiDat(x.caiDat))}</span>` : ''}${x.ghiChu ? `<br><span class="m">${esc(x.ghiChu)}</span>` : ''}</span></label>`).join('')
       : '<p class="hint">Chưa có bản nhạc nào. Tạo trên Suno rồi dán link vào đây, mỗi lần tạo là một phiên bản.</p>';
     // điểm
     const tong = N.tongDiem(b);
@@ -438,6 +443,20 @@ ${DINH_DANG(s.id, w.so, 'playlist')}`;
         <button type="button" class="mini" data-xd-github="${f}">Dùng bản GitHub</button> <button type="button" class="mini" data-xd-giu="${f}">Giữ bản trình duyệt</button></div>`).join('')}</div>` : '') +
       `<ol class="ls">${[...b.lichSu].reverse().map(h => `<li><span class="m">${fmtLuc(h.luc)}</span>
       ${h.tu === null ? '' : `${ttPill(h.tu)} →`} ${ttPill(h.den)}${h.ghiChu ? ` <span>${esc(h.ghiChu)}</span>` : ''}</li>`).join('')}</ol>`;
+  }
+  function renderCaiDat() {
+    const cd = N.chuanCaiDat(bai.caiDatSuno), bat = (k, v) => `<option value="" ${cd[k] === null ? 'selected' : ''}>—</option><option value="off" ${cd[k] === false ? 'selected' : ''}>Off</option><option value="on" ${cd[k] === true ? 'selected' : ''}>On</option>`;
+    const pt = k => `<span class="cd-pt"><input type="range" min="0" max="100" step="1" data-cd="${k}" value="${cd[k] ?? 50}" class="${cd[k] === null ? 'chua' : ''}"><input type="number" min="0" max="100" data-cd="${k}" value="${cd[k] ?? ''}" placeholder="—">%</span>`;
+    $('#d-cai-dat').innerHTML = `
+      <label>Model<input data-cd="model" list="dl-model" value="${esc(cd.model)}" placeholder="v6"></label>
+      <label>Vocal Gender<select data-cd="giong"><option value="">—</option><option value="nam" ${cd.giong === 'nam' ? 'selected' : ''}>Male (nam)</option><option value="nu" ${cd.giong === 'nu' ? 'selected' : ''}>Female (nữ)</option></select></label>
+      <label>Duration<input data-cd="thoiLuong" list="dl-thoi-luong" value="${esc(cd.thoiLuong === 'auto' ? 'Auto' : cd.thoiLuong)}" placeholder="Auto hoặc 3:45"></label>
+      <label>Max Mode<select data-cd="maxMode">${bat('maxMode')}</select></label>
+      <label>Weirdness${pt('weirdness')}</label>
+      <label>Style Influence${pt('styleInfluence')}</label>
+      <label>Variety<input data-cd="variety" list="dl-variety" value="${esc(cd.variety)}" placeholder="Normal"></label>
+      <label>Personalize<select data-cd="personalize">${bat('personalize')}</select></label>`;
+    $('#d-cd-tt').textContent = N.tomTatCaiDat(cd) || 'chưa nhập';
   }
   function renderCanhBao() {
     const den = +$('#d-tt-moi').value, w = N.canhBaoChuyen(bai, den);
@@ -534,6 +553,18 @@ ${DINH_DANG(s.id, w.so, 'playlist')}`;
     if (e.target.name !== 'style-chon') return;
     N.chonStyle(bai, +e.target.value); $('[data-f=promptSuno]', dlg).value = bai.promptSuno; luuKho(); renderBai(); toast(`Đang dùng Style v${bai.styleChon}`);
   });
+  // thông số Suno: lưu ngay khi đổi (giống ô điểm)
+  $('#d-cai-dat').addEventListener('input', e => {
+    const k = e.target.dataset.cd; if (!k || e.target.type !== 'range') return;
+    const so = $(`input[type=number][data-cd="${k}"]`, dlg); if (so) so.value = e.target.value;
+  });
+  $('#d-cai-dat').addEventListener('change', e => {
+    const k = e.target.dataset.cd; if (!k) return;
+    const v = e.target.value.trim();
+    N.datCaiDat(bai, { [k]: v });
+    luuKho(); renderCaiDat();
+  });
+  $('#d-copy-cd').onclick = () => copyCo(N.tomTatCaiDat(bai.caiDatSuno), 'thông số Suno');
   $('#d-ds-nhac').addEventListener('change', e => {
     if (e.target.name !== 'nhac-chon') return;
     N.chonNhac(bai, e.target.value === '' ? null : +e.target.value); luuKho(); renderBai();

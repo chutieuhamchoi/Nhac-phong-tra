@@ -196,3 +196,13 @@ button:disabled{opacity:.5;cursor:not-allowed}
 .xd2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:6px 0}
 .xd2 pre{white-space:pre-wrap;font-family:inherit;font-size:12.5px;margin:2px 0 0;max-height:160px;overflow:auto;background:#0003;padding:6px;border-radius:6px}
 @media(max-width:700px){.xd2{grid-template-columns:1fr}}
+/* thông số Suno (22/11/2026) */
+.cai-dat{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:6px 0 4px}
+@media(max-width:760px){.cai-dat{grid-template-columns:repeat(2,1fr)}}
+.cai-dat label{margin:0}
+.cd-pt{display:flex;align-items:center;gap:6px;margin-top:4px;color:var(--ink)}
+.cd-pt input[type=range]{flex:1;min-width:0;accent-color:var(--accent)}
+.cd-pt input[type=range].chua{opacity:.35}
+.cd-pt input[type=number]{width:58px;flex:none}
+#d-cd-tt{color:var(--mute);font-weight:400}
+.cd-tt{display:inline-block;margin-top:2px}

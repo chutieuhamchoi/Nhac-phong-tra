@@ -334,3 +334,37 @@ test('Style đồng bộ GitHub: nhận lịch sử Style đúng số bản; Tí
   assert.equal(kho.bai[0].promptSuno, 'rock V5'); assert.equal(kho.bai[0].styleChon, 5);
   assert.deepEqual(kho.bai[0].styleVersions.map(x => x.style), ['soul V1', 'rock V4', 'rock V5']);
 });
+
+test('Thông số Suno: chuẩn hóa, tóm tắt, chụp vào bản nhạc', () => {
+  const cd = N.chuanCaiDat({ model: 'v6', giong: 'Female', thoiLuong: 'auto', maxMode: 'Off', weirdness: '58%', styleInfluence: 46, variety: 'Normal', personalize: false });
+  assert.deepEqual(cd, { model: 'v6', giong: 'nu', thoiLuong: 'auto', maxMode: false, weirdness: 58, styleInfluence: 46, variety: 'Normal', personalize: false });
+  assert.equal(N.chuanCaiDat({ weirdness: 140, thoiLuong: 225 }).weirdness, null);
+  assert.equal(N.chuanCaiDat({ thoiLuong: 225 }).thoiLuong, '3:45');
+  assert.equal(N.tomTatCaiDat(cd), 'v6 · Nữ · Duration Auto · Max Off · Weirdness 58% · Style Influence 46% · Variety Normal · Personalize Off');
+  const kho = N.khoRong(), b = N.taoBai(kho, { ten: 'X', loi: '[Verse 1]\nA' });
+  assert.deepEqual(b.caiDatSuno, N.caiDatRong());
+  assert.equal(N.themNhac(b, 'https://suno.com/song/1', ''), 1);
+  assert.equal(b.nhacVersions[0].caiDat, null, 'chưa nhập thông số thì không chụp');
+  N.datCaiDat(b, cd); N.themNhac(b, 'https://suno.com/song/2', '');
+  assert.deepEqual(b.nhacVersions[1].caiDat, cd);
+  N.datCaiDat(b, { weirdness: '60' });
+  assert.equal(b.nhacVersions[1].caiDat.weirdness, 58, 'ảnh chụp không đổi theo bài');
+  const k2 = N.chuanHoaKho(JSON.parse(JSON.stringify(kho))).kho;
+  assert.deepEqual(k2.bai[0].nhacVersions[1].caiDat, cd);
+});
+
+test('Thông số Suno: nhập từ ChatGPT và đồng bộ GitHub', () => {
+  const r = N.kiemTraNhap({ ten: 'Y', loi: '[Verse 1]\nA', style: 's', caiDatSuno: { model: 'v6', giong: 'nam', weirdness: 'abc', laLa: 1 } }, { series: 'tuoi-tho', tuan: 1 });
+  assert.ok(r.ok); assert.equal(r.data.caiDatSuno.giong, 'nam');
+  assert.equal(r.canhBao.filter(x => x.startsWith('caiDatSuno')).length, 2);
+  assert.ok(!N.kiemTraNhap({ ten: 'Y', loi: '[Verse 1]\nA', caiDatSuno: 'v6' }, { series: 'tuoi-tho', tuan: 1 }).ok);
+  const kho = N.khoRong(); const b = N.apNhap(kho, r.data);
+  assert.equal(b.caiDatSuno.model, 'v6');
+  const gh = { schema: 2, nextId: 2, bai: [JSON.parse(JSON.stringify(b))] };
+  const kho2 = N.khoRong(); N.dongBoTuGitHub(kho2, gh);
+  gh.bai[0].caiDatSuno = Object.assign({}, gh.bai[0].caiDatSuno, { weirdness: 58 }); gh.bai[0].ngayCapNhat = '2099-01-01T00:00:00.000Z';
+  gh.bai[0].nhacVersions = [{ v: 1, link: 'https://suno.com/song/9', ghiChu: '', luc: 'x', loiV: 1, styleV: 1, caiDat: { model: 'v6', weirdness: 58 } }];
+  N.dongBoTuGitHub(kho2, gh);
+  assert.equal(kho2.bai[0].caiDatSuno.weirdness, 58);
+  assert.equal(kho2.bai[0].nhacVersions[0].caiDat.weirdness, 58);
+});
