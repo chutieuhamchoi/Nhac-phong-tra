@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "capNhat": "2026-11-22T05:50:00.000Z",
-  "nextId": 3,
+  "capNhat": "2026-11-22T06:27:01.567Z",
+  "nextId": 33,
   "bai": [
     {
       "id": "NPT-0001",
@@ -229,6 +229,1606 @@
         }
       ],
       "styleChon": 4
+    },
+    {
+      "id": "NPT-0003",
+      "loai": "bai",
+      "ten": "Lúc Nào Anh Cũng Bận",
+      "series": "tinh-yeu",
+      "tuan": 1,
+      "ngayTao": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "trangThai": 1,
+      "lichSu": [
+        {
+          "tu": null,
+          "den": 1,
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 13. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiVersions": [
+        {
+          "v": 1,
+          "loi": "[Verse 1 - Female]\nEm thay váy lần thứ hai\nRồi treo ngay ngắn vào tủ\nTin anh nhắn vừa đủ dài\nĐể em hiểu mình lại lỡ\nQuán quen kê bàn sát cửa\nEm xin đổi bàn một người\nAnh nhắn cuối tuần bù nhé\nEm nhắn lại một mặt cười\n[Verse 2 - Male]\nAnh cứ nghĩ còn Chủ nhật\nCòn một bữa tối tuần sau\nMỗi lần em nói được mà\nAnh tin em chẳng buồn lâu\nHôm nay anh về đúng hẹn\nGọi hai ly ở quán quen\nCô phục vụ mang thêm ghế\nAnh chợt nghe mình gọi em\n[Chorus - Duet]\n(Nữ) Lúc nào anh cũng bận\nLúc nào em cũng chờ\n(Nam) Anh cứ dành em cho ngày mai\n(Nữ) Em đã thôi để cửa\n(Nam) Anh có cả buổi tối nay\n(Nữ) Em có một đời phải sống\n(Cả hai) Mình để lỡ nhau từng chút\nĐến khi rảnh thì mất nhau\n[Bridge - Duet]\n(Nam) Anh xin lỗi vì về muộn\n(Nữ) Em đợi câu đó lâu rồi\n(Nam) Vậy mình còn gì để nói?\n(Nữ) Ngồi uống hết ly đi thôi\n[Final Chorus - Duet]\n(Nữ) Lúc nào anh cũng bận\nEm đã từng chờ rất lâu\n(Nam) Anh có cả buổi tối nay\nMà chẳng còn cách nào bù\n(Cả hai) Mình để lỡ nhau từng chút\nĐến khi rảnh thì mất nhau",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 13. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiChon": 1,
+      "styleVersions": [
+        {
+          "v": 1,
+          "style": "Vietnamese contemporary R&B duet, 88 BPM, close female alto and warm male tenor. Keep each singer on their labeled verse, then alternate short replies in the chorus. Use Rhodes, muted electric guitar, rounded bass and a dry two-step drum pocket. Leave a beat of air before the final shared line. Strip to keys in the bridge; return with restrained harmonies and an unresolved final chord.",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí soạn Style nháp V1."
+        }
+      ],
+      "styleChon": 1,
+      "promptSuno": "Vietnamese contemporary R&B duet, 88 BPM, close female alto and warm male tenor. Keep each singer on their labeled verse, then alternate short replies in the chorus. Use Rhodes, muted electric guitar, rounded bass and a dry two-step drum pocket. Leave a beat of air before the final shared line. Strip to keys in the bridge; return with restrained harmonies and an unresolved final chord.",
+      "nhacVersions": [],
+      "nhacChon": null,
+      "diem": {
+        "cauChuyen": null,
+        "diemCham": null,
+        "giaiDieu": null,
+        "banSac": null
+      },
+      "thumbnail": "",
+      "tieude": "",
+      "mota": "",
+      "shorts": "",
+      "tag": "",
+      "linkYoutube": "",
+      "ngayPhatHanh": "",
+      "ghiChu": "Bài số 13 · R&B đối đáp. Anh có thời gian thì cô đã thôi chờ.",
+      "promptChatGPT": ""
+    },
+    {
+      "id": "NPT-0004",
+      "loai": "bai",
+      "ten": "Em Đã Thôi Kể Về Anh",
+      "series": "tinh-yeu",
+      "tuan": 1,
+      "ngayTao": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "trangThai": 1,
+      "lichSu": [
+        {
+          "tu": null,
+          "den": 1,
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 29. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiVersions": [
+        {
+          "v": 1,
+          "loi": "[Verse 1]\nBạn hỏi dạo này em sao\nEm kể vừa thay rèm cửa\nKể chỗ làm có mèo hoang\nNgày nào cũng sang xin sữa\nKể em học bơi tháng trước\nĐã dám qua đầu bên kia\nBạn cười, bảo lâu lắm rồi\nMới nghe em nói say sưa\n[Chorus]\nEm đã thôi kể về anh\nTừ bao giờ em chẳng nhớ\nMột buổi chiều qua rất nhanh\nEm kể bao điều nho nhỏ\nĐến khi đứng chờ đèn xanh\nEm mới nhận ra trên phố\nEm đã thôi kể về anh\nMà còn bao điều để nói\n[Verse 2]\nEm vẫn nhớ anh sợ lạnh\nVẫn nhớ nhà anh nuôi chim\nHôm qua ai mở bài cũ\nEm nghe từ đầu tới cuối\nRồi em về tưới mấy chậu\nCây húng vừa nhú thêm hoa\nLần đầu em chụp một tấm\nChỉ vì nhìn thấy nó xinh\n[Chorus]\nEm đã thôi kể về anh\nTừ bao giờ em chẳng nhớ\nMột buổi chiều qua rất nhanh\nEm kể bao điều nho nhỏ\nĐến khi đứng chờ đèn xanh\nEm mới nhận ra trên phố\nEm đã thôi kể về anh\nMà còn bao điều để nói\n[Final Chorus]\nEm đã thôi kể về anh\nTừ bao giờ em chẳng nhớ\nNgày mai nếu bạn ghé ngang\nEm có chuyện vui muốn kể\nEm bơi qua đầu bên kia\nLần này không cần nghỉ giữa",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 29. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiChon": 1,
+      "styleVersions": [
+        {
+          "v": 1,
+          "style": "Vietnamese acoustic soul, 82 BPM. Female mezzo with a relaxed conversational delivery. Nylon guitar, upright bass and brushes. Keep the verse lightly syncopated; lift the title into a gentle sustained melody. Let the room sound open up on the second chorus. End simply on guitar and voice, with warmth and relief.",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí soạn Style nháp V1."
+        }
+      ],
+      "styleChon": 1,
+      "promptSuno": "Vietnamese acoustic soul, 82 BPM. Female mezzo with a relaxed conversational delivery. Nylon guitar, upright bass and brushes. Keep the verse lightly syncopated; lift the title into a gentle sustained melody. Let the room sound open up on the second chorus. End simply on guitar and voice, with warmth and relief.",
+      "nhacVersions": [],
+      "nhacChon": null,
+      "diem": {
+        "cauChuyen": null,
+        "diemCham": null,
+        "giaiDieu": null,
+        "banSac": null
+      },
+      "thumbnail": "",
+      "tieude": "",
+      "mota": "",
+      "shorts": "",
+      "tag": "",
+      "linkYoutube": "",
+      "ngayPhatHanh": "",
+      "ghiChu": "Bài số 29 · Acoustic soul. Cô nhận ra mình đã thôi nhắc người cũ khi kể về đời mình.",
+      "promptChatGPT": ""
+    },
+    {
+      "id": "NPT-0005",
+      "loai": "bai",
+      "ten": "Tháng Mười Hai Có Hẹn",
+      "series": "do-thi",
+      "tuan": 2,
+      "ngayTao": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "trangThai": 1,
+      "lichSu": [
+        {
+          "tu": null,
+          "den": 1,
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 03. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiVersions": [
+        {
+          "v": 1,
+          "loi": "[Verse 1 - Female]\nEm khoanh ngày mười hai\nTrên tờ lịch cạnh bếp\nTháng này trời trở rét\nEm vẫn mua hai phần\n[Verse 2 - Male]\nAnh đếm qua từng ga\nQua một vùng sương trắng\nLoa vừa báo sắp đến\nAnh lấy khăn quàng ra\n[Chorus - Duet]\nTháng Mười Hai có hẹn\nEm đi xuống sân ga\nAnh xuống toa sau chót\nĐể nhìn em từ xa\nMình đã nói qua máy\nĐủ chuyện nhỏ trong nhà\nGặp nhau câu đầu tiên\nLại là em lạnh à\n[Bridge - Duet]\n(Nữ) Em mang theo hai găng\n(Nam) Anh còn nguyên hai tay\n(Cả hai) Thôi mình chia mỗi chiếc\nTay còn lại nắm tay\n[Final Chorus - Duet]\nTháng Mười Hai có hẹn\nTàu vừa dừng sân ga\nTrời còn nguyên cái rét\nMình đi bộ về nhà",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 03. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiChon": 1,
+      "styleVersions": [
+        {
+          "v": 1,
+          "style": "Vietnamese winter pop-jazz duet, 102 BPM. Female alto and male tenor trade perspectives over warm piano, upright bass and brushes. Short, lightly swung verses; flowing unison title on the chorus. Let the bridge become playful call and response. Finish with interwoven harmony and a piano tag.",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí soạn Style nháp V1."
+        }
+      ],
+      "styleChon": 1,
+      "promptSuno": "Vietnamese winter pop-jazz duet, 102 BPM. Female alto and male tenor trade perspectives over warm piano, upright bass and brushes. Short, lightly swung verses; flowing unison title on the chorus. Let the bridge become playful call and response. Finish with interwoven harmony and a piano tag.",
+      "nhacVersions": [],
+      "nhacChon": null,
+      "diem": {
+        "cauChuyen": null,
+        "diemCham": null,
+        "giaiDieu": null,
+        "banSac": null
+      },
+      "thumbnail": "",
+      "tieude": "",
+      "mota": "",
+      "shorts": "",
+      "tag": "",
+      "linkYoutube": "",
+      "ngayPhatHanh": "",
+      "ghiChu": "Bài số 03 · Pop jazz song ca. Yêu xa, một người đếm ngày, một người đếm ga tàu.",
+      "promptChatGPT": ""
+    },
+    {
+      "id": "NPT-0006",
+      "loai": "bai",
+      "ten": "Bạn Cũ Ơi",
+      "series": "truong-thanh",
+      "tuan": 2,
+      "ngayTao": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "trangThai": 1,
+      "lichSu": [
+        {
+          "tu": null,
+          "den": 1,
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 04. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiVersions": [
+        {
+          "v": 1,
+          "loi": "[Verse 1]\nSố cậu còn trong máy\nTên lưu từ lớp mười\nTớ tập câu lâu quá\nBấm gọi lại quên rồi\nMẹ tớ vừa thay kính\nCầu cũ họ sơn xanh\nTớ có bao chuyện nhỏ\nChưa kể cậu nghe lần nào\n[Chorus]\nBạn cũ ơi, kể từ đâu?\nTừ hôm mưa ngập tới đầu gối\nHay từ hôm cả hai giận nhau\nĐứa nào cũng mong bên kia gọi\nBạn cũ ơi, cậu cứ kể\nTớ còn thức, cứ nói cho lâu\nMấy năm qua nói trong một tối\nMai mình còn gọi được cho nhau\n[Verse 2]\nCậu gọi tớ là Tép\nTớ cười vang cả phòng\nBiệt danh từ hồi bé\nLâu lắm chẳng ai dùng\nCon cậu đang tập nói\nMà nghe tớ gọi sai\nNó nhắc tên ba nó\nY như cậu hồi hai mươi\n[Chorus]\nBạn cũ ơi, kể từ đâu?\nTừ hôm mưa ngập tới đầu gối\nHay từ hôm cả hai giận nhau\nĐứa nào cũng mong bên kia gọi\nBạn cũ ơi, cậu cứ kể\nTớ còn thức, cứ nói cho lâu\nMấy năm qua nói trong một tối\nMai mình còn gọi được cho nhau\n[Outro]\nBạn cũ ơi, mai gọi nhé\nLần này tới lượt tớ kể đầu",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 04. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiChon": 1,
+      "styleVersions": [
+        {
+          "v": 1,
+          "style": "Vietnamese acoustic soul, 78 BPM. Warm male lead with conversational phrasing, fingerpicked guitar, mellow Wurlitzer, upright bass and light brushes. Let the title sound like a genuine greeting. Add soft friend-like backing responses on the reprise. Leave a small breath before the final line.",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí soạn Style nháp V1."
+        }
+      ],
+      "styleChon": 1,
+      "promptSuno": "Vietnamese acoustic soul, 78 BPM. Warm male lead with conversational phrasing, fingerpicked guitar, mellow Wurlitzer, upright bass and light brushes. Let the title sound like a genuine greeting. Add soft friend-like backing responses on the reprise. Leave a small breath before the final line.",
+      "nhacVersions": [],
+      "nhacChon": null,
+      "diem": {
+        "cauChuyen": null,
+        "diemCham": null,
+        "giaiDieu": null,
+        "banSac": null
+      },
+      "thumbnail": "",
+      "tieude": "",
+      "mota": "",
+      "shorts": "",
+      "tag": "",
+      "linkYoutube": "",
+      "ngayPhatHanh": "",
+      "ghiChu": "Bài số 04 · Acoustic soul. Gọi lại sau nhiều năm và vẫn dùng biệt danh cũ.",
+      "promptChatGPT": ""
+    },
+    {
+      "id": "NPT-0007",
+      "loai": "bai",
+      "ten": "Em Có Biết Đâu",
+      "series": "tinh-yeu",
+      "tuan": 3,
+      "ngayTao": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "trangThai": 1,
+      "lichSu": [
+        {
+          "tu": null,
+          "den": 1,
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 05. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiVersions": [
+        {
+          "v": 1,
+          "loi": "[Verse 1]\nEm đặt máy lên bàn\nBảo anh xem hộ nhé\nNhắn người ta thế này\nCó lộ là thích quá?\nAnh sửa một dấu câu\nRồi dặn đừng xóa nữa\nEm gửi đi rất nhanh\nAnh nhìn ly tan đá\n[Chorus]\nEm có biết đâu\nAnh thuộc giờ em hay nhắn\nEm có biết đâu\nAnh để chuông riêng tên em\nCâu em sắp gửi người ấy\nAnh đã tập nói bao lần\nGiờ anh còn ngồi đây chọn\nMột lời chúc em gặp may\n[Verse 2]\nEm hỏi anh có ai\nMà rành mấy chuyện thế\nAnh nói cũng có người\nEm bảo kể nghe đi\nAnh nhìn em một lúc\nRồi kể tên một phim\nEm chê anh giấu giỏi\nAnh cười, ừ, cũng kín\n[Chorus]\nEm có biết đâu\nAnh thuộc giờ em hay nhắn\nEm có biết đâu\nAnh để chuông riêng tên em\nCâu em sắp gửi người ấy\nAnh đã tập nói bao lần\nGiờ anh còn ngồi đây chọn\nMột lời chúc em gặp may\n[Outro]\nEm có biết đâu\nCâu khó nhất anh chưa gửi",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 05. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiChon": 1,
+      "styleVersions": [
+        {
+          "v": 1,
+          "style": "Vietnamese indie pop, 106 BPM. An unassuming male tenor, palm-muted guitar, springy bass and dry drums. Keep the verse quick and teasing, then shift to a bittersweet chord on the title. Briefly thin the drums on the final hook to expose the confession. End on a small instrumental answer.",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí soạn Style nháp V1."
+        }
+      ],
+      "styleChon": 1,
+      "promptSuno": "Vietnamese indie pop, 106 BPM. An unassuming male tenor, palm-muted guitar, springy bass and dry drums. Keep the verse quick and teasing, then shift to a bittersweet chord on the title. Briefly thin the drums on the final hook to expose the confession. End on a small instrumental answer.",
+      "nhacVersions": [],
+      "nhacChon": null,
+      "diem": {
+        "cauChuyen": null,
+        "diemCham": null,
+        "giaiDieu": null,
+        "banSac": null
+      },
+      "thumbnail": "",
+      "tieude": "",
+      "mota": "",
+      "shorts": "",
+      "tag": "",
+      "linkYoutube": "",
+      "ngayPhatHanh": "",
+      "ghiChu": "Bài số 05 · Indie pop. Anh giúp cô nhắn cho người cô thích, còn lời của chính mình thì chẳng dám gửi.",
+      "promptChatGPT": ""
+    },
+    {
+      "id": "NPT-0008",
+      "loai": "bai",
+      "ten": "Em Thuộc Về Biển",
+      "series": "sang-tao",
+      "tuan": 3,
+      "ngayTao": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "trangThai": 1,
+      "lichSu": [
+        {
+          "tu": null,
+          "den": 1,
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 06. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiVersions": [
+        {
+          "v": 1,
+          "loi": "[Verse 1]\nCha khâu lại tay lưới\nCon giữ đèn cho cha\nMùi dầu bám lên áo\nTheo con tới trường xa\nNgày người ta hỏi lớn\nCon định đi nơi nào\nCon vẽ một đường nước\nQua tận mũi đất cao\n[Chorus]\nEm thuộc về biển\nTừ lúc biết nhìn mây\nTừ hôm tự cầm lái\nVà đưa thuyền qua vịnh\nEm thuộc về biển\nBàn tay em đã chai\nMai khi con nước lên\nEm đi phiên của mình\n[Verse 2]\nCha đứng trên bậc đá\nĐưa con chiếc khăn tay\nDặn lúc qua cửa lạch\nNhìn sao rồi nhìn mây\nLần đầu qua đèn cảng\nCon nghe ngực mình nhanh\nRồi gọi về bến nhỏ\nCha ơi, con qua rồi\n[Chorus]\nEm thuộc về biển\nTừ lúc biết nhìn mây\nTừ hôm tự cầm lái\nVà đưa thuyền qua vịnh\nEm thuộc về biển\nBàn tay em đã chai\nMai khi con nước lên\nEm đi phiên của mình\n[Final Chorus]\nEm thuộc về biển\nQua cả ngày gió ngược\nVà lúc quay đầu lại\nEm tự đưa thuyền về",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 06. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiChon": 1,
+      "styleVersions": [
+        {
+          "v": 1,
+          "style": "Vietnamese indie folk, 91 BPM. Clear female alto, acoustic guitar, woody percussion and warm low strings. Verses carry a steady motion; chorus opens the vocal register and widens the harmony. Keep the bridge or instrumental breathing space spacious. Finish with a confident, grounded delivery.",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí soạn Style nháp V1."
+        }
+      ],
+      "styleChon": 1,
+      "promptSuno": "Vietnamese indie folk, 91 BPM. Clear female alto, acoustic guitar, woody percussion and warm low strings. Verses carry a steady motion; chorus opens the vocal register and widens the harmony. Keep the bridge or instrumental breathing space spacious. Finish with a confident, grounded delivery.",
+      "nhacVersions": [],
+      "nhacChon": null,
+      "diem": {
+        "cauChuyen": null,
+        "diemCham": null,
+        "giaiDieu": null,
+        "banSac": null
+      },
+      "thumbnail": "",
+      "tieude": "",
+      "mota": "",
+      "shorts": "",
+      "tag": "",
+      "linkYoutube": "",
+      "ngayPhatHanh": "",
+      "ghiChu": "Bài số 06 · Indie folk. Cô gái làng chài tự chọn nghề đi biển.",
+      "promptChatGPT": ""
+    },
+    {
+      "id": "NPT-0009",
+      "loai": "bai",
+      "ten": "Em Không Cần Một Người Hoàn Hảo",
+      "series": "tinh-yeu",
+      "tuan": 4,
+      "ngayTao": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "trangThai": 1,
+      "lichSu": [
+        {
+          "tu": null,
+          "den": 1,
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 07. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiVersions": [
+        {
+          "v": 1,
+          "loi": "[Verse 1]\nAnh thay bóng đèn hỏng\nRồi đặt ghế về chỗ\nHỏi hôm nay em mệt\nCòn mình thì bảo không\nEm nghe vòi nước chảy\nLâu hơn mọi tối thường\nBiết anh còn trong bếp\nĐợi mắt mình hết đỏ\n[Chorus]\nEm không cần một người hoàn hảo\nChỉ cần anh nói hôm nay anh buồn\nPhần nào nặng quá, anh đưa em giữ\nHai đứa mình ngồi tính tiếp ngày mai\nEm không cần anh trả lời cho hết\nCứ nói một điều anh giấu lâu nay\nNếu câu đầu khó, em ngồi đây đợi\nĐến lúc anh nói, em vẫn còn đây\n[Verse 2]\nAnh vừa ngồi xuống ghế\nĐã nói mình mất việc\nEm với tay tắt bếp\nĐể nghe hết câu sau\nCơm tối nguội một chút\nMình hâm lại cũng nhanh\nMai em đi chợ sớm\nAnh muốn ăn gì nào?\n[Chorus]\nEm không cần một người hoàn hảo\nChỉ cần anh nói hôm nay anh buồn\nPhần nào nặng quá, anh đưa em giữ\nHai đứa mình ngồi tính tiếp ngày mai\nEm không cần anh trả lời cho hết\nCứ nói một điều anh giấu lâu nay\nNếu câu đầu khó, em ngồi đây đợi\nĐến lúc anh nói, em vẫn còn đây\n[Outro]\nHai đứa mình ngồi tính tiếp ngày mai",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 07. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiChon": 1,
+      "styleVersions": [
+        {
+          "v": 1,
+          "style": "Vietnamese indie pop, 92 BPM. Female lead in gentle conversational phrases. Start with clean electric guitar and soft piano; add bass and understated drums across the chorus. Give the longer chorus lines space to resolve naturally. Drop to guitar for the kitchen-table verse, then return with a single harmony voice.",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí soạn Style nháp V1."
+        }
+      ],
+      "styleChon": 1,
+      "promptSuno": "Vietnamese indie pop, 92 BPM. Female lead in gentle conversational phrases. Start with clean electric guitar and soft piano; add bass and understated drums across the chorus. Give the longer chorus lines space to resolve naturally. Drop to guitar for the kitchen-table verse, then return with a single harmony voice.",
+      "nhacVersions": [],
+      "nhacChon": null,
+      "diem": {
+        "cauChuyen": null,
+        "diemCham": null,
+        "giaiDieu": null,
+        "banSac": null
+      },
+      "thumbnail": "",
+      "tieude": "",
+      "mota": "",
+      "shorts": "",
+      "tag": "",
+      "linkYoutube": "",
+      "ngayPhatHanh": "",
+      "ghiChu": "Bài số 07 · Indie pop. Cô mong anh chịu nói ra để hai người cùng lo.",
+      "promptChatGPT": ""
+    },
+    {
+      "id": "NPT-0010",
+      "loai": "bai",
+      "ten": "Mưa Qua Ô Cửa Sổ",
+      "series": "ca-phe-sang",
+      "tuan": 4,
+      "ngayTao": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "trangThai": 1,
+      "lichSu": [
+        {
+          "tu": null,
+          "den": 1,
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 08. Chờ Ông chủ duyệt. Bản có lời để thử; lịch gốc chọn smooth jazz không lời."
+        }
+      ],
+      "loiVersions": [
+        {
+          "v": 1,
+          "loi": "[Verse 1]\nMưa đậu bên ô kính\nQuán còn đúng hai người\nCô mang ra tách nóng\nTôi ngồi nghe phố trôi\n[Chorus]\nMưa qua ô cửa sổ\nRơi đều trên mái hiên\nTôi để ngày chậm lại\nNghe lòng mình ngồi yên\n[Verse 2]\nAi gấp ô ngoài cửa\nMang theo mùi đường ướt\nMột vệt trời trong veo\nNằm trên bàn vừa lau\n[Outro]\nMưa qua ô cửa sổ\nPhố sáng lên từ từ",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 08. Chờ Ông chủ duyệt. Bản có lời để thử; lịch gốc chọn smooth jazz không lời."
+        }
+      ],
+      "loiChon": 1,
+      "styleVersions": [
+        {
+          "v": 1,
+          "style": "Vietnamese smooth jazz vocal alternate, 72 BPM. Felt piano, nylon guitar, upright bass and brushes. Soft close female alto for the labeled lyric, with a sparse melody and long spaces between lines. Develop a three-stage arc: light rain, fuller texture, brighter harmony. Give piano an extended middle passage and a short clear-sky outro.",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí soạn Style nháp V1. Bản có lời để thử; lịch gốc chọn smooth jazz không lời."
+        }
+      ],
+      "styleChon": 1,
+      "promptSuno": "Vietnamese smooth jazz vocal alternate, 72 BPM. Felt piano, nylon guitar, upright bass and brushes. Soft close female alto for the labeled lyric, with a sparse melody and long spaces between lines. Develop a three-stage arc: light rain, fuller texture, brighter harmony. Give piano an extended middle passage and a short clear-sky outro.",
+      "nhacVersions": [],
+      "nhacChon": null,
+      "diem": {
+        "cauChuyen": null,
+        "diemCham": null,
+        "giaiDieu": null,
+        "banSac": null
+      },
+      "thumbnail": "",
+      "tieude": "",
+      "mota": "",
+      "shorts": "",
+      "tag": "",
+      "linkYoutube": "",
+      "ngayPhatHanh": "",
+      "ghiChu": "Bài số 08 · Smooth jazz không lời. Piano đi qua ba sắc thái của một buổi sáng mưa. Bản có lời để thử; lịch gốc chọn smooth jazz không lời.",
+      "promptChatGPT": ""
+    },
+    {
+      "id": "NPT-0011",
+      "loai": "bai",
+      "ten": "Đêm Noel Anh Ở Đâu?",
+      "series": "mua",
+      "tuan": 5,
+      "ngayTao": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "trangThai": 1,
+      "lichSu": [
+        {
+          "tu": null,
+          "den": 1,
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 09. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiVersions": [
+        {
+          "v": 1,
+          "loi": "[Verse 1]\nBạn kéo em ra phố\nChỗ nhà thờ vừa lên đèn\nCó người bán bắp nóng\nCó ai đội mũ tuần lộc\nEm đứng vào chỗ cũ\nTheo phản xạ nhìn sang\nMột đôi chờ chụp ảnh\nEm nhích qua nhường phần\n[Chorus]\nĐêm Noel anh ở đâu?\nBên đó trời có lạnh?\nEm gõ một câu rất ngắn\nMà đèn đổi màu ba lần\nĐêm Noel anh ở đâu?\nPhố mình đông như mọi năm\nBạn bè đang gọi em lại\nEm cất điện thoại vào túi\n[Verse 2]\nBạn em nhìn màn hình\nRồi làm như chưa thấy\nKéo em vào giữa đám\nBảo đứng sát vào đây\nTấm hình về tới máy\nEm cười hơi nghiêng vai\nPhía sau ngôi sao sáng\nĐủ sáng cho cả hai\n[Chorus]\nĐêm Noel anh ở đâu?\nBên đó trời có lạnh?\nEm gõ một câu rất ngắn\nMà đèn đổi màu ba lần\nĐêm Noel anh ở đâu?\nPhố mình đông như mọi năm\nBạn bè đang gọi em lại\nEm cất điện thoại vào túi\n[Outro]\nĐêm Noel anh ở đâu?\nCâu đó em để lại",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 09. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiChon": 1,
+      "styleVersions": [
+        {
+          "v": 1,
+          "style": "Vietnamese Christmas jazz ballad, 70 BPM. Intimate female alto, brushed drums, upright bass, warm piano and occasional celesta. Keep the verse grounded in the city at night. Lift the question in the chorus, then let the second half settle. Leave a pause before the final unresolved line.",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí soạn Style nháp V1."
+        }
+      ],
+      "styleChon": 1,
+      "promptSuno": "Vietnamese Christmas jazz ballad, 70 BPM. Intimate female alto, brushed drums, upright bass, warm piano and occasional celesta. Keep the verse grounded in the city at night. Lift the question in the chorus, then let the second half settle. Leave a pause before the final unresolved line.",
+      "nhacVersions": [],
+      "nhacChon": null,
+      "diem": {
+        "cauChuyen": null,
+        "diemCham": null,
+        "giaiDieu": null,
+        "banSac": null
+      },
+      "thumbnail": "",
+      "tieude": "",
+      "mota": "",
+      "shorts": "",
+      "tag": "",
+      "linkYoutube": "",
+      "ngayPhatHanh": "",
+      "ghiChu": "Bài số 09 · Jazz ballad. Đi xem đèn Noel với bạn, cô ngang chỗ hẹn cũ và gõ một câu hỏi rồi thôi.",
+      "promptChatGPT": ""
+    },
+    {
+      "id": "NPT-0012",
+      "loai": "bai",
+      "ten": "Đêm Nay Còn Ai Thức?",
+      "series": "do-thi",
+      "tuan": 5,
+      "ngayTao": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "trangThai": 1,
+      "lichSu": [
+        {
+          "tu": null,
+          "den": 1,
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 10. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiVersions": [
+        {
+          "v": 1,
+          "loi": "[Verse 1]\nĐêm nay trên sóng nhỏ\nCó người xin một bài\nAnh vừa qua Xuân Thủy\nCòn phải lái đường dài\nChị ở tầng năm nhắn\nPhòng trực còn đèn xanh\nChờ người sang ca sáng\nChị xin nghe gì nhanh\n[Chorus]\nĐêm nay còn ai thức?\nTôi gửi bạn bài này\nNgười đang ngồi một mình\nNgười còn tay làm việc\nĐêm nay còn ai thức?\nVặn vừa đủ nghe thôi\nMai gặp nhau ngoài phố\nCó khi chẳng nhận người\n[Verse 2]\nAnh xuống xe mua bánh\nTiệm vừa lấy mẻ đầu\nCô đứng quầy chợt hỏi\nSao cả hai cùng ngân?\nBài tôi vừa phát đó\nCòn đi qua mấy đường\nTrời gần lên màu sáng\nTôi đọc lời chào sớm\n[Chorus]\nĐêm nay còn ai thức?\nTôi gửi bạn bài này\nNgười đang ngồi một mình\nNgười còn tay làm việc\nĐêm nay còn ai thức?\nVặn vừa đủ nghe thôi\nMai gặp nhau ngoài phố\nCó khi chẳng nhận người\n[Outro]\nĐêm nay còn ai thức?\nTrời lên rồi, chào nhau",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 10. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiChon": 1,
+      "styleVersions": [
+        {
+          "v": 1,
+          "style": "Vietnamese late-night jazz soul, 84 BPM. Close warm voice with a radio-host calm, Rhodes, double bass, brushes and spare muted trumpet. Let the verse sound like dedications and open the chorus with a clear rising question. Add a brief horn response after the second chorus. Resolve at dawn into solo keys.",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí soạn Style nháp V1."
+        }
+      ],
+      "styleChon": 1,
+      "promptSuno": "Vietnamese late-night jazz soul, 84 BPM. Close warm voice with a radio-host calm, Rhodes, double bass, brushes and spare muted trumpet. Let the verse sound like dedications and open the chorus with a clear rising question. Add a brief horn response after the second chorus. Resolve at dawn into solo keys.",
+      "nhacVersions": [],
+      "nhacChon": null,
+      "diem": {
+        "cauChuyen": null,
+        "diemCham": null,
+        "giaiDieu": null,
+        "banSac": null
+      },
+      "thumbnail": "",
+      "tieude": "",
+      "mota": "",
+      "shorts": "",
+      "tag": "",
+      "linkYoutube": "",
+      "ngayPhatHanh": "",
+      "ghiChu": "Bài số 10 · Jazz soul. Người trực đài gửi nhạc cho những người làm ca đêm.",
+      "promptChatGPT": ""
+    },
+    {
+      "id": "NPT-0013",
+      "loai": "bai",
+      "ten": "Còn Kịp Yêu Nhau",
+      "series": "mua",
+      "tuan": 6,
+      "ngayTao": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "trangThai": 1,
+      "lichSu": [
+        {
+          "tu": null,
+          "den": 1,
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 11. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiVersions": [
+        {
+          "v": 1,
+          "loi": "[Verse 1 - Male]\nAnh đứng cạnh bàn tiệc\nGiữ áo khoác cho mình\nNhạc lên qua mấy lượt\nAnh vẫn làm thinh\n[Verse 2 - Female]\nEm đi qua chỗ ấy\nChìa tay đúng lúc đèn\nĐếm ngược còn ba tiếng\nAnh nhảy với em?\n[Chorus - Duet]\nCòn kịp yêu nhau\nCòn kịp một bài\nAnh bước nhầm chân\nEm đếm lại hai\nCòn kịp yêu nhau\nCó gì phải vội\nNhạc hết bài này\nMình xin bài mới\n[Bridge - Duet]\n(Nam) Anh tưởng qua tuổi biết run\n(Nữ) Em cũng tưởng mình thôi đợi\n(Cả hai) Vừa chạm tay nhau một lần\nĐã quên người ta đếm tới\n[Final Chorus - Duet]\nCòn kịp yêu nhau\nĐồng hồ điểm rồi\nAnh giữ tay em\nChào năm mới thôi",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 11. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiChon": 1,
+      "styleVersions": [
+        {
+          "v": 1,
+          "style": "Vietnamese disco soul duet, 115 BPM. Warm male and female leads, four-on-the-floor drums, syncopated bass, clean rhythm guitar, handclaps and light strings. Trade short verse phrases, then join on the compact title. Let the bridge reduce to bass and claps; bring back the band for the midnight chorus.",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí soạn Style nháp V1."
+        }
+      ],
+      "styleChon": 1,
+      "promptSuno": "Vietnamese disco soul duet, 115 BPM. Warm male and female leads, four-on-the-floor drums, syncopated bass, clean rhythm guitar, handclaps and light strings. Trade short verse phrases, then join on the compact title. Let the bridge reduce to bass and claps; bring back the band for the midnight chorus.",
+      "nhacVersions": [],
+      "nhacChon": null,
+      "diem": {
+        "cauChuyen": null,
+        "diemCham": null,
+        "giaiDieu": null,
+        "banSac": null
+      },
+      "thumbnail": "",
+      "tieude": "",
+      "mota": "",
+      "shorts": "",
+      "tag": "",
+      "linkYoutube": "",
+      "ngayPhatHanh": "",
+      "ghiChu": "Bài số 11 · Disco soul song ca. Một lời mời nhảy cuối năm làm hai người tìm lại cảm giác rung động.",
+      "promptChatGPT": ""
+    },
+    {
+      "id": "NPT-0014",
+      "loai": "bai",
+      "ten": "Cho Tôi Buồn Một Lát",
+      "series": "truong-thanh",
+      "tuan": 6,
+      "ngayTao": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "trangThai": 1,
+      "lichSu": [
+        {
+          "tu": null,
+          "den": 1,
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 12. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiVersions": [
+        {
+          "v": 1,
+          "loi": "[Verse 1]\nCả ngày tôi nghe hỏi\nDạo này có vui không\nTôi trả lời như thể\nĐã học thuộc từ lâu\nBạn dẹp giùm hai chén\nChừa lại bình nước ấm\nHỏi tôi muốn kể hết\nHay cứ ngồi thế này\n[Chorus]\nCho tôi buồn một lát\nĐể tôi thở thật dài\nBạn cứ ngồi bên cạnh\nĐèn cứ để như vầy\nCho tôi buồn một lát\nMai còn nhiều việc thôi\nĐêm nay tôi mệt quá\nTựa vào vai bạn ngồi\n[Verse 2]\nTôi nói điều đã giấu\nTới nửa câu thì ngưng\nBạn ngồi đan sợi áo\nĐợi tôi tự nói xong\nNước trong bình nguội bớt\nTôi rót ra hai ly\nLần đầu trong ngày ấy\nTôi biết mình cần gì\n[Chorus]\nCho tôi buồn một lát\nĐể tôi thở thật dài\nBạn cứ ngồi bên cạnh\nĐèn cứ để như vầy\nCho tôi buồn một lát\nMai còn nhiều việc thôi\nĐêm nay tôi mệt quá\nTựa vào vai bạn ngồi\n[Outro]\nCho tôi buồn một lát\nBạn ở đây là được",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 12. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiChon": 1,
+      "styleVersions": [
+        {
+          "v": 1,
+          "style": "Vietnamese piano soul, 70 BPM. Close low-mid lead, finger noise on felt piano, soft bass and brushes entering late. Keep the chorus melody unhurried with clear breaths. Leave a quiet break before the final statement. End plainly on piano and the last two lines, with no belted run.",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí soạn Style nháp V1."
+        }
+      ],
+      "styleChon": 1,
+      "promptSuno": "Vietnamese piano soul, 70 BPM. Close low-mid lead, finger noise on felt piano, soft bass and brushes entering late. Keep the chorus melody unhurried with clear breaths. Leave a quiet break before the final statement. End plainly on piano and the last two lines, with no belted run.",
+      "nhacVersions": [],
+      "nhacChon": null,
+      "diem": {
+        "cauChuyen": null,
+        "diemCham": null,
+        "giaiDieu": null,
+        "banSac": null
+      },
+      "thumbnail": "",
+      "tieude": "",
+      "mota": "",
+      "shorts": "",
+      "tag": "",
+      "linkYoutube": "",
+      "ngayPhatHanh": "",
+      "ghiChu": "Bài số 12 · Piano soul. Xin được buồn cạnh một người đủ thân.",
+      "promptChatGPT": ""
+    },
+    {
+      "id": "NPT-0015",
+      "loai": "bai",
+      "ten": "Cà Phê Đắng, Em Ngọt",
+      "series": "ca-phe-sang",
+      "tuan": 7,
+      "ngayTao": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "trangThai": 1,
+      "lichSu": [
+        {
+          "tu": null,
+          "den": 1,
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 01. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiVersions": [
+        {
+          "v": 1,
+          "loi": "[Verse 1]\nEm gọi một đen đá\nAnh gọi giống em luôn\nHai người nâng ly rất lịch sự\nRồi nhăn mặt cùng lúc\nEm đẩy hũ đường tới\nAnh vờ bảo anh quen\nEm nhấp thêm một ngụm nhỏ\nChẳng ai nhịn cười thêm\n[Chorus]\nCà phê đắng, em ngọt\nThôi, đừng thêm đường\nAnh còn chưa uống hết\nĐã muốn ngồi thêm\nCà phê đắng, em ngọt\nEm cứ cười đi\nLần sau anh gọi sữa\nĐể em khỏi nhường\n[Verse 2]\nBàn bên vừa gọi tính\nNgoài hiên nắng lên đầy\nEm hỏi mai anh bận chứ\nAnh bảo bận chỗ này\nEm gõ muỗng lên đĩa\nMột tiếng nghe trong veo\nVậy mai em tới trước nhé\nEm gọi gì anh theo?\n[Chorus]\nCà phê đắng, em ngọt\nThôi, đừng thêm đường\nAnh còn chưa uống hết\nĐã muốn ngồi thêm\nCà phê đắng, em ngọt\nEm cứ cười đi\nLần sau anh gọi sữa\nĐể em khỏi nhường\n[Outro]\nCà phê đắng, em ngọt\nMai cho anh ly sữa",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 01. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiChon": 1,
+      "styleVersions": [
+        {
+          "v": 1,
+          "style": "Vietnamese bossa nova, 104 BPM, light male lead with a brief female response. Nylon guitar syncopation, upright bass, shaker and mellow electric piano. Treat the verse as a playful conversation. Pause between the two parts of the title hook. Add a short guitar turnaround and end with a wink in the vocal phrasing.",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí soạn Style nháp V1."
+        }
+      ],
+      "styleChon": 1,
+      "promptSuno": "Vietnamese bossa nova, 104 BPM, light male lead with a brief female response. Nylon guitar syncopation, upright bass, shaker and mellow electric piano. Treat the verse as a playful conversation. Pause between the two parts of the title hook. Add a short guitar turnaround and end with a wink in the vocal phrasing.",
+      "nhacVersions": [],
+      "nhacChon": null,
+      "diem": {
+        "cauChuyen": null,
+        "diemCham": null,
+        "giaiDieu": null,
+        "banSac": null
+      },
+      "thumbnail": "",
+      "tieude": "",
+      "mota": "",
+      "shorts": "",
+      "tag": "",
+      "linkYoutube": "",
+      "ngayPhatHanh": "",
+      "ghiChu": "Bài số 01 · Bossa nova. Cả hai uống cà phê đen và cố giấu cái nhăn mặt.",
+      "promptChatGPT": ""
+    },
+    {
+      "id": "NPT-0016",
+      "loai": "bai",
+      "ten": "Chậm Một Nhịp",
+      "series": "truong-thanh",
+      "tuan": 7,
+      "ngayTao": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "trangThai": 1,
+      "lichSu": [
+        {
+          "tu": null,
+          "den": 1,
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 14. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiVersions": [
+        {
+          "v": 1,
+          "loi": "[Verse 1]\nMọi người quay về trái\nTôi quay sang bên phải\nGót giày tôi chạm sàn\nMuộn hơn tiếng đàn vang\nAnh nhìn tôi rồi đếm\nLại từ một, hai, ba\nĐến lần tôi quên bước\nAnh cũng dừng chân mà\n[Chorus]\nChậm một nhịp thôi\nCho tôi kịp nhớ\nChân nào đi trước\nTay nào buông ra\nChậm một nhịp thôi\nNgoài kia cứ vội\nBài này còn dài\nMình cứ tập lại\n[Verse 2]\nTôi treo đôi giày mới\nCạnh tấm bằng ngày xưa\nMấy mươi năm quen giỏi\nNay học lại từ đầu\nTuần sau tôi tới sớm\nĐứng đếm trước gương mờ\nĐến lúc anh bước tới\nTôi cười, xin đếm nhờ\n[Chorus]\nChậm một nhịp thôi\nCho tôi kịp nhớ\nChân nào đi trước\nTay nào buông ra\nChậm một nhịp thôi\nNgoài kia cứ vội\nBài này còn dài\nMình cứ tập lại\n[Outro]\nChậm một nhịp thôi\nLần này tôi dẫn",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 14. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiChon": 1,
+      "styleVersions": [
+        {
+          "v": 1,
+          "style": "Vietnamese jazz waltz in 3/4, 114 BPM. Female lead, brushed kit, upright bass, warm piano and a small clarinet counterline. Give the verse slightly hesitant accents; make the chorus settle clearly into the three-count. Short piano dance break. End with the singer firmly leading the final phrase.",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí soạn Style nháp V1."
+        }
+      ],
+      "styleChon": 1,
+      "promptSuno": "Vietnamese jazz waltz in 3/4, 114 BPM. Female lead, brushed kit, upright bass, warm piano and a small clarinet counterline. Give the verse slightly hesitant accents; make the chorus settle clearly into the three-count. Short piano dance break. End with the singer firmly leading the final phrase.",
+      "nhacVersions": [],
+      "nhacChon": null,
+      "diem": {
+        "cauChuyen": null,
+        "diemCham": null,
+        "giaiDieu": null,
+        "banSac": null
+      },
+      "thumbnail": "",
+      "tieude": "",
+      "mota": "",
+      "shorts": "",
+      "tag": "",
+      "linkYoutube": "",
+      "ngayPhatHanh": "",
+      "ghiChu": "Bài số 14 · Waltz jazz. Bạn nhảy kiên nhẫn đếm lại nhịp cho người mới học.",
+      "promptChatGPT": ""
+    },
+    {
+      "id": "NPT-0017",
+      "loai": "bai",
+      "ten": "Đừng Đợi Anh Quên",
+      "series": "tinh-yeu",
+      "tuan": 8,
+      "ngayTao": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "trangThai": 1,
+      "lichSu": [
+        {
+          "tu": null,
+          "den": 1,
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 15. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiVersions": [
+        {
+          "v": 1,
+          "loi": "[Verse 1]\nEm hỏi anh còn nhớ\nTiệm bánh sát cầu thang\nAnh nhớ ngày quán đóng\nNhớ cả bàn ngoài sân\nEm cười, anh hay thật\nĐến giờ còn nhớ sao\nAnh kéo ghế cho em\nMắt nhìn người qua cầu\n[Chorus]\nĐừng đợi anh quên\nRồi mới yên lòng em nhé\nAnh giữ một chiều đẹp\nNhư giữ tấm hình xưa\nĐừng đợi anh quên\nĐể biết mình đi được\nMai anh còn có hẹn\nỞ nơi em chưa qua\n[Verse 2]\nAnh kể đã chuyển chỗ\nPhòng mới nhìn ra sông\nEm kể nuôi con chó\nSợ nhất lúc trời giông\nLúc qua đường hai đứa\nVẫn cùng nhìn sang trái\nĐèn xanh lên một lượt\nHai đứa đi hai chiều\n[Chorus]\nĐừng đợi anh quên\nRồi mới yên lòng em nhé\nAnh giữ một chiều đẹp\nNhư giữ tấm hình xưa\nĐừng đợi anh quên\nĐể biết mình đi được\nMai anh còn có hẹn\nỞ nơi em chưa qua\n[Outro]\nĐừng đợi anh quên\nEm về cẩn thận nhé",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 15. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiChon": 1,
+      "styleVersions": [
+        {
+          "v": 1,
+          "style": "Vietnamese pop ballad, 76 BPM. Warm male baritone, fingerpicked guitar, close piano and gently rising strings. Calm conversational verses, a fuller chorus without heavy percussion. Let one soft rest split the final chorus. Return to the texture of the opening for the goodbye.",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí soạn Style nháp V1."
+        }
+      ],
+      "styleChon": 1,
+      "promptSuno": "Vietnamese pop ballad, 76 BPM. Warm male baritone, fingerpicked guitar, close piano and gently rising strings. Calm conversational verses, a fuller chorus without heavy percussion. Let one soft rest split the final chorus. Return to the texture of the opening for the goodbye.",
+      "nhacVersions": [],
+      "nhacChon": null,
+      "diem": {
+        "cauChuyen": null,
+        "diemCham": null,
+        "giaiDieu": null,
+        "banSac": null
+      },
+      "thumbnail": "",
+      "tieude": "",
+      "mota": "",
+      "shorts": "",
+      "tag": "",
+      "linkYoutube": "",
+      "ngayPhatHanh": "",
+      "ghiChu": "Bài số 15 · Pop ballad. Gặp người cũ, anh giữ kỷ niệm và vẫn bước tiếp.",
+      "promptChatGPT": ""
+    },
+    {
+      "id": "NPT-0018",
+      "loai": "bai",
+      "ten": "Một Căn Phòng Có Nắng",
+      "series": "truong-thanh",
+      "tuan": 8,
+      "ngayTao": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "trangThai": 1,
+      "lichSu": [
+        {
+          "tu": null,
+          "den": 1,
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 16. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiVersions": [
+        {
+          "v": 1,
+          "loi": "[Verse 1]\nCăn phòng em mới thuê\nCòn dấu đinh trên vách\nEm kê bàn sát kính\nTự chọn rèm màu vàng\nMột đôi đũa cạnh bếp\nMột cái ghế gần cây\nEm mua thêm chiếc cốc\nChỉ vì thích cầm tay\n[Chorus]\nMột căn phòng có nắng\nEm mở cửa ban mai\nMặt bàn lên màu mật\nMấy quyển sách nằm dài\nMột căn phòng có nắng\nEm về giờ em chọn\nBày những thứ em thương\nỞ ngay chỗ dễ nhìn\n[Verse 2]\nCó hôm đường mất điện\nEm thắp một cây nến\nBạn qua mang hai bát\nCả hai ngồi ăn kem\nĐến khuya em rửa chén\nCất theo cách của mình\nRồi tưới cây ngoài cửa\nNghe phố tắt dần đèn\n[Chorus]\nMột căn phòng có nắng\nEm mở cửa ban mai\nMặt bàn lên màu mật\nMấy quyển sách nằm dài\nMột căn phòng có nắng\nEm về giờ em chọn\nBày những thứ em thương\nỞ ngay chỗ dễ nhìn\n[Outro]\nMột căn phòng có nắng\nChìa khóa vừa tay em",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 16. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiChon": 1,
+      "styleVersions": [
+        {
+          "v": 1,
+          "style": "Vietnamese chamber pop, 92 BPM. Light female lead with precise Vietnamese diction, felt piano, pizzicato strings and soft bass drum. Start sparse, then let strings widen the sunlit chorus. Use a brief small-ensemble interlude. Keep the final chorus bright and understated, with a gentle violin answer.",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí soạn Style nháp V1."
+        }
+      ],
+      "styleChon": 1,
+      "promptSuno": "Vietnamese chamber pop, 92 BPM. Light female lead with precise Vietnamese diction, felt piano, pizzicato strings and soft bass drum. Start sparse, then let strings widen the sunlit chorus. Use a brief small-ensemble interlude. Keep the final chorus bright and understated, with a gentle violin answer.",
+      "nhacVersions": [],
+      "nhacChon": null,
+      "diem": {
+        "cauChuyen": null,
+        "diemCham": null,
+        "giaiDieu": null,
+        "banSac": null
+      },
+      "thumbnail": "",
+      "tieude": "",
+      "mota": "",
+      "shorts": "",
+      "tag": "",
+      "linkYoutube": "",
+      "ngayPhatHanh": "",
+      "ghiChu": "Bài số 16 · Chamber pop. Lần đầu sống riêng và tự chọn cách sắp xếp cuộc sống.",
+      "promptChatGPT": ""
+    },
+    {
+      "id": "NPT-0019",
+      "loai": "bai",
+      "ten": "Đàn Ông Cũng Biết Khóc",
+      "series": "truong-thanh",
+      "tuan": 9,
+      "ngayTao": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "trangThai": 1,
+      "lichSu": [
+        {
+          "tu": null,
+          "den": 1,
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 17. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiVersions": [
+        {
+          "v": 1,
+          "loi": "[Verse 1]\nBa quay lưng bên cửa\nĐưa tay chùi ngang mi\nCon đứng ôm quả bóng\nChờ ba nói điều gì\nBa bảo bụi bay đấy\nCon biết nhà vừa lau\nCon kéo ghế ngồi xuống\nCạnh ba, chẳng hỏi đâu\n[Chorus]\nĐàn ông cũng biết khóc\nBa ơi, khóc cũng được\nHồi con trầy đầu gối\nBa ngồi với con lâu\nĐàn ông cũng biết khóc\nHôm nay đến lượt con\nBa cứ ngồi thêm chút\nCon để bóng ngoài sân\n[Verse 2]\nBa nói chiều tan sở\nBà gọi mà ba quên\nĐến khi ba gọi lại\nNghe máy đổ chuông hoài\nCon đưa ba cốc nước\nHỏi mai mình sang thăm?\nBa ôm con một chút\nRồi nói ừ, đi sớm\n[Chorus]\nĐàn ông cũng biết khóc\nBa ơi, khóc cũng được\nHồi con trầy đầu gối\nBa ngồi với con lâu\nĐàn ông cũng biết khóc\nHôm nay đến lượt con\nBa cứ ngồi thêm chút\nCon để bóng ngoài sân\n[Final Chorus]\nĐàn ông cũng biết khóc\nBa ơi, khóc cũng được\nHồi con buồn ba đợi\nGiờ con ngồi với ba",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 17. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiChon": 1,
+      "styleVersions": [
+        {
+          "v": 1,
+          "style": "Vietnamese soft rock, 81 BPM. Warm male lead with a youthful backing voice on the chorus. Electric piano and clean guitar in the verse, round bass, live drums and restrained overdrive in the chorus. Build the final refrain through voice and harmony rather than volume. Let the closing line stand alone.",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí soạn Style nháp V1."
+        }
+      ],
+      "styleChon": 1,
+      "promptSuno": "Vietnamese soft rock, 81 BPM. Warm male lead with a youthful backing voice on the chorus. Electric piano and clean guitar in the verse, round bass, live drums and restrained overdrive in the chorus. Build the final refrain through voice and harmony rather than volume. Let the closing line stand alone.",
+      "nhacVersions": [],
+      "nhacChon": null,
+      "diem": {
+        "cauChuyen": null,
+        "diemCham": null,
+        "giaiDieu": null,
+        "banSac": null
+      },
+      "thumbnail": "",
+      "tieude": "",
+      "mota": "",
+      "shorts": "",
+      "tag": "",
+      "linkYoutube": "",
+      "ngayPhatHanh": "",
+      "ghiChu": "Bài số 17 · Soft rock. Con trai kéo ghế ngồi cạnh khi thấy ba khóc.",
+      "promptChatGPT": ""
+    },
+    {
+      "id": "NPT-0020",
+      "loai": "bai",
+      "ten": "Thành Phố Thức Cùng Tôi",
+      "series": "do-thi",
+      "tuan": 9,
+      "ngayTao": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "trangThai": 1,
+      "lichSu": [
+        {
+          "tu": null,
+          "den": 1,
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 18. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiVersions": [
+        {
+          "v": 1,
+          "loi": "[Verse 1]\nTôi tháo thẻ ra cổng\nLúc bốn giờ ba mươi\nĐường còn in đèn đỏ\nTiệm bánh đã lên hơi\nChị quét ngang đầu ngõ\nGom mấy chiếc lá me\nTôi mua hai ổ nóng\nMột ổ gửi chị về\n[Chorus]\nThành phố thức cùng tôi\nTừ khi trời còn tối\nNgười bật lò, người quét phố\nNgười vừa hết một ca\nThành phố thức cùng tôi\nMột hàng đèn vừa tắt\nTôi nhìn ô xe buýt\nThấy một ngày chạy qua\n[Verse 2]\nQua cầu mùi sông mới\nTrời đỏ sau thùng xe\nCô bán xôi dọn ghế\nBảo hôm nay về khuya?\nTôi nói hôm nay sớm\nCô cười thêm gói hành\nPhố mở từng ô cửa\nTôi đi giữa trời xanh\n[Chorus]\nThành phố thức cùng tôi\nTừ khi trời còn tối\nNgười bật lò, người quét phố\nNgười vừa hết một ca\nThành phố thức cùng tôi\nMột hàng đèn vừa tắt\nTôi nhìn ô xe buýt\nThấy một ngày chạy qua\n[Outro]\nThành phố thức cùng tôi\nTôi về, phố đi làm",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 18. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiChon": 1,
+      "styleVersions": [
+        {
+          "v": 1,
+          "style": "Vietnamese city pop, 108 BPM. Warm male lead, Rhodes, muted funk guitar, elastic bass and airy sax fills. Begin with a sparse night-shift pocket. Open the chorus with brighter chords and add a short sax turnaround as dawn arrives. Keep diction clear and the tempo relaxed but moving.",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí soạn Style nháp V1."
+        }
+      ],
+      "styleChon": 1,
+      "promptSuno": "Vietnamese city pop, 108 BPM. Warm male lead, Rhodes, muted funk guitar, elastic bass and airy sax fills. Begin with a sparse night-shift pocket. Open the chorus with brighter chords and add a short sax turnaround as dawn arrives. Keep diction clear and the tempo relaxed but moving.",
+      "nhacVersions": [],
+      "nhacChon": null,
+      "diem": {
+        "cauChuyen": null,
+        "diemCham": null,
+        "giaiDieu": null,
+        "banSac": null
+      },
+      "thumbnail": "",
+      "tieude": "",
+      "mota": "",
+      "shorts": "",
+      "tag": "",
+      "linkYoutube": "",
+      "ngayPhatHanh": "",
+      "ghiChu": "Bài số 18 · City pop. Người tan ca đi qua những người đang mở đầu một ngày.",
+      "promptChatGPT": ""
+    },
+    {
+      "id": "NPT-0021",
+      "loai": "bai",
+      "ten": "Tết Này Con Về Sớm",
+      "series": "mua",
+      "tuan": 10,
+      "ngayTao": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "trangThai": 1,
+      "lichSu": [
+        {
+          "tu": null,
+          "den": 1,
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 19. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiVersions": [
+        {
+          "v": 1,
+          "loi": "[Verse 1]\nMẹ hỏi về hôm mấy\nCon bảo chắc hăm ba\nMẹ tính nhầm là tháng\nCon bảo Tết mà, má\nXe tới vừa qua chợ\nMẹ xách giỏ đi ngang\nCon nắm quai bên kia\nMẹ quay lại nhìn con\n[Chorus]\nTết này con về sớm\nĐể đi chợ cùng mẹ\nĐể rửa từng tàu lá\nVà nghe mẹ mặc cả\nTết này con về sớm\nCơm chiều đừng dọn vội\nCon còn nhiều chuyện nhỏ\nMuốn kể mẹ nghe thôi\n[Verse 2]\nMẹ ngồi bên thau lá\nChỉ con lau mặt nào\nCon xếp ngay một chồng\nRồi xếp xiêu chồng sau\nMẹ cười, còn vụng lắm\nCon bảo vậy năm sau\nCon về sớm thêm bữa\nMẹ chỉ con từ đầu\n[Chorus]\nTết này con về sớm\nĐể đi chợ cùng mẹ\nĐể rửa từng tàu lá\nVà nghe mẹ mặc cả\nTết này con về sớm\nCơm chiều đừng dọn vội\nCon còn nhiều chuyện nhỏ\nMuốn kể mẹ nghe thôi\n[Outro]\nTết này con về sớm\nMẹ để con làm nha",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 19. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiChon": 1,
+      "styleVersions": [
+        {
+          "v": 1,
+          "style": "Vietnamese Lunar New Year folk pop, 95 BPM. Warm adult lead, acoustic guitar, bamboo flute accents, hand percussion and bass. The market verse is conversational; open the chorus into a broad melody with a gentle group harmony. Brief instrumental space for flute, then a close, familial final line.",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí soạn Style nháp V1."
+        }
+      ],
+      "styleChon": 1,
+      "promptSuno": "Vietnamese Lunar New Year folk pop, 95 BPM. Warm adult lead, acoustic guitar, bamboo flute accents, hand percussion and bass. The market verse is conversational; open the chorus into a broad melody with a gentle group harmony. Brief instrumental space for flute, then a close, familial final line.",
+      "nhacVersions": [],
+      "nhacChon": null,
+      "diem": {
+        "cauChuyen": null,
+        "diemCham": null,
+        "giaiDieu": null,
+        "banSac": null
+      },
+      "thumbnail": "",
+      "tieude": "",
+      "mota": "",
+      "shorts": "",
+      "tag": "",
+      "linkYoutube": "",
+      "ngayPhatHanh": "",
+      "ghiChu": "Bài số 19 · Pop folk. Về trước Tết để đi chợ và rửa lá cùng mẹ.",
+      "promptChatGPT": ""
+    },
+    {
+      "id": "NPT-0022",
+      "loai": "bai",
+      "ten": "Tết Ở Phòng Trọ",
+      "series": "mua",
+      "tuan": 10,
+      "ngayTao": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "trangThai": 1,
+      "lichSu": [
+        {
+          "tu": null,
+          "den": 1,
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 20. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiVersions": [
+        {
+          "v": 1,
+          "loi": "[Verse 1]\nPhòng đầu mang bánh tét\nPhòng cuối dọn dưa hành\nCậu mới thuê tháng trước\nMang nguyên nồi canh xanh\nNhà trọ kê bàn nhựa\nDài tới chỗ để xe\nCó ai vừa tan sở\nChạy lên thay áo lẹ\n[Chorus]\nTết ở phòng trọ\nMỗi người một món thôi\nThêm đôi đũa nữa\nAi gõ cửa thì mời\nTết ở phòng trọ\nNgười Nam người Bắc ngồi\nGắp đi, đừng khách sáo\nĂn hết rồi xới thôi\n[Verse 2]\nBà chủ vừa ra nhắc\nMười giờ nhớ vặn loa\nRồi quay vào trong bếp\nLấy thêm bánh mang ra\nCậu ở phòng sát ngõ\nGọi về cho mẹ nghe\nMẹ hỏi đông người quá\nCậu xoay máy một vòng\n[Chorus]\nTết ở phòng trọ\nMỗi người một món thôi\nThêm đôi đũa nữa\nAi gõ cửa thì mời\nTết ở phòng trọ\nNgười Nam người Bắc ngồi\nGắp đi, đừng khách sáo\nĂn hết rồi xới thôi\n[Final Chorus]\nTết ở phòng trọ\nMỗi người một món thôi\nThêm đôi đũa nữa\nCho ai vừa về tới",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 20. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiChon": 1,
+      "styleVersions": [
+        {
+          "v": 1,
+          "style": "Vietnamese Lunar New Year folk funk, 112 BPM. Playful lead and small group responses, syncopated electric bass, hand drums, clean guitar and bamboo flute fills. Short verses with clear diction, a chorus that a room can sing together, and an eight-bar groove break. Finish with an extra group call and a crisp stop.",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí soạn Style nháp V1."
+        }
+      ],
+      "styleChon": 1,
+      "promptSuno": "Vietnamese Lunar New Year folk funk, 112 BPM. Playful lead and small group responses, syncopated electric bass, hand drums, clean guitar and bamboo flute fills. Short verses with clear diction, a chorus that a room can sing together, and an eight-bar groove break. Finish with an extra group call and a crisp stop.",
+      "nhacVersions": [],
+      "nhacChon": null,
+      "diem": {
+        "cauChuyen": null,
+        "diemCham": null,
+        "giaiDieu": null,
+        "banSac": null
+      },
+      "thumbnail": "",
+      "tieude": "",
+      "mota": "",
+      "shorts": "",
+      "tag": "",
+      "linkYoutube": "",
+      "ngayPhatHanh": "",
+      "ghiChu": "Bài số 20 · Funk dân gian. Mỗi phòng góp một món quê mình vào mâm Tết.",
+      "promptChatGPT": ""
+    },
+    {
+      "id": "NPT-0023",
+      "loai": "bai",
+      "ten": "Hẹn Nhau Ở Tuổi Sáu Mươi",
+      "series": "tinh-yeu",
+      "tuan": 11,
+      "ngayTao": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "trangThai": 1,
+      "lichSu": [
+        {
+          "tu": null,
+          "den": 1,
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 cho bài số 21. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiVersions": [
+        {
+          "v": 1,
+          "loi": "[Verse 1]\nÔng mở ngăn tủ dưới\nTìm bản đồ ngày cưới\nCác đường gấp bạc màu\nCòn vòng tròn bà vẽ\nBà lấy đôi giày thấp\nÔng mang hai chai nước\nCon cháu hỏi đi đâu\nBà bảo đi hẹn hò\n[Chorus]\nHẹn nhau ở tuổi sáu mươi\nChỗ ngày xưa mình chưa kịp tới\nĐường vòng thì mình đi chậm thôi\nBà ngắm mây, tôi nhìn bà cười\nHẹn nhau ở tuổi sáu mươi\nTôi vẫn tới sớm mười phút\nBà cứ sửa tóc thong thả\nChuyến này mình có cả ngày\n[Verse 2]\nQuán ngày xưa đã dẹp\nĐường mới chạy ven sông\nBà xin dừng một chút\nChụp tấm hình cho ông\nÔng lấy tay vuốt tóc\nBà bảo cứ để bay\nRồi tựa vào vai ấy\nNhư lần đầu tới đây\n[Chorus]\nHẹn nhau ở tuổi sáu mươi\nChỗ ngày xưa mình chưa kịp tới\nĐường vòng thì mình đi chậm thôi\nBà ngắm mây, tôi nhìn bà cười\nHẹn nhau ở tuổi sáu mươi\nTôi vẫn tới sớm mười phút\nBà cứ sửa tóc thong thả\nChuyến này mình có cả ngày\n[Outro]\nHẹn nhau ở tuổi sáu mươi\nLần sau mình đi đâu nữa?",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 cho bài số 21. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiChon": 1,
+      "styleVersions": [],
+      "styleChon": null,
+      "promptSuno": "",
+      "nhacVersions": [],
+      "nhacChon": null,
+      "diem": {
+        "cauChuyen": null,
+        "diemCham": null,
+        "giaiDieu": null,
+        "banSac": null
+      },
+      "thumbnail": "",
+      "tieude": "",
+      "mota": "",
+      "shorts": "",
+      "tag": "",
+      "linkYoutube": "",
+      "ngayPhatHanh": "",
+      "ghiChu": "Bài số 21 · Jazz waltz. Hai vợ chồng lên đường với tấm bản đồ mua hồi mới cưới.",
+      "promptChatGPT": ""
+    },
+    {
+      "id": "NPT-0024",
+      "loai": "bai",
+      "ten": "Mùa Xuân Từ Bên Kia Cửa",
+      "series": "mua",
+      "tuan": 11,
+      "ngayTao": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "trangThai": 1,
+      "lichSu": [
+        {
+          "tu": null,
+          "den": 1,
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 cho bài số 22. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiVersions": [
+        {
+          "v": 1,
+          "loi": "[Verse 1]\nTết đầu tiên tuyết xuống\nCon gọi nhà lúc khuya\nMẹ ở đầu dây hỏi\nĐã nấu được món gì?\nCon đang hâm cơm hộp\nThì cửa vang hai lần\nBà hàng xóm giơ đĩa\nRa hiệu con đi sang\n[Chorus]\nMùa xuân từ bên kia cửa\nCó người chừa sẵn ghế cho con\nBà nói một câu con nghe chưa rõ\nRồi gắp thêm miếng nữa vào chén con\nMùa xuân từ bên kia cửa\nBữa cơm lạ mà cử chỉ quen\nCon nhớ mẹ hay chờ con ăn hết\nMới chịu ngồi ăn phần của mình\n[Verse 2]\nCon chạy về lấy mứt\nMẹ gói lúc con đi\nBà nếm rồi hỏi nhỏ\nTên món này là gì?\nCon nói chậm từng tiếng\nBà tập nói theo con\nNgoài hiên tuyết còn xuống\nTrên bàn trà còn nóng\n[Chorus]\nMùa xuân từ bên kia cửa\nCó người chừa sẵn ghế cho con\nBà nói một câu con nghe chưa rõ\nRồi gắp thêm miếng nữa vào chén con\nMùa xuân từ bên kia cửa\nBữa cơm lạ mà cử chỉ quen\nCon nhớ mẹ hay chờ con ăn hết\nMới chịu ngồi ăn phần của mình\n[Outro]\nMùa xuân từ bên kia cửa\nMẹ ơi, con ăn Tết rồi",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 cho bài số 22. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiChon": 1,
+      "styleVersions": [],
+      "styleChon": null,
+      "promptSuno": "",
+      "nhacVersions": [],
+      "nhacChon": null,
+      "diem": {
+        "cauChuyen": null,
+        "diemCham": null,
+        "giaiDieu": null,
+        "banSac": null
+      },
+      "thumbnail": "",
+      "tieude": "",
+      "mota": "",
+      "shorts": "",
+      "tag": "",
+      "linkYoutube": "",
+      "ngayPhatHanh": "",
+      "ghiChu": "Bài số 22 · Acoustic soul. Đón Tết ở xứ lạnh và được nhà bên mời sang ăn.",
+      "promptChatGPT": ""
+    },
+    {
+      "id": "NPT-0025",
+      "loai": "bai",
+      "ten": "Đêm Nay Đừng Nói Chia Tay",
+      "series": "tinh-yeu",
+      "tuan": 12,
+      "ngayTao": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "trangThai": 1,
+      "lichSu": [
+        {
+          "tu": null,
+          "den": 1,
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 cho bài số 23. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiVersions": [
+        {
+          "v": 1,
+          "loi": "[Verse 1]\nAnh đã xếp hai áo\nTúi vẫn mở trên giường\nEm đang gỡ chìa khóa\nRa khỏi vòng chung\nCả hai đều nói được\nNhững điều kia làm sai\nCòn câu làm em sợ\nEm giữ mấy tháng nay\n[Chorus]\nĐêm nay đừng nói chia tay\nCho em nói hết điều em sợ\nEm sợ nhất khi anh ở đây\nMà em chẳng biết anh nghĩ gì\nĐêm nay đừng nói chia tay\nAnh nói đi nếu anh còn muốn\nNgày mai mình chọn đường nào\nCho em nghe thật lòng anh trước\n[Verse 2]\nAnh đặt chìa khóa xuống\nBảo anh cũng từng sợ\nMỗi lần em nói thôi\nAnh tưởng em muốn thế\nEm kéo ghế gần lại\nHai vai chạm nhẹ thôi\nLần đầu trong nhiều tháng\nAnh nghe em nói hết\n[Chorus]\nĐêm nay đừng nói chia tay\nCho em nói hết điều em sợ\nEm sợ nhất khi anh ở đây\nMà em chẳng biết anh nghĩ gì\nĐêm nay đừng nói chia tay\nAnh nói đi nếu anh còn muốn\nNgày mai mình chọn đường nào\nCho em nghe thật lòng anh trước\n[Outro]\nMai mình chọn đường nào\nĐêm nay mình nghe nhau",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 cho bài số 23. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiChon": 1,
+      "styleVersions": [],
+      "styleChon": null,
+      "promptSuno": "",
+      "nhacVersions": [],
+      "nhacChon": null,
+      "diem": {
+        "cauChuyen": null,
+        "diemCham": null,
+        "giaiDieu": null,
+        "banSac": null
+      },
+      "thumbnail": "",
+      "tieude": "",
+      "mota": "",
+      "shorts": "",
+      "tag": "",
+      "linkYoutube": "",
+      "ngayPhatHanh": "",
+      "ghiChu": "Bài số 23 · Blues rock. Dành một buổi tối để nói hết điều từng sợ nói.",
+      "promptChatGPT": ""
+    },
+    {
+      "id": "NPT-0026",
+      "loai": "bai",
+      "ten": "Đừng Hẹn Em Kiếp Sau",
+      "series": "tinh-yeu",
+      "tuan": 12,
+      "ngayTao": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "trangThai": 1,
+      "lichSu": [
+        {
+          "tu": null,
+          "den": 1,
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 cho bài số 24. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiVersions": [
+        {
+          "v": 1,
+          "loi": "[Verse 1]\nAnh nói nếu đời khác\nMình sẽ gặp sớm hơn\nSẽ đưa em đi biển\nVào hôm không có giông\nEm nghe anh nói hết\nRồi mở cuốn lịch bàn\nCuối tuần này em rảnh\nAnh xem được tối nào?\n[Chorus]\nĐừng hẹn em kiếp sau\nTối thứ Bảy anh có rảnh không?\nĐường nhà em qua hai ngã rẽ\nAnh từng đi thuộc cả vòng\nĐừng hẹn em kiếp sau\nEm chỉ xin một tối thôi\nAnh để điện thoại trong túi áo\nMình ngồi nói chuyện với nhau\n[Verse 2]\nAnh bảo để anh tính\nRồi nhìn em rất lâu\nEm tự khoanh thứ Bảy\nViết tên mình vào ô\nEm vẫn đi ăn tối\nVẫn gọi món em mê\nAnh tới thì em đợi\nTới giờ em tự về\n[Chorus]\nĐừng hẹn em kiếp sau\nTối thứ Bảy anh có rảnh không?\nĐường nhà em qua hai ngã rẽ\nAnh từng đi thuộc cả vòng\nĐừng hẹn em kiếp sau\nEm chỉ xin một tối thôi\nAnh để điện thoại trong túi áo\nMình ngồi nói chuyện với nhau\n[Final Chorus]\nĐừng hẹn em kiếp sau\nTối thứ Bảy anh có rảnh không?\nNếu hôm đó anh còn chưa biết\nEm có lịch của em rồi",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 cho bài số 24. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiChon": 1,
+      "styleVersions": [],
+      "styleChon": null,
+      "promptSuno": "",
+      "nhacVersions": [],
+      "nhacChon": null,
+      "diem": {
+        "cauChuyen": null,
+        "diemCham": null,
+        "giaiDieu": null,
+        "banSac": null
+      },
+      "thumbnail": "",
+      "tieude": "",
+      "mota": "",
+      "shorts": "",
+      "tag": "",
+      "linkYoutube": "",
+      "ngayPhatHanh": "",
+      "ghiChu": "Bài số 24 · Tango pop. Cô đáp lời hẹn kiếp sau bằng câu hỏi anh có rảnh tối thứ Bảy này không.",
+      "promptChatGPT": ""
+    },
+    {
+      "id": "NPT-0027",
+      "loai": "bai",
+      "ten": "Một Mình Nhưng Không Cô Đơn",
+      "series": "truong-thanh",
+      "tuan": 13,
+      "ngayTao": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "trangThai": 1,
+      "lichSu": [
+        {
+          "tu": null,
+          "den": 1,
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 cho bài số 25. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiVersions": [
+        {
+          "v": 1,
+          "loi": "[Verse 1]\nTôi mua một vé lẻ\nGhế giữa hàng gần sau\nTay ôm phần bắp nhỏ\nLúc cười chẳng nhìn đâu\nRa ngoài trời còn sáng\nTôi tạt vào hàng quen\nGọi đúng món tôi thích\nChọn bàn nhìn ra đèn\n[Chorus]\nMột mình mà lòng tôi đông vui\nCó bao điều tôi vừa kịp thấy\nCó đoạn phim tôi còn cười hoài\nCó cơn mưa qua vừa đúng lúc\nMột mình nhưng không cô đơn\nTôi kéo dài thêm một con phố\nTới nhà còn muốn kể hôm nay\nTôi đã vui như thế nào\n[Verse 2]\nBạn gọi hỏi đi với\nAi mà nghe vui vậy?\nTôi chỉ cười, hôm nay\nTớ đi chơi với tớ\nTối về tôi treo áo\nBật lại nhạc trong phim\nMở tấm hình chụp phố\nCòn nguyên vệt đèn vàng\n[Chorus]\nMột mình mà lòng tôi đông vui\nCó bao điều tôi vừa kịp thấy\nCó đoạn phim tôi còn cười hoài\nCó cơn mưa qua vừa đúng lúc\nMột mình nhưng không cô đơn\nTôi kéo dài thêm một con phố\nTới nhà còn muốn kể hôm nay\nTôi đã vui như thế nào\n[Outro]\nMột mình nhưng không cô đơn\nMai tôi lại đi đâu đó",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 cho bài số 25. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiChon": 1,
+      "styleVersions": [],
+      "styleChon": null,
+      "promptSuno": "",
+      "nhacVersions": [],
+      "nhacChon": null,
+      "diem": {
+        "cauChuyen": null,
+        "diemCham": null,
+        "giaiDieu": null,
+        "banSac": null
+      },
+      "thumbnail": "",
+      "tieude": "",
+      "mota": "",
+      "shorts": "",
+      "tag": "",
+      "linkYoutube": "",
+      "ngayPhatHanh": "",
+      "ghiChu": "Bài số 25 · Indie soul. Tự đi xem phim và tận hưởng một ngày vui.",
+      "promptChatGPT": ""
+    },
+    {
+      "id": "NPT-0028",
+      "loai": "bai",
+      "ten": "Vườn Trên Sân Thượng",
+      "series": "do-thi",
+      "tuan": 13,
+      "ngayTao": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "trangThai": 1,
+      "lichSu": [
+        {
+          "tu": null,
+          "den": 1,
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 cho bài số 26. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiVersions": [
+        {
+          "v": 1,
+          "loi": "[Verse 1]\nAi để thùng xốp cũ\nTrên sân thượng tầng năm?\nCó người đổ vào đất\nCó người cắm que tre\nCô phòng bên nhắn hộ\nMai cô về hơi trễ\nNhờ tưới giùm luống nhỏ\nTừ đó tôi biết tên\n[Chorus]\nVườn trên sân thượng\nMỗi nhà một bàn tay\nNgười đem theo hạt giống\nNgười quên ngày tưới cây\nVườn trên sân thượng\nCà chua chín vài trái\nChia ra mỗi nhà một ít\nRồi ngồi thêm đến khuya\n[Verse 2]\nHôm nọ tôi lên sốt\nNằm im sau cánh cửa\nCô phòng bên để trước nhà\nTô canh còn bốc hơi\nTôi lên sân vài bữa\nThấy ghế mình kê sẵn\nKế bên một bình nước\nVà cả luống rau xanh\n[Chorus]\nVườn trên sân thượng\nMỗi nhà một bàn tay\nNgười đem theo hạt giống\nNgười quên ngày tưới cây\nVườn trên sân thượng\nCà chua chín vài trái\nChia ra mỗi nhà một ít\nRồi ngồi thêm đến khuya\n[Outro]\nVườn trên sân thượng\nNgày mai tôi tưới giùm",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 cho bài số 26. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiChon": 1,
+      "styleVersions": [],
+      "styleChon": null,
+      "promptSuno": "",
+      "nhacVersions": [],
+      "nhacChon": null,
+      "diem": {
+        "cauChuyen": null,
+        "diemCham": null,
+        "giaiDieu": null,
+        "banSac": null
+      },
+      "thumbnail": "",
+      "tieude": "",
+      "mota": "",
+      "shorts": "",
+      "tag": "",
+      "linkYoutube": "",
+      "ngayPhatHanh": "",
+      "ghiChu": "Bài số 26 · Folk jazz. Hàng xóm làm quen và chia rau từ khu vườn chung.",
+      "promptChatGPT": ""
+    },
+    {
+      "id": "NPT-0029",
+      "loai": "bai",
+      "ten": "Mượn Một Ngày Của Mai Sau",
+      "series": "sang-tao",
+      "tuan": 14,
+      "ngayTao": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "trangThai": 1,
+      "lichSu": [
+        {
+          "tu": null,
+          "den": 1,
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 cho bài số 27. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiVersions": [
+        {
+          "v": 1,
+          "loi": "[Verse 1 - Female]\nEm của năm sáu mươi\nVề thăm căn bếp cũ\nThấy mình đang thái hành\nVừa thái vừa càu nhàu\n[Verse 2 - Male]\nAnh của năm sáu mươi\nNghe tiếng xe ngoài ngõ\nThấy mình vừa về tới\nVứt chìa khóa lên bàn\n[Chorus - Duet]\nMượn một ngày của mai sau\nĐể nghe hôm nay lần nữa\nNghe em gọi anh vào ăn\nNghe anh tranh phần rửa chén\nMượn một ngày của mai sau\nEm sẽ đi ngang thật khẽ\nSợ mình vừa chạm vào nhau\nĐã phải về năm sáu mươi\n[Bridge - Duet]\n(Nữ) Hồi ấy em hay than chật\n(Nam) Anh cứ đòi dọn nhà đi\n(Cả hai) Ai ngờ qua bao căn rộng\nMình nhớ căn này nhất\n[Chorus - Duet]\nMượn một ngày của mai sau\nĐể nghe hôm nay lần nữa\nNghe em gọi anh vào ăn\nNghe anh tranh phần rửa chén\nMượn một ngày của mai sau\nEm sẽ đi ngang thật khẽ\nSợ mình vừa chạm vào nhau\nĐã phải về năm sáu mươi\n[Outro - Duet]\nNghe em gọi anh vào ăn\nAnh ở đây, anh vào ngay",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 cho bài số 27. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiChon": 1,
+      "styleVersions": [],
+      "styleChon": null,
+      "promptSuno": "",
+      "nhacVersions": [],
+      "nhacChon": null,
+      "diem": {
+        "cauChuyen": null,
+        "diemCham": null,
+        "giaiDieu": null,
+        "banSac": null
+      },
+      "thumbnail": "",
+      "tieude": "",
+      "mota": "",
+      "shorts": "",
+      "tag": "",
+      "linkYoutube": "",
+      "ngayPhatHanh": "",
+      "ghiChu": "Bài số 27 · Dream pop song ca. Một cặp đôi về già quay lại thăm chính mình lúc trẻ.",
+      "promptChatGPT": ""
+    },
+    {
+      "id": "NPT-0030",
+      "loai": "bai",
+      "ten": "Đau Đến Bao Giờ?",
+      "series": "tinh-yeu",
+      "tuan": 14,
+      "ngayTao": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "trangThai": 1,
+      "lichSu": [
+        {
+          "tu": null,
+          "den": 1,
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 cho bài số 28. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiVersions": [
+        {
+          "v": 1,
+          "loi": "[Verse 1]\nEm cười trong thang máy\nĐúng lúc người ta đùa\nVề tới nhà tra khóa\nTay run một nhịp thôi\nEm để nguyên đèn tắt\nNgồi ngay chỗ cởi giày\nNgoài kia người giao bánh\nLại bấm nhầm chuông này\n[Chorus]\nĐau đến bao giờ?\nEm hỏi căn phòng tối\nMai dậy em còn biết\nPhải cười lúc nào thôi\nĐau đến bao giờ?\nĐể em nghe ai gọi\nMà tay không đưa vội\nTưởng là anh về rồi\n[Verse 2]\nEm đã dời tủ thấp\nQua chỗ anh từng ngồi\nMà lúc nhà mất điện\nVẫn bước vòng như xưa\nEm mở rèm cho phố\nĐổ ánh sáng vào nhà\nRồi lần đầu cho phép\nMình khóc thành tiếng ra\n[Chorus]\nĐau đến bao giờ?\nEm hỏi căn phòng tối\nMai dậy em còn biết\nPhải cười lúc nào thôi\nĐau đến bao giờ?\nĐể em nghe ai gọi\nMà tay không đưa vội\nTưởng là anh về rồi\n[Final Chorus]\nĐau đến bao giờ?\nEm chưa cần ai đáp\nCho em ngồi thêm chút\nĐến lúc trời lên thôi",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 cho bài số 28. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiChon": 1,
+      "styleVersions": [],
+      "styleChon": null,
+      "promptSuno": "",
+      "nhacVersions": [],
+      "nhacChon": null,
+      "diem": {
+        "cauChuyen": null,
+        "diemCham": null,
+        "giaiDieu": null,
+        "banSac": null
+      },
+      "thumbnail": "",
+      "tieude": "",
+      "mota": "",
+      "shorts": "",
+      "tag": "",
+      "linkYoutube": "",
+      "ngayPhatHanh": "",
+      "ghiChu": "Bài số 28 · Piano ballad. Cô cười đúng lúc cả ngày, về nhà mới đối diện nỗi đau.",
+      "promptChatGPT": ""
+    },
+    {
+      "id": "NPT-0031",
+      "loai": "bai",
+      "ten": "Cứ Sai Đi",
+      "series": "tich-cuc",
+      "tuan": 15,
+      "ngayTao": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "trangThai": 1,
+      "lichSu": [
+        {
+          "tu": null,
+          "den": 1,
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 cho bài số 02. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiVersions": [
+        {
+          "v": 1,
+          "loi": "[Verse 1]\nMọi người hỏi tôi thích\nSao chưa làm việc đó\nTôi thuộc lòng câu đáp\nĐợi thêm ít lâu thôi\nHôm nay tay tôi đặt\nTrên cái nút gửi đi\nTôi đọc tên mình đúng\nRồi nhấn một lần đi\n[Chorus]\nCứ sai đi, lần này mình chọn\nTrật một đường thì tính đường sau\nTôi đã đứng bên lề quá lâu\nĐợi người khác gật đầu hộ mình\nCứ sai đi, tay còn đang run\nCứ để nó run thêm một chút\nTôi muốn biết nếu đi đến cùng\nThì mình sẽ trở thành người nào\n[Verse 2]\nNgày đầu tôi làm hỏng\nMột việc tưởng rất thường\nTôi về nhà tự viết\nMai làm khác chỗ nào\nCó người nghe rồi bảo\nThấy chưa, tôi nói mà\nTôi dọn bàn làm lại\nTới khi trời sáng ra\n[Chorus]\nCứ sai đi, lần này mình chọn\nTrật một đường thì tính đường sau\nTôi đã đứng bên lề quá lâu\nĐợi người khác gật đầu hộ mình\nCứ sai đi, tay còn đang run\nCứ để nó run thêm một chút\nTôi muốn biết nếu đi đến cùng\nThì mình sẽ trở thành người nào\n[Final Chorus]\nCứ sai đi, lần này mình chọn\nTrật một đường thì tính đường sau\nTôi muốn biết nếu đi đến cùng\nThì mình sẽ trở thành người nào",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 cho bài số 02. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiChon": 1,
+      "styleVersions": [],
+      "styleChon": null,
+      "promptSuno": "",
+      "nhacVersions": [],
+      "nhacChon": null,
+      "diem": {
+        "cauChuyen": null,
+        "diemCham": null,
+        "giaiDieu": null,
+        "banSac": null
+      },
+      "thumbnail": "",
+      "tieude": "",
+      "mota": "",
+      "shorts": "",
+      "tag": "",
+      "linkYoutube": "",
+      "ngayPhatHanh": "",
+      "ghiChu": "Bài số 02 · Pop rock. Một người lần đầu dám tự quyết.",
+      "promptChatGPT": ""
+    },
+    {
+      "id": "NPT-0032",
+      "loai": "bai",
+      "ten": "Nếu Anh Gọi Lại",
+      "series": "tinh-yeu",
+      "tuan": 15,
+      "ngayTao": "2026-11-22T06:27:01.567Z",
+      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
+      "trangThai": 1,
+      "lichSu": [
+        {
+          "tu": null,
+          "den": 1,
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 cho bài số 30. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiVersions": [
+        {
+          "v": 1,
+          "loi": "[Verse 1]\nMột hồi chuông đầu tiên\nEm tưởng người giao hàng\nHồi thứ hai nhìn xuống\nDãy số em còn quen\nBốn số cuối em thuộc\nTừ hồi dùng máy cũ\nMàn hình soi đầu ngón\nEm chưa chạm vào đâu\n[Chorus]\nNếu anh gọi lại\nEm có nghe không?\nGiọng anh còn đó\nChắc em vẫn mềm lòng\nNếu anh gọi lại\nAnh sẽ nói gì?\nEm muốn nghe anh nói\nRồi em muốn ngủ yên\n[Bridge]\nHồi chuông vừa ngắt\nNhà yên như ban đầu\nEm mở tay ra\nVẫn còn dấu móng tay\nRồi màn hình lại sáng\nEm hít vào một hơi\nChạm đầu ngón, tắt tiếng\nĐặt mặt máy xuống bàn\n[Chorus]\nNếu anh gọi lại\nEm có nghe không?\nGiọng anh còn đó\nChắc em vẫn mềm lòng\nNếu anh gọi lại\nAnh sẽ nói gì?\nEm muốn nghe anh nói\nRồi em muốn ngủ yên\n[Outro]\nNếu anh gọi lại\nEm để mai xem\nĐêm nay em muốn\nNgủ một giấc yên",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T06:27:01.567Z",
+          "ghiChu": "Tí lưu lời nháp V1 cho bài số 30. Chờ Ông chủ duyệt."
+        }
+      ],
+      "loiChon": 1,
+      "styleVersions": [],
+      "styleChon": null,
+      "promptSuno": "",
+      "nhacVersions": [],
+      "nhacChon": null,
+      "diem": {
+        "cauChuyen": null,
+        "diemCham": null,
+        "giaiDieu": null,
+        "banSac": null
+      },
+      "thumbnail": "",
+      "tieude": "",
+      "mota": "",
+      "shorts": "",
+      "tag": "",
+      "linkYoutube": "",
+      "ngayPhatHanh": "",
+      "ghiChu": "Bài số 30 · Soft rock. Vài hồi chuông để quyết định có bắt máy người cũ.",
+      "promptChatGPT": ""
     }
   ]
 }
