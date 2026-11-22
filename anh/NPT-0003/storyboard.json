@@ -1,0 +1,139 @@
+{
+  "maBai": "NPT-0003",
+  "ten": "Lúc Nào Anh Cũng Bận",
+  "mp3": "nhac/nhac-chinh.mp3",
+  "thoiLuongMp3": 216.864,
+  "ghiChu": "Mốc chốt bởi Tèo 22/11/2026 theo giọng hát thật (tách giọng + khớp giai điệu). batDau là lúc bắt đầu cross dissolve 2s; ảnh rõ hẳn sau 2s. Giờ trong ngoặc ở doanLoi = lúc câu hát bắt đầu.",
+  "canh": [
+    {
+      "so": 1,
+      "batDau": 0,
+      "ketThuc": 24.5,
+      "doanLoi": "Dạo đầu nhạc cụ",
+      "anh": "canh-01.png",
+      "hieuUng": "slow zoom in",
+      "lopPhu": "film grain",
+      "chuyenCanh": "cross dissolve"
+    },
+    {
+      "so": 2,
+      "batDau": 24.5,
+      "ketThuc": 42.2,
+      "doanLoi": "Anh bảo dạo này nhiều việc … Anh bảo về muộn một chút (Verse 1, 28.7s)",
+      "anh": "canh-02.png",
+      "hieuUng": "static",
+      "lopPhu": "film grain",
+      "chuyenCanh": "cross dissolve"
+    },
+    {
+      "so": 3,
+      "batDau": 42.2,
+      "ketThuc": 59.2,
+      "doanLoi": "Một chút thành ra khuya lắm … Em nhớ anh ngay trong nhà mình? (44.2s)",
+      "anh": "canh-03.png",
+      "hieuUng": "slow pan right",
+      "lopPhu": "film grain",
+      "chuyenCanh": "cross dissolve"
+    },
+    {
+      "so": 4,
+      "batDau": 59.2,
+      "ketThuc": 70.5,
+      "doanLoi": "Lúc nào anh cũng bận / Lúc nào em cũng chờ / Anh để dành cho em (Chorus, 61.2s)",
+      "anh": "canh-04.png",
+      "hieuUng": "slow zoom in",
+      "lopPhu": "film grain",
+      "chuyenCanh": "cross dissolve"
+    },
+    {
+      "so": 5,
+      "batDau": 70.5,
+      "ketThuc": 93.0,
+      "doanLoi": "Phần cuối của mỗi ngày … Mình vẫn nằm cạnh nhau / Sao em thấy xa anh quá? (72.5s)",
+      "anh": "canh-05.png",
+      "hieuUng": "static",
+      "lopPhu": "film grain",
+      "chuyenCanh": "cross dissolve"
+    },
+    {
+      "so": 6,
+      "batDau": 93.0,
+      "ketThuc": 100.6,
+      "doanLoi": "Ngày mới về chung một nhà / Có chuyện gì anh cũng kể (Verse 2, 95.5s)",
+      "anh": "canh-06.png",
+      "hieuUng": "slow zoom in",
+      "lopPhu": "film grain",
+      "chuyenCanh": "cross dissolve"
+    },
+    {
+      "so": 7,
+      "batDau": 100.6,
+      "ketThuc": 109.4,
+      "doanLoi": "Giờ bao nhiêu điều muốn nói / Em lại để dành hôm sau (102.6s)",
+      "anh": "canh-07.png",
+      "hieuUng": "static",
+      "lopPhu": "film grain",
+      "chuyenCanh": "cross dissolve"
+    },
+    {
+      "so": 8,
+      "batDau": 109.4,
+      "ketThuc": 125.0,
+      "doanLoi": "Em cũng quen dần với việc / Tự mình qua một ngày dài … Em chẳng còn gì để nói (110.1s)",
+      "anh": "canh-08.png",
+      "hieuUng": "slow pan left",
+      "lopPhu": "film grain",
+      "chuyenCanh": "cross dissolve"
+    },
+    {
+      "so": 9,
+      "batDau": 125.0,
+      "ketThuc": 144.0,
+      "doanLoi": "Bridge: Em đã lâu rồi không hỏi (127.4s) … Em chỉ quen không hỏi nữa (139.5s)",
+      "anh": "canh-09.png",
+      "hieuUng": "static",
+      "lopPhu": "film grain",
+      "chuyenCanh": "cross dissolve"
+    },
+    {
+      "so": 10,
+      "batDau": 144.0,
+      "ketThuc": 166.2,
+      "doanLoi": "Final Chorus: Lúc nào anh cũng bận (145.4s) … Em muốn có anh bên em / Trước khi ngày đã cạn (152.8s)",
+      "anh": "canh-10.png",
+      "hieuUng": "slow zoom in",
+      "lopPhu": "film grain",
+      "chuyenCanh": "cross dissolve"
+    },
+    {
+      "so": 11,
+      "batDau": 166.2,
+      "ketThuc": 189.6,
+      "doanLoi": "Để em hỏi anh có mệt không (168.2s) / Để anh hỏi em có buồn không … Outro: Em vẫn mong anh về / Ngày mai mình còn bận",
+      "anh": "canh-11.png",
+      "hieuUng": "slow zoom in",
+      "lopPhu": "film grain",
+      "chuyenCanh": "cross dissolve"
+    },
+    {
+      "so": 12,
+      "batDau": 189.6,
+      "ketThuc": 205.0,
+      "doanLoi": "Tối nay mình nói đi anh (191.6s)",
+      "anh": "canh-12.png",
+      "hieuUng": "slow zoom out",
+      "lopPhu": "film grain",
+      "chuyenCanh": "cross dissolve"
+    },
+    {
+      "so": 13,
+      "batDau": 205.0,
+      "ketThuc": 216.864,
+      "doanLoi": "Đuôi nhạc cụ – trở lại căn nhà ngoài ngõ (dùng lại ảnh cảnh 1)",
+      "anh": "canh-01.png",
+      "hieuUng": "slow zoom out",
+      "lopPhu": "film grain",
+      "chuyenCanh": "fade black"
+    }
+  ]
+}
