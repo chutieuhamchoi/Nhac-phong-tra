@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "capNhat": "2026-11-22T05:20:00.000Z",
+  "capNhat": "2026-11-22T05:50:00.000Z",
   "nextId": 3,
   "bai": [
     {
@@ -10,7 +10,7 @@
       "series": "tuoi-tho",
       "tuan": 1,
       "ngayTao": "2026-11-18T15:06:07.306Z",
-      "ngayCapNhat": "2026-11-22T05:20:00.000Z",
+      "ngayCapNhat": "2026-11-22T05:50:00.000Z",
       "trangThai": 6,
       "lichSu": [
         {
@@ -85,7 +85,7 @@
       "series": "tinh-yeu",
       "tuan": 2,
       "ngayTao": "2026-11-19T16:58:35.936Z",
-      "ngayCapNhat": "2026-11-22T05:20:00.000Z",
+      "ngayCapNhat": "2026-11-22T05:50:00.000Z",
       "trangThai": 6,
       "lichSu": [
         {
