@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "capNhat": "2026-11-22T16:11:44.561Z",
+  "capNhat": "2026-11-22T16:33:59.695Z",
   "nextId": 33,
   "bai": [
     {
@@ -237,7 +237,7 @@
       "series": "tinh-yeu",
       "tuan": 1,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-22T16:11:44.561Z",
+      "ngayCapNhat": "2026-11-22T16:33:59.695Z",
       "trangThai": 2,
       "lichSu": [
         {
@@ -263,6 +263,12 @@
           "den": 2,
           "luc": "2026-11-22T16:11:44.561Z",
           "ghiChu": "Tí lưu metadata dự kiến, thumbnail và storyboard sơ bộ theo lời V3 trong khi Ông chủ thử Suno."
+        },
+        {
+          "tu": 2,
+          "den": 2,
+          "luc": "2026-11-22T16:33:59.695Z",
+          "ghiChu": "Tí lưu Style V3 và 8 thông số Suno đề xuất để thử bản phối ít bass."
         }
       ],
       "loiVersions": [
@@ -303,10 +309,17 @@
           "nguon": "chatgpt",
           "luc": "2026-11-22T16:05:36.928Z",
           "ghiChu": "Tí đổi sang R&B ballad pha acoustic soul, một giọng nữ."
+        },
+        {
+          "v": 3,
+          "style": "Vietnamese acoustic soul ballad, 76 BPM, intimate late-night listening-room sound. One female mezzo lead throughout. Sing like a wife speaking honestly to her husband, with clear Vietnamese diction and room to breathe. Open with felt piano and sparse nylon-string guitar. Keep both verses and the bridge free of drums and bass. No sub-bass, 808, pulsing synth, kick loop or repeating bassline. Let the first chorus lift through melody and harmony, especially on “Phần cuối của mỗi ngày”. Pause before “Em chỉ quen không hỏi nữa” and let her sing that line almost alone. Add a thin layer of strings and just a few soft brush accents in the final chorus. Let the voice carry the peak, then close with voice and piano on “Tối nay mình nói đi anh”. Follow the supplied lyrics and section order.",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T16:33:59.695Z",
+          "ghiChu": "Tí đề xuất acoustic soul tối giản để giảm bass và trống lặp."
         }
       ],
-      "styleChon": 2,
-      "promptSuno": "Vietnamese contemporary R&B ballad with acoustic soul warmth, 76 BPM, 4/4. One female mezzo lead throughout, intimate and conversational, with clear Vietnamese tones and natural pauses. No male vocals, duet or spoken dialogue. Begin with sparse Rhodes and muted guitar, then add warm bass and a soft rim-click groove. Let the two opening chorus lines answer each other in the same voice; lift the melody on “Phần cuối của mỗi ngày”. Pull back to Rhodes and exposed vocal in the bridge; pause before “Em chỉ quen không hỏi nữa”. Bring in restrained drums and soft strings for the final chorus. Build from quiet hurt to a sincere invitation, with no belting or flashy runs. End with voice and Rhodes, holding the final line before a short instrumental tail. Follow the supplied lyrics and section order.",
+      "styleChon": 3,
+      "promptSuno": "Vietnamese acoustic soul ballad, 76 BPM, intimate late-night listening-room sound. One female mezzo lead throughout. Sing like a wife speaking honestly to her husband, with clear Vietnamese diction and room to breathe. Open with felt piano and sparse nylon-string guitar. Keep both verses and the bridge free of drums and bass. No sub-bass, 808, pulsing synth, kick loop or repeating bassline. Let the first chorus lift through melody and harmony, especially on “Phần cuối của mỗi ngày”. Pause before “Em chỉ quen không hỏi nữa” and let her sing that line almost alone. Add a thin layer of strings and just a few soft brush accents in the final chorus. Let the voice carry the peak, then close with voice and piano on “Tối nay mình nói đi anh”. Follow the supplied lyrics and section order.",
       "nhacVersions": [],
       "nhacChon": null,
       "diem": {
@@ -323,7 +336,17 @@
       "linkYoutube": "",
       "ngayPhatHanh": "",
       "ghiChu": "Bài số 13 · R&B ballad pha acoustic soul. Ông chủ đã chốt lời từ góc nhìn người vợ chờ chồng thường về muộn vì công việc hoặc bạn bè.",
-      "promptChatGPT": ""
+      "promptChatGPT": "",
+      "caiDatSuno": {
+        "model": "v6",
+        "giong": "nu",
+        "thoiLuong": "auto",
+        "maxMode": false,
+        "weirdness": 45,
+        "styleInfluence": 80,
+        "variety": "Normal",
+        "personalize": false
+      }
     },
     {
       "id": "NPT-0004",
