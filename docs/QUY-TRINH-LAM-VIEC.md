@@ -81,11 +81,11 @@ Nhac_Phong_Tra/
 
 ### Bước 2. Lời và prompt Suno (Tí, ông chủ duyệt)
 - Lời có nhãn cấu trúc `[Verse 1]`, `[Pre-Chorus]`, `[Chorus]`, `[Bridge]`, `[Final Chorus]`, `[Outro]`.
-  - **Tí đề xuất:** chọn các nhãn phù hợp cấu trúc thực tế của bài. Chỉ dùng các phần giúp câu chuyện tiến triển và tạo cao trào.
+  - **Chốt 22/11/2026:** chọn các nhãn phù hợp cấu trúc thực tế của bài, chỉ dùng các phần giúp câu chuyện tiến triển và tạo cao trào. Vẫn bắt buộc ghi nhãn cho từng đoạn. Độ dài lời vừa với bài 3–4 phút để Suno không tự rút gọn (NPT-0002 bị rút gọn Chorus 2).
 - Prompt Suno (Style) bằng tiếng Anh, tả thể loại, tempo, giọng, nhạc cụ và cao trào từng đoạn.
   - Tí kiểm tra Style tối đa **1.000 ký tự**, tính cả khoảng trắng và dấu câu, trước khi gửi. Giữ trọng tâm vào nhịp, cách hát và các điểm chuyển năng lượng.
 - Mỗi lần sửa thì ghi một phiên bản mới trong `loiVersions`, giữ bản cũ. Bản đã duyệt ghi vào `loiChon`.
-  - **Tí đề xuất:** khi chỉ sửa Style, ghi nhận phiên bản Style và nội dung thay đổi trong kho bài. Chỉ thêm `loiVersions` khi lời thực sự thay đổi. Ví dụ NPT-0002 chốt Style V4 và tiếp tục dùng lời V3.
+  - **Chốt 22/11/2026:** khi sửa Style, ghi một phiên bản Style mới trong `styleVersions` kèm ghi chú thay đổi; bản đang dùng ở `styleChon`, `promptSuno` luôn là nội dung bản đang dùng. Chỉ thêm `loiVersions` khi lời thực sự thay đổi. Mỗi bản nhạc ghi kèm phiên bản lời và Style đã dùng. Ví dụ NPT-0002: lời V3 + Style V4.
 - Nếu đổi thể loại so với lịch (NPT-0002 đổi từ pop soul/R&B sang acoustic pop rock), ghi lại lý do vào kho bài và báo Tèo để cập nhật kế hoạch.
 - **Tự kiểm tra lời trước khi gửi Ông chủ**
   1. Đếm âm tiết từng dòng, đọc thành tiếng và gõ nhịp theo tempo dự kiến. So các câu có mô-típ tương ứng, rà chỗ dồn chữ, thiếu nhịp lấy hơi hoặc ngắt giữa một cụm ý. Linh hoạt số âm tiết nếu câu vẫn hát tự nhiên.
@@ -103,8 +103,8 @@ Nhac_Phong_Tra/
 ### Bước 4. Storyboard và ảnh (Tí)
 
 **Storyboard**
-- Tí đọc độ dài thật của MP3 rồi viết `storyboard/NPT-xxxx.md`. Mỗi cảnh có số thứ tự, tên cảnh, đoạn lời, mô tả, prompt ảnh, prompt chuyển động.
-  - **Tí đề xuất:** có thể phác cảnh từ lời đã duyệt trước khi có MP3. Ghi rõ mốc đang ước lượng. Khi có đúng bản MP3 đã chọn, đo thời lượng, cập nhật mốc sơ bộ và ghi các câu hát cần khớp hình để Tèo chốt.
+- Tí viết `storyboard/NPT-xxxx.md` (phác từ lời đã duyệt, cập nhật theo độ dài thật khi có MP3). Mỗi cảnh có số thứ tự, tên cảnh, đoạn lời, mô tả, prompt ảnh, prompt chuyển động.
+  - **Chốt 22/11/2026:** Tí phác storyboard ngay khi lời đã duyệt, không chờ MP3. Cảnh gắn với câu hát, không gắn với giây; mốc ghi rõ là ước lượng. Được tạo ảnh trước. Khi có đúng bản MP3 đã chọn: đo thời lượng, cập nhật mốc sơ bộ, chốt lại số cảnh (mỗi cảnh tối đa 25 giây) và ghi các câu hát cần khớp hình để Tèo chốt mốc theo lời hát thật.
 - Ghi rõ cảnh nào phải rơi vào câu hát nào. Ví dụ ở NPT-0002: cảnh 10 vào câu "Tối nay anh đón em tan làm".
 - Mốc thời gian của Tí chỉ là bản sơ bộ. **Tèo chốt mốc theo lời hát thật** ở bước 5, vì Suno hay đổi cấu trúc: kéo dài nhạc dạo, chèn đoạn không lời, rút gọn điệp khúc.
 - Mỗi cảnh tối đa 25 giây. Bài khoảng 3,5 phút thì cần ít nhất 9 cảnh; NPT-0002 dùng 16 cảnh.
