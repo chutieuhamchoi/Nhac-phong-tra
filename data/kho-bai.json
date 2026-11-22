@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "capNhat": "2026-11-22T11:55:00.544Z",
+  "capNhat": "2026-11-22T16:05:36.928Z",
   "nextId": 33,
   "bai": [
     {
@@ -237,8 +237,8 @@
       "series": "tinh-yeu",
       "tuan": 1,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-22T11:55:00.544Z",
-      "trangThai": 1,
+      "ngayCapNhat": "2026-11-22T16:05:36.928Z",
+      "trangThai": 2,
       "lichSu": [
         {
           "tu": null,
@@ -251,6 +251,12 @@
           "den": 1,
           "luc": "2026-11-22T11:55:00.544Z",
           "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
+        },
+        {
+          "tu": 1,
+          "den": 2,
+          "luc": "2026-11-22T16:05:36.928Z",
+          "ghiChu": "Ông chủ chốt lời V3. Tí cập nhật Style V2 cho một giọng nữ để thử Suno."
         }
       ],
       "loiVersions": [
@@ -267,9 +273,16 @@
           "nguon": "chatgpt",
           "luc": "2026-11-22T11:55:00.544Z",
           "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
+        },
+        {
+          "v": 3,
+          "loi": "[Verse 1]\nAnh bảo dạo này nhiều việc\nEm biết anh cũng mỏi mệt\nCó hôm bạn bè gọi tới\nAnh bảo về muộn một chút\n\nMột chút thành ra khuya lắm\nEm thức qua mấy lần buồn\nEm muốn hỏi anh có biết\nEm nhớ anh ngay trong nhà mình?\n\n[Chorus]\nLúc nào anh cũng bận\nLúc nào em cũng chờ\nAnh để dành cho em\nPhần cuối của mỗi ngày\n\nĐến khi anh về nhà\nHai đứa chẳng còn sức nói\nMình vẫn nằm cạnh nhau\nSao em thấy xa anh quá?\n\n[Verse 2]\nNgày mới về chung một nhà\nCó chuyện gì anh cũng kể\nGiờ bao nhiêu điều muốn nói\nEm lại để dành hôm sau\n\nEm cũng quen dần với việc\nTự mình qua một ngày dài\nChỉ sợ một hôm anh hỏi\nEm chẳng còn gì để nói\n\n[Bridge]\nEm đã lâu rồi không hỏi\nTối nay mấy giờ anh về\nAnh tưởng em quen rồi đấy\nEm chỉ quen không hỏi nữa\n\n[Final Chorus]\nLúc nào anh cũng bận\nLúc nào em cũng chờ\nEm muốn có anh bên em\nTrước khi ngày đã cạn\n\nMình còn thương nhau mà anh\nDành cho nhau một tối nhé\nĐể em hỏi anh có mệt không\nĐể anh hỏi em có buồn không\n\n[Outro]\nEm vẫn mong anh về\nVẫn mong nghe anh gọi\nNgày mai mình còn bận\nTối nay mình nói đi anh",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T16:05:36.928Z",
+          "ghiChu": "Ông chủ chốt lời độc thoại của người vợ chờ chồng về muộn."
         }
       ],
-      "loiChon": 2,
+      "loiChon": 3,
       "styleVersions": [
         {
           "v": 1,
@@ -277,10 +290,17 @@
           "nguon": "chatgpt",
           "luc": "2026-11-22T06:27:01.567Z",
           "ghiChu": "Tí soạn Style nháp V1."
+        },
+        {
+          "v": 2,
+          "style": "Vietnamese contemporary R&B ballad with acoustic soul warmth, 76 BPM, 4/4. One female mezzo lead throughout, intimate and conversational, with clear Vietnamese tones and natural pauses. No male vocals, duet or spoken dialogue. Begin with sparse Rhodes and muted guitar, then add warm bass and a soft rim-click groove. Let the two opening chorus lines answer each other in the same voice; lift the melody on “Phần cuối của mỗi ngày”. Pull back to Rhodes and exposed vocal in the bridge; pause before “Em chỉ quen không hỏi nữa”. Bring in restrained drums and soft strings for the final chorus. Build from quiet hurt to a sincere invitation, with no belting or flashy runs. End with voice and Rhodes, holding the final line before a short instrumental tail. Follow the supplied lyrics and section order.",
+          "nguon": "chatgpt",
+          "luc": "2026-11-22T16:05:36.928Z",
+          "ghiChu": "Tí đổi sang R&B ballad pha acoustic soul, một giọng nữ."
         }
       ],
-      "styleChon": 1,
-      "promptSuno": "Vietnamese contemporary R&B duet, 88 BPM, close female alto and warm male tenor. Keep each singer on their labeled verse, then alternate short replies in the chorus. Use Rhodes, muted electric guitar, rounded bass and a dry two-step drum pocket. Leave a beat of air before the final shared line. Strip to keys in the bridge; return with restrained harmonies and an unresolved final chord.",
+      "styleChon": 2,
+      "promptSuno": "Vietnamese contemporary R&B ballad with acoustic soul warmth, 76 BPM, 4/4. One female mezzo lead throughout, intimate and conversational, with clear Vietnamese tones and natural pauses. No male vocals, duet or spoken dialogue. Begin with sparse Rhodes and muted guitar, then add warm bass and a soft rim-click groove. Let the two opening chorus lines answer each other in the same voice; lift the melody on “Phần cuối của mỗi ngày”. Pull back to Rhodes and exposed vocal in the bridge; pause before “Em chỉ quen không hỏi nữa”. Bring in restrained drums and soft strings for the final chorus. Build from quiet hurt to a sincere invitation, with no belting or flashy runs. End with voice and Rhodes, holding the final line before a short instrumental tail. Follow the supplied lyrics and section order.",
       "nhacVersions": [],
       "nhacChon": null,
       "diem": {
@@ -296,7 +316,7 @@
       "tag": "",
       "linkYoutube": "",
       "ngayPhatHanh": "",
-      "ghiChu": "Bài số 13 · R&B đối đáp. Anh có thời gian thì cô đã thôi chờ.",
+      "ghiChu": "Bài số 13 · R&B ballad pha acoustic soul. Ông chủ đã chốt lời từ góc nhìn người vợ chờ chồng thường về muộn vì công việc hoặc bạn bè.",
       "promptChatGPT": ""
     },
     {
