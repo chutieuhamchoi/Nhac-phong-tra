@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "capNhat": "2026-11-22T16:33:59.695Z",
+  "capNhat": "2026-11-22T16:39:28.549Z",
   "nextId": 33,
   "bai": [
     {
@@ -237,8 +237,8 @@
       "series": "tinh-yeu",
       "tuan": 1,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-22T16:33:59.695Z",
-      "trangThai": 2,
+      "ngayCapNhat": "2026-11-22T16:39:28.549Z",
+      "trangThai": 4,
       "lichSu": [
         {
           "tu": null,
@@ -269,6 +269,18 @@
           "den": 2,
           "luc": "2026-11-22T16:33:59.695Z",
           "ghiChu": "Tí lưu Style V3 và 8 thông số Suno đề xuất để thử bản phối ít bass."
+        },
+        {
+          "tu": 2,
+          "den": 3,
+          "luc": "2026-11-22T16:39:28.549Z",
+          "ghiChu": "Tí ghi nhận bản Suno V1 từ metadata MP3 Ông chủ đã gửi."
+        },
+        {
+          "tu": 3,
+          "den": 4,
+          "luc": "2026-11-22T16:39:28.549Z",
+          "ghiChu": "Tí đặt Suno V1 là bản chọn, xác minh MP3 chính dài 216,864 giây và cập nhật storyboard sơ bộ để Tèo dựng preview."
         }
       ],
       "loiVersions": [
@@ -320,8 +332,27 @@
       ],
       "styleChon": 3,
       "promptSuno": "Vietnamese acoustic soul ballad, 76 BPM, intimate late-night listening-room sound. One female mezzo lead throughout. Sing like a wife speaking honestly to her husband, with clear Vietnamese diction and room to breathe. Open with felt piano and sparse nylon-string guitar. Keep both verses and the bridge free of drums and bass. No sub-bass, 808, pulsing synth, kick loop or repeating bassline. Let the first chorus lift through melody and harmony, especially on “Phần cuối của mỗi ngày”. Pause before “Em chỉ quen không hỏi nữa” and let her sing that line almost alone. Add a thin layer of strings and just a few soft brush accents in the final chorus. Let the voice carry the peak, then close with voice and piano on “Tối nay mình nói đi anh”. Follow the supplied lyrics and section order.",
-      "nhacVersions": [],
-      "nhacChon": null,
+      "nhacVersions": [
+        {
+          "v": 1,
+          "link": "https://suno.com/song/bdea4d36-a65b-45ce-ab37-8e914c311777",
+          "ghiChu": "Tí xác minh link từ mã bản Suno trong metadata MP3 Drive. caiDat là ảnh chụp bộ đề xuất hiện có lúc ghi kho. Chưa xác nhận Style hoặc thông số thực tế đã dùng.",
+          "luc": "2026-11-22T16:39:28.549Z",
+          "loiV": 3,
+          "styleV": null,
+          "caiDat": {
+            "model": "v6",
+            "giong": "nu",
+            "thoiLuong": "auto",
+            "maxMode": false,
+            "weirdness": 45,
+            "styleInfluence": 80,
+            "variety": "Normal",
+            "personalize": false
+          }
+        }
+      ],
+      "nhacChon": 1,
       "diem": {
         "cauChuyen": null,
         "diemCham": null,
