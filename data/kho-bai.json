@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "capNhat": "2026-11-22T05:17:00.000Z",
+  "capNhat": "2026-11-22T05:20:00.000Z",
   "nextId": 3,
   "bai": [
     {
@@ -10,7 +10,7 @@
       "series": "tuoi-tho",
       "tuan": 1,
       "ngayTao": "2026-11-18T15:06:07.306Z",
-      "ngayCapNhat": "2026-11-19T08:42:00.000Z",
+      "ngayCapNhat": "2026-11-22T05:20:00.000Z",
       "trangThai": 6,
       "lichSu": [
         {
@@ -30,6 +30,12 @@
           "den": 6,
           "luc": "2026-11-19T08:42:00.000Z",
           "ghiChu": "Đã đăng YouTube công khai: https://www.youtube.com/watch?v=aV9Z0ukc9vo (Claude xác nhận qua YouTube Studio)"
+        },
+        {
+          "tu": 6,
+          "den": 6,
+          "luc": "2026-11-22T05:20:00.000Z",
+          "ghiChu": "Ông chủ xác nhận nhạc tạo bằng gói Suno trả phí (được dùng thương mại)."
         }
       ],
       "loiVersions": [
@@ -69,7 +75,7 @@
       "series": "tinh-yeu",
       "tuan": 2,
       "ngayTao": "2026-11-19T16:58:35.936Z",
-      "ngayCapNhat": "2026-11-22T05:17:00.000Z",
+      "ngayCapNhat": "2026-11-22T05:20:00.000Z",
       "trangThai": 6,
       "lichSu": [
         {
@@ -131,6 +137,12 @@
           "den": 6,
           "luc": "2026-11-22T05:17:00.000Z",
           "ghiChu": "Ông chủ duyệt preview; final.mp4 = preview 1080p. Claude đăng công khai trên YouTube 22/11/2026 12:17 (giờ VN): thẻ, nhãn AI, không dành cho trẻ em, thumbnail, danh sách phát mới \"Tình Yêu – Nhạc Phòng Trà\"."
+        },
+        {
+          "tu": 6,
+          "den": 6,
+          "luc": "2026-11-22T05:20:00.000Z",
+          "ghiChu": "Ông chủ xác nhận nhạc tạo bằng gói Suno trả phí (được dùng thương mại)."
         }
       ],
       "loiVersions": [
@@ -155,7 +167,7 @@
         {
           "v": 1,
           "link": "https://suno.com/song/508646d9-ae7c-4360-985b-c66803c53419",
-          "ghiChu": "Bản Suno ông chủ gửi (lời V3)",
+          "ghiChu": "Bản Suno ông chủ gửi (lời V3). Tạo bằng gói Suno trả phí (được dùng thương mại).",
           "luc": "2026-11-21T17:15:00.000Z",
           "loiV": 3
         }
