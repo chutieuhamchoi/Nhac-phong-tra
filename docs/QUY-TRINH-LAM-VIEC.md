@@ -175,9 +175,10 @@ No text, digits, logos, watermarks, borders or storyboard panels.
 
 ## 5. Metadata YouTube
 
-- **Tiêu đề:** chưa thống nhất mẫu. Kế hoạch ghi `<Tên bài> | <Thể loại> – Nhạc Phòng Trà`; NPT-0002 dùng "Yêu Nhau Lại Từ Đầu | Acoustic Pop Rock Việt | Nhạc Phòng Trà". *[Ông chủ chọn một mẫu, Tí áp dụng từ bài sau.]*
-  - **Phương án A – Theo kế hoạch.** `<Tên bài> | <Thể loại> – Nhạc Phòng Trà`. Ví dụ: `Yêu Nhau Lại Từ Đầu | Acoustic Pop Rock – Nhạc Phòng Trà`. Gọn hơn, dễ áp dụng cho nhiều thể loại và đỡ chiếm chỗ trên điện thoại. Ngôn ngữ ca khúc không hiện ngay trong tiêu đề.
-  - **Phương án B – Theo NPT-0002.** `<Tên bài> | <Thể loại> Việt | Nhạc Phòng Trà`. Ví dụ: `Yêu Nhau Lại Từ Đầu | Acoustic Pop Rock Việt | Nhạc Phòng Trà`. Nêu rõ đây là nhạc Việt và tách rõ ba phần. Tiêu đề dài hơn, tên kênh dễ bị khuất khi tên bài hoặc thể loại dài. Cần cân nhắc chữ “Việt” với bài song ngữ hoặc không lời.
+- **Tiêu đề (chốt 22/11/2026, Ông chủ chọn phương án A):** `<Tên bài> | <Thể loại> – Nhạc Phòng Trà`. Ví dụ: `Yêu Nhau Lại Từ Đầu | Acoustic Pop Rock – Nhạc Phòng Trà`.
+  - Mẫu chính thức, áp dụng từ bài tiếp theo (sau NPT-0002). Tí đặt tiêu đề theo mẫu này trong kho bài; Tèo kiểm tra lại khi đăng.
+  - Giữ nguyên tiêu đề các video đã phát hành, kể cả NPT-0002 ("Yêu Nhau Lại Từ Đầu | Acoustic Pop Rock Việt | Nhạc Phòng Trà").
+  - Lý do chọn: gọn, dùng được cho mọi thể loại, ít bị cắt trên điện thoại. Phương án B (`<Tên bài> | <Thể loại> Việt | Nhạc Phòng Trà`) không dùng.
 - **Mô tả:** đoạn giới thiệu câu chuyện, khẩu hiệu kênh, câu khai báo AI, 3–5 hashtag.
 - **Thẻ:** 10–15 thẻ gồm tên bài, thể loại, chủ đề, "nhạc phòng trà", "nhạc phòng trà cà phê chill".
   - Tí chuẩn bị thẻ phân cách bằng dấu phẩy, tổng dưới 500 ký tự. Hashtag nằm riêng trong mô tả.
@@ -207,5 +208,5 @@ Tin nhắn cần chuyển cho bên kia thì đặt **trong một khung duy nhấ
 
 - NPT-0001: bổ sung link bản Suno đã chọn vào kho.
 - "Cánh Diều Tuổi Thơ": kiểm tra nhãn AI và gói Suno, thêm thẻ, cho vào danh sách phát Tuổi Thơ.
-- Thống nhất mẫu tiêu đề video.
+- ~~Thống nhất mẫu tiêu đề video.~~ Đã chốt 22/11/2026: phương án A (mục 5), áp dụng từ bài tiếp theo.
 - Ý tưởng: cắt clip dọc 30–60 giây từ đoạn hook để đăng Shorts và TikTok.
