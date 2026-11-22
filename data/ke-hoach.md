@@ -1,6 +1,6 @@
 # Chiến dịch xây kênh Nhạc Phòng Trà – Phòng trà đa sắc
 
-Cập nhật 19/11/2026 theo phương án **A – Phòng trà đa sắc** (chủ kênh đã duyệt) · Kênh: [youtube.com/@nhac-phongtra](https://www.youtube.com/@nhac-phongtra) · Giai đoạn: 16/11/2026 – 28/02/2027 (15 tuần)
+Tí cập nhật 22/11/2026 theo kế hoạch Ông chủ duyệt · Kênh: [youtube.com/@nhac-phongtra](https://www.youtube.com/@nhac-phongtra) · Giai đoạn sản xuất mới: 23/11/2026 – 07/03/2027 (15 tuần)
 
 ## 1. Tình hình và mốc quan trọng
 
@@ -47,37 +47,39 @@ Kênh bắt đầu từ tháng 11/2026. Đến 19/11/2026 kênh có 4 người �
 - Đa dạng hình ảnh; không lặp liên tục người quay lưng dưới mưa.
 - Có tên trong lịch không có nghĩa là mặc định được duyệt. Bài không đạt thì sửa hoặc thay.
 
-**Sáu bài chủ lực:** Yêu Nhau Lại Từ Đầu; Cà Phê Đắng, Em Ngọt; Ngày Mai Xin Nghỉ Một Hôm; Em Không Cần Một Người Hoàn Hảo; Đêm Nay Đừng Nói Chia Tay; Tháng Mười Hai Có Hẹn.
+**Hai bài mở màn:** Lúc Nào Anh Cũng Bận và Em Đã Thôi Kể Về Anh.
 
 **Phiếu duyệt (20 điểm):** Câu chuyện (5), Điểm chạm (5), Giai điệu (5), Bản sắc (5). Từ 17 điểm: đề xuất duyệt; 14–16: cần chỉnh sửa; dưới 14: viết lại. Website chấm theo đúng phiếu này. Điểm số là công cụ biên tập, không thay cho việc nghe bản nhạc thật.
 
-## 4. Lịch 15 tuần (tóm tắt)
+## 4. Lịch sản xuất 15 tuần
 
-Chi tiết từng tuần ở tab **Lịch 15 tuần** (`data/lich.json`). Mỗi tuần một bài đơn chính.
+Sản xuất **30 bài mới, 2 bài mỗi tuần**. NPT-0001 và NPT-0002 đã phát hành trước giai đoạn này. Số 01–30 dùng để trao đổi về danh sách đã duyệt. Mã NPT được cấp khi bài vào kho.
 
-| Tuần | Giai đoạn | Bài | Hướng thử |
+| Tuần sản xuất | Bắt đầu | Bài 1 | Bài 2 |
 |---|---|---|---|
-| 1 | Nền móng | Có Những Ngày Chỉ Muốn Về Nhà (NPT-0001, đã phát hành) | Chạy thử quy trình Drive → Claude → YouTube |
-| 2 | Thử nghiệm đa sắc | Yêu Nhau Lại Từ Đầu (NPT-0002, đã phát hành 22/11/2026) | Acoustic pop rock (đổi từ pop soul/R&B), hook rõ; danh sách phát YouTube "Tình Yêu – Nhạc Phòng Trà" |
-| 3 | Thử nghiệm đa sắc | Cà Phê Đắng, Em Ngọt | Bossa nova vui, thumbnail sáng |
-| 4 | Thử nghiệm đa sắc | Chúng Ta Đã Quên Hẹn Hò | Dự phòng; chỉ phát hành nếu khác rõ với tuần 2 |
-| 5 | Thử nghiệm đa sắc | Tháng Mười Hai Có Hẹn | Pop jazz |
-| 6 | Thử nghiệm đa sắc | Ngày Mai Xin Nghỉ Một Hôm | City pop/indie |
-| 7 | Tăng trưởng chọn lọc | Năm Mới, Tôi Yêu Tôi | Disco pop / pop hiện đại |
-| 8 | Tăng trưởng chọn lọc | Em Không Cần Một Người Hoàn Hảo | Indie pop |
-| 9 | Tăng trưởng chọn lọc | Mưa Qua Ô Cửa Sổ | Instrumental smooth jazz/bossa nova |
-| 10 | Tăng trưởng chọn lọc | Người Từng Là Cả Thế Giới | Pop ballad, phối khác NPT-0001 |
-| 11 | Tăng trưởng chọn lọc | Năm Mới, Tôi Yêu Tôi (dùng lại tuần 7) | Truyền thông Xuân; có thể thay bằng bài Xuân mới |
-| 12 | Tăng trưởng chọn lọc | Đàn Ông Cũng Biết Khóc | Soft rock |
-| 13 | Mùa lễ hội và tổng kết | Đêm Nay Đừng Nói Chia Tay | Blues rock / pop rock, trước Valentine |
-| 14 | Mùa lễ hội và tổng kết | Hẹn Nhau Ở Tuổi Sáu Mươi | Dự phòng; có thể thay bằng bài Tết vui |
-| 15 | Tổng kết | Một Mình Nhưng Không Cô Đơn | Tổng kết, chọn 2–3 hướng hiệu quả |
+| 1 | 23/11/2026 | 13 · Lúc Nào Anh Cũng Bận · R&B đối đáp | 29 · Em Đã Thôi Kể Về Anh · Acoustic soul |
+| 2 | 30/11/2026 | 03 · Tháng Mười Hai Có Hẹn · Pop jazz song ca | 04 · Bạn Cũ Ơi · Acoustic soul |
+| 3 | 07/12/2026 | 05 · Em Có Biết Đâu · Indie pop | 06 · Em Thuộc Về Biển · Indie folk |
+| 4 | 14/12/2026 | 07 · Em Không Cần Một Người Hoàn Hảo · Indie pop | 08 · Mưa Qua Ô Cửa Sổ · Smooth jazz không lời |
+| 5 | 21/12/2026 | 09 · Đêm Noel Anh Ở Đâu? · Jazz ballad | 10 · Đêm Nay Còn Ai Thức? · Jazz soul |
+| 6 | 28/12/2026 | 11 · Còn Kịp Yêu Nhau · Disco soul song ca | 12 · Cho Tôi Buồn Một Lát · Piano soul |
+| 7 | 04/01/2027 | 01 · Cà Phê Đắng, Em Ngọt · Bossa nova | 14 · Chậm Một Nhịp · Waltz jazz |
+| 8 | 11/01/2027 | 15 · Đừng Đợi Anh Quên · Pop ballad | 16 · Một Căn Phòng Có Nắng · Chamber pop |
+| 9 | 18/01/2027 | 17 · Đàn Ông Cũng Biết Khóc · Soft rock | 18 · Thành Phố Thức Cùng Tôi · City pop |
+| 10 | 25/01/2027 | 19 · Tết Này Con Về Sớm · Pop folk | 20 · Tết Ở Phòng Trọ · Funk dân gian |
+| 11 | 01/02/2027 | 21 · Hẹn Nhau Ở Tuổi Sáu Mươi · Jazz waltz | 22 · Mùa Xuân Từ Bên Kia Cửa · Acoustic soul |
+| 12 | 08/02/2027 | 23 · Đêm Nay Đừng Nói Chia Tay · Blues rock | 24 · Đừng Hẹn Em Kiếp Sau · Tango pop |
+| 13 | 15/02/2027 | 25 · Một Mình Nhưng Không Cô Đơn · Indie soul | 26 · Vườn Trên Sân Thượng · Folk jazz |
+| 14 | 22/02/2027 | 27 · Mượn Một Ngày Của Mai Sau · Dream pop song ca | 28 · Đau Đến Bao Giờ? · Piano ballad |
+| 15 | 01/03/2027 | 02 · Cứ Sai Đi · Pop rock | 30 · Nếu Anh Gọi Lại · Soft rock |
+
+Ý tưởng từng bài nằm trong phần việc của tuần trên tab **Lịch 15 tuần**. Series hiển thị của tuần theo bài đầu tiên. Series riêng của từng bài ghi trong phần việc của tuần.
 
 ## 5. Chiến lược nội dung: ba trụ cột
 
 | Trụ cột | Là gì | Tần suất | Vai trò |
 |---|---|---|---|
-| Bài đơn có lời | 1 bài, 3–5 phút, hình minh họa + lời chạy trên màn hình | 1 bài đạt chuẩn/tuần | Thể hiện dấu ấn sáng tác |
+| Bài đơn có lời | 1 bài, 3–5 phút, hình minh họa + lời chạy trên màn hình | 1–2 bài đạt chuẩn/tuần, theo lịch duyệt | Thể hiện dấu ấn sáng tác |
 | Shorts | 30–45 giây đoạn hook, khung dọc | 2–3 clip/tuần | Kéo người đăng ký mới |
 | Playlist dài | 1–3 giờ, có mốc thời gian | Chỉ khi đủ bài phù hợp và có quyền sử dụng | Nguồn giờ xem chính về sau |
 
@@ -91,7 +93,7 @@ Không kéo dài playlist bằng bài chưa đạt chất lượng. Shorts chọ
 | 25/01/2027 | 200 | 700 | 11 |
 | 28/02/2027 | 400 | 1.500 | 16 |
 
-Mục tiêu tính theo nhịp 1 bài/tuần, chưa có playlist dài. Sau 4 tuần (tuần 4) đánh giá lại theo CTR, tỷ lệ giữ chân 30 giây đầu và thời lượng xem.
+Các mốc bài đăng trong bảng là tham chiếu theo nhịp 1 bài/tuần. Chỉ tiêu sản xuất là 2 bài/tuần. Sau 4 tuần (tuần 4) đánh giá lại theo CTR, tỷ lệ giữ chân 30 giây đầu và thời lượng xem.
 
 ## 7. Tiêu đề, mô tả và thẻ
 
@@ -139,20 +141,18 @@ Chỉ đánh dấu "Đã đăng YouTube" khi đã xác minh video trên YouTube.
 
 | Ngày | Việc |
 |---|---|
-| Thứ Hai | Chốt ý tưởng bài của tuần, duyệt lời theo phiếu 20 điểm |
-| Thứ Ba | Tạo nhiều phương án Suno, chọn theo hook, cao trào và bản sắc |
-| Thứ Tư | Storyboard, ảnh, dựng preview |
-| Thứ Năm | Duyệt video và metadata, đăng bài đơn (19h–20h) |
-| Thứ Sáu – Thứ Bảy | Đăng 2–3 Shorts từ đoạn hook |
-| Chủ Nhật | Xem số liệu tuần |
+| Đầu tuần | Tí triển khai hai bài theo lịch. Ông chủ duyệt lời. |
+| Giữa tuần | Ông chủ thử và chọn bản Suno. Tí phác storyboard sau khi duyệt lời, chuẩn bị ảnh và cập nhật mốc sơ bộ khi có MP3. |
+| Cuối tuần | Tèo chốt mốc theo lời hát thật và dựng preview cho bài đủ tài nguyên. Ông chủ duyệt trước khi xếp lịch đăng. |
+| Chủ Nhật | Xem số liệu và tiến độ sản xuất. |
 
 ## 10. Rủi ro
 
 | Rủi ro | Cách phòng |
 |---|---|
-| Bị đánh giá "nội dung không chân thực" | Lời tự viết, mô tả câu chuyện riêng, 1 bài dài mỗi tuần |
+| Bị đánh giá "nội dung không chân thực" | Lời tự viết, mô tả câu chuyện riêng, đăng theo chất lượng bản đã duyệt |
 | Đa sắc làm kênh thiếu nhận diện | Giữ nhất quán tên kênh, khung thumbnail, dòng mô tả; mỗi bài có câu chuyện rõ |
-| Hai bài cùng chủ đề phát hành sát nhau | Bài dự phòng (tuần 4, 14) chỉ phát hành nếu khác biệt rõ |
+| Hai bài cùng chủ đề phát hành sát nhau | Xếp lịch theo độ khác biệt về câu chuyện, cảm xúc và thể loại |
 | Bài tạo bằng gói miễn phí | Chỉ dùng bài tạo khi đang có gói Pro |
 | Trùng bài có bản quyền | Không nhắc tên ca sĩ, nhạc sĩ thật; nghe kỹ trước khi đăng |
 | ChatGPT và Claude ghi đè dữ liệu của nhau | Đọc SHA mới nhất trước khi ghi, mỗi bên sửa đúng phần mình phụ trách |

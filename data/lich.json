@@ -1,215 +1,229 @@
 {
-  "batDau": "2026-11-16",
+  "batDau": "2026-11-23",
   "tuan": [
     {
       "so": 1,
-      "giaiDoan": "Nền móng",
-      "series": "dem-mua",
-      "chuDe": "Khởi động và tái định vị",
+      "giaiDoan": "Thử nghiệm đa sắc",
+      "series": "tinh-yeu",
+      "chuDe": "Lúc Nào Anh Cũng Bận / Em Đã Thôi Kể Về Anh",
       "baiDon": [
-        "Có Những Ngày Chỉ Muốn Về Nhà"
+        "Lúc Nào Anh Cũng Bận",
+        "Em Đã Thôi Kể Về Anh"
       ],
       "playlist": "",
       "viec": [
-        "NPT-0001 đã phát hành 19/11/2026; không tạo bài trùng",
-        "Kiểm tra quy trình Google Drive → Claude → YouTube",
-        "Chuẩn hóa mẫu thumbnail, tiêu đề, mô tả, hashtag và 10–15 tags"
+        "Bài 13 · Lúc Nào Anh Cũng Bận · R&B đối đáp · tinh-yeu. Anh có thời gian thì cô đã thôi chờ.",
+        "Bài 29 · Em Đã Thôi Kể Về Anh · Acoustic soul · tinh-yeu. Cô nhận ra mình đã thôi nhắc người cũ khi kể về đời mình."
       ]
     },
     {
       "so": 2,
       "giaiDoan": "Thử nghiệm đa sắc",
-      "series": "tinh-yeu",
-      "chuDe": "Tình yêu trưởng thành",
+      "series": "do-thi",
+      "chuDe": "Tháng Mười Hai Có Hẹn / Bạn Cũ Ơi",
       "baiDon": [
-        "Yêu Nhau Lại Từ Đầu"
+        "Tháng Mười Hai Có Hẹn",
+        "Bạn Cũ Ơi"
       ],
       "playlist": "",
       "viec": [
-        "NPT-0002 đã phát hành 22/11/2026 (acoustic pop rock, thay cho pop soul/R&B dự kiến); không tạo bài trùng",
-        "Đối chiếu với Chúng Ta Đã Quên Hẹn Hò, tránh phát hành hai bài gần nhau"
+        "Bài 03 · Tháng Mười Hai Có Hẹn · Pop jazz song ca · do-thi. Yêu xa, một người đếm ngày, một người đếm ga tàu.",
+        "Bài 04 · Bạn Cũ Ơi · Acoustic soul · truong-thanh. Gọi lại sau nhiều năm và vẫn dùng biệt danh cũ."
       ]
     },
     {
       "so": 3,
       "giaiDoan": "Thử nghiệm đa sắc",
-      "series": "ca-phe-sang",
-      "chuDe": "Niềm vui trong quán cà phê",
+      "series": "tinh-yeu",
+      "chuDe": "Em Có Biết Đâu / Em Thuộc Về Biển",
       "baiDon": [
-        "Cà Phê Đắng, Em Ngọt"
+        "Em Có Biết Đâu",
+        "Em Thuộc Về Biển"
       ],
       "playlist": "",
       "viec": [
-        "Thử bossa nova vui tươi và thumbnail sáng",
-        "Tạo 2–3 Shorts từ đoạn hook"
+        "Bài 05 · Em Có Biết Đâu · Indie pop · tinh-yeu. Anh giúp cô nhắn cho người cô thích, còn lời của chính mình thì chẳng dám gửi.",
+        "Bài 06 · Em Thuộc Về Biển · Indie folk · sang-tao. Cô gái làng chài tự chọn nghề đi biển."
       ]
     },
     {
       "so": 4,
       "giaiDoan": "Thử nghiệm đa sắc",
       "series": "tinh-yeu",
-      "chuDe": "Tình yêu trong đời thường",
+      "chuDe": "Em Không Cần Một Người Hoàn Hảo / Mưa Qua Ô Cửa Sổ",
       "baiDon": [
-        "Chúng Ta Đã Quên Hẹn Hò"
+        "Em Không Cần Một Người Hoàn Hảo",
+        "Mưa Qua Ô Cửa Sổ"
       ],
       "playlist": "",
       "viec": [
-        "Bài dự phòng; chỉ phát hành nếu khác biệt rõ với Yêu Nhau Lại Từ Đầu",
-        "Đánh giá CTR, giữ chân 30 giây, thời lượng xem sau 4 tuần"
+        "Bài 07 · Em Không Cần Một Người Hoàn Hảo · Indie pop · tinh-yeu. Cô mong anh chịu nói ra để hai người cùng lo.",
+        "Bài 08 · Mưa Qua Ô Cửa Sổ · Smooth jazz không lời · ca-phe-sang. Piano đi qua ba sắc thái của một buổi sáng mưa."
       ]
     },
     {
       "so": 5,
-      "giaiDoan": "Thử nghiệm đa sắc",
-      "series": "do-thi",
-      "chuDe": "Mùa đông và những cuộc hẹn",
+      "giaiDoan": "Tăng trưởng chọn lọc",
+      "series": "mua",
+      "chuDe": "Đêm Noel Anh Ở Đâu? / Đêm Nay Còn Ai Thức?",
       "baiDon": [
-        "Tháng Mười Hai Có Hẹn"
+        "Đêm Noel Anh Ở Đâu?",
+        "Đêm Nay Còn Ai Thức?"
       ],
       "playlist": "",
       "viec": [
-        "Thử pop jazz với giai điệu sáng",
-        "Không ép sản xuất playlist dài khi chưa đủ bài"
+        "Bài 09 · Đêm Noel Anh Ở Đâu? · Jazz ballad · mua. Đi xem đèn Noel với bạn, cô ngang chỗ hẹn cũ và gõ một câu hỏi rồi thôi.",
+        "Bài 10 · Đêm Nay Còn Ai Thức? · Jazz soul · do-thi. Người trực đài gửi nhạc cho những người làm ca đêm."
       ]
     },
     {
       "so": 6,
-      "giaiDoan": "Thử nghiệm đa sắc",
-      "series": "truong-thanh",
-      "chuDe": "Thoát khỏi guồng quay công việc",
+      "giaiDoan": "Tăng trưởng chọn lọc",
+      "series": "mua",
+      "chuDe": "Còn Kịp Yêu Nhau / Cho Tôi Buồn Một Lát",
       "baiDon": [
-        "Ngày Mai Xin Nghỉ Một Hôm"
+        "Còn Kịp Yêu Nhau",
+        "Cho Tôi Buồn Một Lát"
       ],
       "playlist": "",
       "viec": [
-        "Thử city pop/indie có tiết tấu rõ",
-        "Làm Shorts kể tình huống đời thường"
+        "Bài 11 · Còn Kịp Yêu Nhau · Disco soul song ca · mua. Một lời mời nhảy cuối năm làm hai người tìm lại cảm giác rung động.",
+        "Bài 12 · Cho Tôi Buồn Một Lát · Piano soul · truong-thanh. Xin được buồn cạnh một người đủ thân."
       ]
     },
     {
       "so": 7,
       "giaiDoan": "Tăng trưởng chọn lọc",
-      "series": "tich-cuc",
-      "chuDe": "Khởi đầu năm mới",
+      "series": "ca-phe-sang",
+      "chuDe": "Cà Phê Đắng, Em Ngọt / Chậm Một Nhịp",
       "baiDon": [
-        "Năm Mới, Tôi Yêu Tôi"
+        "Cà Phê Đắng, Em Ngọt",
+        "Chậm Một Nhịp"
       ],
       "playlist": "",
       "viec": [
-        "Thử disco pop hoặc pop hiện đại tích cực",
-        "Đánh giá bài nào có người xem quay lại"
+        "Bài 01 · Cà Phê Đắng, Em Ngọt · Bossa nova · ca-phe-sang. Cả hai uống cà phê đen và cố giấu cái nhăn mặt.",
+        "Bài 14 · Chậm Một Nhịp · Waltz jazz · truong-thanh. Bạn nhảy kiên nhẫn đếm lại nhịp cho người mới học."
       ]
     },
     {
       "so": 8,
       "giaiDoan": "Tăng trưởng chọn lọc",
       "series": "tinh-yeu",
-      "chuDe": "Tình yêu không hoàn hảo",
+      "chuDe": "Đừng Đợi Anh Quên / Một Căn Phòng Có Nắng",
       "baiDon": [
-        "Em Không Cần Một Người Hoàn Hảo"
+        "Đừng Đợi Anh Quên",
+        "Một Căn Phòng Có Nắng"
       ],
       "playlist": "",
       "viec": [
-        "Thử indie pop; tránh công thức ballad cũ",
-        "Điều chỉnh nhịp sản xuất theo chất lượng"
+        "Bài 15 · Đừng Đợi Anh Quên · Pop ballad · tinh-yeu. Gặp người cũ, anh giữ kỷ niệm và vẫn bước tiếp.",
+        "Bài 16 · Một Căn Phòng Có Nắng · Chamber pop · truong-thanh. Lần đầu sống riêng và tự chọn cách sắp xếp cuộc sống."
       ]
     },
     {
       "so": 9,
       "giaiDoan": "Tăng trưởng chọn lọc",
-      "series": "ca-phe-sang",
-      "chuDe": "Nhạc nghe tại quán",
+      "series": "truong-thanh",
+      "chuDe": "Đàn Ông Cũng Biết Khóc / Thành Phố Thức Cùng Tôi",
       "baiDon": [
-        "Mưa Qua Ô Cửa Sổ"
+        "Đàn Ông Cũng Biết Khóc",
+        "Thành Phố Thức Cùng Tôi"
       ],
-      "playlist": "Tuyển chọn nhạc phòng trà thư giãn (khi đủ bài)",
+      "playlist": "",
       "viec": [
-        "Thử instrumental smooth jazz/bossa nova",
-        "Chỉ xuất playlist khi có đủ tác phẩm phù hợp và quyền sử dụng"
+        "Bài 17 · Đàn Ông Cũng Biết Khóc · Soft rock · truong-thanh. Con trai kéo ghế ngồi cạnh khi thấy ba khóc.",
+        "Bài 18 · Thành Phố Thức Cùng Tôi · City pop · do-thi. Người tan ca đi qua những người đang mở đầu một ngày."
       ]
     },
     {
       "so": 10,
-      "giaiDoan": "Tăng trưởng chọn lọc",
-      "series": "tinh-yeu",
-      "chuDe": "Gặp lại người cũ",
+      "giaiDoan": "Mùa lễ hội",
+      "series": "mua",
+      "chuDe": "Tết Này Con Về Sớm / Tết Ở Phòng Trọ",
       "baiDon": [
-        "Người Từng Là Cả Thế Giới"
+        "Tết Này Con Về Sớm",
+        "Tết Ở Phòng Trọ"
       ],
       "playlist": "",
       "viec": [
-        "Thử pop ballad nhưng phối khí và hook khác NPT-0001",
-        "Kiểm tra phản hồi về lời và giai điệu"
+        "Bài 19 · Tết Này Con Về Sớm · Pop folk · mua. Về trước Tết để đi chợ và rửa lá cùng mẹ.",
+        "Bài 20 · Tết Ở Phòng Trọ · Funk dân gian · mua. Mỗi phòng góp một món quê mình vào mâm Tết."
       ]
     },
     {
       "so": 11,
-      "giaiDoan": "Tăng trưởng chọn lọc",
-      "series": "mua",
-      "chuDe": "Không khí Xuân hiện đại",
+      "giaiDoan": "Mùa lễ hội",
+      "series": "tinh-yeu",
+      "chuDe": "Hẹn Nhau Ở Tuổi Sáu Mươi / Mùa Xuân Từ Bên Kia Cửa",
       "baiDon": [
-        "Năm Mới, Tôi Yêu Tôi"
+        "Hẹn Nhau Ở Tuổi Sáu Mươi",
+        "Mùa Xuân Từ Bên Kia Cửa"
       ],
       "playlist": "",
       "viec": [
-        "Chỉ sử dụng lại bài tuần 7 để truyền thông, không tạo bản ghi trùng",
-        "Có thể thay bằng bài Xuân mới nếu ý tưởng đủ mạnh"
+        "Bài 21 · Hẹn Nhau Ở Tuổi Sáu Mươi · Jazz waltz · tinh-yeu. Hai vợ chồng lên đường với tấm bản đồ mua hồi mới cưới.",
+        "Bài 22 · Mùa Xuân Từ Bên Kia Cửa · Acoustic soul · mua. Đón Tết ở xứ lạnh và được nhà bên mời sang ăn."
       ]
     },
     {
       "so": 12,
-      "giaiDoan": "Tăng trưởng chọn lọc",
-      "series": "truong-thanh",
-      "chuDe": "Những áp lực không nói ra",
+      "giaiDoan": "Mùa lễ hội",
+      "series": "tinh-yeu",
+      "chuDe": "Đêm Nay Đừng Nói Chia Tay / Đừng Hẹn Em Kiếp Sau",
       "baiDon": [
-        "Đàn Ông Cũng Biết Khóc"
+        "Đêm Nay Đừng Nói Chia Tay",
+        "Đừng Hẹn Em Kiếp Sau"
       ],
       "playlist": "",
       "viec": [
-        "Thử soft rock với cao trào rõ",
-        "Thực hiện khảo sát khán giả về thể loại"
+        "Bài 23 · Đêm Nay Đừng Nói Chia Tay · Blues rock · tinh-yeu. Dành một buổi tối để nói hết điều từng sợ nói.",
+        "Bài 24 · Đừng Hẹn Em Kiếp Sau · Tango pop · tinh-yeu. Cô đáp lời hẹn kiếp sau bằng câu hỏi anh có rảnh tối thứ Bảy này không."
       ]
     },
     {
       "so": 13,
-      "giaiDoan": "Mùa lễ hội và tổng kết",
-      "series": "tinh-yeu",
-      "chuDe": "Valentine và lựa chọn",
+      "giaiDoan": "Tăng trưởng và tổng kết",
+      "series": "truong-thanh",
+      "chuDe": "Một Mình Nhưng Không Cô Đơn / Vườn Trên Sân Thượng",
       "baiDon": [
-        "Đêm Nay Đừng Nói Chia Tay"
+        "Một Mình Nhưng Không Cô Đơn",
+        "Vườn Trên Sân Thượng"
       ],
       "playlist": "",
       "viec": [
-        "Thử blues rock hoặc pop rock",
-        "Lên lịch phát hành trước dịp Valentine nếu bài đạt chất lượng"
+        "Bài 25 · Một Mình Nhưng Không Cô Đơn · Indie soul · truong-thanh. Tự đi xem phim và tận hưởng một ngày vui.",
+        "Bài 26 · Vườn Trên Sân Thượng · Folk jazz · do-thi. Hàng xóm làm quen và chia rau từ khu vườn chung."
       ]
     },
     {
       "so": 14,
-      "giaiDoan": "Mùa lễ hội và tổng kết",
-      "series": "mua",
-      "chuDe": "Tết nhẹ nhàng, tích cực",
+      "giaiDoan": "Tăng trưởng và tổng kết",
+      "series": "sang-tao",
+      "chuDe": "Mượn Một Ngày Của Mai Sau / Đau Đến Bao Giờ?",
       "baiDon": [
-        "Hẹn Nhau Ở Tuổi Sáu Mươi"
+        "Mượn Một Ngày Của Mai Sau",
+        "Đau Đến Bao Giờ?"
       ],
-      "playlist": "Tuyển chọn nhạc Tết/cà phê (nếu đủ bài)",
+      "playlist": "",
       "viec": [
-        "Bài dự phòng; có thể thay bằng ca khúc Tết vui mới",
-        "Ưu tiên dùng nội dung đã sản xuất trước kỳ nghỉ"
+        "Bài 27 · Mượn Một Ngày Của Mai Sau · Dream pop song ca · sang-tao. Một cặp đôi về già quay lại thăm chính mình lúc trẻ.",
+        "Bài 28 · Đau Đến Bao Giờ? · Piano ballad · tinh-yeu. Cô cười đúng lúc cả ngày, về nhà mới đối diện nỗi đau."
       ]
     },
     {
       "so": 15,
-      "giaiDoan": "Tổng kết",
-      "series": "sang-tao",
-      "chuDe": "Đánh giá và mở rộng",
+      "giaiDoan": "Tăng trưởng và tổng kết",
+      "series": "tich-cuc",
+      "chuDe": "Cứ Sai Đi / Nếu Anh Gọi Lại",
       "baiDon": [
-        "Một Mình Nhưng Không Cô Đơn"
+        "Cứ Sai Đi",
+        "Nếu Anh Gọi Lại"
       ],
       "playlist": "Nhạc Phòng Trà Đa Sắc – tuyển chọn (nếu đủ bài)",
       "viec": [
-        "Tổng kết 15 tuần theo CTR, giữ chân, thời lượng xem, người xem quay lại",
-        "Chọn 2–3 hướng âm nhạc hiệu quả cho quý tiếp theo"
+        "Bài 02 · Cứ Sai Đi · Pop rock · tich-cuc. Một người lần đầu dám tự quyết.",
+        "Bài 30 · Nếu Anh Gọi Lại · Soft rock · tinh-yeu. Vài hồi chuông để quyết định có bắt máy người cũ."
       ]
     }
   ]
