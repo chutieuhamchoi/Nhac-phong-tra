@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "capNhat": "2026-11-21T18:52:00.000Z",
+  "capNhat": "2026-11-22T05:17:00.000Z",
   "nextId": 3,
   "bai": [
     {
@@ -69,8 +69,8 @@
       "series": "tinh-yeu",
       "tuan": 2,
       "ngayTao": "2026-11-19T16:58:35.936Z",
-      "ngayCapNhat": "2026-11-21T18:52:00.000Z",
-      "trangThai": 3,
+      "ngayCapNhat": "2026-11-22T05:17:00.000Z",
+      "trangThai": 6,
       "lichSu": [
         {
           "tu": null,
@@ -125,6 +125,12 @@
           "den": 3,
           "luc": "2026-11-21T18:52:00.000Z",
           "ghiChu": "Claude chốt timeline 16 cảnh theo lời hát Suno V1 (commit 52e584a) và dựng preview 1080p: Drive NPT-0002/video/preview.mp4 https://drive.google.com/file/d/128hIrZAcskNoXkYpL9UG0LQHrfxUil9k/view. Chờ ông chủ duyệt."
+        },
+        {
+          "tu": 3,
+          "den": 6,
+          "luc": "2026-11-22T05:17:00.000Z",
+          "ghiChu": "Ông chủ duyệt preview; final.mp4 = preview 1080p. Claude đăng công khai trên YouTube 22/11/2026 12:17 (giờ VN): thẻ, nhãn AI, không dành cho trẻ em, thumbnail, danh sách phát mới \"Tình Yêu – Nhạc Phòng Trà\"."
         }
       ],
       "loiVersions": [
@@ -166,8 +172,8 @@
       "mota": "Có bao lâu rồi mình chưa hẹn hò như ngày đầu? “Yêu Nhau Lại Từ Đầu” là lời rủ rê dịu dàng dành cho người đã ở bên ta qua những ngày bận rộn. Một ca khúc Acoustic Pop Rock ấm áp về tình yêu trưởng thành, về việc chọn yêu nhau thêm một lần nữa.\n\nNhạc Phòng Trà – Mỗi bài hát, một câu chuyện đáng nghe.\n\nLời do kênh sáng tác. Nhạc và hình ảnh được tạo với sự hỗ trợ của AI.\n\n#YeuNhauLaiTuDau #NhacPhongTra #AcousticPopRock #TinhYeuTruongThanh",
       "shorts": "Hay là mình yêu nhau lại từ đầu\nLại hẹn hò như ngày xưa em nhé\nLại nắm tay qua từng con phố\nLại thấy tim mình bối rối vì nhau",
       "tag": "#YeuNhauLaiTuDau #NhacPhongTra #AcousticPopRock #NhacViet #TinhYeuTruongThanh",
-      "linkYoutube": "",
-      "ngayPhatHanh": "",
+      "linkYoutube": "https://www.youtube.com/watch?v=gM4ctyrqMK4",
+      "ngayPhatHanh": "2026-11-22",
       "ghiChu": "Đã lưu nhạc chính trên Drive, đã thay ảnh cảnh 06–16 và thumbnail; storyboard 16 cảnh có timeline sơ bộ theo Suno V1. Chờ xác nhận mốc vào lời, duyệt nhạc theo phiếu 4 tiêu chí và hoàn thiện MV.",
       "promptChatGPT": "MV storyboard: storyboard/NPT-0002.md; ảnh Google Drive Nhac_Phong_Tra/NPT-0002/anh/canh-01.png...canh-16.png; video roughcut Nhac_Phong_Tra/NPT-0002/video/NPT-0002-MV-roughcut-v1.mp4. Ảnh 06–16 đã được tạo độc lập và xuất PNG 1920×1080. Timeline đã căn sơ bộ theo MP3 Suno V1; cần nghe xác nhận các mốc vào lời."
     }
