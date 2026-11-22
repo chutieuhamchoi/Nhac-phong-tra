@@ -368,3 +368,20 @@ test('Thông số Suno: nhập từ ChatGPT và đồng bộ GitHub', () => {
   assert.equal(kho2.bai[0].caiDatSuno.weirdness, 58);
   assert.equal(kho2.bai[0].nhacVersions[0].caiDat.weirdness, 58);
 });
+
+test('Thông số Suno đề xuất thay bộ cũ đã đồng bộ trong trình duyệt', () => {
+  const src = N.khoRong(), song = N.taoBai(src, { ten: 'A' });
+  const cd = N.chuanCaiDat({ model: 'v6', giong: 'nu', thoiLuong: 'auto', maxMode: false, weirdness: 45, styleInfluence: 80, variety: 'Normal', personalize: false });
+  N.datCaiDat(song, cd);
+  const kho = N.khoRong();
+  N.dongBoTuGitHub(kho, src);
+  const b = kho.bai[0];
+  b.caiDatSuno = N.chuanCaiDat({ weirdness: 51 });
+  N.themNhac(b, 'https://suno.com/song/test');
+  b.xungDotGitHub = { caiDatSuno: {}, mota: {} };
+  assert.equal(N.dongBoTuGitHub(kho, src).capNhat, 1);
+  assert.deepEqual(b.caiDatSuno, cd);
+  assert.equal(b.nhacVersions[0].caiDat.weirdness, 51);
+  assert.deepEqual(b.xungDotGitHub, { mota: {} });
+  assert.equal(N.dongBoTuGitHub(kho, src).doi, false);
+});

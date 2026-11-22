@@ -442,8 +442,24 @@
       }
       kq.trung++;
       if (!l.remoteId) { l.remoteId = r.id; kq.doi = true; }
-      if (l.remoteNgayCapNhat === r.ngayCapNhat && l.gocGitHub) continue;   // GitHub chưa đổi gì
-      let doi = themPhanBoSung(l, r) > 0;
+      // Tí quản lý thông số đề xuất trên GitHub, kể cả với kho đã đồng bộ.
+      const suno = giaTriDB(r, 'caiDatSuno');
+      let doiSuno = false;
+      if (suno) {
+        if (suno !== giaTriDB(l, 'caiDatSuno')) {
+          ganDB(l, 'caiDatSuno', suno); doiSuno = true;
+        }
+        if (l.xungDotGitHub?.caiDatSuno) {
+          delete l.xungDotGitHub.caiDatSuno;
+          if (!Object.keys(l.xungDotGitHub).length) delete l.xungDotGitHub;
+          doiSuno = true;
+        }
+      }
+      if (l.remoteNgayCapNhat === r.ngayCapNhat && l.gocGitHub) {
+        if (doiSuno) { l.gocGitHub.caiDatSuno = suno; kq.capNhat++; kq.doi = true; }
+        continue;
+      }
+      let doi = themPhanBoSung(l, r) > 0 || doiSuno;
       if (!l.gocGitHub) {
         // Lần đầu ghép: nếu bản trong trình duyệt mới hơn thì coi bản GitHub làm gốc, không đổi gì thêm.
         l.gocGitHub = thoiGian(r.ngayCapNhat) > thoiGian(l.ngayCapNhat) ? {} : chupGoc(r);
