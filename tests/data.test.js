@@ -297,3 +297,40 @@ test('đồng bộ: bài GitHub còn khóa điểm cũ (null) không gây xung �
   assert.equal(k.bai[0].diem.cauChuyen, 5);
   assert.ok(!k.bai[0].xungDotGitHub || !('diem' in k.bai[0].xungDotGitHub));
 });
+
+test('Style Suno có phiên bản riêng: không trùng, chọn lại được, promptSuno luôn là bản đang dùng', () => {
+  const kho = N.khoRong(); const b = N.taoBai(kho, { ten: 'A', loi: 'x', style: 'pop soul' });
+  assert.equal(b.styleVersions.length, 1); assert.equal(b.styleChon, 1); assert.equal(b.promptSuno, 'pop soul');
+  assert.equal(N.themStyle(b, 'pop soul  '), null);
+  assert.equal(N.themStyle(b, 'acoustic pop rock'), 2);
+  assert.equal(b.promptSuno, 'acoustic pop rock');
+  assert.equal(b.loiVersions.length, 1, 'sửa Style không tạo bản lời mới');
+  N.themNhac(b, 'https://suno.com/song/1'); assert.equal(b.nhacVersions[0].styleV, 2);
+  N.chonStyle(b, 1); assert.equal(b.promptSuno, 'pop soul'); assert.equal(b.styleChon, 1);
+  assert.equal(N.themStyle(b, 'acoustic pop rock'), null); assert.equal(b.styleChon, 2, 'nhập lại nội dung cũ thì chọn lại bản đó');
+});
+
+test('Style: bài cũ chỉ có promptSuno được chuẩn hóa thành v1, chuẩn hóa lại không đổi', () => {
+  const raw = { schema: 2, nextId: 2, bai: [{ id: 'NPT-0001', ten: 'A', series: 'tuoi-tho', trangThai: 2, promptSuno: 'ballad', ngayTao: '2026-11-19T00:00:00.000Z', ngayCapNhat: '2026-11-19T00:00:00.000Z', loiVersions: [], nhacVersions: [], lichSu: [] }] };
+  const a = N.chuanHoaKho(raw).kho, b = N.chuanHoaKho(JSON.parse(JSON.stringify(a))).kho;
+  assert.deepEqual(a.bai[0].styleVersions.map(x => [x.v, x.style]), [[1, 'ballad']]);
+  assert.equal(a.bai[0].styleChon, 1);
+  assert.deepEqual(b.bai[0].styleVersions, a.bai[0].styleVersions);
+  assert.equal(b.bai[0].ngayCapNhat, '2026-11-19T00:00:00.000Z');
+});
+
+test('Style đồng bộ GitHub: nhận lịch sử Style đúng số bản; Tí sửa thẳng promptSuno thì thành bản mới', () => {
+  const baiGH = (extra) => Object.assign({ id: 'NPT-0002', ten: 'Yêu', series: 'tuoi-tho', trangThai: 3, ngayTao: '2026-11-19T00:00:00.000Z', loiVersions: [{ v: 3, loi: 'lời', nguon: 'github', luc: '2026-11-21T00:00:00.000Z', ghiChu: '' }], loiChon: 3, nhacVersions: [], lichSu: [] }, extra);
+  // trình duyệt cũ chỉ có promptSuno (chưa có styleVersions)
+  const kho = N.chuanHoaKho({ schema: 2, nextId: 3, bai: [baiGH({ promptSuno: 'rock V4', ngayCapNhat: '2026-11-22T00:00:00.000Z' })] }).kho;
+  kho.bai[0].remoteId = 'NPT-0002';
+  const gh = { schema: 2, nextId: 3, bai: [baiGH({ promptSuno: 'rock V4', ngayCapNhat: '2026-11-22T01:00:00.000Z', styleChon: 4,
+    styleVersions: [{ v: 1, style: 'soul V1', nguon: 'github', luc: 'a', ghiChu: '' }, { v: 4, style: 'rock V4', nguon: 'github', luc: 'b', ghiChu: 'duyệt' }] })] };
+  N.dongBoTuGitHub(kho, gh);
+  assert.deepEqual(kho.bai[0].styleVersions.map(x => x.v), [1, 4]); assert.equal(kho.bai[0].styleChon, 4);
+  N.dongBoTuGitHub(kho, gh); assert.equal(kho.bai[0].styleVersions.length, 2, 'tải lại không nhân đôi');
+  const gh2 = JSON.parse(JSON.stringify(gh)); gh2.bai[0].promptSuno = 'rock V5'; gh2.bai[0].ngayCapNhat = '2026-11-23T00:00:00.000Z';
+  N.dongBoTuGitHub(kho, gh2);
+  assert.equal(kho.bai[0].promptSuno, 'rock V5'); assert.equal(kho.bai[0].styleChon, 5);
+  assert.deepEqual(kho.bai[0].styleVersions.map(x => x.style), ['soul V1', 'rock V4', 'rock V5']);
+});

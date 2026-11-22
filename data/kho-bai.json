@@ -66,7 +66,17 @@
       "linkYoutube": "https://www.youtube.com/watch?v=aV9Z0ukc9vo",
       "ngayPhatHanh": "2026-11-19",
       "ghiChu": "Bài thử nghiệm đồng bộ GitHub; lời V1 đã duyệt, chưa tạo Suno.",
-      "promptChatGPT": ""
+      "promptChatGPT": "",
+      "styleVersions": [
+        {
+          "v": 1,
+          "style": "Vietnamese acoustic ballad, 72 BPM, warm male baritone, fingerstyle guitar, soft piano and cello, intimate storytelling, expressive chorus, emotional bridge, powerful final chorus.",
+          "nguon": "github",
+          "luc": "2026-11-18T15:06:07.306Z",
+          "ghiChu": "Style của bản đã phát hành"
+        }
+      ],
+      "styleChon": 1
     },
     {
       "id": "NPT-0002",
@@ -143,6 +153,12 @@
           "den": 6,
           "luc": "2026-11-22T05:20:00.000Z",
           "ghiChu": "Ông chủ xác nhận nhạc tạo bằng gói Suno trả phí (được dùng thương mại)."
+        },
+        {
+          "tu": 6,
+          "den": 6,
+          "luc": "2026-11-22T05:45:00.000Z",
+          "ghiChu": "Tèo khôi phục lịch sử Style Suno từ GitHub (v1, v2, v4) theo quy định phiên bản Style chốt 22/11/2026."
         }
       ],
       "loiVersions": [
@@ -169,7 +185,8 @@
           "link": "https://suno.com/song/508646d9-ae7c-4360-985b-c66803c53419",
           "ghiChu": "Bản Suno ông chủ gửi (lời V3). Tạo bằng gói Suno trả phí (được dùng thương mại).",
           "luc": "2026-11-21T17:15:00.000Z",
-          "loiV": 3
+          "loiV": 3,
+          "styleV": 4
         }
       ],
       "nhacChon": 1,
@@ -187,7 +204,31 @@
       "linkYoutube": "https://www.youtube.com/watch?v=gM4ctyrqMK4",
       "ngayPhatHanh": "2026-11-22",
       "ghiChu": "Đã lưu nhạc chính trên Drive, đã thay ảnh cảnh 06–16 và thumbnail; storyboard 16 cảnh có timeline sơ bộ theo Suno V1. Chờ xác nhận mốc vào lời, duyệt nhạc theo phiếu 4 tiêu chí và hoàn thiện MV.",
-      "promptChatGPT": "MV storyboard: storyboard/NPT-0002.md; ảnh Google Drive Nhac_Phong_Tra/NPT-0002/anh/canh-01.png...canh-16.png; video roughcut Nhac_Phong_Tra/NPT-0002/video/NPT-0002-MV-roughcut-v1.mp4. Ảnh 06–16 đã được tạo độc lập và xuất PNG 1920×1080. Timeline đã căn sơ bộ theo MP3 Suno V1; cần nghe xác nhận các mốc vào lời."
+      "promptChatGPT": "MV storyboard: storyboard/NPT-0002.md; ảnh Google Drive Nhac_Phong_Tra/NPT-0002/anh/canh-01.png...canh-16.png; video roughcut Nhac_Phong_Tra/NPT-0002/video/NPT-0002-MV-roughcut-v1.mp4. Ảnh 06–16 đã được tạo độc lập và xuất PNG 1920×1080. Timeline đã căn sơ bộ theo MP3 Suno V1; cần nghe xác nhận các mốc vào lời.",
+      "styleVersions": [
+        {
+          "v": 1,
+          "style": "Vietnamese romantic pop soul, soft modern R&B groove, 90 BPM, warm expressive male baritone, intimate conversational verses, catchy uplifting chorus, Rhodes piano, clean electric guitar, melodic bass, subtle live drums, tasteful harmonies. Strong soaring hook on 'Hay là mình yêu nhau lại từ đầu', dynamic bridge and final chorus. Natural Vietnamese diction, warm organic studio sound, joyful mature love. Avoid monotonous melody, sad ballad, EDM, robotic vocals and excessive runs.",
+          "nguon": "github",
+          "luc": "2026-11-19T16:58:00.000Z",
+          "ghiChu": "Pop soul/R&B, đi cùng lời V2 (khôi phục từ lịch sử GitHub, commit 7bb018d)"
+        },
+        {
+          "v": 2,
+          "style": "Vietnamese romantic pop soul with a warm modern R&B groove, 90 BPM, expressive intimate male baritone, natural Vietnamese diction. Conversational tender verses with spacious Rhodes piano, clean electric guitar, melodic bass and restrained live drums. Pre-chorus gradually builds anticipation; chorus opens into a memorable soaring melodic hook on 'Hay là mình yêu nhau lại từ đầu', with tasteful harmonies and clear dynamic contrast. Bridge strips back to piano and soft guitar, becomes vulnerable and reflective, with a gentle pause before 'bắt đầu từ em', then a rising emotional lift into the final chorus with fuller instrumentation and heartfelt vocals. Mature, hopeful, affectionate, organic studio warmth. Avoid flat repetitive melody, overly sad ballad, EDM, robotic vocals, excessive vocal runs.",
+          "nguon": "github",
+          "luc": "2026-11-21T16:39:00.000Z",
+          "ghiChu": "Pop soul/R&B groove, đi cùng lời V3 (khôi phục từ lịch sử GitHub, commit e58fa45)"
+        },
+        {
+          "v": 4,
+          "style": "Vietnamese romantic acoustic pop rock, 84 BPM, warm slightly raspy male tenor, natural Vietnamese diction, expressive live-band sound. Intimate storytelling verses with fingerpicked acoustic guitar, short vocal phrases and meaningful pauses. Pre-chorus rises in pitch and tension with building drums. Chorus opens wide: instantly catchy, soaring hook on \"Hay là mình yêu nhau lại từ đầu\", melodic leap and held note on \"đầu\", followed by a contrasting descending phrase. Bright acoustic strums, punchy live drums, warm bass, tasteful electric guitar. Verse 2 pulls back into a playful groove. Bridge drops to sparse piano and vulnerable near-whispered vocals; pause after \"Anh vẫn muốn...\" before a powerful final chorus with lifted melody, layered harmonies and full-band climax. Tender acoustic outro. Strong melodic variation and clear emotional peaks; hopeful, romantic, organic. No flat repetitive melody, sleepy ballad, R&B, EDM or heavy distortion.",
+          "nguon": "github",
+          "luc": "2026-11-21T17:09:00.000Z",
+          "ghiChu": "Style V4 acoustic pop rock, Ông chủ duyệt; dùng cho bản nhạc v1 đã phát hành. Bản V3 không được lưu trong kho."
+        }
+      ],
+      "styleChon": 4
     }
   ]
 }

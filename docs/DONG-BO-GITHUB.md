@@ -34,6 +34,7 @@ Các trường trang tự thêm vào mỗi bài để theo dõi đồng bộ: `r
 2. **Mã NPT không trùng và không đổi.** Bài mới lấy mã tiếp theo theo `nextId`, rồi tăng `nextId`.
 3. **Mỗi lần sửa một bài phải cập nhật `ngayCapNhat`** (ISO 8601, ví dụ `2026-11-19T10:00:00.000Z`). Website chỉ xét lại bài khi `ngayCapNhat` thay đổi.
 4. Sửa lời: **thêm** phiên bản mới vào `loiVersions` (v tăng dần) và đặt `loiChon` sang bản đó. Không sửa, không xóa bản cũ.
+   - Sửa Style Suno: **thêm** bản mới vào `styleVersions` (`{v, style, nguon, luc, ghiChu}`, v tăng dần), đặt `styleChon` sang bản đó và chép nội dung vào `promptSuno`. Chỉ sửa Style thì không thêm `loiVersions`. Nếu chỉ sửa `promptSuno`, website tự ghi thành một bản Style mới. Mỗi bản nhạc trong `nhacVersions` ghi `loiV` và `styleV` đã dùng.
 5. Đổi trạng thái: đặt `trangThai` và **thêm** một dòng vào `lichSu` (`tu`, `den`, `luc`, `ghiChu`).
 6. Không xóa bài khỏi file. Website cũng không xóa bài trong trình duyệt khi bài biến mất khỏi GitHub.
 7. Commit một bài một lần, nội dung commit ghi rõ mã và tên bài.

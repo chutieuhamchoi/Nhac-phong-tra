@@ -74,7 +74,7 @@
       trangThai: Number.isInteger(d.trangThai) ? d.trangThai : (str(d.loi).trim() ? TT.VIET_LOI : TT.Y_TUONG),
       lichSu: [],
       loiVersions: [], loiChon: null,
-      promptSuno: str(d.promptSuno ?? d.style),
+      promptSuno: '', styleVersions: [], styleChon: null,
       nhacVersions: [], nhacChon: null,
       diem: diemRong(),
       thumbnail: str(d.thumbnail), tieude: str(d.tieude), mota: str(d.mota), shorts: str(d.shorts),
@@ -83,6 +83,7 @@
     };
     b.lichSu.push({ tu: null, den: b.trangThai, luc: t, ghiChu: 'Tạo bài' });
     if (str(d.loi).trim()) themLoi(b, d.loi, d.nguon || 'chatgpt', d.ghiChuLoi || '');
+    if (str(d.promptSuno ?? d.style).trim()) themStyle(b, d.promptSuno ?? d.style, d.nguon || 'chatgpt');
     kho.bai.unshift(b);
     return b;
   }
@@ -106,10 +107,42 @@
   function chonLoi(b, v) { if (b.loiVersions.some(x => x.v === v)) { b.loiChon = v; cham(b); } }
   function themNhac(b, link, ghiChu = '') {
     const v = (b.nhacVersions.reduce((m, x) => Math.max(m, x.v), 0)) + 1;
-    b.nhacVersions.push({ v, link: str(link).trim(), ghiChu: str(ghiChu), luc: now(), loiV: b.loiChon });
+    b.nhacVersions.push({ v, link: str(link).trim(), ghiChu: str(ghiChu), luc: now(), loiV: b.loiChon, styleV: b.styleChon ?? null });
     cham(b); return v;
   }
   function chonNhac(b, v) { if (v === null || b.nhacVersions.some(x => x.v === v)) { b.nhacChon = v; cham(b); } }
+
+  /* Style Suno có phiên bản riêng (chốt 22/11/2026). promptSuno luôn là nội dung bản đang chọn (styleChon). */
+  const chuanStyle = s => str(s).replace(/\r/g, '').trim();
+  function styleHienTai(b) {
+    const x = (b.styleVersions || []).find(x => x.v === b.styleChon) || (b.styleVersions || []).at(-1);
+    return x ? x.style : null;
+  }
+  /** Thêm bản Style mới (trùng nội dung bản đã có thì chỉ chọn lại bản đó). Trả về số phiên bản mới, null nếu không thêm. */
+  function themStyle(b, style, nguon = 'tay', ghiChu = '') {
+    const text = chuanStyle(style); if (!text) return null;
+    const da = b.styleVersions.find(x => x.style === text);
+    if (da) { if (b.styleChon !== da.v || b.promptSuno !== text) { b.styleChon = da.v; b.promptSuno = text; cham(b); } return null; }
+    const v = b.styleVersions.reduce((m, x) => Math.max(m, x.v), 0) + 1;
+    b.styleVersions.push({ v, style: text, nguon, luc: now(), ghiChu: str(ghiChu) });
+    b.styleChon = v; b.promptSuno = text; cham(b);
+    return v;
+  }
+  function chonStyle(b, v) { const x = b.styleVersions.find(x => x.v === v); if (x) { b.styleChon = v; b.promptSuno = x.style; cham(b); } }
+  /** Giữ promptSuno và styleVersions khớp nhau, không đổi ngày cập nhật (dùng khi chuẩn hóa và đồng bộ). */
+  function dongBoStyle(b) {
+    b.styleVersions = Array.isArray(b.styleVersions) ? b.styleVersions.filter(x => x && chuanStyle(x.style)) : [];
+    if (b.styleChon === undefined) b.styleChon = null;
+    const p = chuanStyle(b.promptSuno);
+    if (!p) { const c = styleHienTai(b); if (c !== null) { b.promptSuno = c; b.styleChon = b.styleVersions.find(x => x.style === c).v; } return; }
+    let x = b.styleVersions.find(x => x.style === p);
+    if (!x) {                                               // promptSuno được sửa thẳng (vd. trên GitHub): ghi thành bản mới
+      const v = b.styleVersions.reduce((m, y) => Math.max(m, y.v), 0) + 1;
+      x = { v, style: p, nguon: 'tu-dong', luc: b.ngayCapNhat || b.ngayTao || now(), ghiChu: b.styleVersions.length ? 'Tự ghi nhận khi promptSuno được sửa trực tiếp' : '', tuDong: true };
+      b.styleVersions.push(x);
+    }
+    b.styleChon = x.v; b.promptSuno = p;
+  }
 
   /* ---------- trạng thái ---------- */
   function doiTrangThai(b, den, ghiChu = '') {
@@ -200,6 +233,7 @@
     if (!b.loiVersions.length && typeof o.loi === 'string' && o.loi.trim())   // dạng phẳng {"loi": "..."}
       b.loiVersions = [{ v: 1, loi: o.loi.replace(/\r/g, ''), nguon: 'github', luc: b.ngayTao || now(), ghiChu: '' }];
     if (!b.promptSuno && typeof o.style === 'string') b.promptSuno = o.style;
+    b.promptSuno = str(b.promptSuno); dongBoStyle(b);
     if (b.loiChon == null && b.loiVersions.length) b.loiChon = b.loiVersions[b.loiVersions.length - 1].v;
     if (b.nhacChon === undefined) b.nhacChon = null;
     b.diem = chuanDiem(b);
@@ -275,6 +309,7 @@
       return;
     }
     l[f] = v;
+    if (f === 'promptSuno') dongBoStyle(l);
   }
   const thoiGian = s => { const t = Date.parse(s); return isNaN(t) ? 0 : t; };
   function themPhanBoSung(l, r) {        // chỉ thêm, không xóa
@@ -287,6 +322,23 @@
       coLoi.add(x.loi); them++;
     }
     if (l.loiChon == null && l.loiVersions.length) l.loiChon = l.loiVersions[l.loiVersions.length - 1].v;
+    const tuDong = l.styleVersions.length > 0 && l.styleVersions.every(x => x.tuDong);
+    if (r.styleVersions.some(x => !x.tuDong) && (tuDong || !l.styleVersions.length)) {
+      // bản trình duyệt chỉ có Style tự ghi nhận: lấy nguyên lịch sử Style trên GitHub để giữ đúng số phiên bản
+      const giu = l.styleVersions.filter(x => !r.styleVersions.some(y => y.style === x.style));
+      l.styleVersions = clone(r.styleVersions);
+      giu.forEach(x => l.styleVersions.push(Object.assign({}, x, { v: l.styleVersions.reduce((m, y) => Math.max(m, y.v), 0) + 1 })));
+      them++;
+    } else {
+      const coStyle = new Set(l.styleVersions.map(x => x.style));
+      for (const x of r.styleVersions) {
+        if (!chuanStyle(x.style) || coStyle.has(x.style)) continue;
+        const v = l.styleVersions.reduce((m, y) => Math.max(m, y.v), 0) + 1;
+        l.styleVersions.push({ v, style: x.style, nguon: 'github', luc: x.luc || now(), ghiChu: `Từ GitHub (bản v${x.v} của ${r.id})${x.ghiChu ? ': ' + x.ghiChu : ''}` });
+        coStyle.add(x.style); them++;
+      }
+    }
+    dongBoStyle(l);
     const coNhac = new Set(l.nhacVersions.map(x => x.link + '|' + x.ghiChu));
     for (const x of r.nhacVersions) {
       if (coNhac.has(x.link + '|' + x.ghiChu)) continue;
@@ -361,6 +413,7 @@
       if (doi) { kq.capNhat++; cham(l); }
       kq.doi = true;
     }
+    kho.bai.forEach(dongBoStyle);                            // promptSuno vừa nhận từ GitHub có bản Style tương ứng
     kho.nextId = Math.max(kho.nextId || 1, raw.nextId || 1, kho.bai.reduce((m, b) => Math.max(m, idNum(b.id)), 0) + 1);
     return kq;
   }
@@ -488,7 +541,7 @@
 
   root.NPT = {
     SCHEMA, TRANG_THAI, TT, SERIES, datSeries, TIEU_CHI, TIEU_CHI_CU, NGUONG, datTieuChi, diemToiDa, xepLoai, SO_TUAN, TRUONG_NHAP,
-    khoRong, taoBai, themLoi, loiHienTai, chonLoi, themNhac, chonNhac, doiTrangThai, canhBaoChuyen,
+    khoRong, taoBai, themLoi, loiHienTai, chonLoi, themNhac, chonNhac, themStyle, chonStyle, styleHienTai, dongBoStyle, doiTrangThai, canhBaoChuyen,
     datDiem, tongDiem, chuanHoaKho, gopKho, dongBoTuGitHub, giaiXungDot, hienGiaTriDB, NHAN_DB, tachJson, kiemTraNhap, phanTichNhap, timBaiTrung, apNhap, xungDot,
     soSanh, goiSaoLuu, docSaoLuu, xuatKho, boDau, fmtId
   };

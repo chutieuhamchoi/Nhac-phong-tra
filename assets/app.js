@@ -369,7 +369,7 @@ ${DINH_DANG(s.id, w.so, 'playlist')}`;
   $('#btn-xuat-md').onclick = () => {
     const out = kho.bai.filter(b => b.loai !== 'playlist').map(b => {
       const nhac = b.nhacVersions.find(x => x.v === b.nhacChon);
-      return `# ${b.id} · ${b.ten}\n\n- Series: ${seriesOf(b.series).ten} · Tuần ${b.tuan} · ${N.TRANG_THAI[b.trangThai]}\n- Lời: phiên bản ${b.loiChon ?? '—'} / ${b.loiVersions.length}\n- Prompt Suno: ${b.promptSuno}\n${nhac ? `- Bản nhạc phát hành: v${nhac.v} ${nhac.link}\n` : ''}- Điểm: ${N.tongDiem(b) ?? '—'}/${N.diemToiDa()}\n- Tiêu đề YouTube: ${b.tieude}\n${b.linkYoutube ? `- Link: ${b.linkYoutube}\n` : ''}\n## Lời\n\n${N.loiHienTai(b) || ''}\n\n## Mô tả\n\n${b.mota}\n\n${b.tag}\n`;
+      return `# ${b.id} · ${b.ten}\n\n- Series: ${seriesOf(b.series).ten} · Tuần ${b.tuan} · ${N.TRANG_THAI[b.trangThai]}\n- Lời: phiên bản ${b.loiChon ?? '—'} / ${b.loiVersions.length}\n- Prompt Suno (Style v${b.styleChon ?? '—'} / ${b.styleVersions.length}): ${b.promptSuno}\n${nhac ? `- Bản nhạc phát hành: v${nhac.v} ${nhac.link}\n` : ''}- Điểm: ${N.tongDiem(b) ?? '—'}/${N.diemToiDa()}\n- Tiêu đề YouTube: ${b.tieude}\n${b.linkYoutube ? `- Link: ${b.linkYoutube}\n` : ''}\n## Lời\n\n${N.loiHienTai(b) || ''}\n\n## Mô tả\n\n${b.mota}\n\n${b.tag}\n`;
     }).join('\n---\n\n');
     download(`loi-bai-hat-${homNay()}.md`, out || '# Kho trống\n', 'text/markdown');
   };
@@ -410,12 +410,17 @@ ${DINH_DANG(s.id, w.so, 'playlist')}`;
     const vs = [...b.loiVersions].reverse().map(x => `<option value="${x.v}">v${x.v} · ${fmtLuc(x.luc)}</option>`).join('');
     $('#d-ss-a').innerHTML = vs; $('#d-ss-b').innerHTML = vs;
     if (b.loiVersions.length > 1) { $('#d-ss-b').value = b.loiVersions.at(-1).v; $('#d-ss-a').value = b.loiVersions.at(-2).v; }
+    // phiên bản Style
+    $('#d-dem-style').textContent = b.styleVersions.length;
+    $('#d-ds-style').innerHTML = b.styleVersions.length ? [...b.styleVersions].reverse().map(x => `<label class="vrow chk"><input type="radio" name="style-chon" value="${x.v}" ${x.v === b.styleChon ? 'checked' : ''}>
+        <span><b>Style v${x.v}</b>${x.v === b.styleChon ? '<span class="chon">đang dùng</span>' : ''} <span class="m">· ${fmtLuc(x.luc)}${x.ghiChu ? ' · ' + esc(x.ghiChu) : ''}</span><br><span class="m">${esc(x.style)}</span></span></label>`).join('')
+      : '<p class="hint">Chưa có Style.</p>';
     // nhạc
     $('#d-dem-nhac').textContent = b.nhacVersions.length;
     $('#d-ds-nhac').innerHTML = b.nhacVersions.length ? `<label class="vrow chk"><input type="radio" name="nhac-chon" value="" ${b.nhacChon === null ? 'checked' : ''}> Chưa chọn bản phát hành</label>` +
       b.nhacVersions.map(x => `<label class="vrow chk"><input type="radio" name="nhac-chon" value="${x.v}" ${x.v === b.nhacChon ? 'checked' : ''}>
         <span><b>v${x.v}</b> ${linkOk(x.link) ? `<a href="${esc(x.link)}" target="_blank" rel="noopener">${esc(x.link)}</a>` : esc(x.link) || '<i>không có link</i>'}
-        <span class="m">· ${fmtLuc(x.luc)}${x.loiV ? ` · theo lời v${x.loiV}` : ''}</span>${x.ghiChu ? `<br><span class="m">${esc(x.ghiChu)}</span>` : ''}</span></label>`).join('')
+        <span class="m">· ${fmtLuc(x.luc)}${x.loiV ? ` · theo lời v${x.loiV}` : ''}${x.styleV ? ` · Style v${x.styleV}` : ''}</span>${x.ghiChu ? `<br><span class="m">${esc(x.ghiChu)}</span>` : ''}</span></label>`).join('')
       : '<p class="hint">Chưa có bản nhạc nào. Tạo trên Suno rồi dán link vào đây, mỗi lần tạo là một phiên bản.</p>';
     // điểm
     const tong = N.tongDiem(b);
@@ -449,7 +454,11 @@ ${DINH_DANG(s.id, w.so, 'playlist')}`;
   });
   $('#d-tt-moi').onchange = renderCanhBao;
   function luuTruong() {
-    $$('[data-f]', dlg).forEach(el => { const f = el.dataset.f; bai[f] = f === 'tuan' ? +el.value : el.value; });
+    $$('[data-f]', dlg).forEach(el => {
+      const f = el.dataset.f;
+      if (f === 'promptSuno') { if (el.value.trim()) N.themStyle(bai, el.value, 'tay'); return; }   // Style đổi thì thành phiên bản mới
+      bai[f] = f === 'tuan' ? +el.value : el.value;
+    });
     bai.ten = bai.ten.trim() || 'Bài chưa đặt tên';
     bai.ngayCapNhat = new Date().toISOString();
     dirty = false; $('#d-dirty').textContent = '';
@@ -521,6 +530,10 @@ ${DINH_DANG(s.id, w.so, 'playlist')}`;
   ['#d-nhac-link', '#d-nhac-ghichu'].forEach(s => $(s).addEventListener('keydown', e => {
     if (e.key === 'Enter' && !e.isComposing) { e.preventDefault(); $('#d-them-nhac').click(); }
   }));
+  $('#d-ds-style').addEventListener('change', e => {
+    if (e.target.name !== 'style-chon') return;
+    N.chonStyle(bai, +e.target.value); $('[data-f=promptSuno]', dlg).value = bai.promptSuno; luuKho(); renderBai(); toast(`Đang dùng Style v${bai.styleChon}`);
+  });
   $('#d-ds-nhac').addEventListener('change', e => {
     if (e.target.name !== 'nhac-chon') return;
     N.chonNhac(bai, e.target.value === '' ? null : +e.target.value); luuKho(); renderBai();
