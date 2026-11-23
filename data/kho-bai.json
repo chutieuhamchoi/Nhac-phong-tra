@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "capNhat": "2026-11-23T09:05:00.000Z",
+  "capNhat": "2026-11-23T09:10:00.000Z",
   "nextId": 33,
   "bai": [
     {
@@ -392,8 +392,8 @@
       "series": "tinh-yeu",
       "tuan": 1,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-23T09:05:00.000Z",
-      "trangThai": 4,
+      "ngayCapNhat": "2026-11-23T09:10:00.000Z",
+      "trangThai": 5,
       "lichSu": [
         {
           "tu": null,
@@ -424,6 +424,12 @@
           "den": 4,
           "luc": "2026-11-23T09:05:00.000Z",
           "ghiChu": "Tèo đặt Suno V1 là bản chọn, xác minh MP3 chính 204,024 s trên Drive, nhận 10 ảnh, khóa mốc 11 đoạn theo lời hát thật và dựng video/preview.mp4. Chờ Ông chủ duyệt."
+        },
+        {
+          "tu": 4,
+          "den": 5,
+          "luc": "2026-11-23T09:10:00.000Z",
+          "ghiChu": "Ông chủ duyệt preview và yêu cầu đăng (23/11/2026 16:00). final.mp4 = preview 1080p. Tèo soạn tiêu đề, mô tả, thẻ theo mẫu và làm thumbnail 1280×720 từ ảnh cảnh 07."
         }
       ],
       "loiVersions": [
@@ -496,10 +502,10 @@
         "banSac": null
       },
       "thumbnail": "",
-      "tieude": "",
-      "mota": "",
-      "shorts": "",
-      "tag": "",
+      "tieude": "Em Đã Thôi Kể Về Anh | Acoustic Soul – Nhạc Phòng Trà",
+      "mota": "Một buổi chiều ở quán cà phê quen, cô kể với bạn đủ chuyện nhỏ trong đời mình và chợt nhận ra đã lâu rồi không còn nhắc đến người cũ. Không còn đau, chỉ thấy nhẹ nhõm, và vẫn còn bao điều muốn kể về những ngày đang sống.\n\nNhạc Phòng Trà – Mỗi bài hát, một câu chuyện đáng nghe.\n\nLời do kênh sáng tác. Nhạc và hình ảnh được tạo với sự hỗ trợ của AI.\n\n#EmDaThoiKeVeAnh #NhacPhongTra #AcousticSoul #NhacViet",
+      "shorts": "Em đã thôi kể về anh\nTừ bao giờ em chẳng nhớ\nCó hôm nhắc chuyện ngày xưa\nEm cười như vừa nghe kể",
+      "tag": "Em Đã Thôi Kể Về Anh, Em Da Thoi Ke Ve Anh, Nhạc Phòng Trà, nhạc phòng trà cà phê chill, acoustic soul Việt, acoustic ballad, nhạc Việt, nhạc tâm sự, buông bỏ người cũ, chữa lành, tình yêu trưởng thành, nhạc nữ",
       "linkYoutube": "",
       "ngayPhatHanh": "",
       "ghiChu": "Bài số 29 · Acoustic soul. Cô nhận ra mình đã thôi nhắc người cũ khi kể về đời mình.",
