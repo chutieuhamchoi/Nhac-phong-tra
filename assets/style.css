@@ -202,3 +202,5 @@ button:disabled{opacity:.5;cursor:not-allowed}
 .cd-o small{color:var(--mute);font-size:11.5px}
 .cd-o b{color:var(--ink);font-weight:600}
 .cd-tt{display:inline-block;margin-top:2px}
+
+.o-link{display:flex;gap:6px;align-items:stretch;margin-top:4px}.o-link input{flex:1;min-width:0;color:var(--ink);font-size:14px}.o-link button{white-space:nowrap}

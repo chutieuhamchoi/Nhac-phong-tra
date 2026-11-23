@@ -388,7 +388,7 @@ ${DINH_DANG(s.id, w.so, 'playlist')}`;
     $('#d-tt-ghichu').value = ''; $('#d-loi-ghichu').value = ''; $('#d-diff').innerHTML = '';
     $('#d-nhac-link').value = ''; $('#d-nhac-ghichu').value = '';
     loiDangXem = bai.loiChon;
-    dTab('tt'); renderBai();
+    dTab('tt'); renderBai(); capNhatNutYT();
     if (!dlg.open) dlg.showModal();
   }
   function renderBai() {
@@ -459,11 +459,14 @@ ${DINH_DANG(s.id, w.so, 'playlist')}`;
   function dTab(d) { $$('.dtabs button', dlg).forEach(b => b.classList.toggle('on', b.dataset.d === d)); $$('.dpanel', dlg).forEach(p => p.classList.toggle('on', p.dataset.d === d)); }
   $$('.dtabs button', dlg).forEach(b => b.onclick = () => dTab(b.dataset.d));
   function capNhatTieuDe() { const n = $('#d-tieude').value.length; $('#d-dem-td').textContent = `${n}/100`; $('#d-dem-td').className = 'cnt' + (n > 90 ? ' no' : ''); }
+  function capNhatNutYT() { $('#d-mo-yt').disabled = !linkOk($('#d-yt').value.trim()); }
+  $('#d-mo-yt').onclick = e => { e.preventDefault(); const u = $('#d-yt').value.trim(); if (linkOk(u)) window.open(u, '_blank', 'noopener'); };
   function capNhatThumb() { const u = $('#d-thumb').value.trim(), img = $('#d-thumb-img'); img.hidden = !linkOk(u); if (linkOk(u)) img.src = u; }
   dlg.addEventListener('input', e => {
     if (e.target.dataset.f) { dirty = true; $('#d-dirty').textContent = 'Có thay đổi chưa lưu'; }
     if (e.target.id === 'd-tieude') capNhatTieuDe();
     if (e.target.id === 'd-thumb') capNhatThumb();
+    if (e.target.id === 'd-yt') capNhatNutYT();
   });
   $('#d-tt-moi').onchange = renderCanhBao;
   function luuTruong() {
@@ -560,7 +563,7 @@ ${DINH_DANG(s.id, w.so, 'playlist')}`;
     const g = e.target.dataset.xdGithub, k = e.target.dataset.xdGiu;
     if (!g && !k) return;
     N.giaiXungDot(bai, g || k, !!g); luuKho(); renderBai();
-    $$('[data-f]', dlg).forEach(el => el.value = bai[el.dataset.f] ?? '');
+    $$('[data-f]', dlg).forEach(el => el.value = bai[el.dataset.f] ?? ''); capNhatNutYT();
     toast(g ? 'Đã dùng bản GitHub' : 'Đã giữ bản trình duyệt');
   });
   $('#d-xoa').onclick = () => {
