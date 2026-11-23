@@ -1,10 +1,10 @@
 # Chiến dịch xây kênh Nhạc Phòng Trà – Phòng trà đa sắc
 
-Tí cập nhật 22/11/2026 theo kế hoạch Ông chủ duyệt · Kênh: [youtube.com/@nhac-phongtra](https://www.youtube.com/@nhac-phongtra) · Giai đoạn sản xuất mới: 23/11/2026 – 07/03/2027 (15 tuần)
+Tí cập nhật 22/11/2026 theo kế hoạch Ông chủ duyệt; Tèo cập nhật tiến độ 23/11/2026 · Kênh: [youtube.com/@nhac-phongtra](https://www.youtube.com/@nhac-phongtra) · Giai đoạn sản xuất mới: 23/11/2026 – 07/03/2027 (15 tuần)
 
 ## 1. Tình hình và mốc quan trọng
 
-Kênh bắt đầu từ tháng 11/2026. Đến 19/11/2026 kênh có 4 người đăng ký và 2 video công khai: "Cánh Diều Tuổi Thơ" (16/11/2026) và NPT-0001 "Có Những Ngày Chỉ Muốn Về Nhà" (19/11/2026, [xem trên YouTube](https://www.youtube.com/watch?v=aV9Z0ukc9vo)). NPT-0001 là video đầu tiên làm theo quy trình ở mục 8. Ngày 22/11/2026 kênh đăng thêm NPT-0002 "Yêu Nhau Lại Từ Đầu" ([xem trên YouTube](https://www.youtube.com/watch?v=gM4ctyrqMK4)), bài đầu tiên theo định hướng đa sắc, nâng số video công khai lên 3. Từ tuần 2 kênh chuyển sang định hướng đa sắc. Ba điều quyết định cách làm:
+Kênh bắt đầu từ tháng 11/2026. Đến 19/11/2026 kênh có 4 người đăng ký và 2 video công khai: "Cánh Diều Tuổi Thơ" (16/11/2026) và NPT-0001 "Có Những Ngày Chỉ Muốn Về Nhà" (19/11/2026, [xem trên YouTube](https://www.youtube.com/watch?v=aV9Z0ukc9vo)). NPT-0001 là video đầu tiên làm theo quy trình ở mục 8. Ngày 22/11/2026 kênh đăng thêm NPT-0002 "Yêu Nhau Lại Từ Đầu" ([xem trên YouTube](https://www.youtube.com/watch?v=gM4ctyrqMK4)), bài đầu tiên theo định hướng đa sắc, nâng số video công khai lên 3. Ngày 23/11/2026 kênh đăng NPT-0003 "Lúc Nào Anh Cũng Bận" ([xem trên YouTube](https://www.youtube.com/watch?v=mDeTht2Utls)), bài mở màn tuần sản xuất 1, nâng số video công khai lên 4. Từ tuần 2 kênh chuyển sang định hướng đa sắc. Ba điều quyết định cách làm:
 
 **Ngưỡng bật kiếm tiền quảng cáo sắp tăng gấp đôi.** Hiện tại cần 1.000 người đăng ký và 4.000 giờ xem trong 12 tháng. Từ 01/02/2027, kênh mới cần 1.000 người đăng ký và 8.000 giờ xem trong 365 ngày (hoặc 20 triệu lượt xem Shorts trong 90 ngày). Kênh mình không thể đạt 4.000 giờ trước 01/02/2027, nên cứ tính theo mốc 8.000 giờ, tức trung bình khoảng 22 giờ xem mỗi ngày trong cả năm. Thời gian xem (không phải lượt xem) là thứ quan trọng nhất.
 
@@ -15,9 +15,9 @@ Kênh bắt đầu từ tháng 11/2026. Đến 19/11/2026 kênh có 4 người �
 ## 2. Việc bắt buộc
 
 - **Dùng gói Suno Pro trở lên.** Bài tạo bằng gói miễn phí không được dùng để kiếm tiền, nâng cấp sau cũng không chuyển bài cũ thành bài thương mại. Kiểm tra "Cánh Diều Tuổi Thơ" được tạo bằng gói nào.
-- **Gắn nhãn nội dung có dùng AI** cho mọi video trong YouTube Studio. *NPT-0001: đã gắn (Claude kiểm tra 19/11/2026). NPT-0002: đã gắn khi đăng 22/11/2026. Cánh Diều Tuổi Thơ: mô tả đã ghi có dùng AI, cần kiểm tra nhãn trong Studio.*
+- **Gắn nhãn nội dung có dùng AI** cho mọi video trong YouTube Studio. *NPT-0001: đã gắn (Claude kiểm tra 19/11/2026). NPT-0002: đã gắn khi đăng 22/11/2026. NPT-0003: đã gắn khi đăng 23/11/2026. Cánh Diều Tuổi Thơ: mô tả đã ghi có dùng AI, cần kiểm tra nhãn trong Studio.*
 - **Chỉ dùng lời tự viết.** Không đưa lời bài hát của nhạc sĩ khác vào Suno, không ghi tên ca sĩ thật trong câu lệnh.
-- Lưu file gốc của mỗi bài (lời, câu lệnh Suno, ngày tạo, gói đang dùng) để làm bằng chứng khi bị khiếu nại bản quyền. *Ông chủ xác nhận 22/11/2026: NPT-0001 và NPT-0002 đều tạo bằng gói Suno trả phí. NPT-0001 còn thiếu link bản Suno được chọn (`nhacChon`).*
+- Lưu file gốc của mỗi bài (lời, câu lệnh Suno, ngày tạo, gói đang dùng) để làm bằng chứng khi bị khiếu nại bản quyền. *Ông chủ xác nhận 22/11/2026: NPT-0001 và NPT-0002 đều tạo bằng gói Suno trả phí. NPT-0001 còn thiếu link bản Suno được chọn (`nhacChon`). NPT-0003 đã ghi bản Suno V1 được chọn; thông số Suno thực tế chưa xác nhận.*
 
 ## 3. Định vị và tiêu chuẩn sáng tác (duyệt 19/11/2026)
 
@@ -57,7 +57,7 @@ Sản xuất **30 bài mới, 2 bài mỗi tuần**. NPT-0001 và NPT-0002 đã 
 
 | Tuần sản xuất | Bắt đầu | Bài 1 | Bài 2 |
 |---|---|---|---|
-| 1 | 23/11/2026 | 13 · Lúc Nào Anh Cũng Bận · R&B đối đáp | 29 · Em Đã Thôi Kể Về Anh · Acoustic soul |
+| 1 | 23/11/2026 | 13 · Lúc Nào Anh Cũng Bận · R&B đối đáp · ✅ đã phát hành 23/11/2026 (NPT-0003) | 29 · Em Đã Thôi Kể Về Anh · Acoustic soul |
 | 2 | 30/11/2026 | 03 · Tháng Mười Hai Có Hẹn · Pop jazz song ca | 04 · Bạn Cũ Ơi · Acoustic soul |
 | 3 | 07/12/2026 | 05 · Em Có Biết Đâu · Indie pop | 06 · Em Thuộc Về Biển · Indie folk |
 | 4 | 14/12/2026 | 07 · Em Không Cần Một Người Hoàn Hảo · Indie pop | 08 · Mưa Qua Ô Cửa Sổ · Smooth jazz không lời |
