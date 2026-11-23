@@ -182,6 +182,7 @@ No text, digits, logos, watermarks, borders or storyboard panels.
    - danh sách phát của series.
 4. Thumbnail: ông chủ bấm "Tải tệp lên" và chọn `thumbnail.png`.
 5. Đăng theo chế độ ông chủ chọn (công khai, riêng tư hoặc hẹn giờ). Tèo mở trang xem để xác minh video phát được.
+6. **Bắt buộc – đưa bài vào danh sách phát (chốt 23/11/2026).** Sau khi tải lên, Tèo kiểm tra bài đã nằm trong danh sách phát công khai của đúng series (Tình yêu → "Tình Yêu – Nhạc Phòng Trà"; Tuổi thơ → "Tuổi Thơ – Quê Nhà | Nhạc Phòng Trà Hoài Niệm"; series mới thì tạo danh sách mới). Mở trang danh sách phát để xác nhận video có trong đó, rồi ghi tên danh sách vào dòng `lichSu` khi chuyển sang 6. Chưa vào danh sách phát thì chưa coi là đăng xong. NPT-0003 từng bị sót, đã bổ sung 23/11/2026.
 
 ### Bước 8. Đồng bộ (Tèo)
 - `kho-bai.json`: `trangThai` 6, `linkYoutube`, `ngayPhatHanh`, một dòng `lichSu` ghi cách xác minh.

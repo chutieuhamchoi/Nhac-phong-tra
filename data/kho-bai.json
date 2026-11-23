@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "capNhat": "2026-11-23T09:31:05.000Z",
+  "capNhat": "2026-11-23T09:55:00.000Z",
   "nextId": 33,
   "bai": [
     {
@@ -237,7 +237,7 @@
       "series": "tinh-yeu",
       "tuan": 1,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-23T03:59:23.000Z",
+      "ngayCapNhat": "2026-11-23T09:55:00.000Z",
       "trangThai": 6,
       "lichSu": [
         {
@@ -287,6 +287,12 @@
           "den": 6,
           "luc": "2026-11-23T03:59:23.000Z",
           "ghiChu": "Tèo đăng công khai trên YouTube (Ông chủ chọn file, duyệt công khai 23/11/2026): tiêu đề, mô tả, 12 thẻ, thumbnail, tiếng Việt, danh mục Nhạc, nhãn AI = Có, không dành cho trẻ em."
+        },
+        {
+          "tu": 6,
+          "den": 6,
+          "luc": "2026-11-23T09:55:00.000Z",
+          "ghiChu": "Tèo bổ sung video vào danh sách phát \"Tình Yêu – Nhạc Phòng Trà\" (bị sót khi đăng); đã xác nhận trên trang danh sách phát."
         }
       ],
       "loiVersions": [
