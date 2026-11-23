@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "capNhat": "2026-11-22T17:16:54.894Z",
+  "capNhat": "2026-11-23T09:05:00.000Z",
   "nextId": 33,
   "bai": [
     {
@@ -392,8 +392,8 @@
       "series": "tinh-yeu",
       "tuan": 1,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-22T17:16:54.894Z",
-      "trangThai": 2,
+      "ngayCapNhat": "2026-11-23T09:05:00.000Z",
+      "trangThai": 4,
       "lichSu": [
         {
           "tu": null,
@@ -412,6 +412,18 @@
           "den": 2,
           "luc": "2026-11-22T17:16:54.894Z",
           "ghiChu": "Ông chủ chốt lời V3. Tí lưu Style V2 và thông số Suno đề xuất."
+        },
+        {
+          "tu": 2,
+          "den": 3,
+          "luc": "2026-11-23T09:05:00.000Z",
+          "ghiChu": "Tèo ghi bản Suno V1 (link Ông chủ gửi, đối chiếu mã bản trong metadata MP3)."
+        },
+        {
+          "tu": 3,
+          "den": 4,
+          "luc": "2026-11-23T09:05:00.000Z",
+          "ghiChu": "Tèo đặt Suno V1 là bản chọn, xác minh MP3 chính 204,024 s trên Drive, nhận 10 ảnh, khóa mốc 11 đoạn theo lời hát thật và dựng video/preview.mp4. Chờ Ông chủ duyệt."
         }
       ],
       "loiVersions": [
@@ -456,8 +468,27 @@
       ],
       "styleChon": 2,
       "promptSuno": "Vietnamese acoustic soul ballad, 82 BPM, solo female mezzo, intimate and gently buoyant. Open directly with the chorus hook over felt piano and light nylon guitar; no long intro. Use clear Vietnamese diction, soft syncopation and short breaths. Keep the verse conversational, with guitar answering the vocal. No sub-bass, kick loops or repeating bass pattern. Strip back to piano for the bridge, then brighten the harmony and add a light string layer for the final chorus. Let the emotion move from wistful to quietly relieved. At the outro, sing “Em đã thôi kể về anh” once, nearly alone, then end with two bars of fading piano. Follow the lyric order; add no extra lines or vocal ad-libs.",
-      "nhacVersions": [],
-      "nhacChon": null,
+      "nhacVersions": [
+        {
+          "v": 1,
+          "link": "https://suno.com/s/UngNp8S5esHT6UBf",
+          "ghiChu": "Bản Ông chủ chọn 23/11/2026. Mã bản Suno db0cbc22-43ee-4a08-9df1-d262e634f6cc (metadata MP3, lời khớp V3). MP3: https://drive.google.com/file/d/13-Nd9lSfwGAm2gdlaXlUu12zBgXxTiLH/view (Nhac_Phong_Tra/NPT-0004/nhac/nhac-chinh.mp3, 204,024 s). caiDat là bộ đề xuất lúc ghi kho, chưa xác nhận thông số thực tế.",
+          "luc": "2026-11-23T09:05:00.000Z",
+          "loiV": 3,
+          "styleV": 2,
+          "caiDat": {
+            "model": "v6",
+            "giong": "nu",
+            "thoiLuong": "auto",
+            "maxMode": false,
+            "weirdness": 45,
+            "styleInfluence": 80,
+            "variety": "Normal",
+            "personalize": false
+          }
+        }
+      ],
+      "nhacChon": 1,
       "diem": {
         "cauChuyen": null,
         "diemCham": null,

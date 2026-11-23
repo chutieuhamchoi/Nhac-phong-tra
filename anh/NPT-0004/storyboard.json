@@ -1,0 +1,136 @@
+{
+  "maBai": "NPT-0004",
+  "ten": "Em Đã Thôi Kể Về Anh",
+  "mp3": "nhac/nhac-chinh.mp3",
+  "thoiLuongMp3": 204.024,
+  "sunoId": "db0cbc22-43ee-4a08-9df1-d262e634f6cc",
+  "ghiChu": "Mốc chốt bởi Tèo 23/11/2026 theo giọng hát thật (tách giọng spleeter + nhận dạng whisper + cao độ). batDau là lúc bắt đầu cross dissolve 2s, đặt sớm hơn câu hát ~1,8s. Giờ trong ngoặc ở doanLoi = lúc câu hát bắt đầu. 10 ảnh, 11 đoạn; 07A/07B dùng chung canh-07.png (07B cắt khung cận).",
+  "canh": [
+    {
+      "so": 1,
+      "ma": "01",
+      "batDau": 0.0,
+      "ketThuc": 22.0,
+      "doanLoi": "Nhạc dạo piano (0–16,8) · Chorus mở: «Em đã thôi kể về anh» (16,8) · «Từ bao giờ em chẳng nhớ» (20,3)",
+      "anh": "canh-01.png",
+      "hieuUng": "slow zoom out",
+      "lopPhu": "film grain",
+      "chuyenCanh": "cross dissolve"
+    },
+    {
+      "so": 2,
+      "ma": "02",
+      "batDau": 22.0,
+      "ketThuc": 46.0,
+      "doanLoi": "«Có hôm nhắc chuyện ngày xưa» (24,0) … «Em đã thôi kể về anh / Mà còn bao điều để nói» (31,6) … «Vậy thôi mà em muốn kể» (42,1)",
+      "anh": "canh-02.png",
+      "hieuUng": "slow pan right",
+      "lopPhu": "film grain",
+      "chuyenCanh": "cross dissolve"
+    },
+    {
+      "so": 3,
+      "ma": "03",
+      "batDau": 46.0,
+      "ketThuc": 60.6,
+      "doanLoi": "Verse: «Có lần nghe lại bài hát» (47,8) · «Anh từng hát sai mấy lời» (50,7) · «Em nhớ, rồi cười một mình» (55,0) · «Nghe hết bài, thế là thôi» (58,1)",
+      "anh": "canh-03.png",
+      "hieuUng": "slow zoom in",
+      "lopPhu": "film grain",
+      "chuyenCanh": "cross dissolve"
+    },
+    {
+      "so": 4,
+      "ma": "04",
+      "batDau": 60.6,
+      "ketThuc": 74.2,
+      "doanLoi": "«Ngày trước em hay tự hỏi» (62,4) · «Anh có còn nhớ em không» (65,4) · «Giờ đôi khi em vẫn nhớ» (69,4) · «Rồi ngày của em lại tiếp» (71,6)",
+      "anh": "canh-04.png",
+      "hieuUng": "static",
+      "lopPhu": "film grain",
+      "chuyenCanh": "cross dissolve"
+    },
+    {
+      "so": 5,
+      "ma": "05",
+      "batDau": 74.2,
+      "ketThuc": 88.6,
+      "doanLoi": "Chorus lặp: «Em đã thôi kể về anh» (76,0) · «Từ bao giờ em chẳng nhớ» (79,5) · «Có hôm nhắc chuyện ngày xưa» (83,2) · «Em cười như vừa nghe kể» (86,2)",
+      "anh": "canh-05.png",
+      "hieuUng": "slow pan right",
+      "lopPhu": "film grain",
+      "chuyenCanh": "cross dissolve"
+    },
+    {
+      "so": 6,
+      "ma": "06",
+      "batDau": 88.6,
+      "ketThuc": 113.2,
+      "doanLoi": "«Em đã thôi kể về anh / Mà còn bao điều để nói» (≈90,6) · «Dạo này em thấy mình vui» (97,9) · «Vậy thôi mà em muốn kể» (101,2) · nhạc gian tấu từ 105,4",
+      "anh": "canh-06.png",
+      "hieuUng": "slow zoom in",
+      "lopPhu": "film grain",
+      "chuyenCanh": "cross dissolve"
+    },
+    {
+      "so": 7,
+      "ma": "07A",
+      "batDau": 113.2,
+      "ketThuc": 138.0,
+      "doanLoi": "Gian tấu (105,4–135,6) · Bridge: «Em từng nghĩ đến một ngày» (135,7)",
+      "anh": "canh-07.png",
+      "hieuUng": "static",
+      "lopPhu": "film grain",
+      "chuyenCanh": "cross dissolve"
+    },
+    {
+      "so": 8,
+      "ma": "07B",
+      "batDau": 138.0,
+      "ketThuc": 148.0,
+      "doanLoi": "Bridge: «Nghe tên anh lòng chẳng đau» (139,8) · «Hóa ra ngày ấy tới rồi» (142,8) · «Bình thường như bao ngày khác» (145,9)",
+      "anh": "canh-07.png",
+      "hieuUng": "static",
+      "lopPhu": "film grain",
+      "chuyenCanh": "cross dissolve",
+      "khung": [
+        0.12,
+        0.05,
+        0.45
+      ]
+    },
+    {
+      "so": 9,
+      "ma": "08",
+      "batDau": 148.0,
+      "ketThuc": 162.6,
+      "doanLoi": "Final Chorus: «Em đã thôi kể về anh» (149,8) · «Từ bao giờ em chẳng nhớ» (153,4) · «Mình từng thương nhau nhiều lắm» (157,1) · «Nhắc lại em vẫn thấy vui» (161,2)",
+      "anh": "canh-08.png",
+      "hieuUng": "slow pan left",
+      "lopPhu": "film grain",
+      "chuyenCanh": "cross dissolve"
+    },
+    {
+      "so": 10,
+      "ma": "09",
+      "batDau": 162.6,
+      "ketThuc": 179.024,
+      "doanLoi": "«Mai nếu ai hỏi em sao» (≈164,4) · «Em còn bao điều muốn kể» (168,2) · «Về những ngày em đang sống» (171,3) · «Và những ngày em mong tới» (175,2)",
+      "anh": "canh-09.png",
+      "hieuUng": "static",
+      "lopPhu": "film grain",
+      "chuyenCanh": "cross dissolve"
+    },
+    {
+      "so": 11,
+      "ma": "10",
+      "batDau": 179.024,
+      "ketThuc": 204.024,
+      "doanLoi": "Outro: «Em đã thôi» (179,5) … «kể về anh» (183,8–187,3) · piano kết, mờ về đen 200,0–204,0",
+      "anh": "canh-10.png",
+      "hieuUng": "static",
+      "lopPhu": "film grain",
+      "chuyenCanh": "fade black"
+    }
+  ]
+}
