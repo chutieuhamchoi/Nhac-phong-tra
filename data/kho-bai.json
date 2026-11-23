@@ -237,8 +237,8 @@
       "series": "tinh-yeu",
       "tuan": 1,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-22T16:39:28.549Z",
-      "trangThai": 4,
+      "ngayCapNhat": "2026-11-23T03:59:23.000Z",
+      "trangThai": 6,
       "lichSu": [
         {
           "tu": null,
@@ -281,6 +281,12 @@
           "den": 4,
           "luc": "2026-11-22T16:39:28.549Z",
           "ghiChu": "Tí đặt Suno V1 là bản chọn, xác minh MP3 chính dài 216,864 giây và cập nhật storyboard sơ bộ để Tèo dựng preview."
+        },
+        {
+          "tu": 4,
+          "den": 6,
+          "luc": "2026-11-23T03:59:23.000Z",
+          "ghiChu": "Tèo đăng công khai trên YouTube (Ông chủ chọn file, duyệt công khai 23/11/2026): tiêu đề, mô tả, 12 thẻ, thumbnail, tiếng Việt, danh mục Nhạc, nhãn AI = Có, không dành cho trẻ em."
         }
       ],
       "loiVersions": [
@@ -364,8 +370,8 @@
       "mota": "Một người vợ vẫn mong chồng về sau những ngày anh bận công việc và những tối về muộn cùng bạn bè. Cô muốn hai người dành cho nhau một buổi tối để hỏi han và nghe nhau nói.\n\nNhạc Phòng Trà – Mỗi bài hát, một câu chuyện đáng nghe.\n\nLời do kênh sáng tác. Nhạc và hình ảnh được tạo với sự hỗ trợ của AI.\n\n#LucNaoAnhCungBan #NhacPhongTra #RnBViet #NhacViet",
       "shorts": "Lúc nào anh cũng bận\nLúc nào em cũng chờ\nAnh để dành cho em\nPhần cuối của mỗi ngày",
       "tag": "Lúc Nào Anh Cũng Bận, Luc Nao Anh Cung Ban, Nhạc Phòng Trà, nhạc phòng trà cà phê chill, R&B Việt, R&B ballad, acoustic soul Việt, nhạc Việt, nhạc tâm sự, tình yêu trưởng thành, tình cảm vợ chồng, nhạc nữ",
-      "linkYoutube": "",
-      "ngayPhatHanh": "",
+      "linkYoutube": "https://www.youtube.com/watch?v=mDeTht2Utls",
+      "ngayPhatHanh": "2026-11-23",
       "ghiChu": "Bài số 13 · R&B ballad pha acoustic soul. Ông chủ đã chốt lời từ góc nhìn người vợ chờ chồng thường về muộn vì công việc hoặc bạn bè.",
       "promptChatGPT": "",
       "caiDatSuno": {
