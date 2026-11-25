@@ -322,7 +322,8 @@ ${DINH_DANG(s.id, w.so, 'playlist')}`;
   /* ---------- kho bài ---------- */
   function renderKho() {
     const fs = $('#loc-series').value, ft = $('#loc-tt').value, q = N.boDau($('#loc-q').value);
-    const ds = kho.bai.filter(b => (!fs || b.series === fs) && (ft === '' || b.trangThai === +ft) && (!q || N.boDau(b.ten + ' ' + b.id).includes(q)));
+    const ds = kho.bai.filter(b => (!fs || b.series === fs) && (ft === '' || b.trangThai === +ft) && (!q || N.boDau(b.ten + ' ' + b.id).includes(q)))
+      .sort((a, b) => a.tuan - b.tuan);
     $('#dem-tt').innerHTML = N.TRANG_THAI.map((t, k) => {
       const n = kho.bai.filter(b => b.trangThai === k).length;
       return `<button class="ttc ${ft === String(k) ? 'on' : ''}" data-tt="${k}">${esc(t)} <b>${n}</b></button>`;
