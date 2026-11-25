@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "capNhat": "2026-11-25T03:18:09.920Z",
+  "capNhat": "2026-11-25T15:54:11.949Z",
   "nextId": 33,
   "bai": [
     {
@@ -747,7 +747,7 @@
       "series": "sang-tao",
       "tuan": 2,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-25T03:18:09.920Z",
+      "ngayCapNhat": "2026-11-25T15:54:11.949Z",
       "trangThai": 1,
       "lichSu": [
         {
@@ -777,9 +777,16 @@
           "nguon": "chatgpt",
           "luc": "2026-11-22T11:55:00.544Z",
           "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
+        },
+        {
+          "v": 3,
+          "loi": "[Verse 1]\nHồi mới yêu, mỗi lần ra biển\nEm mải nhìn con sóng ngoài xa\nAnh kéo nhẹ tay em, cười bảo\n“Nhìn anh này, biển có chạy đâu”\n\n[Chorus]\nEm thuộc về biển\nCòn anh thuộc về ai?\nChiều nay em khẽ kéo tay anh\nSao anh chẳng quay lại?\n\n[Verse 2]\nAnh bảo em về trước\nEm đi xa dần tiếng sóng\nNgày xưa mỗi lần ngoái lại\nAnh vẫn đứng đó nhìn theo\n\n[Bridge]\nEm đi chậm hơn mọi lần\nCứ ngỡ anh còn điều muốn nói\nNgày trước sóng ồn đến thế\nAnh gọi khẽ, em vẫn nghe\n\n[Final Chorus]\nEm thuộc về biển\nCòn anh thuộc về ai?\nEm đi xa dần tiếng sóng\nVẫn mong anh gọi lại\n\nEm thuộc về biển\nCòn anh thuộc về nỗi nhớ",
+          "nguon": "chatgpt",
+          "luc": "2026-11-25T15:54:11.949Z",
+          "ghiChu": "Ông chủ chốt lời, gồm Bridge bốn câu."
         }
       ],
-      "loiChon": 2,
+      "loiChon": 3,
       "styleVersions": [
         {
           "v": 1,
@@ -787,10 +794,17 @@
           "nguon": "chatgpt",
           "luc": "2026-11-22T06:27:01.567Z",
           "ghiChu": "Tí soạn Style nháp V1."
+        },
+        {
+          "v": 2,
+          "style": "Vietnamese acoustic pop ballad, 78 BPM, 4/4, intimate solo female vocal with clear Vietnamese diction. Open with fingerpicked acoustic guitar and sparse felt piano. Sing the first verse like a fond memory, with a natural smile in the quoted line. Bring in the first chorus within 30 seconds. Give its first two lines a simple, repeatable melody: start low on “Em thuộc về biển”, take a short breath, then rise and sustain “ai” in “Còn anh thuộc về ai?”. Add soft brushed drums and restrained cello at the chorus. Strip the bridge back to piano and voice. Let the final chorus open up with warm strings, then drop the drums and leave the final two lines almost bare over piano. Let “nỗi nhớ” fall gently and linger. No key change, belting, ad-libs, or ocean sound effects. Target about 3 minutes.",
+          "nguon": "chatgpt",
+          "luc": "2026-11-25T15:54:11.949Z",
+          "ghiChu": "Style đề xuất để thử Suno, chờ Ông chủ duyệt."
         }
       ],
-      "styleChon": 1,
-      "promptSuno": "Vietnamese indie folk, 91 BPM. Clear female alto, acoustic guitar, woody percussion and warm low strings. Verses carry a steady motion; chorus opens the vocal register and widens the harmony. Keep the bridge or instrumental breathing space spacious. Finish with a confident, grounded delivery.",
+      "styleChon": 2,
+      "promptSuno": "Vietnamese acoustic pop ballad, 78 BPM, 4/4, intimate solo female vocal with clear Vietnamese diction. Open with fingerpicked acoustic guitar and sparse felt piano. Sing the first verse like a fond memory, with a natural smile in the quoted line. Bring in the first chorus within 30 seconds. Give its first two lines a simple, repeatable melody: start low on “Em thuộc về biển”, take a short breath, then rise and sustain “ai” in “Còn anh thuộc về ai?”. Add soft brushed drums and restrained cello at the chorus. Strip the bridge back to piano and voice. Let the final chorus open up with warm strings, then drop the drums and leave the final two lines almost bare over piano. Let “nỗi nhớ” fall gently and linger. No key change, belting, ad-libs, or ocean sound effects. Target about 3 minutes.",
       "nhacVersions": [],
       "nhacChon": null,
       "diem": {
