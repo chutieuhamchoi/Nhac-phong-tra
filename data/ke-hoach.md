@@ -58,8 +58,8 @@ Sản xuất **30 bài mới, 2 bài mỗi tuần**. NPT-0001 và NPT-0002 đã 
 | Tuần sản xuất | Bắt đầu | Bài 1 | Bài 2 |
 |---|---|---|---|
 | 1 | 23/11/2026 | 13 · Lúc Nào Anh Cũng Bận · R&B đối đáp · ✅ đã phát hành 23/11/2026 (NPT-0003) | 29 · Em Đã Thôi Kể Về Anh · Acoustic soul · ✅ đã phát hành 23/11/2026 (NPT-0004) |
-| 2 | 30/11/2026 | 03 · Tháng Mười Hai Có Hẹn · Pop jazz song ca | 04 · Bạn Cũ Ơi · Acoustic soul |
-| 3 | 07/12/2026 | 05 · Em Có Biết Đâu · Indie pop | 06 · Em Thuộc Về Biển · Indie folk |
+| 2 | 30/11/2026 | 06 · Em Thuộc Về Biển · Indie folk | 04 · Bạn Cũ Ơi · Acoustic soul |
+| 3 | 07/12/2026 | 05 · Em Có Biết Đâu · Indie pop | 03 · Tháng Mười Hai Có Hẹn · Pop jazz song ca |
 | 4 | 14/12/2026 | 07 · Em Không Cần Một Người Hoàn Hảo · Indie pop | 08 · Mưa Qua Ô Cửa Sổ · Smooth jazz không lời |
 | 5 | 21/12/2026 | 09 · Đêm Noel Anh Ở Đâu? · Jazz ballad | 10 · Đêm Nay Còn Ai Thức? · Jazz soul |
 | 6 | 28/12/2026 | 11 · Còn Kịp Yêu Nhau · Disco soul song ca | 12 · Cho Tôi Buồn Một Lát · Piano soul |
