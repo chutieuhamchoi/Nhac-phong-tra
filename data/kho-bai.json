@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "capNhat": "2026-11-23T09:55:00.000Z",
+  "capNhat": "2026-11-25T03:18:09.920Z",
   "nextId": 33,
   "bai": [
     {
@@ -538,9 +538,9 @@
       "loai": "bai",
       "ten": "Tháng Mười Hai Có Hẹn",
       "series": "do-thi",
-      "tuan": 2,
+      "tuan": 3,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-22T11:55:00.544Z",
+      "ngayCapNhat": "2026-11-25T03:18:09.920Z",
       "trangThai": 1,
       "lichSu": [
         {
@@ -745,9 +745,9 @@
       "loai": "bai",
       "ten": "Em Thuộc Về Biển",
       "series": "sang-tao",
-      "tuan": 3,
+      "tuan": 2,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-22T11:55:00.544Z",
+      "ngayCapNhat": "2026-11-25T03:18:09.920Z",
       "trangThai": 1,
       "lichSu": [
         {
