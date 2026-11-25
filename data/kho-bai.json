@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "capNhat": "2026-11-25T15:57:21.044Z",
+  "capNhat": "2026-11-25T16:17:43.328Z",
   "nextId": 33,
   "bai": [
     {
@@ -747,7 +747,7 @@
       "series": "sang-tao",
       "tuan": 2,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-25T15:57:21.044Z",
+      "ngayCapNhat": "2026-11-25T16:17:43.328Z",
       "trangThai": 1,
       "lichSu": [
         {
@@ -784,9 +784,16 @@
           "nguon": "chatgpt",
           "luc": "2026-11-25T15:54:11.949Z",
           "ghiChu": "Ông chủ chốt lời, gồm Bridge bốn câu."
+        },
+        {
+          "v": 4,
+          "loi": "[Verse 1]\nHồi mới yêu, mỗi lần ra biển\nEm mải nhìn con sóng ngoài xa\nAnh kéo nhẹ tay em, cười bảo\n“Nhìn anh này, biển có chạy đâu”\n\n[Chorus]\nEm thuộc về biển\nCòn anh thuộc về ai?\nChiều nay em khẽ buông tay anh\nSao anh chẳng níu lại?\n\n[Verse 2]\nAnh bảo em về trước\nEm đi xa dần tiếng sóng\nEm ngoái lại một lần cuối\nChẳng thấy bóng anh đâu nữa\n\n[Bridge]\nNgày trước sóng ồn đến thế\nAnh gọi khẽ, em vẫn nghe\nChiều nay em nghe rõ sóng\nMà chẳng nghe anh gọi em\n\n[Final Chorus]\nEm thuộc về biển\nCòn anh thuộc về ai?\nEm đi xa dần tiếng sóng\nVẫn mong anh gọi lại\n\nEm thuộc về biển\nCòn anh thuộc về nỗi nhớ\nDù sóng đã xóa hết dấu chân\nThì em vẫn nhớ… anh từng ở đây\n\n[Outro]\nEm thuộc về biển…\nCòn anh thuộc về nỗi nhớ.",
+          "nguon": "chatgpt",
+          "luc": "2026-11-25T16:17:43.328Z",
+          "ghiChu": "Ông chủ chốt lời mới, Bridge sáu tiếng và Outro hai câu."
         }
       ],
-      "loiChon": 3,
+      "loiChon": 4,
       "styleVersions": [
         {
           "v": 1,
@@ -801,10 +808,17 @@
           "nguon": "chatgpt",
           "luc": "2026-11-25T15:54:11.949Z",
           "ghiChu": "Style đề xuất để thử Suno, chờ Ông chủ duyệt."
+        },
+        {
+          "v": 3,
+          "style": "Vietnamese acoustic pop ballad, 72 BPM, 6/8, solo female mezzo with clear Vietnamese tones. Begin with two bars of fingerpicked nylon guitar and felt piano. Verse 1 is low and conversational, with space after the quoted line. In the chorus, sing “Em thuộc về biển” gently, take a breath, then climb and sustain “ai” in “Còn anh thuộc về ai?”. Let “Sao anh chẳng níu lại?” fall in pitch over a held cello note. Pull back to guitar for Verse 2. In the bridge, leave piano and voice, then pause for one beat after “Mà chẳng nghe anh gọi em”. Return with the same hook, fuller strings and light brushed drums; make this the vocal peak. Let the melody descend on “Còn anh thuộc về nỗi nhớ”. Strip the Outro to voice and piano, holding “nhớ” softly. Follow the lyrics as written. No heavy bass, drum loops, key change, or vocal runs.",
+          "nguon": "chatgpt",
+          "luc": "2026-11-25T16:17:43.328Z",
+          "ghiChu": "Đề xuất ballad acoustic nhịp 6/8, nâng giai điệu ở hook và dồn cao trào vào điệp khúc cuối."
         }
       ],
-      "styleChon": 2,
-      "promptSuno": "Vietnamese acoustic pop ballad, 78 BPM, 4/4, intimate solo female vocal with clear Vietnamese diction. Open with fingerpicked acoustic guitar and sparse felt piano. Sing the first verse like a fond memory, with a natural smile in the quoted line. Bring in the first chorus within 30 seconds. Give its first two lines a simple, repeatable melody: start low on “Em thuộc về biển”, take a short breath, then rise and sustain “ai” in “Còn anh thuộc về ai?”. Add soft brushed drums and restrained cello at the chorus. Strip the bridge back to piano and voice. Let the final chorus open up with warm strings, then drop the drums and leave the final two lines almost bare over piano. Let “nỗi nhớ” fall gently and linger. No key change, belting, ad-libs, or ocean sound effects. Target about 3 minutes.",
+      "styleChon": 3,
+      "promptSuno": "Vietnamese acoustic pop ballad, 72 BPM, 6/8, solo female mezzo with clear Vietnamese tones. Begin with two bars of fingerpicked nylon guitar and felt piano. Verse 1 is low and conversational, with space after the quoted line. In the chorus, sing “Em thuộc về biển” gently, take a breath, then climb and sustain “ai” in “Còn anh thuộc về ai?”. Let “Sao anh chẳng níu lại?” fall in pitch over a held cello note. Pull back to guitar for Verse 2. In the bridge, leave piano and voice, then pause for one beat after “Mà chẳng nghe anh gọi em”. Return with the same hook, fuller strings and light brushed drums; make this the vocal peak. Let the melody descend on “Còn anh thuộc về nỗi nhớ”. Strip the Outro to voice and piano, holding “nhớ” softly. Follow the lyrics as written. No heavy bass, drum loops, key change, or vocal runs.",
       "nhacVersions": [],
       "nhacChon": null,
       "diem": {
@@ -827,8 +841,8 @@
         "giong": "nu",
         "thoiLuong": "auto",
         "maxMode": false,
-        "weirdness": 40,
-        "styleInfluence": 75,
+        "weirdness": 48,
+        "styleInfluence": 80,
         "variety": "Normal",
         "personalize": false
       }
