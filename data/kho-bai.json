@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "capNhat": "2026-11-25T16:37:43.655Z",
+  "capNhat": "2026-11-25T16:58:09.304Z",
   "nextId": 33,
   "bai": [
     {
@@ -605,11 +605,11 @@
     {
       "id": "NPT-0006",
       "loai": "bai",
-      "ten": "Bạn Cũ Ơi",
-      "series": "truong-thanh",
+      "ten": "Đi Thêm Một Đoạn",
+      "series": "tinh-yeu",
       "tuan": 2,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-22T11:55:00.544Z",
+      "ngayCapNhat": "2026-11-25T16:58:09.304Z",
       "trangThai": 1,
       "lichSu": [
         {
@@ -623,6 +623,12 @@
           "den": 1,
           "luc": "2026-11-22T11:55:00.544Z",
           "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
+        },
+        {
+          "tu": 1,
+          "den": 1,
+          "luc": "2026-11-25T16:58:09.304Z",
+          "ghiChu": "Thay Bạn Cũ Ơi bằng Đi Thêm Một Đoạn ở tuần 2 theo yêu cầu Ông chủ."
         }
       ],
       "loiVersions": [
@@ -639,9 +645,16 @@
           "nguon": "chatgpt",
           "luc": "2026-11-22T11:55:00.544Z",
           "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
+        },
+        {
+          "v": 3,
+          "loi": "[Chorus]\nHay mình đi thêm một đoạn\nAnh còn muốn nghe em cười\nTối nay anh về muộn một chút\nHình như em cũng muốn thế thôi",
+          "nguon": "chatgpt",
+          "luc": "2026-11-25T16:58:09.304Z",
+          "ghiChu": "Hook nháp cho Đi Thêm Một Đoạn."
         }
       ],
-      "loiChon": 2,
+      "loiChon": 3,
       "styleVersions": [
         {
           "v": 1,
@@ -651,8 +664,8 @@
           "ghiChu": "Tí soạn Style nháp V1."
         }
       ],
-      "styleChon": 1,
-      "promptSuno": "Vietnamese acoustic soul, 78 BPM. Warm male lead with conversational phrasing, fingerpicked guitar, mellow Wurlitzer, upright bass and light brushes. Let the title sound like a genuine greeting. Add soft friend-like backing responses on the reprise. Leave a small breath before the final line.",
+      "styleChon": null,
+      "promptSuno": "",
       "nhacVersions": [],
       "nhacChon": null,
       "diem": {
@@ -668,7 +681,7 @@
       "tag": "",
       "linkYoutube": "",
       "ngayPhatHanh": "",
-      "ghiChu": "Bài số 04 · Acoustic soul. Gọi lại sau nhiều năm và vẫn dùng biệt danh cũ.",
+      "ghiChu": "Bài số 04 · Acoustic pop nhịp vừa, nam solo. Buổi hẹn đầu, tới đầu ngõ nhà cô, cả hai vẫn muốn đi thêm một đoạn. Mới có hook nháp.",
       "promptChatGPT": ""
     },
     {
