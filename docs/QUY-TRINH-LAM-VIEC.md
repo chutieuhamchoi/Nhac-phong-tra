@@ -220,9 +220,15 @@ No text, digits, logos, watermarks, borders or storyboard panels.
 
 Tin nhắn cần chuyển cho bên kia thì đặt **trong một khung duy nhất** để ông chủ copy một lần.
 
-## 8. Việc còn tồn (22/11/2026)
+## 8. Việc còn tồn (cập nhật 25/11/2026)
 
-- NPT-0001: bổ sung link bản Suno đã chọn vào kho.
-- "Cánh Diều Tuổi Thơ": kiểm tra nhãn AI và gói Suno, thêm thẻ, cho vào danh sách phát Tuổi Thơ.
+- Danh sách phát "Tình Yêu – Nhạc Phòng Trà" (3 bài): chuyển sang xếp theo ngày đăng. Tèo chưa mở được trang cài đặt danh sách phát trong trình duyệt tích hợp.
+- NPT-0001: bổ sung link bản Suno đã chọn (`nhacChon`) vào kho.
+- NPT-0003, NPT-0004: xác nhận Style và thông số Suno thực tế đã dùng (`caiDat` hiện là bộ đề xuất lúc ghi kho).
+- "Cánh Diều Tuổi Thơ": kiểm tra nhãn AI và gói Suno, bật bình luận, thêm thẻ, cho vào danh sách phát Tuổi Thơ.
+- Shorts và TikTok: kho bài đã có câu hook từng bài; chưa ghi nhận clip dọc nào được đăng (kế hoạch 2–3 clip/tuần).
+- Tab Kế hoạch: ô đếm "việc trong lịch đã xong" chưa phản ánh tiến độ.
+- Hiệu ứng mưa: cần video lớp phủ mưa có giấy phép sử dụng.
+- Dọn file thử trên Drive: `NPT-0001/kiem-thu-anh-that.png`, `kiem-thu-claude.mp4`, `NPT-0001-anh-nen.zip`, `video/kiem-thu-37mb.mp4`.
 - ~~Thống nhất mẫu tiêu đề video.~~ Đã chốt 22/11/2026: phương án A (mục 5), áp dụng từ bài tiếp theo.
-- Ý tưởng: cắt clip dọc 30–60 giây từ đoạn hook để đăng Shorts và TikTok.
+- ~~NPT-0003 vào danh sách phát Tình Yêu.~~ Tèo bổ sung 23/11/2026.
