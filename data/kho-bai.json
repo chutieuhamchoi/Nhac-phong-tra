@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "capNhat": "2026-11-25T16:58:09.304Z",
+  "capNhat": "2026-11-25T17:21:05.000Z",
   "nextId": 33,
   "bai": [
     {
@@ -760,8 +760,8 @@
       "series": "sang-tao",
       "tuan": 2,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-25T16:37:43.655Z",
-      "trangThai": 3,
+      "ngayCapNhat": "2026-11-25T17:21:05.000Z",
+      "trangThai": 4,
       "lichSu": [
         {
           "tu": null,
@@ -780,6 +780,12 @@
           "den": 3,
           "luc": "2026-11-25T16:37:43.655Z",
           "ghiChu": "Nhận và lưu MP3 v1 để căn dựng."
+        },
+        {
+          "tu": 3,
+          "den": 4,
+          "luc": "2026-11-25T17:21:05.000Z",
+          "ghiChu": "Tèo khóa mốc 13 đoạn theo lời hát thật của Suno V1 (226,824 s), tạo anh/NPT-0008/storyboard.json, dựng video/preview.mp4 1080p trên Drive. Đoạn 08B (2:16–2:40,5) tạm dùng canh-01 cắt khung, cần ảnh bổ sung. Chờ Ông chủ duyệt."
         }
       ],
       "loiVersions": [

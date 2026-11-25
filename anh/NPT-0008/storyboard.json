@@ -1,0 +1,168 @@
+{
+  "maBai": "NPT-0008",
+  "ten": "Em Thuộc Về Biển",
+  "mp3": "nhac/nhac-chinh.mp3",
+  "thoiLuongMp3": 226.824,
+  "sunoId": "6bbd0746-6789-4b31-b1eb-7381e68250d6",
+  "ghiChu": "Mốc chốt bởi Tèo 26/11/2026 theo giọng hát thật (tách giọng UVR-MDX-NET + nhận dạng tiếng Việt sherpa-onnx zipformer, sai số khoảng ±0,5 s). batDau là lúc bắt đầu cross dissolve 2 s. Giờ trong ngoặc ở doanLoi = lúc câu hát/chữ bắt đầu. 11 ảnh, 13 đoạn: 03A/03B dùng chung canh-03 (03B và 04 cùng khung cắt để nối động tác tay); 08B tạm dùng canh-01 cắt khung, cần ảnh bổ sung.",
+  "canh": [
+    {
+      "so": 1,
+      "ma": "01",
+      "batDau": 0.0,
+      "ketThuc": 23.4,
+      "doanLoi": "Intro guitar và piano (0–25,0)",
+      "anh": "canh-01.png",
+      "hieuUng": "slow zoom in",
+      "lopPhu": "film grain",
+      "chuyenCanh": "cross dissolve"
+    },
+    {
+      "so": 2,
+      "ma": "02",
+      "batDau": 23.4,
+      "ketThuc": 36.3,
+      "doanLoi": "Verse 1: «Hồi mới yêu, mỗi lần ra biển» (25,0) · «Em mải nhìn con sóng ngoài xa» (31,6)",
+      "anh": "canh-02.png",
+      "hieuUng": "slow pan right",
+      "lopPhu": "film grain",
+      "chuyenCanh": "cross dissolve"
+    },
+    {
+      "so": 3,
+      "ma": "03A",
+      "batDau": 36.3,
+      "ketThuc": 49.0,
+      "doanLoi": "«Anh kéo nhẹ tay em, cười bảo» (37,8) · «Nhìn anh này, biển có chạy đâu» (43,9)",
+      "anh": "canh-03.png",
+      "hieuUng": "slow zoom in",
+      "lopPhu": "film grain",
+      "chuyenCanh": "cross dissolve"
+    },
+    {
+      "so": 4,
+      "ma": "03B",
+      "batDau": 49.0,
+      "ketThuc": 64.3,
+      "doanLoi": "Chorus: «Em thuộc về biển» (50,5) · «Còn anh thuộc về ai?» (56,3) · «Chiều nay em khẽ…» (62,3)",
+      "anh": "canh-03.png",
+      "hieuUng": "static",
+      "lopPhu": "film grain",
+      "chuyenCanh": "cross dissolve",
+      "khung": [
+        0.08,
+        0.08,
+        0.85
+      ]
+    },
+    {
+      "so": 5,
+      "ma": "04",
+      "batDau": 64.3,
+      "ketThuc": 75.0,
+      "doanLoi": "«…buông tay anh» (buông 65,5) · «Sao anh chẳng níu lại?» (68,5)",
+      "anh": "canh-04.png",
+      "hieuUng": "static",
+      "lopPhu": "film grain",
+      "chuyenCanh": "cross dissolve",
+      "khung": [
+        0.08,
+        0.08,
+        0.85
+      ]
+    },
+    {
+      "so": 6,
+      "ma": "05",
+      "batDau": 75.0,
+      "ketThuc": 87.6,
+      "doanLoi": "Verse 2: «Anh bảo em về trước» (76,4) · «Em đi xa dần tiếng sóng» (81,9)",
+      "anh": "canh-05.png",
+      "hieuUng": "slow zoom out",
+      "lopPhu": "film grain",
+      "chuyenCanh": "cross dissolve"
+    },
+    {
+      "so": 7,
+      "ma": "06",
+      "batDau": 87.6,
+      "ketThuc": 99.5,
+      "doanLoi": "«Em ngoái lại một lần cuối» (ngoái 88,8) · «Chẳng thấy bóng anh đâu nữa» (93,0)",
+      "anh": "canh-06.png",
+      "hieuUng": "static",
+      "lopPhu": "film grain",
+      "chuyenCanh": "cross dissolve"
+    },
+    {
+      "so": 8,
+      "ma": "07",
+      "batDau": 99.5,
+      "ketThuc": 112.2,
+      "doanLoi": "Bridge: «Ngày trước sóng ồn đến thế» (101,0) · «Anh gọi khẽ, em vẫn nghe» (106,9)",
+      "anh": "canh-07.png",
+      "hieuUng": "slow zoom in",
+      "lopPhu": "film grain",
+      "chuyenCanh": "cross dissolve"
+    },
+    {
+      "so": 9,
+      "ma": "08",
+      "batDau": 112.2,
+      "ketThuc": 136.0,
+      "doanLoi": "«Chiều nay em nghe rõ sóng» (113,5) · «Mà chẳng nghe anh gọi em» (117,4–125,8) · gian tấu",
+      "anh": "canh-08.png",
+      "hieuUng": "static",
+      "lopPhu": "film grain",
+      "chuyenCanh": "cross dissolve"
+    },
+    {
+      "so": 10,
+      "ma": "08B",
+      "batDau": 136.0,
+      "ketThuc": 160.5,
+      "doanLoi": "Gian tấu (đến 149,6) · Final Chorus: «Em thuộc về biển» (149,6) · «Còn anh thuộc về ai?» (155,3) — TẠM dùng canh-01 cắt khung, cần ảnh riêng",
+      "anh": "canh-01.png",
+      "hieuUng": "slow pan right",
+      "lopPhu": "film grain",
+      "chuyenCanh": "cross dissolve",
+      "khung": [
+        0.4,
+        0.25,
+        0.6
+      ]
+    },
+    {
+      "so": 11,
+      "ma": "09",
+      "batDau": 160.5,
+      "ketThuc": 180.0,
+      "doanLoi": "«Em đi xa dần tiếng sóng» (162,0) · «Vẫn mong anh gọi lại» (167,4) · «Em thuộc về biển» (172,5)",
+      "anh": "canh-09.png",
+      "hieuUng": "slow zoom in",
+      "lopPhu": "film grain",
+      "chuyenCanh": "cross dissolve"
+    },
+    {
+      "so": 12,
+      "ma": "10",
+      "batDau": 180.0,
+      "ketThuc": 202.0,
+      "doanLoi": "«Còn anh thuộc về nỗi nhớ» (180,1; nỗi nhớ 182,6) · «Em đã đi xa đến thế» (186,3) · «Mà lòng còn ở bên anh» (192,2)",
+      "anh": "canh-10.png",
+      "hieuUng": "slow pan left",
+      "lopPhu": "film grain",
+      "chuyenCanh": "cross dissolve"
+    },
+    {
+      "so": 13,
+      "ma": "11",
+      "batDau": 202.0,
+      "ketThuc": 226.824,
+      "doanLoi": "Outro: «Em thuộc về biển…» (201,2) · «Còn anh thuộc về nỗi nhớ» (208,8–214,4) · đuôi piano đến 226,0, mờ đen 222,8–226,8",
+      "anh": "canh-11.png",
+      "hieuUng": "static",
+      "lopPhu": "film grain",
+      "chuyenCanh": "fade black"
+    }
+  ]
+}
