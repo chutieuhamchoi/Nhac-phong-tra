@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "capNhat": "2026-11-25T16:23:39.417Z",
+  "capNhat": "2026-11-25T16:37:43.655Z",
   "nextId": 33,
   "bai": [
     {
@@ -747,8 +747,8 @@
       "series": "sang-tao",
       "tuan": 2,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-25T16:23:39.417Z",
-      "trangThai": 1,
+      "ngayCapNhat": "2026-11-25T16:37:43.655Z",
+      "trangThai": 3,
       "lichSu": [
         {
           "tu": null,
@@ -761,6 +761,12 @@
           "den": 1,
           "luc": "2026-11-22T11:55:00.544Z",
           "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
+        },
+        {
+          "tu": 1,
+          "den": 3,
+          "luc": "2026-11-25T16:37:43.655Z",
+          "ghiChu": "Nhận và lưu MP3 v1 để căn dựng."
         }
       ],
       "loiVersions": [
@@ -826,8 +832,17 @@
       ],
       "styleChon": 3,
       "promptSuno": "Vietnamese acoustic pop ballad, 72 BPM, 6/8, solo female mezzo with clear Vietnamese tones. Begin with two bars of fingerpicked nylon guitar and felt piano. Verse 1 is low and conversational, with space after the quoted line. In the chorus, sing “Em thuộc về biển” gently, take a breath, then climb and sustain “ai” in “Còn anh thuộc về ai?”. Let “Sao anh chẳng níu lại?” fall in pitch over a held cello note. Pull back to guitar for Verse 2. In the bridge, leave piano and voice, then pause for one beat after “Mà chẳng nghe anh gọi em”. Return with the same hook, fuller strings and light brushed drums; make this the vocal peak. Let the melody descend on “Còn anh thuộc về nỗi nhớ”. Strip the Outro to voice and piano, holding “nhớ” softly. Follow the lyrics as written. No heavy bass, drum loops, key change, or vocal runs.",
-      "nhacVersions": [],
-      "nhacChon": null,
+      "nhacVersions": [
+        {
+          "v": 1,
+          "link": "https://suno.com/song/6bbd0746-6789-4b31-b1eb-7381e68250d6",
+          "ghiChu": "MP3 Ông chủ gửi, dài 226,824 giây. Lời V5 đối chiếu từ metadata MP3. Style và thông số thực tế chưa xác nhận. Drive: https://drive.google.com/file/d/1s_JCGWdVERCVfqHMxw2co7YRN3bj-at7/view?usp=drivesdk",
+          "luc": "2026-11-25T16:37:43.655Z",
+          "loiV": 5,
+          "styleV": null
+        }
+      ],
+      "nhacChon": 1,
       "diem": {
         "cauChuyen": null,
         "diemCham": null,
