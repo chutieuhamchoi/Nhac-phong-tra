@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "capNhat": "2026-11-25T15:54:11.949Z",
+  "capNhat": "2026-11-25T15:57:21.044Z",
   "nextId": 33,
   "bai": [
     {
@@ -747,7 +747,7 @@
       "series": "sang-tao",
       "tuan": 2,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-25T15:54:11.949Z",
+      "ngayCapNhat": "2026-11-25T15:57:21.044Z",
       "trangThai": 1,
       "lichSu": [
         {
@@ -821,7 +821,17 @@
       "linkYoutube": "",
       "ngayPhatHanh": "",
       "ghiChu": "Bài số 06 · Indie folk. Cô gái làng chài tự chọn nghề đi biển.",
-      "promptChatGPT": ""
+      "promptChatGPT": "",
+      "caiDatSuno": {
+        "model": "v6",
+        "giong": "nu",
+        "thoiLuong": "auto",
+        "maxMode": false,
+        "weirdness": 40,
+        "styleInfluence": 75,
+        "variety": "Normal",
+        "personalize": false
+      }
     },
     {
       "id": "NPT-0009",
