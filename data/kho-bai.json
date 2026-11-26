@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "capNhat": "2026-11-25T17:21:05.000Z",
+  "capNhat": "2026-11-26T04:16:27.000Z",
   "nextId": 33,
   "bai": [
     {
@@ -757,10 +757,10 @@
       "id": "NPT-0008",
       "loai": "bai",
       "ten": "Em Thuộc Về Biển",
-      "series": "sang-tao",
+      "series": "tinh-yeu",
       "tuan": 2,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-25T17:21:05.000Z",
+      "ngayCapNhat": "2026-11-26T04:16:27.000Z",
       "trangThai": 4,
       "lichSu": [
         {
@@ -786,6 +786,18 @@
           "den": 4,
           "luc": "2026-11-25T17:21:05.000Z",
           "ghiChu": "Tèo khóa mốc 13 đoạn theo lời hát thật của Suno V1 (226,824 s), tạo anh/NPT-0008/storyboard.json, dựng video/preview.mp4 1080p trên Drive (https://drive.google.com/file/d/1aEVbyG5uLxbKk3TUw5Q2yC_1bA-iE9ui/view). Đoạn 08B (2:16–2:40,5) tạm dùng canh-01 cắt khung, cần ảnh bổ sung. Chờ Ông chủ duyệt."
+        },
+        {
+          "tu": 4,
+          "den": 5,
+          "luc": "2026-11-26T04:16:27.000Z",
+          "ghiChu": "Ông chủ duyệt preview 26/11/2026 («ổn rồi»). Tèo ghi video/final.mp4 lên Drive, làm thumbnail 1280×720 (ảnh cảnh 08), soạn tiêu đề, mô tả, thẻ."
+        },
+        {
+          "tu": 5,
+          "den": 6,
+          "luc": "2026-11-26T04:16:27.000Z",
+          "ghiChu": "Tèo đăng công khai 26/11/2026 qua YouTube Studio (https://www.youtube.com/watch?v=cTFc99A1xIE), Ông chủ chọn file. Đã xác minh: phát được, 1080p, 3:47, danh mục Âm nhạc, nhãn AI = Có, không dành cho trẻ em, không quảng cáo trả tiền, ngôn ngữ Tiếng Việt. Danh sách phát: Tình Yêu – Nhạc Phòng Trà. Lúc đầu Tèo đăng nhầm thể loại Indie Folk và danh sách Sáng Tạo (theo ghi chú cũ trong kho), đã sửa tiêu đề, hashtag, thẻ, danh sách phát ngay sau khi đăng."
         }
       ],
       "loiVersions": [
@@ -868,14 +880,14 @@
         "giaiDieu": null,
         "banSac": null
       },
-      "thumbnail": "",
-      "tieude": "",
-      "mota": "",
-      "shorts": "",
-      "tag": "",
-      "linkYoutube": "",
-      "ngayPhatHanh": "",
-      "ghiChu": "Bài số 06 · Indie folk. Cô gái làng chài tự chọn nghề đi biển.",
+      "thumbnail": "Nhac_Phong_Tra/NPT-0008/anh/thumbnail.png",
+      "tieude": "Em Thuộc Về Biển | Acoustic Pop Ballad – Nhạc Phòng Trà",
+      "mota": "Một buổi chiều trên bãi biển quen, cô khẽ buông tay người mình thương để đi theo con đường đã chọn: biển. Anh bảo cô về trước, không một lời níu giữ. Bước xa dần tiếng sóng, cô ngoái lại tìm bóng anh, vẫn mong một tiếng gọi. Em thuộc về biển, còn anh thuộc về nỗi nhớ.\n\nNhạc Phòng Trà – Mỗi bài hát, một câu chuyện đáng nghe.\n\nLời do kênh sáng tác. Nhạc và hình ảnh được tạo với sự hỗ trợ của AI.\n\n#EmThuocVeBien #NhacPhongTra #AcousticBallad #NhacViet",
+      "shorts": "Em thuộc về biển\nCòn anh thuộc về ai?\nChiều nay em khẽ buông tay anh\nSao anh chẳng níu lại?",
+      "tag": "Em Thuộc Về Biển, Em Thuoc Ve Bien, Nhạc Phòng Trà, nhạc phòng trà cà phê chill, nhạc Việt, nhạc tâm trạng, chia tay nhẹ nhàng, nhạc buồn, nhạc nữ, acoustic pop ballad Việt, acoustic ballad, nhạc biển, nhạc tình yêu",
+      "linkYoutube": "https://www.youtube.com/watch?v=cTFc99A1xIE",
+      "ngayPhatHanh": "2026-11-26",
+      "ghiChu": "Bài số 06 · Acoustic pop ballad (Style V3, nữ solo, 6/8, 72 BPM). Cô gái buông tay người yêu bên biển, vẫn mong anh gọi lại.",
       "promptChatGPT": "",
       "caiDatSuno": {
         "model": "v6",
