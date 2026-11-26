@@ -1,0 +1,74 @@
+{
+ "ma": "NPT-0002-S1",
+ "ten": "Yêu Nhau Lại Từ Đầu",
+ "batDau": 167.8,
+ "ketThuc": 199.5,
+ "canh": [
+  {
+   "anh": "canh-14.png",
+   "tu": 167.8,
+   "x": [
+    0.3,
+    0.62
+   ]
+  },
+  {
+   "anh": "canh-16.png",
+   "tu": 176.0,
+   "x": [
+    0.35,
+    0.55
+   ]
+  },
+  {
+   "anh": "canh-15.png",
+   "tu": 190.5,
+   "x": [
+    0.5,
+    0.6
+   ]
+  }
+ ],
+ "loi": [
+  {
+   "tu": 169.1,
+   "den": 172.39999999999998,
+   "cau": "Hay là mình yêu nhau lại từ đầu"
+  },
+  {
+   "tu": 172.7,
+   "den": 176.39999999999998,
+   "cau": "Không phải vì tình yêu xưa đã hết"
+  },
+  {
+   "tu": 176.7,
+   "den": 179.0,
+   "cau": "Mà vì sau bao nhiêu năm tháng"
+  },
+  {
+   "tu": 179.3,
+   "den": 184.0,
+   "cau": "Anh vẫn muốn em rung động vì anh"
+  },
+  {
+   "tu": 184.3,
+   "den": 188.0,
+   "cau": "Hay là mình yêu nhau lại từ đầu"
+  },
+  {
+   "tu": 188.3,
+   "den": 191.79999999999998,
+   "cau": "Để mỗi ngày đều là ngày đáng nhớ"
+  },
+  {
+   "tu": 192.1,
+   "den": 194.29999999999998,
+   "cau": "Dẫu mai này mình già đi nữa"
+  },
+  {
+   "tu": 194.6,
+   "den": 199.0,
+   "cau": "Anh vẫn muốn hẹn hò cùng em"
+  }
+ ]
+}

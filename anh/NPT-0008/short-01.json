@@ -1,0 +1,59 @@
+{
+ "ma": "NPT-0008-S1",
+ "ten": "Em Thuộc Về Biển",
+ "batDau": 43.0,
+ "ketThuc": 75.5,
+ "canh": [
+  {
+   "anh": "canh-03.png",
+   "tu": 43.0,
+   "x": [
+    0.2,
+    0.68
+   ]
+  },
+  {
+   "anh": "canh-04.png",
+   "tu": 64.3,
+   "x": [
+    0.62,
+    0.55
+   ]
+  },
+  {
+   "anh": "canh-08.png",
+   "tu": 68.2,
+   "x": [
+    0.6,
+    0.64
+   ]
+  }
+ ],
+ "loi": [
+  {
+   "tu": 43.9,
+   "den": 50.2,
+   "cau": "“Nhìn anh này, biển có chạy đâu”"
+  },
+  {
+   "tu": 50.5,
+   "den": 56.0,
+   "cau": "Em thuộc về biển"
+  },
+  {
+   "tu": 56.3,
+   "den": 62.0,
+   "cau": "Còn anh thuộc về ai?"
+  },
+  {
+   "tu": 62.3,
+   "den": 68.2,
+   "cau": "Chiều nay em khẽ buông tay anh"
+  },
+  {
+   "tu": 68.5,
+   "den": 75.0,
+   "cau": "Sao anh chẳng níu lại?"
+  }
+ ]
+}

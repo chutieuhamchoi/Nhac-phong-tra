@@ -1,0 +1,66 @@
+{
+ "ma": "NPT-0003-S1",
+ "ten": "Lúc Nào Anh Cũng Bận",
+ "batDau": 144.0,
+ "ketThuc": 175.0,
+ "canh": [
+  {
+   "anh": "canh-10.png",
+   "tu": 144.0,
+   "x": [
+    0.7,
+    0.62
+   ]
+  },
+  {
+   "anh": "canh-11.png",
+   "tu": 159.0,
+   "x": [
+    0.72,
+    0.3
+   ]
+  }
+ ],
+ "loi": [
+  {
+   "tu": 145.3,
+   "den": 148.5,
+   "cau": "Lúc nào anh cũng bận"
+  },
+  {
+   "tu": 148.8,
+   "den": 152.7,
+   "cau": "Lúc nào em cũng chờ"
+  },
+  {
+   "tu": 153.0,
+   "den": 155.79999999999998,
+   "cau": "Em muốn có anh bên em"
+  },
+  {
+   "tu": 156.1,
+   "den": 159.29999999999998,
+   "cau": "Trước khi ngày đã cạn"
+  },
+  {
+   "tu": 159.6,
+   "den": 162.6,
+   "cau": "Mình còn thương nhau mà anh"
+  },
+  {
+   "tu": 162.9,
+   "den": 166.39999999999998,
+   "cau": "Dành cho nhau một tối nhé"
+  },
+  {
+   "tu": 166.7,
+   "den": 169.89999999999998,
+   "cau": "Để em hỏi anh có mệt không"
+  },
+  {
+   "tu": 170.2,
+   "den": 174.5,
+   "cau": "Để anh hỏi em có buồn không"
+  }
+ ]
+}

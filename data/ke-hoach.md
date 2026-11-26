@@ -85,6 +85,22 @@ Sản xuất **30 bài mới, 2 bài mỗi tuần**. NPT-0001 và NPT-0002 đã 
 
 Không kéo dài playlist bằng bài chưa đạt chất lượng. Shorts chọn từ những đoạn có điểm nhớ, không ép đủ số lượng.
 
+### Hạng mục Shorts (Tèo toàn quyền, từ 26/11/2026)
+
+- **Người làm:** Tèo chọn đoạn, dựng, đăng và theo dõi. Ông chủ chỉ chọn file khi tải lên. Quy trình chi tiết: `docs/QUY-TRINH-LAM-VIEC.md`, bước 9.
+- **Định dạng:** khung dọc 1080×1920, 30–45 giây, đoạn điệp khúc hoặc cao trào, có phụ đề lời và tên bài, cắt từ ảnh cảnh của MV.
+- **Nhịp đăng:** 2–3 clip/tuần, rải giờ tối. Mỗi bài mới đăng có ít nhất 1 Short trong tuần phát hành, gắn video liên quan là MV đầy đủ.
+- **Quản lý:** từng clip ghi trong `shortVideos` của bài (thư viện Kho bài, tab YouTube). Tab Kế hoạch đếm số Shorts đã đăng mỗi tuần.
+- **Đo hiệu quả (sau 7 ngày):** lượt xem, tỷ lệ xem hết, người đăng ký mới từ Short, lượt chuyển sang MV.
+
+| Mã | Bài | Đoạn | Trạng thái |
+|---|---|---|---|
+| NPT-0001-S1 | Có Những Ngày Chỉ Muốn Về Nhà | Điệp khúc «Chỉ muốn về nhà… là hết những ngày mưa» (1:37,5–2:10) | đã dựng 26/11/2026 |
+| NPT-0002-S1 | Yêu Nhau Lại Từ Đầu | Điệp khúc cuối «Hay là mình yêu nhau lại từ đầu… hẹn hò cùng em» (2:47,8–3:19,5) | đã dựng 26/11/2026 |
+| NPT-0003-S1 | Lúc Nào Anh Cũng Bận | Điệp khúc cuối «Lúc nào anh cũng bận… có buồn không» (2:24–2:55) | đã dựng 26/11/2026 |
+| NPT-0004-S1 | Em Đã Thôi Kể Về Anh | Điệp khúc «Em đã thôi kể về anh… muốn kể» (1:14,5–1:45,5) | đã dựng 26/11/2026 |
+| NPT-0008-S1 | Em Thuộc Về Biển | «Nhìn anh này…» → điệp khúc «…Sao anh chẳng níu lại?» (0:43–1:15,5) | đã dựng 26/11/2026 |
+
 ## 6. Mục tiêu tạm đặt
 
 | Mốc | Người đăng ký | Giờ xem tích lũy | Bài đơn đã đăng |

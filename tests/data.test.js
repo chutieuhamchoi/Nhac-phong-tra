@@ -385,3 +385,19 @@ test('Thông số Suno đề xuất thay bộ cũ đã đồng bộ trong trình
   assert.deepEqual(b.xungDotGitHub, { mota: {} });
   assert.equal(N.dongBoTuGitHub(kho, src).doi, false);
 });
+
+test('Shorts: chuẩn hóa shortVideos và đồng bộ từ GitHub', () => {
+  const { kho } = N.chuanHoaKho({ schema: 2, bai: [{ id: 'NPT-0009', ten: 'A', loiVersions: [], shortVideos: [{ ma: 'NPT-0009-S1', batDau: 10, ketThuc: 40, ngayDang: '2026-11-26', linkYoutube: 'https://youtube.com/shorts/x' }, null] }] });
+  const b = kho.bai[0];
+  assert.equal(b.shortVideos.length, 1);
+  assert.equal(b.shortVideos[0].batDau, 10);
+  assert.equal(N.shortDaDang(b.shortVideos[0]), true);
+  assert.equal(N.shortDaDang({ ma: 'x', ngayDang: '' }), false);
+  const moi = N.taoBai(N.khoRong(), { ten: 'B' });
+  assert.deepEqual(moi.shortVideos, []);
+  // GitHub thêm Short → trình duyệt nhận
+  const local = N.chuanHoaKho({ schema: 2, bai: [{ id: 'NPT-0009', ten: 'A', loiVersions: [], ngayCapNhat: '2026-11-20T00:00:00Z' }] }).kho;
+  N.dongBoTuGitHub(local, { schema: 2, bai: [{ id: 'NPT-0009', ten: 'A', loiVersions: [], ngayCapNhat: '2026-11-20T00:00:00Z' }] });
+  N.dongBoTuGitHub(local, { schema: 2, bai: [{ id: 'NPT-0009', ten: 'A', loiVersions: [], ngayCapNhat: '2026-11-26T00:00:00Z', shortVideos: [{ ma: 'NPT-0009-S1', batDau: 1, ketThuc: 30 }] }] });
+  assert.equal(local.bai[0].shortVideos.length, 1);
+});

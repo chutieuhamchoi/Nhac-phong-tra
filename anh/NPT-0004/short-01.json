@@ -1,0 +1,66 @@
+{
+ "ma": "NPT-0004-S1",
+ "ten": "Em Đã Thôi Kể Về Anh",
+ "batDau": 74.5,
+ "ketThuc": 105.5,
+ "canh": [
+  {
+   "anh": "canh-05.png",
+   "tu": 74.5,
+   "x": [
+    0.22,
+    0.32
+   ]
+  },
+  {
+   "anh": "canh-06.png",
+   "tu": 89.0,
+   "x": [
+    0.3,
+    0.68
+   ]
+  }
+ ],
+ "loi": [
+  {
+   "tu": 76.0,
+   "den": 79.2,
+   "cau": "Em đã thôi kể về anh"
+  },
+  {
+   "tu": 79.5,
+   "den": 82.9,
+   "cau": "Từ bao giờ em chẳng nhớ"
+  },
+  {
+   "tu": 83.2,
+   "den": 85.9,
+   "cau": "Có hôm nhắc chuyện ngày xưa"
+  },
+  {
+   "tu": 86.2,
+   "den": 90.3,
+   "cau": "Em cười như vừa nghe kể"
+  },
+  {
+   "tu": 90.6,
+   "den": 93.9,
+   "cau": "Em đã thôi kể về anh"
+  },
+  {
+   "tu": 94.2,
+   "den": 97.60000000000001,
+   "cau": "Mà còn bao điều để nói"
+  },
+  {
+   "tu": 97.9,
+   "den": 100.9,
+   "cau": "Dạo này em thấy mình vui"
+  },
+  {
+   "tu": 101.2,
+   "den": 105.0,
+   "cau": "Vậy thôi mà em muốn kể"
+  }
+ ]
+}

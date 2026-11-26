@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "capNhat": "2026-11-26T04:16:27.000Z",
+  "capNhat": "2026-11-26T04:57:11.000Z",
   "nextId": 33,
   "bai": [
     {
@@ -10,7 +10,7 @@
       "series": "tuoi-tho",
       "tuan": 1,
       "ngayTao": "2026-11-18T15:06:07.306Z",
-      "ngayCapNhat": "2026-11-22T05:50:00.000Z",
+      "ngayCapNhat": "2026-11-26T04:57:11.000Z",
       "trangThai": 6,
       "lichSu": [
         {
@@ -76,7 +76,22 @@
           "ghiChu": "Style của bản đã phát hành"
         }
       ],
-      "styleChon": 1
+      "styleChon": 1,
+      "shortVideos": [
+        {
+          "ma": "NPT-0001-S1",
+          "batDau": 97.5,
+          "ketThuc": 130.0,
+          "doan": "Chỉ muốn về nhà... ăn một bữa cơm thôi / Nghe mẹ hỏi: “Hôm nay con có mệt?” / Nghe tiếng cha ho khẽ ngoài hiên vắng / Mà thấy lòng... bình yên đến lạ thường / Chỉ muốn về nhà... chẳng cần phải mạnh mẽ / Được làm đứa con bé nhỏ ngày xưa / Dẫu ngoài kia bao nhiêu điều giông bão / Về đến nhà... là hết những ngày mưa",
+          "file": "Nhac_Phong_Tra/NPT-0001/video/short-01.mp4",
+          "linkDrive": "",
+          "tieude": "Chỉ muốn về nhà… ăn một bữa cơm thôi | Có Những Ngày Chỉ Muốn Về Nhà #Shorts",
+          "linkYoutube": "",
+          "ngayDang": "",
+          "ghiChu": "Tèo dựng 26/11/2026 bằng cong-cu/dung_short.py từ anh/NPT-0001/short-01.json · 1080×1920, 32.5 s, phụ đề lời.",
+          "luc": "2026-11-26T04:57:11.000Z"
+        }
+      ]
     },
     {
       "id": "NPT-0002",
@@ -85,7 +100,7 @@
       "series": "tinh-yeu",
       "tuan": 2,
       "ngayTao": "2026-11-19T16:58:35.936Z",
-      "ngayCapNhat": "2026-11-22T05:50:00.000Z",
+      "ngayCapNhat": "2026-11-26T04:57:11.000Z",
       "trangThai": 6,
       "lichSu": [
         {
@@ -228,7 +243,22 @@
           "ghiChu": "Style V4 acoustic pop rock, Ông chủ duyệt; dùng cho bản nhạc v1 đã phát hành. Bản V3 không được lưu trong kho."
         }
       ],
-      "styleChon": 4
+      "styleChon": 4,
+      "shortVideos": [
+        {
+          "ma": "NPT-0002-S1",
+          "batDau": 167.8,
+          "ketThuc": 199.5,
+          "doan": "Hay là mình yêu nhau lại từ đầu / Không phải vì tình yêu xưa đã hết / Mà vì sau bao nhiêu năm tháng / Anh vẫn muốn em rung động vì anh / Hay là mình yêu nhau lại từ đầu / Để mỗi ngày đều là ngày đáng nhớ / Dẫu mai này mình già đi nữa / Anh vẫn muốn hẹn hò cùng em",
+          "file": "Nhac_Phong_Tra/NPT-0002/video/short-01.mp4",
+          "linkDrive": "",
+          "tieude": "Dẫu mai này mình già đi nữa | Yêu Nhau Lại Từ Đầu #Shorts",
+          "linkYoutube": "",
+          "ngayDang": "",
+          "ghiChu": "Tèo dựng 26/11/2026 bằng cong-cu/dung_short.py từ anh/NPT-0002/short-01.json · 1080×1920, 31.7 s, phụ đề lời.",
+          "luc": "2026-11-26T04:57:11.000Z"
+        }
+      ]
     },
     {
       "id": "NPT-0003",
@@ -237,7 +267,7 @@
       "series": "tinh-yeu",
       "tuan": 1,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-23T09:55:00.000Z",
+      "ngayCapNhat": "2026-11-26T04:57:11.000Z",
       "trangThai": 6,
       "lichSu": [
         {
@@ -389,7 +419,22 @@
         "styleInfluence": 80,
         "variety": "Normal",
         "personalize": false
-      }
+      },
+      "shortVideos": [
+        {
+          "ma": "NPT-0003-S1",
+          "batDau": 144.0,
+          "ketThuc": 175.0,
+          "doan": "Lúc nào anh cũng bận / Lúc nào em cũng chờ / Em muốn có anh bên em / Trước khi ngày đã cạn / Mình còn thương nhau mà anh / Dành cho nhau một tối nhé / Để em hỏi anh có mệt không / Để anh hỏi em có buồn không",
+          "file": "Nhac_Phong_Tra/NPT-0003/video/short-01.mp4",
+          "linkDrive": "",
+          "tieude": "Để em hỏi anh có mệt không | Lúc Nào Anh Cũng Bận #Shorts",
+          "linkYoutube": "",
+          "ngayDang": "",
+          "ghiChu": "Tèo dựng 26/11/2026 bằng cong-cu/dung_short.py từ anh/NPT-0003/short-01.json · 1080×1920, 31.0 s, phụ đề lời.",
+          "luc": "2026-11-26T04:57:11.000Z"
+        }
+      ]
     },
     {
       "id": "NPT-0004",
@@ -398,7 +443,7 @@
       "series": "tinh-yeu",
       "tuan": 1,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-23T09:31:05.000Z",
+      "ngayCapNhat": "2026-11-26T04:57:11.000Z",
       "trangThai": 6,
       "lichSu": [
         {
@@ -531,7 +576,22 @@
         "styleInfluence": 80,
         "variety": "Normal",
         "personalize": false
-      }
+      },
+      "shortVideos": [
+        {
+          "ma": "NPT-0004-S1",
+          "batDau": 74.5,
+          "ketThuc": 105.5,
+          "doan": "Em đã thôi kể về anh / Từ bao giờ em chẳng nhớ / Có hôm nhắc chuyện ngày xưa / Em cười như vừa nghe kể / Em đã thôi kể về anh / Mà còn bao điều để nói / Dạo này em thấy mình vui / Vậy thôi mà em muốn kể",
+          "file": "Nhac_Phong_Tra/NPT-0004/video/short-01.mp4",
+          "linkDrive": "",
+          "tieude": "Em cười như vừa nghe kể | Em Đã Thôi Kể Về Anh #Shorts",
+          "linkYoutube": "",
+          "ngayDang": "",
+          "ghiChu": "Tèo dựng 26/11/2026 bằng cong-cu/dung_short.py từ anh/NPT-0004/short-01.json · 1080×1920, 31.0 s, phụ đề lời.",
+          "luc": "2026-11-26T04:57:11.000Z"
+        }
+      ]
     },
     {
       "id": "NPT-0005",
@@ -760,7 +820,7 @@
       "series": "tinh-yeu",
       "tuan": 2,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-26T04:16:27.000Z",
+      "ngayCapNhat": "2026-11-26T04:57:11.000Z",
       "trangThai": 4,
       "lichSu": [
         {
@@ -898,7 +958,22 @@
         "styleInfluence": 80,
         "variety": "Normal",
         "personalize": false
-      }
+      },
+      "shortVideos": [
+        {
+          "ma": "NPT-0008-S1",
+          "batDau": 43.0,
+          "ketThuc": 75.5,
+          "doan": "“Nhìn anh này, biển có chạy đâu” / Em thuộc về biển / Còn anh thuộc về ai? / Chiều nay em khẽ buông tay anh / Sao anh chẳng níu lại?",
+          "file": "Nhac_Phong_Tra/NPT-0008/video/short-01.mp4",
+          "linkDrive": "",
+          "tieude": "Chiều nay em khẽ buông tay anh | Em Thuộc Về Biển #Shorts",
+          "linkYoutube": "",
+          "ngayDang": "",
+          "ghiChu": "Tèo dựng 26/11/2026 bằng cong-cu/dung_short.py từ anh/NPT-0008/short-01.json · 1080×1920, 32.5 s, phụ đề lời.",
+          "luc": "2026-11-26T04:57:11.000Z"
+        }
+      ]
     },
     {
       "id": "NPT-0009",

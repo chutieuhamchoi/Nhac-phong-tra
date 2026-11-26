@@ -79,7 +79,8 @@
       diem: diemRong(),
       thumbnail: str(d.thumbnail), tieude: str(d.tieude), mota: str(d.mota), shorts: str(d.shorts),
       tag: chuanTag(d.tag), linkYoutube: str(d.linkYoutube), ngayPhatHanh: str(d.ngayPhatHanh), ghiChu: str(d.ghiChu),
-      promptChatGPT: str(d.promptChatGPT)
+      promptChatGPT: str(d.promptChatGPT),
+      shortVideos: []
     };
     b.lichSu.push({ tu: null, den: b.trangThai, luc: t, ghiChu: 'Tạo bài' });
     if (str(d.loi).trim()) themLoi(b, d.loi, d.nguon || 'chatgpt', d.ghiChuLoi || '');
@@ -262,6 +263,16 @@
     return b;
   }
   /** Bổ sung trường còn thiếu cho bài v2 (giữ nguyên mọi trường lạ). */
+  /* ---------- Shorts (Tèo phụ trách, thêm 26/11/2026) ----------
+     b.shortVideos: [{ ma, batDau, ketThuc, doan, file, linkDrive, tieude, linkYoutube, ngayDang, ghiChu, luc }]
+     batDau/ketThuc: giây trên MP3 gốc. ngayDang rỗng = đã dựng, chưa đăng. */
+  function chuanShorts(v) {
+    return (Array.isArray(v) ? v : []).filter(x => x && typeof x === 'object').map(x => Object.assign({}, x, {
+      ma: str(x.ma), doan: str(x.doan), file: str(x.file), linkDrive: str(x.linkDrive), tieude: str(x.tieude),
+      linkYoutube: str(x.linkYoutube), ngayDang: str(x.ngayDang), ghiChu: str(x.ghiChu)
+    }));
+  }
+  const shortDaDang = x => !!(x && x.ngayDang && x.linkYoutube);
   function chuanBaiV2(o, kho) {
     const b = Object.assign({}, o);
     if (!isNptId(b.id) || kho.bai.some(x => x.id === b.id)) { if (b.id) b.legacyId = b.legacyId || str(b.id); b.id = capId(kho); }
@@ -283,6 +294,7 @@
     b.caiDatSuno = chuanCaiDat(b.caiDatSuno);
     b.nhacVersions.forEach(x => { if (x && x.caiDat != null) x.caiDat = caiDatTrong(x.caiDat) ? null : chuanCaiDat(x.caiDat); });
     b.diem = chuanDiem(b);
+    b.shortVideos = chuanShorts(b.shortVideos);
     ['promptSuno', 'thumbnail', 'tieude', 'mota', 'shorts', 'tag', 'linkYoutube', 'ngayPhatHanh', 'ghiChu', 'promptChatGPT']
       .forEach(k => b[k] = str(b[k]));
     return b;
@@ -332,15 +344,16 @@
          cả hai đổi khác nhau              → giữ bản trình duyệt, lưu bản GitHub vào xungDotGitHub và cảnh báo
        Phiên bản lời, phiên bản nhạc, lịch sử chỉ được THÊM, không bao giờ xóa hay sửa. */
   const TRUONG_DB = ['ten', 'loai', 'series', 'tuan', 'trangThai', 'promptSuno', 'thumbnail', 'tieude', 'mota', 'shorts',
-    'tag', 'linkYoutube', 'ngayPhatHanh', 'ghiChu', 'diem', 'caiDatSuno', 'loiChonText', 'nhacChonLink'];
+    'tag', 'linkYoutube', 'ngayPhatHanh', 'ghiChu', 'diem', 'caiDatSuno', 'loiChonText', 'nhacChonLink', 'shortVideos'];
   const NHAN_DB = { ten: 'tên bài', loai: 'loại', series: 'series', tuan: 'tuần', trangThai: 'trạng thái', promptSuno: 'prompt Suno',
     thumbnail: 'thumbnail', tieude: 'tiêu đề', mota: 'mô tả', shorts: 'Shorts', tag: 'hashtag', linkYoutube: 'link YouTube',
-    ngayPhatHanh: 'ngày phát hành', ghiChu: 'ghi chú', diem: 'điểm', caiDatSuno: 'thông số Suno', loiChonText: 'lời đang dùng', nhacChonLink: 'bản nhạc phát hành' };
+    ngayPhatHanh: 'ngày phát hành', ghiChu: 'ghi chú', diem: 'điểm', caiDatSuno: 'thông số Suno', loiChonText: 'lời đang dùng', nhacChonLink: 'bản nhạc phát hành', shortVideos: 'Shorts đã dựng' };
   function giaTriDB(b, f) {
     if (f === 'loiChonText') return loiHienTai(b) ?? '';
     if (f === 'nhacChonLink') return b.nhacVersions.find(x => x.v === b.nhacChon)?.link ?? '';
     if (f === 'diem') return JSON.stringify(b.diem);
     if (f === 'caiDatSuno') return caiDatTrong(b.caiDatSuno) ? '' : JSON.stringify(chuanCaiDat(b.caiDatSuno));
+    if (f === 'shortVideos') return (b.shortVideos || []).length ? JSON.stringify(chuanShorts(b.shortVideos)) : '';
     return b[f] ?? '';
   }
   function ganDB(l, f, v) {
@@ -348,6 +361,7 @@
     if (f === 'nhacChonLink') { const x = l.nhacVersions.find(x => x.link === v); l.nhacChon = x ? x.v : null; return; }
     if (f === 'diem') { l.diem = Object.assign(diemRong(), JSON.parse(v)); return; }
     if (f === 'caiDatSuno') { l.caiDatSuno = chuanCaiDat(v ? JSON.parse(v) : null); return; }
+    if (f === 'shortVideos') { l.shortVideos = chuanShorts(v ? JSON.parse(v) : []); return; }
     if (f === 'trangThai') {
       if (l.trangThai !== v) {
         const daCo = l.lichSu.some(h => h.den === v && h.nguon === 'github');
@@ -619,7 +633,7 @@
     SCHEMA, TRANG_THAI, TT, SERIES, datSeries, TIEU_CHI, TIEU_CHI_CU, NGUONG, datTieuChi, diemToiDa, xepLoai, SO_TUAN, TRUONG_NHAP,
     khoRong, taoBai, themLoi, loiHienTai, chonLoi, themNhac, chonNhac, themStyle, chonStyle, styleHienTai, dongBoStyle, doiTrangThai, canhBaoChuyen,
     datDiem, tongDiem, chuanHoaKho, gopKho, dongBoTuGitHub, giaiXungDot, hienGiaTriDB, NHAN_DB, tachJson, kiemTraNhap, phanTichNhap, timBaiTrung, apNhap, xungDot,
-    CAI_DAT_SUNO, caiDatRong, chuanCaiDat, tomTatCaiDat, datCaiDat,
+    CAI_DAT_SUNO, caiDatRong, chuanCaiDat, tomTatCaiDat, datCaiDat, chuanShorts, shortDaDang,
     soSanh, goiSaoLuu, docSaoLuu, xuatKho, boDau, fmtId
   };
 })(typeof window !== 'undefined' ? window : globalThis);

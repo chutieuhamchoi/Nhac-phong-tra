@@ -189,6 +189,20 @@ No text, digits, logos, watermarks, borders or storyboard panels.
 - `ke-hoach.md` và `lich.json`: cập nhật mốc phát hành và việc tuần tương ứng.
 - Mở website kiểm tra: tab Kế hoạch tự tính bài đã đăng là xong.
 
+### Bước 9. Shorts (Tèo toàn quyền, chốt 26/11/2026)
+Ông chủ giao Tèo toàn quyền làm Shorts: chọn đoạn, dựng, đăng, theo dõi. Không cần chờ duyệt từng clip.
+1. **Chọn đoạn.** Sau khi bài đã đăng (trạng thái 6), Tèo chọn đoạn cao trào hoặc đoạn có điểm nhớ, thường là điệp khúc hoặc điệp khúc cuối, dài 30–45 giây. Bắt đầu 1–1,5 giây trước câu đầu, kết ở chỗ câu hát khép ý. Cột `shorts` trong kho (Tí ghi) là gợi ý, Tèo được chọn đoạn khác nếu hay hơn.
+2. **Khóa mốc.** Dò mốc từng câu trên MP3 đã phát hành bằng nhận dạng giọng hát (sai số ±0,5 giây). Phụ đề chép đúng lời trong kho bài.
+3. **Dựng.** Ghi file `anh/NPT-xxxx/short-NN.json` (đoạn, cảnh, phụ đề) rồi chạy `cong-cu/dung_short.py`:
+   - khung dọc 1080×1920, 30 khung hình/giây, H.264 + AAC 192 kbps, cắt dọc từ ảnh cảnh 16:9 và trượt ngang nhẹ theo nhân vật;
+   - chuyển cảnh mờ chồng 0,8 giây; âm thanh nguyên bản, mờ vào 0,3 giây, mờ ra 1,5 giây;
+   - chữ: tên bài + "NHẠC PHÒNG TRÀ" ở trên, phụ đề lời ở giữa dưới (tránh vùng nút của YouTube ở đáy và cạnh phải).
+   - Shorts được phép có chữ (phụ đề, tên bài); MV dài vẫn giữ nguyên tắc không chèn chữ.
+4. **Lưu.** `Nhac_Phong_Tra/NPT-xxxx/video/short-NN.mp4` trên Drive.
+5. **Đăng.** Tiêu đề theo mẫu ở mục 5, mô tả 1–2 câu + câu khai báo AI + hashtag (#Shorts, tên bài, #NhacPhongTra), nhãn AI = Có, không dành cho trẻ em, gắn **video liên quan** là MV đầy đủ của bài. Ông chủ chỉ chọn file khi tải lên. Tèo được lên lịch đăng rải 2–3 clip/tuần, giờ tối (19:00–21:00).
+6. **Ghi kho.** Thêm một mục vào `shortVideos` của bài (xem `docs/DONG-BO-GITHUB.md`): mã, đoạn, file, link Drive, tiêu đề, link YouTube, ngày đăng. Tab Kế hoạch tự đếm Shorts đã đăng trong tuần.
+7. **Theo dõi.** Sau 7 ngày xem lượt xem, tỷ lệ xem hết, người đăng ký từ Short. Clip nào giữ chân tốt thì làm thêm đoạn khác của cùng bài.
+
 ## 5. Metadata YouTube
 
 - **Tiêu đề (chốt 22/11/2026, Ông chủ chọn phương án A):** `<Tên bài> | <Thể loại> – Nhạc Phòng Trà`. Ví dụ: `Yêu Nhau Lại Từ Đầu | Acoustic Pop Rock – Nhạc Phòng Trà`.
@@ -226,7 +240,7 @@ Tin nhắn cần chuyển cho bên kia thì đặt **trong một khung duy nhấ
 - NPT-0001: bổ sung link bản Suno đã chọn (`nhacChon`) vào kho.
 - NPT-0003, NPT-0004: xác nhận Style và thông số Suno thực tế đã dùng (`caiDat` hiện là bộ đề xuất lúc ghi kho).
 - "Cánh Diều Tuổi Thơ": kiểm tra nhãn AI và gói Suno, bật bình luận, thêm thẻ, cho vào danh sách phát Tuổi Thơ.
-- Shorts và TikTok: kho bài đã có câu hook từng bài; chưa ghi nhận clip dọc nào được đăng (kế hoạch 2–3 clip/tuần).
+- Shorts: Tèo đã dựng 5 clip đầu (NPT-0001–0004, NPT-0008) ngày 26/11/2026, theo dõi trạng thái đăng trong `shortVideos` của từng bài. TikTok chưa làm.
 - Tab Kế hoạch: ô đếm "việc trong lịch đã xong" chưa phản ánh tiến độ.
 - Hiệu ứng mưa: cần video lớp phủ mưa có giấy phép sử dụng.
 - Dọn file thử trên Drive: `NPT-0001/kiem-thu-anh-that.png`, `kiem-thu-claude.mp4`, `NPT-0001-anh-nen.zip`, `video/kiem-thu-37mb.mp4`.

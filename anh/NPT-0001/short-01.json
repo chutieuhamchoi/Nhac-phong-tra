@@ -1,0 +1,82 @@
+{
+ "ma": "NPT-0001-S1",
+ "ten": "Có Những Ngày Chỉ Muốn Về Nhà",
+ "batDau": 97.5,
+ "ketThuc": 130.0,
+ "canh": [
+  {
+   "anh": "canh-06.png",
+   "tu": 97.5,
+   "x": [
+    0.42,
+    0.34
+   ]
+  },
+  {
+   "anh": "canh-04.png",
+   "tu": 102.0,
+   "x": [
+    0.33,
+    0.17
+   ]
+  },
+  {
+   "anh": "canh-05.png",
+   "tu": 112.0,
+   "x": [
+    0.6,
+    0.45
+   ]
+  },
+  {
+   "anh": "canh-03.png",
+   "tu": 120.0,
+   "x": [
+    0.5,
+    0.72
+   ]
+  }
+ ],
+ "loi": [
+  {
+   "tu": 98.6,
+   "den": 102.2,
+   "cau": "Chỉ muốn về nhà... ăn một bữa cơm thôi"
+  },
+  {
+   "tu": 102.5,
+   "den": 106.10000000000001,
+   "cau": "Nghe mẹ hỏi: “Hôm nay con có mệt?”"
+  },
+  {
+   "tu": 106.4,
+   "den": 109.0,
+   "cau": "Nghe tiếng cha ho khẽ ngoài hiên vắng"
+  },
+  {
+   "tu": 109.3,
+   "den": 112.5,
+   "cau": "Mà thấy lòng... bình yên đến lạ thường"
+  },
+  {
+   "tu": 112.8,
+   "den": 115.8,
+   "cau": "Chỉ muốn về nhà... chẳng cần phải mạnh mẽ"
+  },
+  {
+   "tu": 116.1,
+   "den": 120.10000000000001,
+   "cau": "Được làm đứa con bé nhỏ ngày xưa"
+  },
+  {
+   "tu": 120.4,
+   "den": 123.10000000000001,
+   "cau": "Dẫu ngoài kia bao nhiêu điều giông bão"
+  },
+  {
+   "tu": 123.4,
+   "den": 129.3,
+   "cau": "Về đến nhà... là hết những ngày mưa"
+  }
+ ]
+}

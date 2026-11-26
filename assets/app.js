@@ -89,10 +89,16 @@
     const d = Math.floor((new Date() - new Date(LICH.batDau + 'T00:00:00')) / 864e5);
     return Math.min(Math.max(Math.floor(d / 7) + 1, 1), LICH.tuan.length);
   }
+  /** Số Shorts đã đăng trong tuần lịch w (theo ngayDang trong kho bài). */
+  function soShortTuan(w) {
+    const a = tuanStart(w.so), b = addDays(a, 7);
+    return kho.bai.reduce((n, x) => n + (x.shortVideos || []).filter(s => N.shortDaDang(s) && new Date(s.ngayDang + 'T12:00:00') >= a && new Date(s.ngayDang + 'T12:00:00') < b).length, 0);
+  }
   function itemsOf(w) {
     const it = w.baiDon.map((t, k) => ({ id: `b${k}`, kind: 'Bài đơn', t, bai: true }));
     if (w.playlist) it.push({ id: 'pl', kind: 'Playlist', t: w.playlist });
-    it.push({ id: 'sh', kind: 'Shorts', t: `${w.so >= 12 ? 5 : 4} Shorts trong tuần` });
+    const can = w.so >= 12 ? 5 : 4, co = soShortTuan(w);
+    it.push({ id: 'sh', kind: 'Shorts', t: `${can} Shorts trong tuần (đã đăng ${co})`, can, co });
     w.viec.forEach((t, k) => it.push({ id: `v${k}`, kind: 'Việc', t }));
     return it;
   }
@@ -100,6 +106,7 @@
   function daXong(w, it) {
     if (tick[`${w.so}:${it.id}`]) return true;
     if (it.bai) { const b = baiCuaLich(it.t); return !!b && b.trangThai === N.TT.DA_DANG; }
+    if (it.id === 'sh') return it.co >= it.can;
     if (it.id === 'pl') return kho.bai.some(b => b.loai === 'playlist' && b.trangThai === N.TT.DA_DANG && N.boDau(b.ten) === N.boDau(it.t));
     return false;
   }
@@ -435,6 +442,14 @@ ${DINH_DANG(s.id, w.so, 'playlist')}`;
       (b.diemCu ? `<div class="m diem-cu">Điểm phiếu cũ (thang ${b.diemCu.thang}): ${Object.entries(N.TIEU_CHI_CU).filter(([k]) => b.diemCu[k] != null).map(([k, t]) => `${esc(t)} ${b.diemCu[k]}`).join(', ') || '—'}</div>` : '');
     // youtube
     capNhatTieuDe(); capNhatThumb();
+    const sv = b.shortVideos || [], gio = s => { const n = +s; return Number.isFinite(n) ? `${Math.floor(n / 60)}:${String((n % 60).toFixed(1)).padStart(4, '0')}` : '—'; };
+    $('#d-dem-shorts').textContent = sv.length;
+    $('#d-ds-shorts').innerHTML = sv.length ? sv.map(x => `<div class="vrow"><b>${esc(x.ma || 'Short')}</b>${N.shortDaDang(x) ? '<span class="chon">đã đăng</span>' : ' <span class="m">· chưa đăng</span>'}
+        <span class="m">· ${gio(x.batDau)}–${gio(x.ketThuc)} trên bản nhạc${x.ngayDang ? ' · đăng ' + esc(x.ngayDang) : ''}</span>
+        ${x.tieude ? `<div>${esc(x.tieude)}</div>` : ''}${x.doan ? `<div class="m">${esc(x.doan)}</div>` : ''}
+        <span class="vbtn">${linkOk(x.linkYoutube) ? `<a class="mini" href="${esc(x.linkYoutube)}" target="_blank" rel="noopener">▶ YouTube</a>` : ''}${linkOk(x.linkDrive) ? `<a class="mini" href="${esc(x.linkDrive)}" target="_blank" rel="noopener">Drive</a>` : x.file ? `<span class="m">${esc(x.file)}</span>` : ''}</span>
+        ${x.ghiChu ? `<div class="m">${esc(x.ghiChu)}</div>` : ''}</div>`).join('')
+      : '<p class="hint">Chưa có Short nào. Tèo dựng clip dọc từ đoạn hay nhất khi bài đã đăng.</p>';
     // lịch sử
     const xd = Object.entries(b.xungDotGitHub || {});
     $('#d-lich-su').innerHTML = (xd.length ? `<div class="alert warn"><b>Xung đột với GitHub</b>: cả trình duyệt và GitHub đều sửa các mục dưới đây. Đang dùng bản trình duyệt.
