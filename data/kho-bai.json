@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "capNhat": "2026-11-27T16:45:00.000Z",
+  "capNhat": "2026-11-27T16:55:00.000Z",
   "nextId": 33,
   "bai": [
     {
@@ -494,7 +494,7 @@
       "series": "tinh-yeu",
       "tuan": 1,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-27T16:15:00.000Z",
+      "ngayCapNhat": "2026-11-27T16:55:00.000Z",
       "trangThai": 6,
       "lichSu": [
         {
@@ -637,11 +637,11 @@
           "file": "Nhac_Phong_Tra/NPT-0004/video/short-01.mp4",
           "linkDrive": "",
           "tieude": "Em cười như vừa nghe kể | Em Đã Thôi Kể Về Anh #Shorts",
-          "mota": "",
+          "mota": "Buổi chiều ở quán quen, cô kể đủ chuyện nhỏ trong đời mình và chợt nhận ra đã lâu rồi không còn nhắc đến người cũ. Không còn đau, chỉ thấy nhẹ nhõm.\n\nNghe bản đầy đủ: https://www.youtube.com/watch?v=53CRqEMaMVg\n\nNhạc Phòng Trà – Mỗi bài hát, một câu chuyện đáng nghe.\nLời do kênh sáng tác. Nhạc và hình ảnh được tạo với sự hỗ trợ của AI.\n\n#Shorts #EmDaThoiKeVeAnh #NhacPhongTra",
           "lichDang": "2026-11-29T19:30",
-          "linkYoutube": "",
-          "ngayDang": "",
-          "ghiChu": "Tèo dựng 26/11/2026 bằng cong-cu/dung_short.py từ anh/NPT-0004/short-01.json · 1080×1920, 31.0 s, phụ đề lời.",
+          "linkYoutube": "https://www.youtube.com/shorts/e6C5P0RC5-M",
+          "ngayDang": "2026-11-29",
+          "ghiChu": "Tèo dựng 26/11/2026 bằng cong-cu/dung_short.py từ anh/NPT-0004/short-01.json · 1080×1920, 31.0 s, phụ đề lời. Tèo tải lên 27/11/2026 23:45 (Ông chủ chọn file), hẹn giờ công khai 19:30 29/11/2026 (GMT+7): 12 thẻ, Tiếng Việt, danh mục Nhạc, nhãn AI = Có, không dành cho trẻ em, danh sách phát Tình Yêu – Nhạc Phòng Trà. YouTube tự thêm vào danh sách \"Đi xe\", Tèo đã bỏ.",
           "luc": "2026-11-26T04:57:11.000Z"
         },
         {
