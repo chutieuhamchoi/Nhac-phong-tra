@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "capNhat": "2026-11-27T17:25:00.000Z",
+  "capNhat": "2026-11-27T17:45:00.000Z",
   "nextId": 33,
   "bai": [
     {
@@ -117,7 +117,7 @@
       "series": "tinh-yeu",
       "tuan": 2,
       "ngayTao": "2026-11-19T16:58:35.936Z",
-      "ngayCapNhat": "2026-11-27T16:15:00.000Z",
+      "ngayCapNhat": "2026-11-27T17:45:00.000Z",
       "trangThai": 6,
       "lichSu": [
         {
@@ -270,11 +270,11 @@
           "file": "Nhac_Phong_Tra/NPT-0002/video/short-01.mp4",
           "linkDrive": "",
           "tieude": "Dẫu mai này mình già đi nữa | Yêu Nhau Lại Từ Đầu #Shorts",
-          "mota": "",
+          "mota": "Có bao lâu rồi mình chưa hẹn hò như ngày đầu? Dẫu mai này mình già đi nữa, anh vẫn muốn hẹn hò cùng em.\n\nNghe bản đầy đủ: https://www.youtube.com/watch?v=gM4ctyrqMK4\n\nNhạc Phòng Trà – Mỗi bài hát, một câu chuyện đáng nghe.\nLời do kênh sáng tác. Nhạc và hình ảnh được tạo với sự hỗ trợ của AI.\n\n#Shorts #YeuNhauLaiTuDau #NhacPhongTra",
           "lichDang": "2026-12-01T19:30",
-          "linkYoutube": "",
-          "ngayDang": "",
-          "ghiChu": "Tèo dựng 26/11/2026 bằng cong-cu/dung_short.py từ anh/NPT-0002/short-01.json · 1080×1920, 31.7 s, phụ đề lời.",
+          "linkYoutube": "https://www.youtube.com/shorts/mL6Mknp3jKg",
+          "ngayDang": "2026-12-01",
+          "ghiChu": "Tèo dựng 26/11/2026 bằng cong-cu/dung_short.py từ anh/NPT-0002/short-01.json · 1080×1920, 31.7 s, phụ đề lời. Tèo tải lên 28/11/2026 00:35 (Ông chủ chọn file), hẹn giờ công khai 19:30 01/12/2026 (GMT+7): 12 thẻ, Tiếng Việt, danh mục Nhạc, nhãn AI = Có, không dành cho trẻ em, danh sách phát Tình Yêu – Nhạc Phòng Trà.",
           "luc": "2026-11-26T04:57:11.000Z"
         },
         {
