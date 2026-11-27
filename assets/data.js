@@ -280,8 +280,12 @@
     return bo(a) === bo(b);
   }
   const chuanShortsDB = v => { try { return v ? JSON.stringify(chuanShorts(JSON.parse(v))) : ''; } catch { return v; } };
-  /** Tình trạng một Short: 'dang' đã đăng · 'lich' có lịch đăng · 'dung' mới dựng, chưa có lịch. */
-  const shortTinhTrang = x => shortDaDang(x) ? 'dang' : (x && x.lichDang) ? 'lich' : 'dung';
+  /** Tình trạng một Short: 'dang' đã công khai · 'hen' đã tải lên và hẹn giờ · 'lich' có lịch dự kiến · 'dung' mới dựng. */
+  const lucDang = x => { const t = Date.parse(((x && x.lichDang) || '').slice(0, 16) + ':00+07:00'); return isNaN(t) ? null : t; };
+  const shortTinhTrang = (x, bayGio = Date.now()) => {
+    if (shortDaDang(x)) return lucDang(x) !== null && lucDang(x) > bayGio ? 'hen' : 'dang';   // đã hẹn giờ trên YouTube, chưa tới giờ
+    return (x && x.lichDang) ? 'lich' : 'dung';
+  };
   function chuanBaiV2(o, kho) {
     const b = Object.assign({}, o);
     if (!isNptId(b.id) || kho.bai.some(x => x.id === b.id)) { if (b.id) b.legacyId = b.legacyId || str(b.id); b.id = capId(kho); }

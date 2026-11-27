@@ -333,7 +333,9 @@ ${DINH_DANG(s.id, w.so, 'playlist')}`;
     if (linkOk(b.linkYoutube)) ra.push(`<a class="lk mv" href="${esc(b.linkYoutube)}" target="_blank" rel="noopener" title="${esc(b.linkYoutube)}">▶ MV</a>`);
     sv.forEach((x, i) => {
       const ma = esc((x.ma || '').split('-').pop() || 'S' + (i + 1));
-      if (N.shortDaDang(x) && linkOk(x.linkYoutube)) ra.push(`<a class="lk sh" href="${esc(x.linkYoutube)}" target="_blank" rel="noopener" title="${esc(x.tieude || x.linkYoutube)}">▶ Short ${ma}</a>`);
+      const tt = N.shortTinhTrang(x), ngay = esc((x.lichDang || '').slice(8, 10) + '/' + (x.lichDang || '').slice(5, 7));
+      if (tt === 'dang' && linkOk(x.linkYoutube)) ra.push(`<a class="lk sh" href="${esc(x.linkYoutube)}" target="_blank" rel="noopener" title="${esc(x.tieude || x.linkYoutube)}">▶ Short ${ma}</a>`);
+      else if (tt === 'hen') ra.push(`<a class="lk hen" href="${esc(x.linkYoutube)}" target="_blank" rel="noopener" title="Đã hẹn giờ công khai ${esc(x.lichDang.replace('T', ' '))}">⏰ Short ${ma} · ${ngay}</a>`);
       else if (x.lichDang) ra.push(`<span class="lk ch" title="${esc(x.tieude)}">📅 Short ${ma} · ${esc(x.lichDang.slice(8, 10) + '/' + x.lichDang.slice(5, 7))}</span>`);
       else ra.push(`<span class="lk ch" title="${esc(x.tieude)}">Short ${ma} · chưa đăng</span>`);
     });
@@ -472,19 +474,19 @@ ${DINH_DANG(s.id, w.so, 'playlist')}`;
      Phần kỹ thuật (đoạn nhạc, lời, file) chỉ xem — Tèo ghi qua GitHub. */
   const gioClip = s => { const n = +s; return s === '' || s == null || !Number.isFinite(n) ? '—' : `${Math.floor(n / 60)}:${String((n % 60).toFixed(1)).padStart(4, '0')}`; };
   const fmtLich = v => { const m = /^(\d{4})-(\d{2})-(\d{2})(?:T(\d{2}):(\d{2}))?/.exec(v || ''); return m ? `${m[3]}/${m[2]}/${m[1]}${m[4] ? ' ' + m[4] + ':' + m[5] : ''}` : ''; };
-  const NHAN_TT_SHORT = { dang: 'Đã đăng', lich: 'Dự kiến đăng', dung: 'Đã dựng, chưa có lịch' };
+  const NHAN_TT_SHORT = { dang: 'Đã đăng', hen: 'Đã hẹn giờ', lich: 'Dự kiến đăng', dung: 'Đã dựng, chưa có lịch' };
   function renderShorts() {
     const sv = bai.shortVideos || [];
-    const dem = { dang: 0, lich: 0, dung: 0 }; sv.forEach(x => dem[N.shortTinhTrang(x)]++);
+    const dem = { dang: 0, hen: 0, lich: 0, dung: 0 }; sv.forEach(x => dem[N.shortTinhTrang(x)]++);
     $('#d-dem-shorts').textContent = sv.length;
     $('#d-tom-shorts').innerHTML = sv.length
-      ? `<span class="ts dang">${dem.dang} đã đăng</span><span class="ts lich">${dem.lich} có lịch đăng</span><span class="ts dung">${dem.dung} chưa có lịch</span>
+      ? `<span class="ts dang">${dem.dang} đã đăng</span><span class="ts hen">${dem.hen} đã hẹn giờ</span><span class="ts lich">${dem.lich} dự kiến</span><span class="ts dung">${dem.dung} chưa có lịch</span>
          ${bai.linkYoutube ? `<span class="m">MV gốc: <a href="${esc(bai.linkYoutube)}" target="_blank" rel="noopener">${esc(bai.linkYoutube)}</a></span>` : ''}`
       : '';
     $('#d-ds-shorts').innerHTML = sv.length ? sv.map((x, i) => {
       const tt = N.shortTinhTrang(x);
       return `<div class="short-card ${tt}">
-        <div class="sc-head"><b>${esc(x.ma || 'Short ' + (i + 1))}</b><span class="badge ${tt}">${NHAN_TT_SHORT[tt]}${tt === 'dang' && x.ngayDang ? ' · ' + esc(fmtLich(x.ngayDang)) : tt === 'lich' ? ' · ' + esc(fmtLich(x.lichDang)) : ''}</span></div>
+        <div class="sc-head"><b>${esc(x.ma || 'Short ' + (i + 1))}</b><span class="badge ${tt}">${NHAN_TT_SHORT[tt]}${tt === 'dang' && x.ngayDang ? ' · ' + esc(fmtLich(x.ngayDang)) : tt === 'lich' || tt === 'hen' ? ' · ' + esc(fmtLich(x.lichDang)) : ''}</span></div>
         ${linkOk(x.linkYoutube) ? `<a class="sc-link" href="${esc(x.linkYoutube)}" target="_blank" rel="noopener">▶ ${esc(x.linkYoutube)}</a>` : '<div class="m sc-link-trong">Chưa có link YouTube</div>'}
         <div class="row2">
           <label>Tiêu đề Short <span class="cnt">${(x.tieude || '').length}/100</span><input data-sv="${i}" data-k="tieude" maxlength="100" value="${esc(x.tieude)}"></label>

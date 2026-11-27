@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "capNhat": "2026-11-27T16:20:08.985Z",
+  "capNhat": "2026-11-27T16:45:00.000Z",
   "nextId": 33,
   "bai": [
     {
@@ -10,7 +10,7 @@
       "series": "tuoi-tho",
       "tuan": 1,
       "ngayTao": "2026-11-18T15:06:07.306Z",
-      "ngayCapNhat": "2026-11-27T16:15:00.000Z",
+      "ngayCapNhat": "2026-11-27T16:45:00.000Z",
       "trangThai": 6,
       "lichSu": [
         {
@@ -86,11 +86,11 @@
           "file": "Nhac_Phong_Tra/NPT-0001/video/short-01.mp4",
           "linkDrive": "",
           "tieude": "Chỉ muốn về nhà… ăn một bữa cơm thôi | Có Những Ngày Chỉ Muốn Về Nhà #Shorts",
-          "mota": "",
+          "mota": "Những ngày mệt mỏi giữa phố, chỉ mong được về nhà ăn một bữa cơm, nghe mẹ hỏi \"Hôm nay con có mệt?\".\n\nNghe bản đầy đủ: https://www.youtube.com/watch?v=aV9Z0ukc9vo\n\nNhạc Phòng Trà – Mỗi bài hát, một câu chuyện đáng nghe.\nLời do kênh sáng tác. Nhạc và hình ảnh được tạo với sự hỗ trợ của AI.\n\n#Shorts #CoNhungNgayChiMuonVeNha #NhacPhongTra",
           "lichDang": "2026-11-28T19:30",
-          "linkYoutube": "",
-          "ngayDang": "",
-          "ghiChu": "Tèo dựng 26/11/2026 bằng cong-cu/dung_short.py từ anh/NPT-0001/short-01.json · 1080×1920, 32.5 s, phụ đề lời.",
+          "linkYoutube": "https://www.youtube.com/shorts/w-eVpo1_ZUM",
+          "ngayDang": "2026-11-28",
+          "ghiChu": "Tèo dựng 26/11/2026 bằng cong-cu/dung_short.py từ anh/NPT-0001/short-01.json · 1080×1920, 32.5 s, phụ đề lời. Tèo tải lên 27/11/2026 23:30 (Ông chủ chọn file), hẹn giờ công khai 19:30 28/11/2026 (GMT+7): 13 thẻ, Tiếng Việt, danh mục Nhạc, nhãn AI = Có, không dành cho trẻ em, danh sách phát Tuổi Thơ – Quê Nhà | Nhạc Phòng Trà Hoài Niệm (lỡ tích thêm \"Đi xe\", đã bỏ ngay).",
           "luc": "2026-11-26T04:57:11.000Z"
         },
         {

@@ -235,3 +235,6 @@ button:disabled{opacity:.5;cursor:not-allowed}
 .song-links a.lk.sh{background:#7fb77e22;border-color:#7fb77e88;color:#cfe8cf}
 .song-links .lk.ch{color:var(--mute)}
 .song-links a.lk:hover{filter:brightness(1.25)}
+.ts.hen,.badge.hen{background:#6fa8dc22;border-color:#6fa8dc88;color:#c6dcf2}
+.short-card.hen{border-left-color:#6fa8dc}
+.song-links a.lk.hen{background:#6fa8dc22;border-color:#6fa8dc88;color:#c6dcf2}

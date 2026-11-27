@@ -443,3 +443,9 @@ test('Đồng bộ: trạng thái trên GitHub cao hơn thì trình duyệt nh�
   N.dongBoTuGitHub(local, { schema: 2, bai: [Object.assign({}, goc, { trangThai: 4, ngayCapNhat: '2026-11-28T00:00:00Z' })] });
   assert.equal(l.trangThai, 6);
 });
+
+test('Shorts: clip đã hẹn giờ trên YouTube là "hen" cho tới giờ công khai', () => {
+  const x = { ma: 'S1', linkYoutube: 'https://youtube.com/shorts/a', ngayDang: '2026-11-28', lichDang: '2026-11-28T19:30' };
+  assert.equal(N.shortTinhTrang(x, Date.parse('2026-11-28T12:00:00+07:00')), 'hen');
+  assert.equal(N.shortTinhTrang(x, Date.parse('2026-11-28T19:31:00+07:00')), 'dang');
+});
