@@ -1,6 +1,6 @@
 # Quy trình phối hợp ChatGPT – Claude – Chủ kênh
 
-Cập nhật 19/11/2026, theo phương án **A – Phòng trà đa sắc**.
+Cập nhật 19/11/2026 (mục Shorts 27/11/2026), theo phương án **A – Phòng trà đa sắc**.
 
 Định vị: **"Nhạc Phòng Trà – Mỗi bài hát, một câu chuyện đáng nghe."** Kênh không giới hạn chủ đề, thể loại hay tiết tấu.
 
@@ -47,7 +47,17 @@ Cập nhật 19/11/2026, theo phương án **A – Phòng trà đa sắc**.
 - Không sửa `lich.json` hay `chu-de.json` nếu chủ kênh chưa duyệt. Không thay hai file này bằng phiên bản cũ.
 - Bài đã phát hành (ví dụ NPT-0001) được giữ nguyên lời, trạng thái, ngày phát hành và URL.
 
-## 5. Kiểm tra sau khi đổi cấu hình
+## 5. Shorts (cập nhật 27/11/2026)
+
+- **Claude toàn quyền Shorts:** chọn đoạn, dựng, đăng, ghi trường `shortVideos` trong kho bài. Nhịp đăng 1 clip/ngày lúc 19:30; mỗi MV mới làm 2 Short (S1, S2).
+- **ChatGPT không sửa `shortVideos`**, nhưng khi ghi lại một bài trong `kho-bai.json` phải **giữ nguyên toàn bộ mảng `shortVideos`**, kể cả các trường mới `mota` (mô tả riêng của Short) và `lichDang` (lịch đăng, giờ VN). Không xoá, không rút gọn, không sắp xếp lại.
+- **ChatGPT ghi trường `shorts` (đoạn gợi ý)** khi viết lời hoặc chuẩn bị metadata, cho **2 đoạn** mỗi bài:
+  - `S1`: điệp khúc hoặc cao trào; `S2`: một hook khác (câu mở ấn tượng, bridge, điệp khúc cuối).
+  - Mỗi đoạn ghi: câu hook dùng làm tiêu đề, câu mở và câu kết của đoạn (30–45 giây), gợi ý cảnh.
+  - Tiêu đề theo mẫu `<Câu hook ngắn> | <Tên bài> #Shorts` (tối đa 100 ký tự).
+- Website: tab YouTube của bài có hai tab con **Video dài (MV)** và **Video ngắn (Shorts)**. Ô `shorts` nằm trong tab Video ngắn.
+
+## 6. Kiểm tra sau khi đổi cấu hình
 
 ```bash
 node --test tests/data.test.js     # có kiểm tra lịch và kho bài chỉ dùng series có trong chu-de.json
