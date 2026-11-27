@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "capNhat": "2026-11-27T06:45:00.000Z",
+  "capNhat": "2026-11-27T08:20:00.000Z",
   "nextId": 33,
   "bai": [
     {
@@ -820,7 +820,7 @@
       "series": "tinh-yeu",
       "tuan": 2,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-27T06:45:00.000Z",
+      "ngayCapNhat": "2026-11-27T08:20:00.000Z",
       "trangThai": 6,
       "lichSu": [
         {
@@ -966,11 +966,11 @@
           "ketThuc": 75.5,
           "doan": "“Nhìn anh này, biển có chạy đâu” / Em thuộc về biển / Còn anh thuộc về ai? / Chiều nay em khẽ buông tay anh / Sao anh chẳng níu lại?",
           "file": "Nhac_Phong_Tra/NPT-0008/video/short-01.mp4",
-          "linkDrive": "",
+          "linkDrive": "https://drive.google.com/file/d/1qle2bVDPh-BAjXh--UnNklq23bClgKpH/view",
           "tieude": "Chiều nay em khẽ buông tay anh | Em Thuộc Về Biển #Shorts",
-          "linkYoutube": "",
-          "ngayDang": "",
-          "ghiChu": "Tèo dựng 26/11/2026 bằng cong-cu/dung_short.py từ anh/NPT-0008/short-01.json · 1080×1920, 32.5 s, phụ đề lời.",
+          "linkYoutube": "https://www.youtube.com/shorts/PLzqyIbkgu8",
+          "ngayDang": "2026-11-27",
+          "ghiChu": "Tèo dựng 26/11/2026 bằng cong-cu/dung_short.py từ anh/NPT-0008/short-01.json · 1080×1920, 32.5 s, phụ đề lời. Tèo đăng công khai 27/11/2026 15:20 (Ông chủ chọn file): 13 thẻ, Tiếng Việt, danh mục Nhạc, nhãn AI = Có, không dành cho trẻ em, danh sách phát Tình Yêu – Nhạc Phòng Trà, mô tả có link MV. Chưa gắn \"video liên quan\" vì YouTube yêu cầu xác minh kênh một lần (Ông chủ làm).",
           "luc": "2026-11-26T04:57:11.000Z"
         }
       ]
