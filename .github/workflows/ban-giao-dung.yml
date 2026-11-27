@@ -1,0 +1,66 @@
+# Bàn giao tự động Tí → Tèo: dựng bản xem trước khi issue của bài sẵn sàng.
+# Quy trình đầy đủ: docs/BAN-GIAO-TU-DONG.md
+name: Bàn giao · dựng bản xem trước
+
+on:
+  issues:
+    types: [labeled, edited]
+  workflow_dispatch:
+    inputs:
+      issue:
+        description: "Số issue cần dựng lại (để trống + tick 'chỉ tạo nhãn' để khởi tạo)"
+        required: false
+      chi_tao_nhan:
+        description: "Chỉ tạo 4 nhãn bàn giao"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+  issues: write
+
+# Mỗi bài (một issue) chỉ một lượt dựng tại một thời điểm.
+# Lượt mới đến khi đang dựng sẽ chờ; GitHub chỉ giữ lượt chờ mới nhất, lượt đó đọc lại phiên bản mới nhất.
+concurrency:
+  group: ban-giao-${{ github.event.issue.number || inputs.issue || 'nhan' }}
+  cancel-in-progress: false
+
+jobs:
+  dung:
+    # Chỉ chạy khi: gắn nhãn "Sẵn sàng dựng", hoặc sửa nội dung issue đang có nhãn đó.
+    # Bình luận không kích hoạt (không nghe sự kiện issue_comment).
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.action == 'labeled' && github.event.label.name == 'Sẵn sàng dựng') ||
+      (github.event.action == 'edited' && github.event.changes.body &&
+       contains(github.event.issue.labels.*.name, 'Sẵn sàng dựng'))
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Cài FFmpeg và thư viện
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          pip install -q requests pillow
+
+      - name: Tạo nhãn bàn giao
+        if: github.event_name == 'workflow_dispatch' && inputs.chi_tao_nhan
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 cong-cu/ban_giao.py --tao-nhan
+
+      - name: Chờ 2 phút, đọc lại bản mới nhất, kiểm tra, dựng, lưu Drive, phản hồi
+        if: github.event_name == 'issues' || (inputs.issue != '' && !inputs.chi_tao_nhan)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GDRIVE_CLIENT_ID: ${{ secrets.GDRIVE_CLIENT_ID }}
+          GDRIVE_CLIENT_SECRET: ${{ secrets.GDRIVE_CLIENT_SECRET }}
+          GDRIVE_REFRESH_TOKEN: ${{ secrets.GDRIVE_REFRESH_TOKEN }}
+          GDRIVE_GOC_ID: ${{ vars.GDRIVE_GOC_ID }}
+        run: |
+          python3 cong-cu/ban_giao.py \
+            --issue "${{ github.event.issue.number || inputs.issue }}" \
+            --cho "${{ github.event_name == 'issues' && 120 || 0 }}"

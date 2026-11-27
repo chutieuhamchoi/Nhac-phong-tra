@@ -157,6 +157,8 @@ No text, digits, logos, watermarks, borders or storyboard panels.
 - **Cảnh hồi tưởng.** Dùng cùng ảnh chuẩn, giữ đường nét khuôn mặt và đặc điểm nhận diện. Có thể cho nhân vật trẻ hơn vừa phải. Dùng thêm dấu hiệu như đạo cụ kỷ niệm, ánh sáng mềm hoặc tông phim ấm hơn hiện tại. Nếu cảnh là hình dung về tuổi già, đổi tuổi và màu tóc nhưng vẫn giữ các nét nhận diện của cùng nhân vật.
 
 ### Bước 5. Kiểm tra ảnh, chốt timeline, dựng preview (Tèo)
+> **Từ 28/11/2026 bước này chạy tự động qua GitHub Issue + Actions** khi Tí gắn nhãn "Sẵn sàng dựng" — xem `docs/BAN-GIAO-TU-DONG.md`. Bản xem trước lưu `video/preview-v<phienBan>.mp4`; Tèo vẫn tinh chỉnh mốc theo lời hát thật khi cần (tạo phiên bản mới).
+
 1. **Kiểm tra ảnh:** đủ số cảnh, kích thước, độ nét, không chữ hoặc số, nhân vật nhất quán, khớp storyboard. Nếu chưa đạt, Tèo gửi ông chủ một đoạn yêu cầu sửa trong một khung để chuyển cho Tí.
 2. **Chốt timeline theo lời hát thật:**
    - Tèo dò mốc từng câu trên MP3 bằng nhận dạng giọng hát, sai số khoảng ±0,5 giây.
@@ -225,7 +227,9 @@ No text, digits, logos, watermarks, borders or storyboard panels.
 
 ## 7. Bàn giao giữa Tí và Tèo
 
-Ông chủ là người chuyển lời giữa Tí và Tèo. Mỗi lần bàn giao ghi đủ:
+**Bàn giao dựng video:** qua GitHub Issue của bài (khối ```ban-giao```, nhãn Sẵn sàng dựng → Đang dựng → Chờ duyệt / Cần xử lý), Actions tự dựng và phản hồi — xem `docs/BAN-GIAO-TU-DONG.md`.
+
+Các việc khác, Ông chủ là người chuyển lời giữa Tí và Tèo. Mỗi lần bàn giao ghi đủ:
 
 - mã bài và tên bài;
 - những gì đã xong, kèm đường dẫn file trên Drive hoặc GitHub và mã commit;

@@ -12,6 +12,7 @@ Cập nhật 19/11/2026 (mục Shorts 27/11/2026), theo phương án **A – Ph�
 | Series, cảm xúc, nhịp, giọng, nhạc cụ, định vị, nguyên tắc sáng tác, tiêu chí duyệt | `data/chu-de.json` | ChatGPT, khi chủ kênh đã duyệt |
 | Kho bài (lời, trạng thái, metadata, link YouTube) | `data/kho-bai.json`, schema 2 | ChatGPT và Claude, theo `docs/DONG-BO-GITHUB.md` |
 | Storyboard | `anh/<MA_BAI>/storyboard.json` | ChatGPT |
+| Thông tin bàn giao dựng video | GitHub Issue của bài (khối `ban-giao`, nhãn) | ChatGPT ghi; Claude/Actions bình luận kết quả, đổi nhãn |
 | Mã nguồn website, công cụ dựng video, kiểm thử | `assets/`, `index.html`, `tests/` | Claude |
 | Ảnh, MP3, video preview và video hoàn chỉnh | Google Drive, mỗi bài một thư mục `NPT-xxxx/anh/`, `NPT-xxxx/nhac/`, `NPT-xxxx/video/` | ChatGPT (ảnh), chủ kênh (MP3), Claude (video) |
 
@@ -33,7 +34,7 @@ Cập nhật 19/11/2026 (mục Shorts 27/11/2026), theo phương án **A – Ph�
 2. **Sáng tác.** ChatGPT viết lời và prompt Suno, sửa đến khi chủ kênh duyệt.
 3. **Tạo nhạc.** Chủ kênh chọn bản Suno, đặt MP3 vào `NPT-xxxx/nhac/`.
 4. **Hình ảnh.** ChatGPT làm storyboard và ảnh, tải ảnh vào `NPT-xxxx/anh/`.
-5. **Dựng video.** Claude kiểm tra tài nguyên, dựng và gửi preview vào `NPT-xxxx/video/`.
+5. **Dựng video (tự động từ 28/11/2026).** ChatGPT tạo GitHub Issue của bài theo mẫu "Bàn giao dựng video", ghi khối `ban-giao` (mã, phiên bản, storyboard, thư mục ảnh, MP3 đã duyệt) rồi gắn nhãn **Sẵn sàng dựng**. GitHub Actions kiểm tra đầu vào, dựng `NPT-xxxx/video/preview-v<phiên bản>.mp4`, bình luận link và gắn **Chờ duyệt** (hoặc **Cần xử lý** kèm danh sách mục cần sửa). Chi tiết: `docs/BAN-GIAO-TU-DONG.md`.
 6. **Duyệt phát hành.** Chủ kênh duyệt video và metadata.
 7. **Đăng YouTube.** Claude làm các bước kỹ thuật được phép, kiểm tra trong Studio và lấy URL.
 8. **Đồng bộ kho bài.** Ghi trạng thái, URL, ngày phát hành và lịch sử vào `data/kho-bai.json`.
