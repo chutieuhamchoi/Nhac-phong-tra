@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "capNhat": "2026-11-27T15:40:00.000Z",
+  "capNhat": "2026-11-27T16:15:00.000Z",
   "nextId": 33,
   "bai": [
     {
@@ -10,7 +10,7 @@
       "series": "tuoi-tho",
       "tuan": 1,
       "ngayTao": "2026-11-18T15:06:07.306Z",
-      "ngayCapNhat": "2026-11-27T15:40:00.000Z",
+      "ngayCapNhat": "2026-11-27T16:15:00.000Z",
       "trangThai": 6,
       "lichSu": [
         {
@@ -92,6 +92,21 @@
           "ngayDang": "",
           "ghiChu": "Tèo dựng 26/11/2026 bằng cong-cu/dung_short.py từ anh/NPT-0001/short-01.json · 1080×1920, 32.5 s, phụ đề lời.",
           "luc": "2026-11-26T04:57:11.000Z"
+        },
+        {
+          "ma": "NPT-0001-S2",
+          "batDau": 203.1,
+          "ketThuc": 236.0,
+          "doan": "Con muốn về nhà... ngay lúc này mẹ ơi / Muốn ôm mẹ như ngày còn thơ bé / Muốn nghe cha nói đôi lời trách nhẹ / “Đi đâu mà... lâu quá chẳng về thăm?” / Con muốn về nhà... khi vẫn còn có thể / Khi mái đầu cha chưa bạc thêm nhiều / Khi bàn tay mẹ vẫn còn hơi ấm / Để nói rằng... con thương mẹ biết bao",
+          "file": "Nhac_Phong_Tra/NPT-0001/video/short-02.mp4",
+          "linkDrive": "",
+          "tieude": "Con muốn về nhà… khi vẫn còn có thể | Có Những Ngày Chỉ Muốn Về Nhà #Shorts",
+          "mota": "Con muốn về nhà khi mái đầu cha chưa bạc thêm, khi bàn tay mẹ vẫn còn hơi ấm – để nói rằng con thương mẹ biết bao.\n\nNghe bản đầy đủ: https://www.youtube.com/watch?v=aV9Z0ukc9vo\n\nNhạc Phòng Trà – Mỗi bài hát, một câu chuyện đáng nghe.\nLời do kênh sáng tác. Nhạc và hình ảnh được tạo với sự hỗ trợ của AI.\n\n#Shorts #CoNhungNgayChiMuonVeNha #NhacPhongTra",
+          "lichDang": "2026-12-02T19:30",
+          "linkYoutube": "",
+          "ngayDang": "",
+          "ghiChu": "Tèo dựng 27/11/2026 bằng cong-cu/dung_short.py từ anh/NPT-0001/short-02.json · 1080×1920, 32.9 s, phụ đề lời. Mốc khớp giai điệu với điệp khúc S1 đã căn (hoặc mốc khóa trong storyboard). Chờ Ông chủ duyệt preview trước khi hẹn giờ.",
+          "luc": "2026-11-27T16:15:00.000Z"
         }
       ]
     },
@@ -102,7 +117,7 @@
       "series": "tinh-yeu",
       "tuan": 2,
       "ngayTao": "2026-11-19T16:58:35.936Z",
-      "ngayCapNhat": "2026-11-27T15:40:00.000Z",
+      "ngayCapNhat": "2026-11-27T16:15:00.000Z",
       "trangThai": 6,
       "lichSu": [
         {
@@ -261,6 +276,21 @@
           "ngayDang": "",
           "ghiChu": "Tèo dựng 26/11/2026 bằng cong-cu/dung_short.py từ anh/NPT-0002/short-01.json · 1080×1920, 31.7 s, phụ đề lời.",
           "luc": "2026-11-26T04:57:11.000Z"
+        },
+        {
+          "ma": "NPT-0002-S2",
+          "batDau": 60.45,
+          "ketThuc": 92.4,
+          "doan": "Hay là mình yêu nhau lại từ đầu / Lại hẹn hò như ngày xưa em nhé / Lại nắm tay qua từng con phố / Lại thấy tim mình bối rối vì nhau / Hay là mình yêu nhau lại từ đầu / Bỏ sau lưng những lo toan thường nhật / Chẳng cần điều gì xa xôi lắm / Chỉ cần em cười, và nói: “Đi thôi anh!”",
+          "file": "Nhac_Phong_Tra/NPT-0002/video/short-02.mp4",
+          "linkDrive": "",
+          "tieude": "Chỉ cần em cười, và nói: “Đi thôi anh!” | Yêu Nhau Lại Từ Đầu #Shorts",
+          "mota": "Chẳng cần điều gì xa xôi, chỉ cần một lần hẹn hò như ngày đầu – và nụ cười của em.\n\nNghe bản đầy đủ: https://www.youtube.com/watch?v=gM4ctyrqMK4\n\nNhạc Phòng Trà – Mỗi bài hát, một câu chuyện đáng nghe.\nLời do kênh sáng tác. Nhạc và hình ảnh được tạo với sự hỗ trợ của AI.\n\n#Shorts #YeuNhauLaiTuDau #NhacPhongTra",
+          "lichDang": "2026-12-03T19:30",
+          "linkYoutube": "",
+          "ngayDang": "",
+          "ghiChu": "Tèo dựng 27/11/2026 bằng cong-cu/dung_short.py từ anh/NPT-0002/short-02.json · 1080×1920, 32.0 s, phụ đề lời. Mốc khớp giai điệu với điệp khúc S1 đã căn (hoặc mốc khóa trong storyboard). Chờ Ông chủ duyệt preview trước khi hẹn giờ.",
+          "luc": "2026-11-27T16:15:00.000Z"
         }
       ]
     },
@@ -271,7 +301,7 @@
       "series": "tinh-yeu",
       "tuan": 1,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-27T15:40:00.000Z",
+      "ngayCapNhat": "2026-11-27T16:15:00.000Z",
       "trangThai": 6,
       "lichSu": [
         {
@@ -439,6 +469,21 @@
           "ngayDang": "",
           "ghiChu": "Tèo dựng 26/11/2026 bằng cong-cu/dung_short.py từ anh/NPT-0003/short-01.json · 1080×1920, 31.0 s, phụ đề lời.",
           "luc": "2026-11-26T04:57:11.000Z"
+        },
+        {
+          "ma": "NPT-0003-S2",
+          "batDau": 59.8,
+          "ketThuc": 91.2,
+          "doan": "Lúc nào anh cũng bận / Lúc nào em cũng chờ / Anh để dành cho em / Phần cuối của mỗi ngày / Đến khi anh về nhà / Hai đứa chẳng còn sức nói / Mình vẫn nằm cạnh nhau / Sao em thấy xa anh quá?",
+          "file": "Nhac_Phong_Tra/NPT-0003/video/short-02.mp4",
+          "linkDrive": "",
+          "tieude": "Sao em thấy xa anh quá? | Lúc Nào Anh Cũng Bận #Shorts",
+          "mota": "Lúc nào anh cũng bận, lúc nào em cũng chờ. Mình vẫn nằm cạnh nhau, sao em thấy xa anh quá?\n\nNghe bản đầy đủ: https://www.youtube.com/watch?v=mDeTht2Utls\n\nNhạc Phòng Trà – Mỗi bài hát, một câu chuyện đáng nghe.\nLời do kênh sáng tác. Nhạc và hình ảnh được tạo với sự hỗ trợ của AI.\n\n#Shorts #LucNaoAnhCungBan #NhacPhongTra",
+          "lichDang": "2026-12-04T19:30",
+          "linkYoutube": "",
+          "ngayDang": "",
+          "ghiChu": "Tèo dựng 27/11/2026 bằng cong-cu/dung_short.py từ anh/NPT-0003/short-02.json · 1080×1920, 31.4 s, phụ đề lời. Mốc khớp giai điệu với điệp khúc S1 đã căn (hoặc mốc khóa trong storyboard). Chờ Ông chủ duyệt preview trước khi hẹn giờ.",
+          "luc": "2026-11-27T16:15:00.000Z"
         }
       ]
     },
@@ -449,7 +494,7 @@
       "series": "tinh-yeu",
       "tuan": 1,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-27T15:40:00.000Z",
+      "ngayCapNhat": "2026-11-27T16:15:00.000Z",
       "trangThai": 6,
       "lichSu": [
         {
@@ -598,6 +643,21 @@
           "ngayDang": "",
           "ghiChu": "Tèo dựng 26/11/2026 bằng cong-cu/dung_short.py từ anh/NPT-0004/short-01.json · 1080×1920, 31.0 s, phụ đề lời.",
           "luc": "2026-11-26T04:57:11.000Z"
+        },
+        {
+          "ma": "NPT-0004-S2",
+          "batDau": 133.8,
+          "ketThuc": 164.4,
+          "doan": "Em từng nghĩ đến một ngày / Nghe tên anh lòng chẳng đau / Hóa ra ngày ấy tới rồi / Bình thường như bao ngày khác / Em đã thôi kể về anh / Từ bao giờ em chẳng nhớ / Mình từng thương nhau nhiều lắm / Nhắc lại em vẫn thấy vui",
+          "file": "Nhac_Phong_Tra/NPT-0004/video/short-02.mp4",
+          "linkDrive": "",
+          "tieude": "Hóa ra ngày ấy tới rồi | Em Đã Thôi Kể Về Anh #Shorts",
+          "mota": "Em từng nghĩ đến một ngày nghe tên anh lòng chẳng đau. Hóa ra ngày ấy tới rồi – bình thường như bao ngày khác.\n\nNghe bản đầy đủ: https://www.youtube.com/watch?v=53CRqEMaMVg\n\nNhạc Phòng Trà – Mỗi bài hát, một câu chuyện đáng nghe.\nLời do kênh sáng tác. Nhạc và hình ảnh được tạo với sự hỗ trợ của AI.\n\n#Shorts #EmDaThoiKeVeAnh #NhacPhongTra",
+          "lichDang": "2026-12-05T19:30",
+          "linkYoutube": "",
+          "ngayDang": "",
+          "ghiChu": "Tèo dựng 27/11/2026 bằng cong-cu/dung_short.py từ anh/NPT-0004/short-02.json · 1080×1920, 30.6 s, phụ đề lời. Mốc khớp giai điệu với điệp khúc S1 đã căn (hoặc mốc khóa trong storyboard). Chờ Ông chủ duyệt preview trước khi hẹn giờ.",
+          "luc": "2026-11-27T16:15:00.000Z"
         }
       ]
     },
@@ -828,7 +888,7 @@
       "series": "tinh-yeu",
       "tuan": 2,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-27T15:40:00.000Z",
+      "ngayCapNhat": "2026-11-27T16:15:00.000Z",
       "trangThai": 6,
       "lichSu": [
         {
@@ -982,6 +1042,21 @@
           "ngayDang": "2026-11-27",
           "ghiChu": "Tèo dựng 26/11/2026 bằng cong-cu/dung_short.py từ anh/NPT-0008/short-01.json · 1080×1920, 32.5 s, phụ đề lời. Tèo đăng công khai 27/11/2026 15:20 (Ông chủ chọn file): 13 thẻ, Tiếng Việt, danh mục Nhạc, nhãn AI = Có, không dành cho trẻ em, danh sách phát Tình Yêu – Nhạc Phòng Trà, mô tả có link MV. Chưa gắn \"video liên quan\" vì YouTube yêu cầu xác minh kênh một lần (Ông chủ làm).",
           "luc": "2026-11-26T04:57:11.000Z"
+        },
+        {
+          "ma": "NPT-0008-S2",
+          "batDau": 99.8,
+          "ketThuc": 172.2,
+          "doan": "Ngày trước sóng ồn đến thế / Anh gọi khẽ, em vẫn nghe / Chiều nay em nghe rõ sóng / Mà chẳng nghe anh gọi em / Em đi xa dần tiếng sóng / Vẫn mong anh gọi lại",
+          "file": "Nhac_Phong_Tra/NPT-0008/video/short-02.mp4",
+          "linkDrive": "",
+          "tieude": "Mà chẳng nghe anh gọi em | Em Thuộc Về Biển #Shorts",
+          "mota": "Chiều nay em nghe rõ sóng, mà chẳng nghe anh gọi em. Em đi xa dần tiếng sóng, vẫn mong anh gọi lại.\n\nNghe bản đầy đủ: https://www.youtube.com/watch?v=cTFc99A1xIE\n\nNhạc Phòng Trà – Mỗi bài hát, một câu chuyện đáng nghe.\nLời do kênh sáng tác. Nhạc và hình ảnh được tạo với sự hỗ trợ của AI.\n\n#Shorts #EmThuocVeBien #NhacPhongTra",
+          "lichDang": "2026-12-06T19:30",
+          "linkYoutube": "",
+          "ngayDang": "",
+          "ghiChu": "Tèo dựng 27/11/2026 bằng cong-cu/dung_short.py từ anh/NPT-0008/short-02.json · 1080×1920, 37.0 s, phụ đề lời. Mốc khớp giai điệu với điệp khúc S1 đã căn (hoặc mốc khóa trong storyboard). Chờ Ông chủ duyệt preview trước khi hẹn giờ. Ghép 2 đoạn 99.8–126.4 s và 161.0–172.2 s, nối mềm 0,8 s, bỏ gian tấu để dưới 45 s.",
+          "luc": "2026-11-27T16:15:00.000Z"
         }
       ]
     },

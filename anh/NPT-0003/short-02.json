@@ -1,0 +1,82 @@
+{
+ "ma": "NPT-0003-S2",
+ "ten": "Lúc Nào Anh Cũng Bận",
+ "batDau": 59.8,
+ "ketThuc": 91.2,
+ "canh": [
+  {
+   "anh": "canh-04.png",
+   "tu": 59.8,
+   "x": [
+    0.62,
+    0.74
+   ]
+  },
+  {
+   "anh": "canh-09.png",
+   "tu": 68.6,
+   "x": [
+    0.42,
+    0.62
+   ]
+  },
+  {
+   "anh": "canh-07.png",
+   "tu": 75.2,
+   "x": [
+    0.26,
+    0.66
+   ]
+  },
+  {
+   "anh": "canh-05.png",
+   "tu": 82.3,
+   "x": [
+    0.22,
+    0.78
+   ]
+  }
+ ],
+ "loi": [
+  {
+   "tu": 61.1,
+   "den": 64.3,
+   "cau": "Lúc nào anh cũng bận"
+  },
+  {
+   "tu": 64.6,
+   "den": 68.5,
+   "cau": "Lúc nào em cũng chờ"
+  },
+  {
+   "tu": 68.8,
+   "den": 71.6,
+   "cau": "Anh để dành cho em"
+  },
+  {
+   "tu": 71.9,
+   "den": 75.1,
+   "cau": "Phần cuối của mỗi ngày"
+  },
+  {
+   "tu": 75.4,
+   "den": 78.4,
+   "cau": "Đến khi anh về nhà"
+  },
+  {
+   "tu": 78.7,
+   "den": 82.2,
+   "cau": "Hai đứa chẳng còn sức nói"
+  },
+  {
+   "tu": 82.5,
+   "den": 85.7,
+   "cau": "Mình vẫn nằm cạnh nhau"
+  },
+  {
+   "tu": 86.0,
+   "den": 90.3,
+   "cau": "Sao em thấy xa anh quá?"
+  }
+ ]
+}

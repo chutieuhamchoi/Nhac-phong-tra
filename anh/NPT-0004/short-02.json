@@ -1,0 +1,82 @@
+{
+ "ma": "NPT-0004-S2",
+ "ten": "Em Đã Thôi Kể Về Anh",
+ "batDau": 133.8,
+ "ketThuc": 164.4,
+ "canh": [
+  {
+   "anh": "canh-03.png",
+   "tu": 133.8,
+   "x": [
+    0.38,
+    0.48
+   ]
+  },
+  {
+   "anh": "canh-07.png",
+   "tu": 142.6,
+   "x": [
+    0.28,
+    0.38
+   ]
+  },
+  {
+   "anh": "canh-08.png",
+   "tu": 149.6,
+   "x": [
+    0.3,
+    0.56
+   ]
+  },
+  {
+   "anh": "canh-10.png",
+   "tu": 157.0,
+   "x": [
+    0.44,
+    0.5
+   ]
+  }
+ ],
+ "loi": [
+  {
+   "tu": 135.7,
+   "den": 139.5,
+   "cau": "Em từng nghĩ đến một ngày"
+  },
+  {
+   "tu": 139.8,
+   "den": 142.5,
+   "cau": "Nghe tên anh lòng chẳng đau"
+  },
+  {
+   "tu": 142.8,
+   "den": 145.6,
+   "cau": "Hóa ra ngày ấy tới rồi"
+  },
+  {
+   "tu": 145.9,
+   "den": 149.5,
+   "cau": "Bình thường như bao ngày khác"
+  },
+  {
+   "tu": 149.8,
+   "den": 153.1,
+   "cau": "Em đã thôi kể về anh"
+  },
+  {
+   "tu": 153.4,
+   "den": 156.8,
+   "cau": "Từ bao giờ em chẳng nhớ"
+  },
+  {
+   "tu": 157.1,
+   "den": 160.9,
+   "cau": "Mình từng thương nhau nhiều lắm"
+  },
+  {
+   "tu": 161.2,
+   "den": 164.0,
+   "cau": "Nhắc lại em vẫn thấy vui"
+  }
+ ]
+}

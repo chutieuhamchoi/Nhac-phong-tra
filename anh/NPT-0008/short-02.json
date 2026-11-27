@@ -1,0 +1,87 @@
+{
+ "ma": "NPT-0008-S2",
+ "ten": "Em Thuộc Về Biển",
+ "batDau": 0.0,
+ "ketThuc": 37.0,
+ "ghep": {
+  "doan": [
+   [
+    99.8,
+    126.4
+   ],
+   [
+    161.0,
+    172.2
+   ]
+  ],
+  "noiMem": 0.8,
+  "ghiChu": "Bỏ gian tấu 126,4–161,0 để clip dưới 45 giây"
+ },
+ "canh": [
+  {
+   "anh": "canh-07.png",
+   "tu": 0.0,
+   "x": [
+    0.3,
+    0.62
+   ]
+  },
+  {
+   "anh": "canh-05.png",
+   "tu": 13.1,
+   "x": [
+    0.28,
+    0.4
+   ]
+  },
+  {
+   "anh": "canh-06.png",
+   "tu": 17.2,
+   "x": [
+    0.38,
+    0.46
+   ],
+   "zoom": 1.05
+  },
+  {
+   "anh": "canh-09.png",
+   "tu": 25.4,
+   "x": [
+    0.22,
+    0.3
+   ]
+  }
+ ],
+ "loi": [
+  {
+   "tu": 1.2,
+   "den": 6.8,
+   "cau": "Ngày trước sóng ồn đến thế"
+  },
+  {
+   "tu": 7.1,
+   "den": 13.4,
+   "cau": "Anh gọi khẽ, em vẫn nghe"
+  },
+  {
+   "tu": 13.7,
+   "den": 17.3,
+   "cau": "Chiều nay em nghe rõ sóng"
+  },
+  {
+   "tu": 17.6,
+   "den": 26.0,
+   "cau": "Mà chẳng nghe anh gọi em"
+  },
+  {
+   "tu": 26.8,
+   "den": 31.9,
+   "cau": "Em đi xa dần tiếng sóng"
+  },
+  {
+   "tu": 32.2,
+   "den": 36.4,
+   "cau": "Vẫn mong anh gọi lại"
+  }
+ ]
+}

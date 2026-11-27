@@ -1,0 +1,82 @@
+{
+ "ma": "NPT-0002-S2",
+ "ten": "Yêu Nhau Lại Từ Đầu",
+ "batDau": 60.45,
+ "ketThuc": 92.4,
+ "canh": [
+  {
+   "anh": "canh-02.png",
+   "tu": 60.45,
+   "x": [
+    0.36,
+    0.6
+   ]
+  },
+  {
+   "anh": "canh-07.png",
+   "tu": 68.9,
+   "x": [
+    0.48,
+    0.6
+   ]
+  },
+  {
+   "anh": "canh-08.png",
+   "tu": 76.6,
+   "x": [
+    0.42,
+    0.55
+   ]
+  },
+  {
+   "anh": "canh-10.png",
+   "tu": 84.4,
+   "x": [
+    0.4,
+    0.62
+   ]
+  }
+ ],
+ "loi": [
+  {
+   "tu": 61.75,
+   "den": 65.05,
+   "cau": "Hay là mình yêu nhau lại từ đầu"
+  },
+  {
+   "tu": 65.35,
+   "den": 69.05,
+   "cau": "Lại hẹn hò như ngày xưa em nhé"
+  },
+  {
+   "tu": 69.35,
+   "den": 71.65,
+   "cau": "Lại nắm tay qua từng con phố"
+  },
+  {
+   "tu": 71.95,
+   "den": 76.65,
+   "cau": "Lại thấy tim mình bối rối vì nhau"
+  },
+  {
+   "tu": 76.95,
+   "den": 80.65,
+   "cau": "Hay là mình yêu nhau lại từ đầu"
+  },
+  {
+   "tu": 80.95,
+   "den": 84.45,
+   "cau": "Bỏ sau lưng những lo toan thường nhật"
+  },
+  {
+   "tu": 84.75,
+   "den": 86.95,
+   "cau": "Chẳng cần điều gì xa xôi lắm"
+  },
+  {
+   "tu": 87.25,
+   "den": 91.65,
+   "cau": "Chỉ cần em cười, và nói: “Đi thôi anh!”"
+  }
+ ]
+}

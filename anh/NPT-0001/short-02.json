@@ -1,0 +1,84 @@
+{
+ "ma": "NPT-0001-S2",
+ "ten": "Có Những Ngày Chỉ Muốn Về Nhà",
+ "batDau": 203.1,
+ "ketThuc": 236.0,
+ "canh": [
+  {
+   "anh": "canh-10.png",
+   "tu": 203.1,
+   "x": [
+    0.4,
+    0.47
+   ]
+  },
+  {
+   "anh": "canh-04.png",
+   "tu": 211.6,
+   "x": [
+    0.24,
+    0.2
+   ],
+   "zoom": 1.2
+  },
+  {
+   "anh": "canh-05.png",
+   "tu": 218.0,
+   "x": [
+    0.4,
+    0.56
+   ]
+  },
+  {
+   "anh": "canh-04.png",
+   "tu": 225.6,
+   "x": [
+    0.44,
+    0.48
+   ],
+   "zoom": 1.3
+  }
+ ],
+ "loi": [
+  {
+   "tu": 204.15,
+   "den": 207.75,
+   "cau": "Con muốn về nhà... ngay lúc này mẹ ơi"
+  },
+  {
+   "tu": 208.05,
+   "den": 211.65,
+   "cau": "Muốn ôm mẹ như ngày còn thơ bé"
+  },
+  {
+   "tu": 211.95,
+   "den": 214.55,
+   "cau": "Muốn nghe cha nói đôi lời trách nhẹ"
+  },
+  {
+   "tu": 214.85,
+   "den": 218.05,
+   "cau": "“Đi đâu mà... lâu quá chẳng về thăm?”"
+  },
+  {
+   "tu": 218.35,
+   "den": 221.35,
+   "cau": "Con muốn về nhà... khi vẫn còn có thể"
+  },
+  {
+   "tu": 221.65,
+   "den": 225.65,
+   "cau": "Khi mái đầu cha chưa bạc thêm nhiều"
+  },
+  {
+   "tu": 225.95,
+   "den": 228.65,
+   "cau": "Khi bàn tay mẹ vẫn còn hơi ấm"
+  },
+  {
+   "tu": 228.95,
+   "den": 234.85,
+   "cau": "Để nói rằng... con thương mẹ biết bao"
+  }
+ ]
+}
