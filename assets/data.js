@@ -264,15 +264,18 @@
   }
   /** Bổ sung trường còn thiếu cho bài v2 (giữ nguyên mọi trường lạ). */
   /* ---------- Shorts (Tèo phụ trách, thêm 26/11/2026) ----------
-     b.shortVideos: [{ ma, batDau, ketThuc, doan, file, linkDrive, tieude, linkYoutube, ngayDang, ghiChu, luc }]
-     batDau/ketThuc: giây trên MP3 gốc. ngayDang rỗng = đã dựng, chưa đăng. */
+     b.shortVideos: [{ ma, batDau, ketThuc, doan, file, linkDrive, tieude, mota, lichDang, linkYoutube, ngayDang, ghiChu, luc }]
+     batDau/ketThuc: giây trên MP3 gốc. ngayDang rỗng = đã dựng, chưa đăng.
+     mota: mô tả riêng của Short; lichDang: lịch đăng dự kiến hoặc giờ hẹn công khai "YYYY-MM-DDTHH:mm" (giờ VN), thêm 27/11/2026. */
   function chuanShorts(v) {
     return (Array.isArray(v) ? v : []).filter(x => x && typeof x === 'object').map(x => Object.assign({}, x, {
       ma: str(x.ma), doan: str(x.doan), file: str(x.file), linkDrive: str(x.linkDrive), tieude: str(x.tieude),
-      linkYoutube: str(x.linkYoutube), ngayDang: str(x.ngayDang), ghiChu: str(x.ghiChu)
+      mota: str(x.mota), lichDang: str(x.lichDang), linkYoutube: str(x.linkYoutube), ngayDang: str(x.ngayDang), ghiChu: str(x.ghiChu)
     }));
   }
   const shortDaDang = x => !!(x && x.ngayDang && x.linkYoutube);
+  /** Tình trạng một Short: 'dang' đã đăng · 'lich' có lịch đăng · 'dung' mới dựng, chưa có lịch. */
+  const shortTinhTrang = x => shortDaDang(x) ? 'dang' : (x && x.lichDang) ? 'lich' : 'dung';
   function chuanBaiV2(o, kho) {
     const b = Object.assign({}, o);
     if (!isNptId(b.id) || kho.bai.some(x => x.id === b.id)) { if (b.id) b.legacyId = b.legacyId || str(b.id); b.id = capId(kho); }
@@ -633,7 +636,7 @@
     SCHEMA, TRANG_THAI, TT, SERIES, datSeries, TIEU_CHI, TIEU_CHI_CU, NGUONG, datTieuChi, diemToiDa, xepLoai, SO_TUAN, TRUONG_NHAP,
     khoRong, taoBai, themLoi, loiHienTai, chonLoi, themNhac, chonNhac, themStyle, chonStyle, styleHienTai, dongBoStyle, doiTrangThai, canhBaoChuyen,
     datDiem, tongDiem, chuanHoaKho, gopKho, dongBoTuGitHub, giaiXungDot, hienGiaTriDB, NHAN_DB, tachJson, kiemTraNhap, phanTichNhap, timBaiTrung, apNhap, xungDot,
-    CAI_DAT_SUNO, caiDatRong, chuanCaiDat, tomTatCaiDat, datCaiDat, chuanShorts, shortDaDang,
+    CAI_DAT_SUNO, caiDatRong, chuanCaiDat, tomTatCaiDat, datCaiDat, chuanShorts, shortDaDang, shortTinhTrang,
     soSanh, goiSaoLuu, docSaoLuu, xuatKho, boDau, fmtId
   };
 })(typeof window !== 'undefined' ? window : globalThis);

@@ -396,7 +396,7 @@ ${DINH_DANG(s.id, w.so, 'playlist')}`;
     $('#d-tt-ghichu').value = ''; $('#d-loi-ghichu').value = ''; $('#d-diff').innerHTML = '';
     $('#d-nhac-link').value = ''; $('#d-nhac-ghichu').value = '';
     loiDangXem = bai.loiChon;
-    dTab('tt'); renderBai(); capNhatNutYT();
+    dTab('tt'); yTab('dai'); renderBai(); capNhatNutYT();
     if (!dlg.open) dlg.showModal();
   }
   function renderBai() {
@@ -442,14 +442,7 @@ ${DINH_DANG(s.id, w.so, 'playlist')}`;
       (b.diemCu ? `<div class="m diem-cu">Điểm phiếu cũ (thang ${b.diemCu.thang}): ${Object.entries(N.TIEU_CHI_CU).filter(([k]) => b.diemCu[k] != null).map(([k, t]) => `${esc(t)} ${b.diemCu[k]}`).join(', ') || '—'}</div>` : '');
     // youtube
     capNhatTieuDe(); capNhatThumb();
-    const sv = b.shortVideos || [], gio = s => { const n = +s; return Number.isFinite(n) ? `${Math.floor(n / 60)}:${String((n % 60).toFixed(1)).padStart(4, '0')}` : '—'; };
-    $('#d-dem-shorts').textContent = sv.length;
-    $('#d-ds-shorts').innerHTML = sv.length ? sv.map(x => `<div class="vrow"><b>${esc(x.ma || 'Short')}</b>${N.shortDaDang(x) ? '<span class="chon">đã đăng</span>' : ' <span class="m">· chưa đăng</span>'}
-        <span class="m">· ${gio(x.batDau)}–${gio(x.ketThuc)} trên bản nhạc${x.ngayDang ? ' · đăng ' + esc(x.ngayDang) : ''}</span>
-        ${x.tieude ? `<div>${esc(x.tieude)}</div>` : ''}${x.doan ? `<div class="m">${esc(x.doan)}</div>` : ''}
-        <span class="vbtn">${linkOk(x.linkYoutube) ? `<a class="mini" href="${esc(x.linkYoutube)}" target="_blank" rel="noopener">▶ YouTube</a>` : ''}${linkOk(x.linkDrive) ? `<a class="mini" href="${esc(x.linkDrive)}" target="_blank" rel="noopener">Drive</a>` : x.file ? `<span class="m">${esc(x.file)}</span>` : ''}</span>
-        ${x.ghiChu ? `<div class="m">${esc(x.ghiChu)}</div>` : ''}</div>`).join('')
-      : '<p class="hint">Chưa có Short nào. Tèo dựng clip dọc từ đoạn hay nhất khi bài đã đăng.</p>';
+    renderShorts();
     // lịch sử
     const xd = Object.entries(b.xungDotGitHub || {});
     $('#d-lich-su').innerHTML = (xd.length ? `<div class="alert warn"><b>Xung đột với GitHub</b>: cả trình duyệt và GitHub đều sửa các mục dưới đây. Đang dùng bản trình duyệt.
@@ -460,6 +453,49 @@ ${DINH_DANG(s.id, w.so, 'playlist')}`;
       `<ol class="ls">${[...b.lichSu].reverse().map(h => `<li><span class="m">${fmtLuc(h.luc)}</span>
       ${h.tu === null ? '' : `${ttPill(h.tu)} →`} ${ttPill(h.den)}${h.ghiChu ? ` <span>${esc(h.ghiChu)}</span>` : ''}</li>`).join('')}</ol>`;
   }
+  /* ---------- Shorts: tab con "Video ngắn" (27/11/2026) ----------
+     Mỗi clip một thẻ riêng, sửa được: tiêu đề, mô tả, giờ hẹn, link YouTube, ngày đăng, ghi chú.
+     Phần kỹ thuật (đoạn nhạc, lời, file) chỉ xem — Tèo ghi qua GitHub. */
+  const gioClip = s => { const n = +s; return s === '' || s == null || !Number.isFinite(n) ? '—' : `${Math.floor(n / 60)}:${String((n % 60).toFixed(1)).padStart(4, '0')}`; };
+  const fmtLich = v => { const m = /^(\d{4})-(\d{2})-(\d{2})(?:T(\d{2}):(\d{2}))?/.exec(v || ''); return m ? `${m[3]}/${m[2]}/${m[1]}${m[4] ? ' ' + m[4] + ':' + m[5] : ''}` : ''; };
+  const NHAN_TT_SHORT = { dang: 'Đã đăng', lich: 'Dự kiến đăng', dung: 'Đã dựng, chưa có lịch' };
+  function renderShorts() {
+    const sv = bai.shortVideos || [];
+    const dem = { dang: 0, lich: 0, dung: 0 }; sv.forEach(x => dem[N.shortTinhTrang(x)]++);
+    $('#d-dem-shorts').textContent = sv.length;
+    $('#d-tom-shorts').innerHTML = sv.length
+      ? `<span class="ts dang">${dem.dang} đã đăng</span><span class="ts lich">${dem.lich} có lịch đăng</span><span class="ts dung">${dem.dung} chưa có lịch</span>
+         ${bai.linkYoutube ? `<span class="m">MV gốc: <a href="${esc(bai.linkYoutube)}" target="_blank" rel="noopener">${esc(bai.linkYoutube)}</a></span>` : ''}`
+      : '';
+    $('#d-ds-shorts').innerHTML = sv.length ? sv.map((x, i) => {
+      const tt = N.shortTinhTrang(x);
+      return `<div class="short-card ${tt}">
+        <div class="sc-head"><b>${esc(x.ma || 'Short ' + (i + 1))}</b><span class="badge ${tt}">${NHAN_TT_SHORT[tt]}${tt === 'dang' && x.ngayDang ? ' · ' + esc(fmtLich(x.ngayDang)) : tt === 'lich' ? ' · ' + esc(fmtLich(x.lichDang)) : ''}</span></div>
+        ${linkOk(x.linkYoutube) ? `<a class="sc-link" href="${esc(x.linkYoutube)}" target="_blank" rel="noopener">▶ ${esc(x.linkYoutube)}</a>` : '<div class="m sc-link-trong">Chưa có link YouTube</div>'}
+        <div class="row2">
+          <label>Tiêu đề Short <span class="cnt">${(x.tieude || '').length}/100</span><input data-sv="${i}" data-k="tieude" maxlength="100" value="${esc(x.tieude)}"></label>
+          <label>Link YouTube Short <span class="o-link"><input data-sv="${i}" data-k="linkYoutube" placeholder="https://youtube.com/shorts/…" value="${esc(x.linkYoutube)}"><button type="button" class="mini" data-mo-sv="${i}" ${linkOk(x.linkYoutube) ? '' : 'disabled'}>▶ Mở</button></span></label>
+        </div>
+        <div class="row2">
+          <label>Lịch đăng (giờ VN) <input type="datetime-local" data-sv="${i}" data-k="lichDang" value="${esc((x.lichDang || '').slice(0, 16))}"></label>
+          <label>Ngày đã đăng <input type="date" data-sv="${i}" data-k="ngayDang" value="${esc(x.ngayDang)}"></label>
+        </div>
+        <label>Mô tả Short <textarea data-sv="${i}" data-k="mota" rows="3">${esc(x.mota)}</textarea></label>
+        <div class="sc-kt">
+          <div><small>Đoạn nhạc</small>${gioClip(x.batDau)} – ${gioClip(x.ketThuc)}</div>
+          <div><small>File</small>${linkOk(x.linkDrive) ? `<a href="${esc(x.linkDrive)}" target="_blank" rel="noopener">Mở trên Drive</a>` : esc(x.file) || '—'}</div>
+        </div>
+        ${x.doan ? `<div class="sc-loi"><small>Lời trong clip</small>${esc(x.doan).replace(/ \/ /g, '<br>')}</div>` : ''}
+        <label>Ghi chú <textarea data-sv="${i}" data-k="ghiChu" rows="2">${esc(x.ghiChu)}</textarea></label>
+      </div>`;
+    }).join('') : '<p class="hint">Chưa có Short nào. Tèo dựng clip dọc từ đoạn hay nhất khi bài đã đăng.</p>';
+  }
+  function yTab(y) { $$('.ytabs button', dlg).forEach(b => b.classList.toggle('on', b.dataset.y === y)); $$('.ypanel', dlg).forEach(p => p.classList.toggle('on', p.dataset.y === y)); }
+  $$('.ytabs button', dlg).forEach(b => b.onclick = () => yTab(b.dataset.y));
+  $('#d-ds-shorts').addEventListener('click', e => {
+    const i = e.target.dataset.moSv; if (i === undefined) return;
+    e.preventDefault(); const u = $(`[data-sv="${i}"][data-k="linkYoutube"]`, dlg).value.trim(); if (linkOk(u)) window.open(u, '_blank', 'noopener');
+  });
   function renderCaiDat() {               // chỉ hiển thị thông số Tí đề xuất (gọn, 22/11/2026)
     const cd = N.chuanCaiDat(bai.caiDatSuno), bat = v => v === null ? '—' : v ? 'On' : 'Off', pt = v => v === null ? '—' : v + '%';
     const o = [['Model', cd.model || '—'], ['Vocal', cd.giong ? (cd.giong === 'nam' ? 'Male' : 'Female') : '—'],
@@ -479,7 +515,8 @@ ${DINH_DANG(s.id, w.so, 'playlist')}`;
   $('#d-mo-yt').onclick = e => { e.preventDefault(); const u = $('#d-yt').value.trim(); if (linkOk(u)) window.open(u, '_blank', 'noopener'); };
   function capNhatThumb() { const u = $('#d-thumb').value.trim(), img = $('#d-thumb-img'); img.hidden = !linkOk(u); if (linkOk(u)) img.src = u; }
   dlg.addEventListener('input', e => {
-    if (e.target.dataset.f) { dirty = true; $('#d-dirty').textContent = 'Có thay đổi chưa lưu'; }
+    if (e.target.dataset.f || e.target.dataset.sv !== undefined) { dirty = true; $('#d-dirty').textContent = 'Có thay đổi chưa lưu'; }
+    if (e.target.dataset.k === 'linkYoutube') { const nut = $(`[data-mo-sv="${e.target.dataset.sv}"]`, dlg); if (nut) nut.disabled = !linkOk(e.target.value.trim()); }
     if (e.target.id === 'd-tieude') capNhatTieuDe();
     if (e.target.id === 'd-thumb') capNhatThumb();
     if (e.target.id === 'd-yt') capNhatNutYT();
@@ -491,6 +528,8 @@ ${DINH_DANG(s.id, w.so, 'playlist')}`;
       if (f === 'promptSuno') { if (el.value.trim()) N.themStyle(bai, el.value, 'tay'); return; }   // Style đổi thì thành phiên bản mới
       bai[f] = f === 'tuan' ? +el.value : el.value;
     });
+    const sv = bai.shortVideos || [];
+    $$('[data-sv]', dlg).forEach(el => { const x = sv[+el.dataset.sv]; if (x) x[el.dataset.k] = el.value.trim(); });
     bai.ten = bai.ten.trim() || 'Bài chưa đặt tên';
     bai.ngayCapNhat = new Date().toISOString();
     dirty = false; $('#d-dirty').textContent = '';

@@ -53,6 +53,8 @@ Mỗi bài có mảng `shortVideos`, Tèo ghi. Tí không cần sửa trường 
   "file": "Nhac_Phong_Tra/NPT-0008/video/short-01.mp4",
   "linkDrive": "https://drive.google.com/…",
   "tieude": "Em thuộc về biển, còn anh thuộc về ai? | Em Thuộc Về Biển #Shorts",
+  "mota": "…",                     // mô tả riêng của Short (thêm 27/11/2026)
+  "lichDang": "2026-11-28T19:30",  // lịch đăng dự kiến / giờ hẹn công khai, giờ VN (thêm 27/11/2026)
   "linkYoutube": "",               // rỗng = đã dựng, chưa đăng
   "ngayDang": "",                  // YYYY-MM-DD, ngày công khai (kể cả hẹn giờ)
   "ghiChu": "", "luc": "ISO 8601"
@@ -60,7 +62,7 @@ Mỗi bài có mảng `shortVideos`, Tèo ghi. Tí không cần sửa trường 
 ```
 - Chỉ thêm mục mới hoặc điền `linkYoutube`, `ngayDang` khi đã đăng; không xoá mục cũ.
 - File dựng: `anh/<mã bài>/short-NN.json`, công cụ: `cong-cu/dung_short.py`.
-- Website: tab YouTube của bài hiện danh sách Shorts; tab Kế hoạch đếm Shorts đã đăng theo `ngayDang`.
+- Website (27/11/2026): tab YouTube của bài chia hai tab con — **Video dài (MV)** giữ các trường của MV (`tieude`, `thumbnail`, `mota`, `tag`, `linkYoutube`, `ngayPhatHanh`); **Video ngắn (Shorts)** hiện mỗi clip một thẻ, sửa được `tieude`, `mota`, `lichDang`, `linkYoutube`, `ngayDang`, `ghiChu`; đoạn nhạc, lời, file chỉ xem. Ô `shorts` (đoạn gợi ý của Tí) nằm trong tab Video ngắn. Tab Kế hoạch đếm Shorts đã đăng theo `ngayDang`.
 - Sửa `shortVideos` cũng phải cập nhật `ngayCapNhat` để trình duyệt nhận.
 
 ## Kiểm thử

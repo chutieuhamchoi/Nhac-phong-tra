@@ -225,22 +225,32 @@
     </section>
 
     <section class="dpanel" data-d="yt">
-      <div class="row2">
-        <label>Tiêu đề YouTube <span id="d-dem-td" class="cnt"></span><input data-f="tieude" id="d-tieude" maxlength="100"></label>
-        <label>Link ảnh minh họa / thumbnail <input data-f="thumbnail" id="d-thumb" placeholder="https://…"></label>
-      </div>
-      <img id="d-thumb-img" alt="" hidden>
-      <label>Mô tả YouTube <textarea data-f="mota" rows="5"></textarea></label>
-      <div class="row2">
-        <label>Đoạn cho Shorts <textarea data-f="shorts" rows="4"></textarea></label>
-        <div>
-          <label>Hashtag <input data-f="tag"></label>
-          <label>Link YouTube <span class="o-link"><input data-f="linkYoutube" id="d-yt" placeholder="https://youtu.be/…"><button type="button" class="mini" id="d-mo-yt" title="Mở video trên YouTube (tab mới)">▶ Mở</button></span></label>
+      <nav class="ytabs">
+        <button type="button" data-y="dai" class="on">🎬 Video dài (MV)</button>
+        <button type="button" data-y="ngan">📱 Video ngắn (Shorts) <span id="d-dem-shorts" class="pill sm"></span></button>
+      </nav>
+
+      <div class="ypanel on" data-y="dai">
+        <div class="row2">
+          <label>Tiêu đề MV <span id="d-dem-td" class="cnt"></span><input data-f="tieude" id="d-tieude" maxlength="100"></label>
+          <label>Link ảnh minh họa / thumbnail <input data-f="thumbnail" id="d-thumb" placeholder="https://…"></label>
+        </div>
+        <img id="d-thumb-img" alt="" hidden>
+        <label>Mô tả MV <textarea data-f="mota" rows="5"></textarea></label>
+        <label>Thẻ / hashtag <input data-f="tag"></label>
+        <div class="row2">
+          <label>Link YouTube MV <span class="o-link"><input data-f="linkYoutube" id="d-yt" placeholder="https://youtu.be/…"><button type="button" class="mini" id="d-mo-yt" title="Mở video trên YouTube (tab mới)">▶ Mở</button></span></label>
           <label>Ngày phát hành <input data-f="ngayPhatHanh" type="date"></label>
         </div>
       </div>
-      <div class="sub-h">Shorts đã dựng <span id="d-dem-shorts" class="pill sm"></span> <small>(Tèo dựng và cập nhật qua GitHub)</small></div>
-      <div id="d-ds-shorts" class="vlist"></div>
+
+      <div class="ypanel" data-y="ngan">
+        <div id="d-tom-shorts" class="tom-shorts"></div>
+        <div id="d-ds-shorts" class="ds-shorts"></div>
+        <details class="goi-y-short"><summary>Đoạn gợi ý cho Shorts <small>(Tí ghi khi viết lời, Tèo chọn đoạn dựng)</small></summary>
+          <textarea data-f="shorts" rows="4" aria-label="Đoạn gợi ý cho Shorts"></textarea>
+        </details>
+      </div>
     </section>
 
     <section class="dpanel" data-d="ls">
@@ -257,7 +267,7 @@
 </dialog>
 
 <div id="toast" role="status"></div>
-<script src="assets/data.js?v=20261123-suno-sync"></script>
-<script src="assets/app.js?v=20261125-kho-tuan"></script>
+<script src="assets/data.js?v=20261127-shorts-tab"></script>
+<script src="assets/app.js?v=20261127-shorts-tab"></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "capNhat": "2026-11-27T08:20:00.000Z",
+  "capNhat": "2026-11-27T15:40:00.000Z",
   "nextId": 33,
   "bai": [
     {
@@ -10,7 +10,7 @@
       "series": "tuoi-tho",
       "tuan": 1,
       "ngayTao": "2026-11-18T15:06:07.306Z",
-      "ngayCapNhat": "2026-11-26T04:57:11.000Z",
+      "ngayCapNhat": "2026-11-27T15:40:00.000Z",
       "trangThai": 6,
       "lichSu": [
         {
@@ -86,6 +86,8 @@
           "file": "Nhac_Phong_Tra/NPT-0001/video/short-01.mp4",
           "linkDrive": "",
           "tieude": "Chỉ muốn về nhà… ăn một bữa cơm thôi | Có Những Ngày Chỉ Muốn Về Nhà #Shorts",
+          "mota": "",
+          "lichDang": "2026-11-28T19:30",
           "linkYoutube": "",
           "ngayDang": "",
           "ghiChu": "Tèo dựng 26/11/2026 bằng cong-cu/dung_short.py từ anh/NPT-0001/short-01.json · 1080×1920, 32.5 s, phụ đề lời.",
@@ -100,7 +102,7 @@
       "series": "tinh-yeu",
       "tuan": 2,
       "ngayTao": "2026-11-19T16:58:35.936Z",
-      "ngayCapNhat": "2026-11-26T04:57:11.000Z",
+      "ngayCapNhat": "2026-11-27T15:40:00.000Z",
       "trangThai": 6,
       "lichSu": [
         {
@@ -253,6 +255,8 @@
           "file": "Nhac_Phong_Tra/NPT-0002/video/short-01.mp4",
           "linkDrive": "",
           "tieude": "Dẫu mai này mình già đi nữa | Yêu Nhau Lại Từ Đầu #Shorts",
+          "mota": "",
+          "lichDang": "2026-12-01T19:30",
           "linkYoutube": "",
           "ngayDang": "",
           "ghiChu": "Tèo dựng 26/11/2026 bằng cong-cu/dung_short.py từ anh/NPT-0002/short-01.json · 1080×1920, 31.7 s, phụ đề lời.",
@@ -267,7 +271,7 @@
       "series": "tinh-yeu",
       "tuan": 1,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-26T04:57:11.000Z",
+      "ngayCapNhat": "2026-11-27T15:40:00.000Z",
       "trangThai": 6,
       "lichSu": [
         {
@@ -429,6 +433,8 @@
           "file": "Nhac_Phong_Tra/NPT-0003/video/short-01.mp4",
           "linkDrive": "",
           "tieude": "Để em hỏi anh có mệt không | Lúc Nào Anh Cũng Bận #Shorts",
+          "mota": "",
+          "lichDang": "2026-11-30T19:30",
           "linkYoutube": "",
           "ngayDang": "",
           "ghiChu": "Tèo dựng 26/11/2026 bằng cong-cu/dung_short.py từ anh/NPT-0003/short-01.json · 1080×1920, 31.0 s, phụ đề lời.",
@@ -443,7 +449,7 @@
       "series": "tinh-yeu",
       "tuan": 1,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-26T04:57:11.000Z",
+      "ngayCapNhat": "2026-11-27T15:40:00.000Z",
       "trangThai": 6,
       "lichSu": [
         {
@@ -586,6 +592,8 @@
           "file": "Nhac_Phong_Tra/NPT-0004/video/short-01.mp4",
           "linkDrive": "",
           "tieude": "Em cười như vừa nghe kể | Em Đã Thôi Kể Về Anh #Shorts",
+          "mota": "",
+          "lichDang": "2026-11-29T19:30",
           "linkYoutube": "",
           "ngayDang": "",
           "ghiChu": "Tèo dựng 26/11/2026 bằng cong-cu/dung_short.py từ anh/NPT-0004/short-01.json · 1080×1920, 31.0 s, phụ đề lời.",
@@ -820,7 +828,7 @@
       "series": "tinh-yeu",
       "tuan": 2,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-27T08:20:00.000Z",
+      "ngayCapNhat": "2026-11-27T15:40:00.000Z",
       "trangThai": 6,
       "lichSu": [
         {
@@ -968,6 +976,8 @@
           "file": "Nhac_Phong_Tra/NPT-0008/video/short-01.mp4",
           "linkDrive": "https://drive.google.com/file/d/1qle2bVDPh-BAjXh--UnNklq23bClgKpH/view",
           "tieude": "Chiều nay em khẽ buông tay anh | Em Thuộc Về Biển #Shorts",
+          "mota": "Cô khẽ buông tay người mình thương bên biển, vẫn mong một tiếng gọi níu lại. Em thuộc về biển, còn anh thuộc về ai?\n\nNghe bản đầy đủ: https://www.youtube.com/watch?v=cTFc99A1xIE\n\nNhạc Phòng Trà – Mỗi bài hát, một câu chuyện đáng nghe.\nLời do kênh sáng tác. Nhạc và hình ảnh được tạo với sự hỗ trợ của AI.\n\n#Shorts #EmThuocVeBien #NhacPhongTra",
+          "lichDang": "2026-11-27T15:20",
           "linkYoutube": "https://www.youtube.com/shorts/PLzqyIbkgu8",
           "ngayDang": "2026-11-27",
           "ghiChu": "Tèo dựng 26/11/2026 bằng cong-cu/dung_short.py từ anh/NPT-0008/short-01.json · 1080×1920, 32.5 s, phụ đề lời. Tèo đăng công khai 27/11/2026 15:20 (Ông chủ chọn file): 13 thẻ, Tiếng Việt, danh mục Nhạc, nhãn AI = Có, không dành cho trẻ em, danh sách phát Tình Yêu – Nhạc Phòng Trà, mô tả có link MV. Chưa gắn \"video liên quan\" vì YouTube yêu cầu xác minh kênh một lần (Ông chủ làm).",

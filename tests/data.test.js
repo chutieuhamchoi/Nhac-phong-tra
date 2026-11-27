@@ -401,3 +401,14 @@ test('Shorts: chuẩn hóa shortVideos và đồng bộ từ GitHub', () => {
   N.dongBoTuGitHub(local, { schema: 2, bai: [{ id: 'NPT-0009', ten: 'A', loiVersions: [], ngayCapNhat: '2026-11-26T00:00:00Z', shortVideos: [{ ma: 'NPT-0009-S1', batDau: 1, ketThuc: 30 }] }] });
   assert.equal(local.bai[0].shortVideos.length, 1);
 });
+
+test('Shorts: mô tả riêng, lịch đăng và tình trạng clip (27/11/2026)', () => {
+  const { kho } = N.chuanHoaKho({ schema: 2, bai: [{ id: 'NPT-0009', ten: 'A', loiVersions: [], shortVideos: [
+    { ma: 'S1', ngayDang: '2026-11-27', linkYoutube: 'https://youtube.com/shorts/x', mota: 'mo ta' },
+    { ma: 'S2', lichDang: '2026-11-28T19:30' },
+    { ma: 'S3' }] }] });
+  const sv = kho.bai[0].shortVideos;
+  assert.equal(sv[0].mota, 'mo ta');
+  assert.equal(sv[2].mota, ''); assert.equal(sv[2].lichDang, '');
+  assert.deepEqual(sv.map(N.shortTinhTrang), ['dang', 'lich', 'dung']);
+});
