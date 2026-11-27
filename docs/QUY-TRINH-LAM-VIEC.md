@@ -199,7 +199,7 @@ No text, digits, logos, watermarks, borders or storyboard panels.
    - chữ: tên bài + "NHẠC PHÒNG TRÀ" ở trên, phụ đề lời ở giữa dưới (tránh vùng nút của YouTube ở đáy và cạnh phải).
    - Shorts được phép có chữ (phụ đề, tên bài); MV dài vẫn giữ nguyên tắc không chèn chữ.
 4. **Lưu.** `Nhac_Phong_Tra/NPT-xxxx/video/short-NN.mp4` trên Drive.
-5. **Đăng.** Tiêu đề theo mẫu ở mục 5, mô tả 1–2 câu + câu khai báo AI + hashtag (#Shorts, tên bài, #NhacPhongTra), nhãn AI = Có, không dành cho trẻ em, gắn **video liên quan** là MV đầy đủ của bài. Ông chủ chỉ chọn file khi tải lên. Tèo được lên lịch đăng rải 2–3 clip/tuần, giờ tối (19:00–21:00).
+5. **Đăng.** Tiêu đề theo mẫu ở mục 5, mô tả 1–2 câu + câu khai báo AI + hashtag (#Shorts, tên bài, #NhacPhongTra), nhãn AI = Có, không dành cho trẻ em, gắn **video liên quan** là MV đầy đủ của bài. Ông chủ chỉ chọn file khi tải lên. Nhịp đăng (chốt 27/11/2026): **1 clip mỗi ngày, 19:30**. Ông chủ tải lên 3–4 clip một lượt (chọn file), Tèo đặt lịch công khai cho các ngày tiếp theo. Mỗi MV mới làm 2 Short; Tèo luôn giữ sẵn ít nhất 5 clip đã dựng. Lưu ý Studio: không bấm Esc trong hộp tải lên (đóng hộp, video thành bản nháp); hashtag gõ trong ô tiêu đề/mô tả có thể bị gợi ý tự thay.
 6. **Ghi kho.** Thêm một mục vào `shortVideos` của bài (xem `docs/DONG-BO-GITHUB.md`): mã, đoạn, file, link Drive, tiêu đề, link YouTube, ngày đăng. Tab Kế hoạch tự đếm Shorts đã đăng trong tuần.
 7. **Theo dõi.** Sau 7 ngày xem lượt xem, tỷ lệ xem hết, người đăng ký từ Short. Clip nào giữ chân tốt thì làm thêm đoạn khác của cùng bài.
 

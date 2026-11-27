@@ -80,7 +80,7 @@ Sản xuất **30 bài mới, 2 bài mỗi tuần**. NPT-0001 và NPT-0002 đã 
 | Trụ cột | Là gì | Tần suất | Vai trò |
 |---|---|---|---|
 | Bài đơn có lời | 1 bài, 3–5 phút, hình minh họa + lời chạy trên màn hình | 1–2 bài đạt chuẩn/tuần, theo lịch duyệt | Thể hiện dấu ấn sáng tác |
-| Shorts | 30–45 giây đoạn hook, khung dọc | 2–3 clip/tuần | Kéo người đăng ký mới |
+| Shorts | 30–45 giây đoạn hook, khung dọc | 1 clip/ngày, 19:30 | Kéo người đăng ký mới |
 | Playlist dài | 1–3 giờ, có mốc thời gian | Chỉ khi đủ bài phù hợp và có quyền sử dụng | Nguồn giờ xem chính về sau |
 
 Không kéo dài playlist bằng bài chưa đạt chất lượng. Shorts chọn từ những đoạn có điểm nhớ, không ép đủ số lượng.
@@ -89,17 +89,22 @@ Không kéo dài playlist bằng bài chưa đạt chất lượng. Shorts chọ
 
 - **Người làm:** Tèo chọn đoạn, dựng, đăng và theo dõi. Ông chủ chỉ chọn file khi tải lên. Quy trình chi tiết: `docs/QUY-TRINH-LAM-VIEC.md`, bước 9.
 - **Định dạng:** khung dọc 1080×1920, 30–45 giây, đoạn điệp khúc hoặc cao trào, có phụ đề lời và tên bài, cắt từ ảnh cảnh của MV.
-- **Nhịp đăng:** 2–3 clip/tuần, rải giờ tối. Mỗi bài mới đăng có ít nhất 1 Short trong tuần phát hành, gắn video liên quan là MV đầy đủ.
+- **Nhịp đăng (chốt 27/11/2026):** **1 clip mỗi ngày, 19:30**, đều đặn, không đăng 2 clip/ngày (2 clip cùng ngày tự chia lượt đề xuất của nhau và làm hết kho clip quá nhanh). Mỗi bài mới đăng có ít nhất 1 Short trong tuần phát hành, gắn video liên quan là MV đầy đủ (sau khi Ông chủ xác minh kênh).
+- **Nguồn clip để giữ nhịp 7 clip/tuần:** mỗi MV mới cho 2 Short (S1 điệp khúc, S2 đoạn hook khác) → 4 clip/tuần; 3 clip còn lại lấy từ MV cũ (S2, S3: điệp khúc cuối, bridge, câu mở). Tèo luôn giữ kho sẵn ít nhất 5 clip đã dựng.
+- **Cách đăng đỡ việc cho Ông chủ:** mỗi lần Ông chủ ngồi máy, tải lên 3–4 clip một lượt (Ông chủ chọn file từng clip), Tèo đặt **lịch công khai** 19:30 các ngày tiếp theo. Không cần ngồi máy mỗi tối.
+- **Ưu tiên khi xếp lịch:** clip của bài vừa phát hành trước; sau đó bài có lượt xem MV tốt (kéo thêm), rồi bài đang yếu.
 - **Quản lý:** từng clip ghi trong `shortVideos` của bài (thư viện Kho bài, tab YouTube). Tab Kế hoạch đếm số Shorts đã đăng mỗi tuần.
 - **Đo hiệu quả (sau 7 ngày):** lượt xem, tỷ lệ xem hết, người đăng ký mới từ Short, lượt chuyển sang MV.
 
 | Mã | Bài | Đoạn | Trạng thái |
 |---|---|---|---|
-| NPT-0001-S1 | Có Những Ngày Chỉ Muốn Về Nhà | Điệp khúc «Chỉ muốn về nhà… là hết những ngày mưa» (1:37,5–2:10) | đã dựng 26/11/2026 |
-| NPT-0002-S1 | Yêu Nhau Lại Từ Đầu | Điệp khúc cuối «Hay là mình yêu nhau lại từ đầu… hẹn hò cùng em» (2:47,8–3:19,5) | đã dựng 26/11/2026 |
-| NPT-0003-S1 | Lúc Nào Anh Cũng Bận | Điệp khúc cuối «Lúc nào anh cũng bận… có buồn không» (2:24–2:55) | đã dựng 26/11/2026 |
-| NPT-0004-S1 | Em Đã Thôi Kể Về Anh | Điệp khúc «Em đã thôi kể về anh… muốn kể» (1:14,5–1:45,5) | đã dựng 26/11/2026 |
+| NPT-0001-S1 | Có Những Ngày Chỉ Muốn Về Nhà | Điệp khúc «Chỉ muốn về nhà… là hết những ngày mưa» (1:37,5–2:10) | đã dựng 26/11/2026 · lịch **28/11 19:30** |
+| NPT-0002-S1 | Yêu Nhau Lại Từ Đầu | Điệp khúc cuối «Hay là mình yêu nhau lại từ đầu… hẹn hò cùng em» (2:47,8–3:19,5) | đã dựng 26/11/2026 · lịch **01/12 19:30** |
+| NPT-0003-S1 | Lúc Nào Anh Cũng Bận | Điệp khúc cuối «Lúc nào anh cũng bận… có buồn không» (2:24–2:55) | đã dựng 26/11/2026 · lịch **30/11 19:30** |
+| NPT-0004-S1 | Em Đã Thôi Kể Về Anh | Điệp khúc «Em đã thôi kể về anh… muốn kể» (1:14,5–1:45,5) | đã dựng 26/11/2026 · lịch **29/11 19:30** |
 | NPT-0008-S1 | Em Thuộc Về Biển | «Nhìn anh này…» → điệp khúc «…Sao anh chẳng níu lại?» (0:43–1:15,5) | ✅ đăng 27/11/2026 · [xem](https://www.youtube.com/shorts/PLzqyIbkgu8) |
+| S2 các bài (NPT-0008, 0004, 0001, 0003, 0002) | — | Tèo chọn đoạn và dựng trước 01/12 | lịch 02/12 → 06/12, 19:30 |
+| NPT-0010-S1 | Mưa Qua Ô Cửa Sổ | sau khi MV phát hành (tuần 2) | trong tuần phát hành |
 
 ## 6. Mục tiêu tạm đặt
 
