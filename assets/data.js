@@ -274,6 +274,12 @@
     }));
   }
   const shortDaDang = x => !!(x && x.ngayDang && x.linkYoutube);
+  /** So sánh shortVideos bỏ qua trường thêm sau (mota, lichDang) khi bên kia còn trống — tránh báo xung đột giả khi nâng cấp. */
+  function shortsGiongCot(a, b) {
+    const bo = v => { try { return JSON.stringify(chuanShorts(v ? JSON.parse(v) : []).map(x => { const y = Object.assign({}, x); delete y.mota; delete y.lichDang; return y; })); } catch { return v; } };
+    return bo(a) === bo(b);
+  }
+  const chuanShortsDB = v => { try { return v ? JSON.stringify(chuanShorts(JSON.parse(v))) : ''; } catch { return v; } };
   /** Tình trạng một Short: 'dang' đã đăng · 'lich' có lịch đăng · 'dung' mới dựng, chưa có lịch. */
   const shortTinhTrang = x => shortDaDang(x) ? 'dang' : (x && x.lichDang) ? 'lich' : 'dung';
   function chuanBaiV2(o, kho) {
@@ -472,6 +478,16 @@
           doiSuno = true;
         }
       }
+      // Xung đột Shorts giả do thêm trường mới (27/11/2026): nếu chỉ khác mota/lichDang mà trình duyệt chưa điền thì nhận bản GitHub.
+      const xdS = l.xungDotGitHub?.shortVideos;
+      if (xdS && shortsGiongCot(xdS.trinhDuyet, giaTriDB(r, 'shortVideos'))
+          && !(chuanShorts(JSON.parse(xdS.trinhDuyet || '[]')).some(x => x.mota || x.lichDang))) {
+        ganDB(l, 'shortVideos', giaTriDB(r, 'shortVideos'));
+        delete l.xungDotGitHub.shortVideos;
+        if (!Object.keys(l.xungDotGitHub).length) delete l.xungDotGitHub;
+        if (l.gocGitHub) l.gocGitHub.shortVideos = giaTriDB(r, 'shortVideos');
+        kq.capNhat++; kq.doi = true;
+      }
       if (l.remoteNgayCapNhat === r.ngayCapNhat && l.gocGitHub) {
         if (doiSuno) { l.gocGitHub.caiDatSuno = suno; kq.capNhat++; kq.doi = true; }
         continue;
@@ -483,7 +499,7 @@
       }
       const goc = l.gocGitHub, xd = [];
       for (const f of TRUONG_DB) {
-        const vr = giaTriDB(r, f), vl = giaTriDB(l, f), vg = goc[f];
+        const vr = giaTriDB(r, f), vl = giaTriDB(l, f), vg = f === 'shortVideos' ? chuanShortsDB(goc[f]) : goc[f];
         if (vr === vl || vr === vg) continue;                  // không có gì mới từ GitHub
         if (vr === '' || (f === 'diem' && vr === JSON.stringify(diemRong()))) continue;   // GitHub để trống: không xóa dữ liệu trình duyệt
         if (vl === vg || vl === '' || vl === undefined || (f === 'diem' && vl === JSON.stringify(diemRong()))) { ganDB(l, f, vr); doi = true; continue; }

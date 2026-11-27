@@ -412,3 +412,20 @@ test('Shorts: mô tả riêng, lịch đăng và tình trạng clip (27/11/2026)
   assert.equal(sv[2].mota, ''); assert.equal(sv[2].lichDang, '');
   assert.deepEqual(sv.map(N.shortTinhTrang), ['dang', 'lich', 'dung']);
 });
+
+test('Shorts: nâng cấp thêm mota/lichDang không gây xung đột giả', () => {
+  const cu = { ma: 'NPT-0009-S1', batDau: 1, ketThuc: 30, doan: '', file: '', linkDrive: '', tieude: 'T', linkYoutube: '', ngayDang: '', ghiChu: '' };
+  const local = N.chuanHoaKho({ schema: 2, bai: [] }).kho;
+  N.dongBoTuGitHub(local, { schema: 2, bai: [{ id: 'NPT-0009', ten: 'A', loiVersions: [], ngayCapNhat: '2026-11-26T00:00:00Z', shortVideos: [cu] }] });
+  // mô phỏng gốc chụp bằng mã cũ (chưa có mota/lichDang)
+  local.bai[0].gocGitHub.shortVideos = JSON.stringify([cu]);
+  N.dongBoTuGitHub(local, { schema: 2, bai: [{ id: 'NPT-0009', ten: 'A', loiVersions: [], ngayCapNhat: '2026-11-27T00:00:00Z', shortVideos: [Object.assign({}, cu, { lichDang: '2026-11-28T19:30', mota: 'M' })] }] });
+  assert.equal(local.bai[0].xungDotGitHub, undefined);
+  assert.equal(local.bai[0].shortVideos[0].lichDang, '2026-11-28T19:30');
+  // xung đột giả đã ghi từ trước cũng tự gỡ
+  local.bai[0].xungDotGitHub = { shortVideos: { github: 'x', trinhDuyet: JSON.stringify([cu]), luc: '' } };
+  local.bai[0].shortVideos = [cu];
+  N.dongBoTuGitHub(local, { schema: 2, bai: [{ id: 'NPT-0009', ten: 'A', loiVersions: [], ngayCapNhat: '2026-11-27T00:00:00Z', shortVideos: [Object.assign({}, cu, { lichDang: '2026-11-28T19:30', mota: 'M' })] }] });
+  assert.equal(local.bai[0].xungDotGitHub, undefined);
+  assert.equal(local.bai[0].shortVideos[0].mota, 'M');
+});
