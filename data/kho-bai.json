@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "capNhat": "2026-11-27T16:15:00.000Z",
+  "capNhat": "2026-11-27T16:20:08.985Z",
   "nextId": 33,
   "bai": [
     {
@@ -81,7 +81,7 @@
         {
           "ma": "NPT-0001-S1",
           "batDau": 97.5,
-          "ketThuc": 130.0,
+          "ketThuc": 130,
           "doan": "Chỉ muốn về nhà... ăn một bữa cơm thôi / Nghe mẹ hỏi: “Hôm nay con có mệt?” / Nghe tiếng cha ho khẽ ngoài hiên vắng / Mà thấy lòng... bình yên đến lạ thường / Chỉ muốn về nhà... chẳng cần phải mạnh mẽ / Được làm đứa con bé nhỏ ngày xưa / Dẫu ngoài kia bao nhiêu điều giông bão / Về đến nhà... là hết những ngày mưa",
           "file": "Nhac_Phong_Tra/NPT-0001/video/short-01.mp4",
           "linkDrive": "",
@@ -96,7 +96,7 @@
         {
           "ma": "NPT-0001-S2",
           "batDau": 203.1,
-          "ketThuc": 236.0,
+          "ketThuc": 236,
           "doan": "Con muốn về nhà... ngay lúc này mẹ ơi / Muốn ôm mẹ như ngày còn thơ bé / Muốn nghe cha nói đôi lời trách nhẹ / “Đi đâu mà... lâu quá chẳng về thăm?” / Con muốn về nhà... khi vẫn còn có thể / Khi mái đầu cha chưa bạc thêm nhiều / Khi bàn tay mẹ vẫn còn hơi ấm / Để nói rằng... con thương mẹ biết bao",
           "file": "Nhac_Phong_Tra/NPT-0001/video/short-02.mp4",
           "linkDrive": "",
@@ -457,8 +457,8 @@
       "shortVideos": [
         {
           "ma": "NPT-0003-S1",
-          "batDau": 144.0,
-          "ketThuc": 175.0,
+          "batDau": 144,
+          "ketThuc": 175,
           "doan": "Lúc nào anh cũng bận / Lúc nào em cũng chờ / Em muốn có anh bên em / Trước khi ngày đã cạn / Mình còn thương nhau mà anh / Dành cho nhau một tối nhé / Để em hỏi anh có mệt không / Để anh hỏi em có buồn không",
           "file": "Nhac_Phong_Tra/NPT-0003/video/short-01.mp4",
           "linkDrive": "",
@@ -668,8 +668,8 @@
       "series": "do-thi",
       "tuan": 3,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-25T03:18:09.920Z",
-      "trangThai": 1,
+      "ngayCapNhat": "2026-11-27T16:20:08.985Z",
+      "trangThai": 2,
       "lichSu": [
         {
           "tu": null,
@@ -682,6 +682,12 @@
           "den": 1,
           "luc": "2026-11-22T11:55:00.544Z",
           "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
+        },
+        {
+          "tu": 1,
+          "den": 2,
+          "luc": "2026-11-27T16:20:08.985Z",
+          "ghiChu": "Ông chủ chốt lời V3. Tí cập nhật Style đề xuất và hai gợi ý Shorts."
         }
       ],
       "loiVersions": [
@@ -698,9 +704,16 @@
           "nguon": "chatgpt",
           "luc": "2026-11-22T11:55:00.544Z",
           "ghiChu": "Tí rà lại bối cảnh, cách xưng hô và lời ăn tiếng nói theo câu chuyện. Bản nháp chờ Ông chủ duyệt."
+        },
+        {
+          "v": 3,
+          "loi": "[Verse 1]\nHôm nay phố vừa trở rét\nEm đi ngang quán mình quen\nMấy bàn đã kê vào sát cửa\nChỗ mình ngồi vẫn nhìn ra đường\n\nHồi ấy anh thường đến muộn\nEm ngồi trông mãi ra ngoài\nHôm chia tay anh còn nói\nTháng mười hai, mình gặp lại\n\n[Chorus]\nTháng mười hai có hẹn\nChỉ mình em nhớ thôi\nCứ đến ngày mình từng hẹn\nEm lại đi ngang qua đây\n\nTháng mười hai có hẹn\nEm còn nhớ giọng anh\nNói “mình gặp lại nhé”\nNhẹ như hẹn ngày mai\n\n[Verse 2]\nNăm đầu em vào quán đợi\nĐến khi người ta dọn bàn\nNăm sau em đi ngang cửa\nThấy có người ngồi chỗ anh\n\nNăm nay em ghé mua một cốc\nCầm theo trên đường về nhà\nRa đến đầu phố mới nhớ\nHôm nay là ngày hẹn xưa\n\n[Bridge]\nHôm ấy nếu anh im lặng\nChắc em đã khóc nhiều hơn\nAnh nói một câu cho em đỡ buồn\nEm tin câu ấy qua mấy mùa đông\n\n[Final Chorus]\nTháng mười hai có hẹn\nChỉ mình em nhớ thôi\nNăm nay ngang qua chỗ cũ\nEm nhớ rồi em về\n\nTháng mười hai có hẹn\nEm còn nhớ giọng anh\nNói “mình gặp lại nhé”\nNhẹ như hẹn ngày mai\n\n[Outro]\nPhố vừa lên đèn\nEm về qua lối quen\nCốc cà phê còn ấm tay\nTháng mười hai lại đến.",
+          "nguon": "chatgpt",
+          "luc": "2026-11-27T16:20:08.985Z",
+          "ghiChu": "Ông chủ chốt lời viết lại cho nữ solo."
         }
       ],
-      "loiChon": 2,
+      "loiChon": 3,
       "styleVersions": [
         {
           "v": 1,
@@ -708,10 +721,17 @@
           "nguon": "chatgpt",
           "luc": "2026-11-22T06:27:01.567Z",
           "ghiChu": "Tí soạn Style nháp V1."
+        },
+        {
+          "v": 2,
+          "style": "Vietnamese pop-jazz ballad, 78 BPM, straight 4/4 with a light brush swing. One female mezzo lead, intimate warm low verses, clear Vietnamese diction, natural conversational phrasing. Felt piano, clean hollow-body guitar, restrained upright bass and brushed drums. Four-bar piano intro. Leave a breath after the title hook, then let the melody rise on 'Chỉ mình em nhớ thôi'. Verse 2 stays close and rhythmic. Drop to voice and piano for the first two bridge lines, then build into a wider final chorus with soft strings and drums. Let 'Em nhớ rồi em về' fall into a brief silence. Close with solo piano and the last lyric almost spoken. No duet, no vocal runs, no heavy bass.",
+          "nguon": "chatgpt",
+          "luc": "2026-11-27T16:20:08.985Z",
+          "ghiChu": "Tí đề xuất Pop jazz ballad nữ solo, 78 BPM."
         }
       ],
-      "styleChon": 1,
-      "promptSuno": "Vietnamese winter pop-jazz duet, 102 BPM. Female alto and male tenor trade perspectives over warm piano, upright bass and brushes. Short, lightly swung verses; flowing unison title on the chorus. Let the bridge become playful call and response. Finish with interwoven harmony and a piano tag.",
+      "styleChon": 2,
+      "promptSuno": "Vietnamese pop-jazz ballad, 78 BPM, straight 4/4 with a light brush swing. One female mezzo lead, intimate warm low verses, clear Vietnamese diction, natural conversational phrasing. Felt piano, clean hollow-body guitar, restrained upright bass and brushed drums. Four-bar piano intro. Leave a breath after the title hook, then let the melody rise on 'Chỉ mình em nhớ thôi'. Verse 2 stays close and rhythmic. Drop to voice and piano for the first two bridge lines, then build into a wider final chorus with soft strings and drums. Let 'Em nhớ rồi em về' fall into a brief silence. Close with solo piano and the last lyric almost spoken. No duet, no vocal runs, no heavy bass.",
       "nhacVersions": [],
       "nhacChon": null,
       "diem": {
@@ -723,12 +743,22 @@
       "thumbnail": "",
       "tieude": "",
       "mota": "",
-      "shorts": "",
+      "shorts": "S1 · Chỉ mình em nhớ thôi | Tháng Mười Hai Có Hẹn #Shorts\nMở: “Tháng mười hai có hẹn” · Kết: “Nhẹ như hẹn ngày mai” (điệp khúc đầu, 30–45 giây).\nCảnh: Cô nhìn qua kính quán, cắt sang ghế đối diện còn trống rồi trở lại ánh mắt cô.\n\nS2 · Em tin câu ấy qua mấy mùa đông | Tháng Mười Hai Có Hẹn #Shorts\nMở: “Hôm ấy nếu anh im lặng” · Kết: “Em nhớ rồi em về” (bridge sang nửa đầu điệp khúc cuối, 30–45 giây).\nCảnh: Hồi tưởng lúc chia tay, chuyển về phố lên đèn khi cô cầm cà phê bước qua quán.\nCăn mốc và thời lượng theo bản nhạc được chọn.",
       "tag": "",
       "linkYoutube": "",
       "ngayPhatHanh": "",
-      "ghiChu": "Bài số 03 · Pop jazz song ca. Yêu xa, một người đếm ngày, một người đếm ga tàu.",
-      "promptChatGPT": ""
+      "ghiChu": "Bài số 03 · Pop jazz ballad, nữ solo. Mỗi tháng Mười Hai, cô lại nhớ lời hẹn mùa đông với người đã chia tay.",
+      "promptChatGPT": "",
+      "caiDatSuno": {
+        "model": "v6",
+        "giong": "nu",
+        "thoiLuong": "auto",
+        "maxMode": false,
+        "weirdness": 35,
+        "styleInfluence": 75,
+        "variety": "Normal",
+        "personalize": false
+      }
     },
     {
       "id": "NPT-0006",
@@ -1030,7 +1060,7 @@
       "shortVideos": [
         {
           "ma": "NPT-0008-S1",
-          "batDau": 43.0,
+          "batDau": 43,
           "ketThuc": 75.5,
           "doan": "“Nhìn anh này, biển có chạy đâu” / Em thuộc về biển / Còn anh thuộc về ai? / Chiều nay em khẽ buông tay anh / Sao anh chẳng níu lại?",
           "file": "Nhac_Phong_Tra/NPT-0008/video/short-01.mp4",
