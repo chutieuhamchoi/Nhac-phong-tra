@@ -429,3 +429,17 @@ test('Shorts: nâng cấp thêm mota/lichDang không gây xung đột giả', ()
   assert.equal(local.bai[0].xungDotGitHub, undefined);
   assert.equal(local.bai[0].shortVideos[0].mota, 'M');
 });
+
+test('Đồng bộ: trạng thái trên GitHub cao hơn thì trình duyệt nhận, kể cả đã có xung đột', () => {
+  const local = N.chuanHoaKho({ schema: 2, bai: [] }).kho;
+  const goc = { id: 'NPT-0003', ten: 'A', loiVersions: [], trangThai: 2, ngayCapNhat: '2026-11-22T00:00:00Z' };
+  N.dongBoTuGitHub(local, { schema: 2, bai: [goc] });
+  const l = local.bai[0];
+  l.trangThai = 3; l.xungDotGitHub = { trangThai: { github: '6', trinhDuyet: '3', luc: '' } };
+  N.dongBoTuGitHub(local, { schema: 2, bai: [Object.assign({}, goc, { trangThai: 6, ngayCapNhat: '2026-11-27T00:00:00Z' })] });
+  assert.equal(l.trangThai, 6);
+  assert.equal(l.xungDotGitHub, undefined);
+  // GitHub thấp hơn trình duyệt: không kéo lùi
+  N.dongBoTuGitHub(local, { schema: 2, bai: [Object.assign({}, goc, { trangThai: 4, ngayCapNhat: '2026-11-28T00:00:00Z' })] });
+  assert.equal(l.trangThai, 6);
+});

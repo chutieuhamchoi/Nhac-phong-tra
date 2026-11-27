@@ -488,6 +488,14 @@
         if (l.gocGitHub) l.gocGitHub.shortVideos = giaTriDB(r, 'shortVideos');
         kq.capNhat++; kq.doi = true;
       }
+      // Trạng thái không lùi (27/11/2026): xung đột trạng thái đã ghi mà GitHub cao hơn thì nhận bản GitHub.
+      const xdT = l.xungDotGitHub?.trangThai;
+      if (xdT && +r.trangThai > +l.trangThai) {
+        const cu = l.trangThai; l.trangThai = +r.trangThai;
+        delete l.xungDotGitHub.trangThai; if (!Object.keys(l.xungDotGitHub).length) delete l.xungDotGitHub;
+        l.lichSu.push({ tu: cu, den: l.trangThai, luc: now(), ghiChu: 'Đồng bộ GitHub: nhận trạng thái mới hơn từ GitHub (trạng thái không lùi).' });
+        kq.capNhat++; kq.doi = true;
+      }
       if (l.remoteNgayCapNhat === r.ngayCapNhat && l.gocGitHub) {
         if (doiSuno) { l.gocGitHub.caiDatSuno = suno; kq.capNhat++; kq.doi = true; }
         continue;
@@ -501,8 +509,10 @@
       for (const f of TRUONG_DB) {
         const vr = giaTriDB(r, f), vl = giaTriDB(l, f), vg = f === 'shortVideos' ? chuanShortsDB(goc[f]) : goc[f];
         if (vr === vl || vr === vg) continue;                  // không có gì mới từ GitHub
+        if (f === 'trangThai' && +vl === TT.DA_DANG && +vr < TT.DA_DANG) continue;   // bài đã đăng YouTube không bị kéo lùi
         if (vr === '' || (f === 'diem' && vr === JSON.stringify(diemRong()))) continue;   // GitHub để trống: không xóa dữ liệu trình duyệt
         if (vl === vg || vl === '' || vl === undefined || (f === 'diem' && vl === JSON.stringify(diemRong()))) { ganDB(l, f, vr); doi = true; continue; }
+        if (f === 'trangThai' && +vr > +vl) { ganDB(l, f, vr); doi = true; continue; }   // GitHub tiến xa hơn thì nhận, không báo xung đột
         xd.push(f);
         (l.xungDotGitHub = l.xungDotGitHub || {})[f] = { github: vr, trinhDuyet: vl, luc: now() };
       }
