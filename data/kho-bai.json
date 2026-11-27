@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "capNhat": "2026-11-26T04:57:11.000Z",
+  "capNhat": "2026-11-27T06:45:00.000Z",
   "nextId": 33,
   "bai": [
     {
@@ -820,8 +820,8 @@
       "series": "tinh-yeu",
       "tuan": 2,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-26T04:57:11.000Z",
-      "trangThai": 4,
+      "ngayCapNhat": "2026-11-27T06:45:00.000Z",
+      "trangThai": 6,
       "lichSu": [
         {
           "tu": null,
