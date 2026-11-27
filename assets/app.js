@@ -327,6 +327,18 @@ ${DINH_DANG(s.id, w.so, 'playlist')}`;
   $('#xem-truoc').addEventListener('click', e => { const id = e.target.dataset.mo; if (id) { e.preventDefault(); moBai(id); } });
 
   /* ---------- kho bài ---------- */
+  /** Dòng link YouTube trên thẻ bài: MV + từng Short (đã đăng: link; có lịch: ngày dự kiến). 27/11/2026 */
+  function theLink(b) {
+    const sv = b.shortVideos || [], ra = [];
+    if (linkOk(b.linkYoutube)) ra.push(`<a class="lk mv" href="${esc(b.linkYoutube)}" target="_blank" rel="noopener" title="${esc(b.linkYoutube)}">▶ MV</a>`);
+    sv.forEach((x, i) => {
+      const ma = esc((x.ma || '').split('-').pop() || 'S' + (i + 1));
+      if (N.shortDaDang(x) && linkOk(x.linkYoutube)) ra.push(`<a class="lk sh" href="${esc(x.linkYoutube)}" target="_blank" rel="noopener" title="${esc(x.tieude || x.linkYoutube)}">▶ Short ${ma}</a>`);
+      else if (x.lichDang) ra.push(`<span class="lk ch" title="${esc(x.tieude)}">📅 Short ${ma} · ${esc(x.lichDang.slice(8, 10) + '/' + x.lichDang.slice(5, 7))}</span>`);
+      else ra.push(`<span class="lk ch" title="${esc(x.tieude)}">Short ${ma} · chưa đăng</span>`);
+    });
+    return ra.length ? `<div class="song-links">${ra.join('')}</div>` : '';
+  }
   function renderKho() {
     const fs = $('#loc-series').value, ft = $('#loc-tt').value, q = N.boDau($('#loc-q').value);
     const ds = kho.bai.filter(b => (!fs || b.series === fs) && (ft === '' || b.trangThai === +ft) && (!q || N.boDau(b.ten + ' ' + b.id).includes(q)))
@@ -343,6 +355,7 @@ ${DINH_DANG(s.id, w.so, 'playlist')}`;
         <div class="m">${b.loai === 'playlist' ? 'Playlist' : 'Bài đơn'} · Tuần ${b.tuan} · ${esc(seriesOf(b.series).ten)}</div>
         <div class="m">Lời: ${b.loiVersions.length} bản · Nhạc: ${b.nhacVersions.length} bản${b.nhacChon ? ` (chọn v${b.nhacChon})` : ''} · Điểm: ${tong === null ? '—' : `<b class="${lopDiem(tong)}" title="${N.xepLoai(tong).nhan}">${tong}/${N.diemToiDa()}</b>`}</div>
         <pre>${esc(loi.slice(0, 220))}</pre>
+        ${theLink(b)}
         ${b.loai === 'playlist' ? '' : `<div class="song-copy">
           <button type="button" class="mini copy-btn" data-copy="loi" ${loi.trim() ? '' : 'disabled'} title="Sao chép toàn bộ lời đang dùng">⧉ Copy lời</button>
           <button type="button" class="mini copy-btn" data-copy="style" ${b.promptSuno.trim() ? '' : 'disabled'} title="Sao chép prompt Suno">⧉ Copy style</button>
@@ -367,6 +380,7 @@ ${DINH_DANG(s.id, w.so, 'playlist')}`;
       const b = kho.bai.find(x => x.id === nut.closest('.song').dataset.id); if (!b) return;
       return nut.dataset.copy === 'loi' ? copyCo(N.loiHienTai(b) || '', 'lời') : copyCo(b.promptSuno, 'prompt Suno');
     }
+    if (e.target.closest('a')) return;               // bấm link MV/Short: mở YouTube, không mở hộp bài
     const c = e.target.closest('.song'); if (c) moBai(c.dataset.id);
   });
   $('#d-copy-loi').onclick = () => copyCo($('#d-loi').value, 'lời');
