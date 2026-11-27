@@ -100,7 +100,7 @@ Không kéo dài playlist bằng bài chưa đạt chất lượng. Shorts chọ
 |---|---|---|---|
 | NPT-0001-S1 | Có Những Ngày Chỉ Muốn Về Nhà | Điệp khúc «Chỉ muốn về nhà… là hết những ngày mưa» (1:37,5–2:10) | ⏰ đã tải lên, hẹn giờ **28/11 19:30** · [link](https://www.youtube.com/shorts/w-eVpo1_ZUM) |
 | NPT-0002-S1 | Yêu Nhau Lại Từ Đầu | Điệp khúc cuối «Hay là mình yêu nhau lại từ đầu… hẹn hò cùng em» (2:47,8–3:19,5) | đã dựng 26/11/2026 · lịch **01/12 19:30** |
-| NPT-0003-S1 | Lúc Nào Anh Cũng Bận | Điệp khúc cuối «Lúc nào anh cũng bận… có buồn không» (2:24–2:55) | đã dựng 26/11/2026 · lịch **30/11 19:30** |
+| NPT-0003-S1 | Lúc Nào Anh Cũng Bận | Điệp khúc cuối «Lúc nào anh cũng bận… có buồn không» (2:24–2:55) | ⏰ đã tải lên, hẹn giờ **30/11 19:30** · [link](https://www.youtube.com/shorts/Yyf8mlHItzE) |
 | NPT-0004-S1 | Em Đã Thôi Kể Về Anh | Điệp khúc «Em đã thôi kể về anh… muốn kể» (1:14,5–1:45,5) | ⏰ đã tải lên, hẹn giờ **29/11 19:30** · [link](https://www.youtube.com/shorts/e6C5P0RC5-M) |
 | NPT-0008-S1 | Em Thuộc Về Biển | «Nhìn anh này…» → điệp khúc «…Sao anh chẳng níu lại?» (0:43–1:15,5) | ✅ đăng 27/11/2026 · [xem](https://www.youtube.com/shorts/PLzqyIbkgu8) |
 | NPT-0001-S2 | Có Những Ngày Chỉ Muốn Về Nhà | Final Chorus «Con muốn về nhà… ngay lúc này mẹ ơi» → «Để nói rằng… con thương mẹ biết bao» (3:23,1–3:56) | đã dựng 27/11, chờ duyệt · lịch **02/12 19:30** |
