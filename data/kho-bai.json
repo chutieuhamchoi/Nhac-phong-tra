@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "capNhat": "2026-11-28T16:00:00.000Z",
+  "capNhat": "2026-11-28T16:15:00.000Z",
   "nextId": 33,
   "bai": [
     {
@@ -117,7 +117,7 @@
       "series": "tinh-yeu",
       "tuan": 2,
       "ngayTao": "2026-11-19T16:58:35.936Z",
-      "ngayCapNhat": "2026-11-28T15:20:00.000Z",
+      "ngayCapNhat": "2026-11-28T16:15:00.000Z",
       "trangThai": 6,
       "lichSu": [
         {
@@ -287,10 +287,10 @@
           "tieude": "Chỉ cần em cười, và nói: “Đi thôi anh!” | Yêu Nhau Lại Từ Đầu #Shorts",
           "mota": "Chẳng cần điều gì xa xôi, chỉ cần một lần hẹn hò như ngày đầu – và nụ cười của em.\n\nNghe bản đầy đủ: https://www.youtube.com/watch?v=gM4ctyrqMK4\n\nNhạc Phòng Trà – Mỗi bài hát, một câu chuyện đáng nghe.\nLời do kênh sáng tác. Nhạc và hình ảnh được tạo với sự hỗ trợ của AI.\n\n#Shorts #YeuNhauLaiTuDau #NhacPhongTra",
           "lichDang": "2026-12-03T19:30",
-          "linkYoutube": "",
-          "ngayDang": "",
-          "ghiChu": "Tèo dựng 27/11/2026 bằng cong-cu/dung_short.py từ anh/NPT-0002/short-02.json · 1080×1920, 32.0 s, phụ đề lời. Mốc khớp giai điệu với điệp khúc S1 đã căn (hoặc mốc khóa trong storyboard). Chờ Ông chủ duyệt preview trước khi hẹn giờ.",
-          "luc": "2026-11-28T15:20:00.000Z"
+          "linkYoutube": "https://www.youtube.com/shorts/Q8CbwrgChOM",
+          "ngayDang": "2026-12-03",
+          "ghiChu": "Tèo dựng 27/11/2026 bằng cong-cu/dung_short.py từ anh/NPT-0002/short-02.json · 1080×1920, 32.0 s, phụ đề lời. Mốc khớp giai điệu với điệp khúc S1 đã căn (hoặc mốc khóa trong storyboard). Chờ Ông chủ duyệt preview trước khi hẹn giờ. Tèo tải lên 28/11, hẹn giờ 2026-12-03 19:30.",
+          "luc": "2026-11-28T16:15:00.000Z"
         }
       ]
     },
@@ -301,7 +301,7 @@
       "series": "tinh-yeu",
       "tuan": 1,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-28T15:20:00.000Z",
+      "ngayCapNhat": "2026-11-28T16:15:00.000Z",
       "trangThai": 6,
       "lichSu": [
         {
@@ -480,10 +480,10 @@
           "tieude": "Sao em thấy xa anh quá? | Lúc Nào Anh Cũng Bận #Shorts",
           "mota": "Lúc nào anh cũng bận, lúc nào em cũng chờ. Mình vẫn nằm cạnh nhau, sao em thấy xa anh quá?\n\nNghe bản đầy đủ: https://www.youtube.com/watch?v=mDeTht2Utls\n\nNhạc Phòng Trà – Mỗi bài hát, một câu chuyện đáng nghe.\nLời do kênh sáng tác. Nhạc và hình ảnh được tạo với sự hỗ trợ của AI.\n\n#Shorts #LucNaoAnhCungBan #NhacPhongTra",
           "lichDang": "2026-12-03T12:00",
-          "linkYoutube": "",
-          "ngayDang": "",
-          "ghiChu": "Tèo dựng 27/11/2026 bằng cong-cu/dung_short.py từ anh/NPT-0003/short-02.json · 1080×1920, 31.4 s, phụ đề lời. Mốc khớp giai điệu với điệp khúc S1 đã căn (hoặc mốc khóa trong storyboard). Chờ Ông chủ duyệt preview trước khi hẹn giờ.",
-          "luc": "2026-11-28T15:20:00.000Z"
+          "linkYoutube": "https://www.youtube.com/shorts/aX-rZyOtxl0",
+          "ngayDang": "2026-12-03",
+          "ghiChu": "Tèo dựng 27/11/2026 bằng cong-cu/dung_short.py từ anh/NPT-0003/short-02.json · 1080×1920, 31.4 s, phụ đề lời. Mốc khớp giai điệu với điệp khúc S1 đã căn (hoặc mốc khóa trong storyboard). Chờ Ông chủ duyệt preview trước khi hẹn giờ. Tèo tải lên 28/11, hẹn giờ 2026-12-03 12:00.",
+          "luc": "2026-11-28T16:15:00.000Z"
         }
       ]
     },
