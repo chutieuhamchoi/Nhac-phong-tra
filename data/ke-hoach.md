@@ -109,7 +109,7 @@ Không kéo dài playlist bằng bài chưa đạt chất lượng. Shorts chọ
 | NPT-0004-S2 | Em Đã Thôi Kể Về Anh | Bridge «Em từng nghĩ đến một ngày» → «Nhắc lại em vẫn thấy vui» (2:13,8–2:44,4) | ⏰ đã tải lên, hẹn giờ **02/12 12:00** · [link](https://www.youtube.com/shorts/4DHvBGD88bA) |
 | NPT-0008-S2 | Em Thuộc Về Biển | Bridge «Ngày trước sóng ồn đến thế» → «Mà chẳng nghe anh gọi em» (1:39,8–2:06,4) + «Em đi xa dần tiếng sóng / Vẫn mong anh gọi lại» (2:41–2:52,2), bỏ gian tấu | ⏰ đã tải lên, hẹn giờ **01/12 12:00** · [link](https://www.youtube.com/shorts/wTpBB12Xm30) |
 | NPT-0005-S1 | Tháng Mười Hai Có Hẹn | Điệp khúc đầu «Tháng mười hai có hẹn» → «Nhẹ như hẹn ngày mai» (0:51–1:29,6) | ⏰ đã tải lên, hẹn giờ **29/11 12:00** · [link](https://www.youtube.com/shorts/3BWkn-Pf6Wk) |
-| NPT-0005-S2 | Tháng Mười Hai Có Hẹn | Bridge «Hôm ấy nếu anh im lặng» → «Em nhớ rồi em về» (2:24,4–3:03) | đã dựng 28/11, Ông chủ duyệt 28/11 · lịch **02/12 19:30** |
+| NPT-0005-S2 | Tháng Mười Hai Có Hẹn | Bridge «Hôm ấy nếu anh im lặng» → «Em nhớ rồi em về» (2:24,4–3:03) | ⏰ đã tải lên, hẹn giờ **02/12 19:30** · [link](https://www.youtube.com/shorts/vG38MH2f3M4) |
 | NPT-0010-S1 | Mưa Qua Ô Cửa Sổ | sau khi MV phát hành (tuần 2) | trong tuần phát hành |
 
 ## 6. Mục tiêu tạm đặt
