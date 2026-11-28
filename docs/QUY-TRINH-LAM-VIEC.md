@@ -129,6 +129,7 @@ Nhac_Phong_Tra/
 - 16:9, đúng 1920×1080 trở lên, rõ nét.
 - **Không chữ, không số, không logo, không watermark.** Lần đầu làm NPT-0002, ảnh 06–16 bị dính số cảnh ở góc.
 - Nhân vật nhất quán ở mọi cảnh: cùng khuôn mặt, kiểu tóc, trang phục. Lấy một hai ảnh làm chuẩn để đối chiếu.
+- **Tạo hình nữ mặc định:** chọn phụ nữ trưởng thành, trẻ, đẹp và cuốn hút. Ưu tiên trang phục gợi cảm phù hợp bối cảnh và tâm trạng bài hát để tăng sức hút của hình ảnh. Chốt tạo hình bằng một hoặc hai ảnh tham chiếu và giữ cùng một nhân vật nữ xuyên suốt bộ ảnh. Nếu bài đã có tạo hình riêng được Ông chủ duyệt, dùng tạo hình đã chốt.
 - Không lặp bố cục giữa các cảnh. Cảnh hồi tưởng phải có dấu hiệu nhận ra là hồi tưởng, ví dụ trẻ hơn hoặc tông màu cũ.
 - Tải ảnh vào `NPT-xxxx/anh/` với tên `canh-01.png`, `canh-02.png`…, ghi đè đúng tên khi làm lại.
   - Sau khi tải, kiểm tra lại trên Drive đủ tên cảnh, đúng kích thước và mở được. So trực quan cả loạt với ảnh chuẩn, chú ý số cảnh ở góc ảnh, biển hiệu, nét mặt và trang phục.
