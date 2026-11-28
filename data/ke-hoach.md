@@ -80,7 +80,7 @@ Sản xuất **30 bài mới, 2 bài mỗi tuần**. NPT-0001 và NPT-0002 đã 
 | Trụ cột | Là gì | Tần suất | Vai trò |
 |---|---|---|---|
 | Bài đơn có lời | 1 bài, 3–5 phút, hình minh họa + lời chạy trên màn hình | 1–2 bài đạt chuẩn/tuần, theo lịch duyệt | Thể hiện dấu ấn sáng tác |
-| Shorts | 30–45 giây đoạn hook, khung dọc | 1 clip/ngày, 19:30 | Kéo người đăng ký mới |
+| Shorts | 30–45 giây đoạn hook, khung dọc | 2 clip/ngày, 12:00 và 19:30 | Kéo người đăng ký mới |
 | Playlist dài | 1–3 giờ, có mốc thời gian | Chỉ khi đủ bài phù hợp và có quyền sử dụng | Nguồn giờ xem chính về sau |
 
 Không kéo dài playlist bằng bài chưa đạt chất lượng. Shorts chọn từ những đoạn có điểm nhớ, không ép đủ số lượng.
@@ -89,9 +89,9 @@ Không kéo dài playlist bằng bài chưa đạt chất lượng. Shorts chọ
 
 - **Người làm:** Tèo chọn đoạn, dựng, đăng và theo dõi. Ông chủ chỉ chọn file khi tải lên. Quy trình chi tiết: `docs/QUY-TRINH-LAM-VIEC.md`, bước 9.
 - **Định dạng:** khung dọc 1080×1920, 30–45 giây, đoạn điệp khúc hoặc cao trào, có phụ đề lời và tên bài, cắt từ ảnh cảnh của MV.
-- **Nhịp đăng (chốt 27/11/2026):** **1 clip mỗi ngày, 19:30**, đều đặn, không đăng 2 clip/ngày (2 clip cùng ngày tự chia lượt đề xuất của nhau và làm hết kho clip quá nhanh). Mỗi bài mới đăng có ít nhất 1 Short trong tuần phát hành, gắn video liên quan là MV đầy đủ (sau khi Ông chủ xác minh kênh).
+- **Nhịp đăng (Ông chủ chốt 28/11/2026, thay nhịp 1 clip/ngày ngày 27/11):** **2 clip mỗi ngày, 12:00 và 19:30**. Không xếp 2 clip của cùng một bài trong một ngày; Short của MV mới lên sớm nhất. Cần giữ sẵn ≥ 10 clip đã dựng (hết 2 clip/ngày rất nhanh). Mỗi bài mới đăng có ít nhất 1 Short trong tuần phát hành, gắn video liên quan là MV đầy đủ (sau khi Ông chủ xác minh kênh).
 - **Nguồn clip để giữ nhịp 7 clip/tuần:** mỗi MV mới cho 2 Short (S1 điệp khúc, S2 đoạn hook khác) → 4 clip/tuần; 3 clip còn lại lấy từ MV cũ (S2, S3: điệp khúc cuối, bridge, câu mở). Tèo luôn giữ kho sẵn ít nhất 5 clip đã dựng.
-- **Cách đăng đỡ việc cho Ông chủ:** mỗi lần Ông chủ ngồi máy, tải lên 3–4 clip một lượt (Ông chủ chọn file từng clip), Tèo đặt **lịch công khai** 19:30 các ngày tiếp theo. Không cần ngồi máy mỗi tối.
+- **Cách đăng đỡ việc cho Ông chủ:** mỗi lần Ông chủ ngồi máy, tải lên 3–4 clip một lượt (Ông chủ chọn file từng clip), Tèo đặt **lịch công khai** 12:00/19:30 các ngày tiếp theo. Không cần ngồi máy mỗi tối.
 - **Ưu tiên khi xếp lịch:** clip của bài vừa phát hành trước; sau đó bài có lượt xem MV tốt (kéo thêm), rồi bài đang yếu.
 - **Quản lý:** từng clip ghi trong `shortVideos` của bài (thư viện Kho bài, tab YouTube). Tab Kế hoạch đếm số Shorts đã đăng mỗi tuần.
 - **Đo hiệu quả (sau 7 ngày):** lượt xem, tỷ lệ xem hết, người đăng ký mới từ Short, lượt chuyển sang MV.
@@ -103,13 +103,13 @@ Không kéo dài playlist bằng bài chưa đạt chất lượng. Shorts chọ
 | NPT-0003-S1 | Lúc Nào Anh Cũng Bận | Điệp khúc cuối «Lúc nào anh cũng bận… có buồn không» (2:24–2:55) | ⏰ đã tải lên, hẹn giờ **30/11 19:30** · [link](https://www.youtube.com/shorts/Yyf8mlHItzE) |
 | NPT-0004-S1 | Em Đã Thôi Kể Về Anh | Điệp khúc «Em đã thôi kể về anh… muốn kể» (1:14,5–1:45,5) | ⏰ đã tải lên, hẹn giờ **29/11 19:30** · [link](https://www.youtube.com/shorts/e6C5P0RC5-M) |
 | NPT-0008-S1 | Em Thuộc Về Biển | «Nhìn anh này…» → điệp khúc «…Sao anh chẳng níu lại?» (0:43–1:15,5) | ✅ đăng 27/11/2026 · [xem](https://www.youtube.com/shorts/PLzqyIbkgu8) |
-| NPT-0001-S2 | Có Những Ngày Chỉ Muốn Về Nhà | Final Chorus «Con muốn về nhà… ngay lúc này mẹ ơi» → «Để nói rằng… con thương mẹ biết bao» (3:23,1–3:56) | đã dựng 27/11, chờ duyệt · lịch **02/12 19:30** |
-| NPT-0002-S2 | Yêu Nhau Lại Từ Đầu | Chorus 1 «Hay là mình yêu nhau lại từ đầu» → «Chỉ cần em cười, và nói: “Đi thôi anh!”» (1:00,5–1:32,4) | đã dựng 27/11, chờ duyệt · lịch **03/12 19:30** |
-| NPT-0003-S2 | Lúc Nào Anh Cũng Bận | Chorus 1 «Lúc nào anh cũng bận» → «Sao em thấy xa anh quá?» (0:59,8–1:31,2) | đã dựng 27/11, chờ duyệt · lịch **04/12 19:30** |
-| NPT-0004-S2 | Em Đã Thôi Kể Về Anh | Bridge «Em từng nghĩ đến một ngày» → «Nhắc lại em vẫn thấy vui» (2:13,8–2:44,4) | đã dựng 27/11, chờ duyệt · lịch **05/12 19:30** |
-| NPT-0008-S2 | Em Thuộc Về Biển | Bridge «Ngày trước sóng ồn đến thế» → «Mà chẳng nghe anh gọi em» (1:39,8–2:06,4) + «Em đi xa dần tiếng sóng / Vẫn mong anh gọi lại» (2:41–2:52,2), bỏ gian tấu | đã dựng 27/11, chờ duyệt · lịch **06/12 19:30** |
-| NPT-0005-S1 | Tháng Mười Hai Có Hẹn | Điệp khúc đầu «Tháng mười hai có hẹn» → «Nhẹ như hẹn ngày mai» (0:51–1:29,6) | đã dựng 28/11, chờ duyệt · lịch **07/12 19:30** |
-| NPT-0005-S2 | Tháng Mười Hai Có Hẹn | Bridge «Hôm ấy nếu anh im lặng» → «Em nhớ rồi em về» (2:24,4–3:03) | đã dựng 28/11, chờ duyệt · lịch **08/12 19:30** |
+| NPT-0001-S2 | Có Những Ngày Chỉ Muốn Về Nhà | Final Chorus «Con muốn về nhà… ngay lúc này mẹ ơi» → «Để nói rằng… con thương mẹ biết bao» (3:23,1–3:56) | đã dựng 27/11, Ông chủ duyệt 28/11 · lịch **30/11 12:00** |
+| NPT-0002-S2 | Yêu Nhau Lại Từ Đầu | Chorus 1 «Hay là mình yêu nhau lại từ đầu» → «Chỉ cần em cười, và nói: “Đi thôi anh!”» (1:00,5–1:32,4) | đã dựng 27/11, Ông chủ duyệt 28/11 · lịch **03/12 19:30** |
+| NPT-0003-S2 | Lúc Nào Anh Cũng Bận | Chorus 1 «Lúc nào anh cũng bận» → «Sao em thấy xa anh quá?» (0:59,8–1:31,2) | đã dựng 27/11, Ông chủ duyệt 28/11 · lịch **03/12 12:00** |
+| NPT-0004-S2 | Em Đã Thôi Kể Về Anh | Bridge «Em từng nghĩ đến một ngày» → «Nhắc lại em vẫn thấy vui» (2:13,8–2:44,4) | đã dựng 27/11, Ông chủ duyệt 28/11 · lịch **02/12 12:00** |
+| NPT-0008-S2 | Em Thuộc Về Biển | Bridge «Ngày trước sóng ồn đến thế» → «Mà chẳng nghe anh gọi em» (1:39,8–2:06,4) + «Em đi xa dần tiếng sóng / Vẫn mong anh gọi lại» (2:41–2:52,2), bỏ gian tấu | đã dựng 27/11, Ông chủ duyệt 28/11 · lịch **01/12 12:00** |
+| NPT-0005-S1 | Tháng Mười Hai Có Hẹn | Điệp khúc đầu «Tháng mười hai có hẹn» → «Nhẹ như hẹn ngày mai» (0:51–1:29,6) | đã dựng 28/11, Ông chủ duyệt 28/11 · lịch **29/11 12:00** |
+| NPT-0005-S2 | Tháng Mười Hai Có Hẹn | Bridge «Hôm ấy nếu anh im lặng» → «Em nhớ rồi em về» (2:24,4–3:03) | đã dựng 28/11, Ông chủ duyệt 28/11 · lịch **02/12 19:30** |
 | NPT-0010-S1 | Mưa Qua Ô Cửa Sổ | sau khi MV phát hành (tuần 2) | trong tuần phát hành |
 
 ## 6. Mục tiêu tạm đặt
