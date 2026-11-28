@@ -89,8 +89,8 @@ Không kéo dài playlist bằng bài chưa đạt chất lượng. Shorts chọ
 
 - **Người làm:** Tèo chọn đoạn, dựng, đăng và theo dõi. Ông chủ chỉ chọn file khi tải lên. Quy trình chi tiết: `docs/QUY-TRINH-LAM-VIEC.md`, bước 9.
 - **Định dạng:** khung dọc 1080×1920, 30–45 giây, đoạn điệp khúc hoặc cao trào, có phụ đề lời và tên bài, cắt từ ảnh cảnh của MV.
-- **Nhịp đăng (Ông chủ chốt 28/11/2026, thay nhịp 1 clip/ngày ngày 27/11):** **2 clip mỗi ngày, 12:00 và 19:30**. Không xếp 2 clip của cùng một bài trong một ngày; Short của MV mới lên sớm nhất. Cần giữ sẵn ≥ 10 clip đã dựng (hết 2 clip/ngày rất nhanh). Mỗi bài mới đăng có ít nhất 1 Short trong tuần phát hành, gắn video liên quan là MV đầy đủ (sau khi Ông chủ xác minh kênh).
-- **Nguồn clip để giữ nhịp 7 clip/tuần:** mỗi MV mới cho 2 Short (S1 điệp khúc, S2 đoạn hook khác) → 4 clip/tuần; 3 clip còn lại lấy từ MV cũ (S2, S3: điệp khúc cuối, bridge, câu mở). Tèo luôn giữ kho sẵn ít nhất 5 clip đã dựng.
+- **Nhịp đăng (Ông chủ chốt 28/11/2026, thay nhịp 1 clip/ngày ngày 27/11):** **2 clip mỗi ngày, 12:00 và 19:30**. Không xếp 2 clip của cùng một bài trong một ngày; Short của MV mới lên sớm nhất. **Mỗi MV chỉ làm đúng 2 Short (S1, S2), không làm S3 (Ông chủ chốt 28/11/2026).** Khi hết clip thì nghỉ đăng Short tới khi có MV mới, không lấy thêm đoạn từ MV cũ. Mỗi bài mới đăng có ít nhất 1 Short trong tuần phát hành, gắn video liên quan là MV đầy đủ (sau khi Ông chủ xác minh kênh).
+- **Nguồn clip:** chỉ từ MV mới, mỗi MV 2 Short (S1 điệp khúc, S2 đoạn hook khác). Với 2 MV/tuần là 4 clip/tuần, nên nhịp 2 clip/ngày chỉ chạy được khoảng 2 ngày sau mỗi MV; những ngày còn lại không có Short. Dựng S1/S2 ngay khi MV đăng và xếp lịch lên sớm nhất.
 - **Cách đăng đỡ việc cho Ông chủ:** mỗi lần Ông chủ ngồi máy, tải lên 3–4 clip một lượt (Ông chủ chọn file từng clip), Tèo đặt **lịch công khai** 12:00/19:30 các ngày tiếp theo. Không cần ngồi máy mỗi tối.
 - **Ưu tiên khi xếp lịch:** clip của bài vừa phát hành trước; sau đó bài có lượt xem MV tốt (kéo thêm), rồi bài đang yếu.
 - **Quản lý:** từng clip ghi trong `shortVideos` của bài (thư viện Kho bài, tab YouTube). Tab Kế hoạch đếm số Shorts đã đăng mỗi tuần.
