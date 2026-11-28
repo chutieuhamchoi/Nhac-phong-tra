@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "capNhat": "2026-11-28T06:05:00.000Z",
+  "capNhat": "2026-11-28T06:20:00.000Z",
   "nextId": 33,
   "bai": [
     {
@@ -668,8 +668,8 @@
       "series": "do-thi",
       "tuan": 3,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-28T06:05:00.000Z",
-      "trangThai": 3,
+      "ngayCapNhat": "2026-11-28T06:20:00.000Z",
+      "trangThai": 4,
       "lichSu": [
         {
           "tu": null,
@@ -694,6 +694,12 @@
           "den": 3,
           "luc": "2026-11-28T06:05:00.000Z",
           "ghiChu": "Ông chủ gửi MP3 Suno (bản v1, 230,04 s). Tèo lưu Drive NPT-0005/nhac/nhac-chinh.mp3, khóa mốc 40/40 câu theo lời V3 bằng nhận dạng giọng hát, tạo anh/NPT-0005/storyboard.json (13 cảnh, ≤ 24,6 s/cảnh)."
+        },
+        {
+          "tu": 3,
+          "den": 4,
+          "luc": "2026-11-28T06:20:00.000Z",
+          "ghiChu": "Tèo dựng preview (bản 2, 230,03 s, 1080p, 13 cảnh) bằng quy trình bàn giao chạy thử cục bộ, lưu Drive NPT-0005/video/preview.mp4. Cảnh 05B, 09B, 10A tạm cắt lại từ ảnh canh-01, canh-03, canh-09 → nên bổ sung 3 ảnh riêng. Chờ Ông chủ duyệt."
         }
       ],
       "loiVersions": [
