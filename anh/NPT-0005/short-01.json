@@ -1,0 +1,83 @@
+{
+ "ma": "NPT-0005-S1",
+ "ten": "Tháng Mười Hai Có Hẹn",
+ "batDau": 51.0,
+ "ketThuc": 89.6,
+ "canh": [
+  {
+   "anh": "canh-04.png",
+   "tu": 51.0,
+   "x": [
+    0.36,
+    0.42
+   ]
+  },
+  {
+   "anh": "canh-04.png",
+   "tu": 61.6,
+   "x": [
+    0.84,
+    0.78
+   ],
+   "zoom": 1.06
+  },
+  {
+   "anh": "canh-05.png",
+   "tu": 71.0,
+   "x": [
+    0.3,
+    0.36
+   ]
+  },
+  {
+   "anh": "canh-02.png",
+   "tu": 80.6,
+   "x": [
+    0.7,
+    0.62
+   ]
+  }
+ ],
+ "loi": [
+  {
+   "tu": 52.52,
+   "den": 56.78,
+   "cau": "Tháng mười hai có hẹn"
+  },
+  {
+   "tu": 57.8,
+   "den": 61.34,
+   "cau": "Chỉ mình em nhớ thôi"
+  },
+  {
+   "tu": 61.96,
+   "den": 65.46,
+   "cau": "Cứ đến ngày mình từng hẹn"
+  },
+  {
+   "tu": 65.76,
+   "den": 69.38,
+   "cau": "Em lại đi ngang qua đây"
+  },
+  {
+   "tu": 71.68,
+   "den": 75.1,
+   "cau": "Tháng mười hai có hẹn"
+  },
+  {
+   "tu": 76.04,
+   "den": 78.84,
+   "cau": "Em còn nhớ giọng anh"
+  },
+  {
+   "tu": 81.4,
+   "den": 84.2,
+   "cau": "Nói “mình gặp lại nhé”"
+  },
+  {
+   "tu": 84.92,
+   "den": 88.3,
+   "cau": "Nhẹ như hẹn ngày mai"
+  }
+ ]
+}
