@@ -1,0 +1,169 @@
+{
+ "maBai": "NPT-0005",
+ "ten": "Tháng Mười Hai Có Hẹn",
+ "mp3": "Nhac_Phong_Tra/NPT-0005/nhac/nhac-chinh.mp3",
+ "thoiLuongMp3": 230.04,
+ "mp3Md5": "1bef320a8cdefcf94b732bad44774700",
+ "sunoId": "",
+ "ghiChu": "Tèo khóa mốc 28/11/2026 theo lời V3 bằng nhận dạng giọng hát sherpa-onnx zipformer-vi trên bản MP3 Ông chủ gửi (40/40 câu khớp, sai số ~±0,5 s). Mỗi cảnh bắt đầu sớm hơn câu hát ~1,5 s. 10 ảnh không đủ cho 230 s (mỗi ảnh ≤ 25 s): 05B, 09B, 10A dùng lại phần cắt cận của canh-01, canh-03, canh-09 — nên bổ sung 3 ảnh riêng (gian tấu, điệp khúc cuối nửa sau, outro phố lên đèn).",
+ "canh": [
+  {
+   "so": 1,
+   "ma": "01",
+   "batDau": 0.0,
+   "ketThuc": 24.6,
+   "doanLoi": "Intro (0–16,9) · «Hôm nay phố vừa trở rét» (16,9) · «Em đi ngang quán mình quen» (21,4)",
+   "anh": "canh-01.png",
+   "hieuUng": "slow pan right",
+   "lopPhu": "film grain",
+   "chuyenCanh": "cross dissolve"
+  },
+  {
+   "so": 2,
+   "ma": "02",
+   "batDau": 24.6,
+   "ketThuc": 34.2,
+   "doanLoi": "«Mấy bàn đã kê vào sát cửa» (26,1) · «Chỗ mình ngồi vẫn nhìn ra đường» (29,5)",
+   "anh": "canh-02.png",
+   "hieuUng": "slow zoom in",
+   "lopPhu": "film grain",
+   "chuyenCanh": "cross dissolve"
+  },
+  {
+   "so": 3,
+   "ma": "03",
+   "batDau": 34.2,
+   "ketThuc": 51.2,
+   "doanLoi": "«Hồi ấy anh thường đến muộn» (35,7) · «Em ngồi trông mãi ra ngoài» (39,8) · «Hôm chia tay anh còn nói» (45,0) · «Tháng mười hai, mình gặp lại» (47,2)",
+   "anh": "canh-03.png",
+   "hieuUng": "slow zoom in",
+   "lopPhu": "film grain",
+   "chuyenCanh": "cross dissolve"
+  },
+  {
+   "so": 4,
+   "ma": "04",
+   "batDau": 51.2,
+   "ketThuc": 70.4,
+   "doanLoi": "Chorus: «Tháng mười hai có hẹn» (52,7) · «Chỉ mình em nhớ thôi» (58,0) · «Cứ đến ngày mình từng hẹn» (62,2) · «Em lại đi ngang qua đây» (66,0)",
+   "anh": "canh-04.png",
+   "hieuUng": "slow zoom in",
+   "lopPhu": "film grain",
+   "chuyenCanh": "cross dissolve"
+  },
+  {
+   "so": 5,
+   "ma": "05",
+   "batDau": 70.4,
+   "ketThuc": 90.0,
+   "doanLoi": "Chorus: «Tháng mười hai có hẹn» (71,9) · «Em còn nhớ giọng anh» (76,2) · «Nói “mình gặp lại nhé”» (81,6) · «Nhẹ như hẹn ngày mai» (85,1)",
+   "anh": "canh-05.png",
+   "hieuUng": "slow zoom in",
+   "lopPhu": "film grain",
+   "chuyenCanh": "cross dissolve"
+  },
+  {
+   "so": 6,
+   "ma": "05B",
+   "batDau": 90.0,
+   "ketThuc": 107.4,
+   "doanLoi": "Gian tấu (88,0–108,9), cắt cận hồ Gươm từ canh-01 — cần ảnh riêng nếu làm lại",
+   "anh": "canh-01.png",
+   "hieuUng": "slow pan left",
+   "lopPhu": "film grain",
+   "chuyenCanh": "cross dissolve",
+   "khung": [
+    0.45,
+    0.12,
+    0.55
+   ]
+  },
+  {
+   "so": 7,
+   "ma": "06",
+   "batDau": 107.4,
+   "ketThuc": 125.0,
+   "doanLoi": "Verse 2: «Năm đầu em vào quán đợi» (109,0) · «Đến khi người ta dọn bàn» (112,8) · «Năm sau em đi ngang cửa» (117,4) · «Thấy có người ngồi chỗ anh» (120,8)",
+   "anh": "canh-06.png",
+   "hieuUng": "slow zoom out",
+   "lopPhu": "film grain",
+   "chuyenCanh": "cross dissolve"
+  },
+  {
+   "so": 8,
+   "ma": "07",
+   "batDau": 125.0,
+   "ketThuc": 144.7,
+   "doanLoi": "Verse 2: «Năm nay em ghé mua một cốc» (126,5) · «Cầm theo trên đường về nhà» (131,1) · «Ra đến đầu phố mới nhớ» (135,7) · «Hôm nay là ngày hẹn xưa» (139,3)",
+   "anh": "canh-07.png",
+   "hieuUng": "slow pan right",
+   "lopPhu": "film grain",
+   "chuyenCanh": "cross dissolve"
+  },
+  {
+   "so": 9,
+   "ma": "08",
+   "batDau": 144.7,
+   "ketThuc": 163.9,
+   "doanLoi": "Bridge: «Hôm ấy nếu anh im lặng» (146,2) · «Chắc em đã khóc nhiều hơn» (151,1) · «Anh nói một câu cho em đỡ buồn» (154,9) · «Em tin câu ấy qua mấy mùa đông» (159,5)",
+   "anh": "canh-08.png",
+   "hieuUng": "slow zoom in",
+   "lopPhu": "film grain",
+   "chuyenCanh": "cross dissolve"
+  },
+  {
+   "so": 10,
+   "ma": "09",
+   "batDau": 163.9,
+   "ketThuc": 182.1,
+   "doanLoi": "Final Chorus: «Tháng mười hai có hẹn» (165,4) · «Chỉ mình em nhớ thôi» (169,8) · «Năm nay ngang qua chỗ cũ» (174,4) · «Em nhớ rồi em về» (178,5)",
+   "anh": "canh-09.png",
+   "hieuUng": "slow zoom out",
+   "lopPhu": "film grain",
+   "chuyenCanh": "cross dissolve"
+  },
+  {
+   "so": 11,
+   "ma": "09B",
+   "batDau": 182.1,
+   "ketThuc": 200.9,
+   "doanLoi": "Final Chorus (hồi tưởng, cắt cận người ở cửa từ canh-03): «Tháng mười hai có hẹn» (183,6) · «Em còn nhớ giọng anh» (187,9) · «Nói “mình gặp lại nhé”» (192,6) · «Nhẹ như hẹn ngày mai» (196,7)",
+   "anh": "canh-03.png",
+   "hieuUng": "slow zoom in",
+   "lopPhu": "film grain",
+   "chuyenCanh": "cross dissolve",
+   "khung": [
+    0.5,
+    0.0,
+    0.5
+   ]
+  },
+  {
+   "so": 12,
+   "ma": "10A",
+   "batDau": 200.9,
+   "ketThuc": 214.3,
+   "doanLoi": "Outro (phố lên đèn, cắt cận ven hồ từ canh-09): «Phố vừa lên đèn» (202,4) · «Em về qua lối quen» (206,0) · «Cốc cà phê còn ấm tay» (210,6)",
+   "anh": "canh-09.png",
+   "hieuUng": "slow pan right",
+   "lopPhu": "film grain",
+   "chuyenCanh": "cross dissolve",
+   "khung": [
+    0.55,
+    0.1,
+    0.45
+   ]
+  },
+  {
+   "so": 13,
+   "ma": "10",
+   "batDau": 214.3,
+   "ketThuc": 230.04,
+   "doanLoi": "Outro: «Tháng mười hai lại đến» (215,8)",
+   "anh": "canh-10.png",
+   "hieuUng": "slow zoom out",
+   "lopPhu": "film grain",
+   "chuyenCanh": "fade to black"
+  }
+ ]
+}

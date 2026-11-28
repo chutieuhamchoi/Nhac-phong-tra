@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "capNhat": "2026-11-27T17:45:00.000Z",
+  "capNhat": "2026-11-28T06:05:00.000Z",
   "nextId": 33,
   "bai": [
     {
@@ -668,8 +668,8 @@
       "series": "do-thi",
       "tuan": 3,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-27T16:20:08.985Z",
-      "trangThai": 2,
+      "ngayCapNhat": "2026-11-28T06:05:00.000Z",
+      "trangThai": 3,
       "lichSu": [
         {
           "tu": null,
@@ -688,6 +688,12 @@
           "den": 2,
           "luc": "2026-11-27T16:20:08.985Z",
           "ghiChu": "Ông chủ chốt lời V3. Tí cập nhật Style đề xuất và hai gợi ý Shorts."
+        },
+        {
+          "tu": 2,
+          "den": 3,
+          "luc": "2026-11-28T06:05:00.000Z",
+          "ghiChu": "Ông chủ gửi MP3 Suno (bản v1, 230,04 s). Tèo lưu Drive NPT-0005/nhac/nhac-chinh.mp3, khóa mốc 40/40 câu theo lời V3 bằng nhận dạng giọng hát, tạo anh/NPT-0005/storyboard.json (13 cảnh, ≤ 24,6 s/cảnh)."
         }
       ],
       "loiVersions": [
@@ -732,8 +738,17 @@
       ],
       "styleChon": 2,
       "promptSuno": "Vietnamese pop-jazz ballad, 78 BPM, straight 4/4 with a light brush swing. One female mezzo lead, intimate warm low verses, clear Vietnamese diction, natural conversational phrasing. Felt piano, clean hollow-body guitar, restrained upright bass and brushed drums. Four-bar piano intro. Leave a breath after the title hook, then let the melody rise on 'Chỉ mình em nhớ thôi'. Verse 2 stays close and rhythmic. Drop to voice and piano for the first two bridge lines, then build into a wider final chorus with soft strings and drums. Let 'Em nhớ rồi em về' fall into a brief silence. Close with solo piano and the last lyric almost spoken. No duet, no vocal runs, no heavy bass.",
-      "nhacVersions": [],
-      "nhacChon": null,
+      "nhacVersions": [
+        {
+          "v": 1,
+          "link": "https://suno.com/song/e81f09b5-d8c3-482f-8dec-5e59d9c9af57",
+          "ghiChu": "MP3 Ông chủ gửi 28/11/2026, dài 230,04 giây, md5 1bef320a8cdefcf94b732bad44774700. Lời trong metadata MP3 khớp lời V3. Style và thông số Suno thực tế chưa xác nhận. Drive: Nhac_Phong_Tra/NPT-0005/nhac/nhac-chinh.mp3",
+          "luc": "2026-11-28T06:05:00.000Z",
+          "loiV": 3,
+          "styleV": null
+        }
+      ],
+      "nhacChon": 1,
       "diem": {
         "cauChuyen": null,
         "diemCham": null,
