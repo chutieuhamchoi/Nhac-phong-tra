@@ -103,12 +103,12 @@ Không kéo dài playlist bằng bài chưa đạt chất lượng. Shorts chọ
 | NPT-0003-S1 | Lúc Nào Anh Cũng Bận | Điệp khúc cuối «Lúc nào anh cũng bận… có buồn không» (2:24–2:55) | ⏰ đã tải lên, hẹn giờ **30/11 19:30** · [link](https://www.youtube.com/shorts/Yyf8mlHItzE) |
 | NPT-0004-S1 | Em Đã Thôi Kể Về Anh | Điệp khúc «Em đã thôi kể về anh… muốn kể» (1:14,5–1:45,5) | ⏰ đã tải lên, hẹn giờ **29/11 19:30** · [link](https://www.youtube.com/shorts/e6C5P0RC5-M) |
 | NPT-0008-S1 | Em Thuộc Về Biển | «Nhìn anh này…» → điệp khúc «…Sao anh chẳng níu lại?» (0:43–1:15,5) | ✅ đăng 27/11/2026 · [xem](https://www.youtube.com/shorts/PLzqyIbkgu8) |
-| NPT-0001-S2 | Có Những Ngày Chỉ Muốn Về Nhà | Final Chorus «Con muốn về nhà… ngay lúc này mẹ ơi» → «Để nói rằng… con thương mẹ biết bao» (3:23,1–3:56) | đã dựng 27/11, Ông chủ duyệt 28/11 · lịch **30/11 12:00** |
+| NPT-0001-S2 | Có Những Ngày Chỉ Muốn Về Nhà | Final Chorus «Con muốn về nhà… ngay lúc này mẹ ơi» → «Để nói rằng… con thương mẹ biết bao» (3:23,1–3:56) | ⏰ đã tải lên, hẹn giờ **30/11 12:00** · [link](https://www.youtube.com/shorts/hUqv-2lq1FM) |
 | NPT-0002-S2 | Yêu Nhau Lại Từ Đầu | Chorus 1 «Hay là mình yêu nhau lại từ đầu» → «Chỉ cần em cười, và nói: “Đi thôi anh!”» (1:00,5–1:32,4) | đã dựng 27/11, Ông chủ duyệt 28/11 · lịch **03/12 19:30** |
 | NPT-0003-S2 | Lúc Nào Anh Cũng Bận | Chorus 1 «Lúc nào anh cũng bận» → «Sao em thấy xa anh quá?» (0:59,8–1:31,2) | đã dựng 27/11, Ông chủ duyệt 28/11 · lịch **03/12 12:00** |
 | NPT-0004-S2 | Em Đã Thôi Kể Về Anh | Bridge «Em từng nghĩ đến một ngày» → «Nhắc lại em vẫn thấy vui» (2:13,8–2:44,4) | đã dựng 27/11, Ông chủ duyệt 28/11 · lịch **02/12 12:00** |
-| NPT-0008-S2 | Em Thuộc Về Biển | Bridge «Ngày trước sóng ồn đến thế» → «Mà chẳng nghe anh gọi em» (1:39,8–2:06,4) + «Em đi xa dần tiếng sóng / Vẫn mong anh gọi lại» (2:41–2:52,2), bỏ gian tấu | đã dựng 27/11, Ông chủ duyệt 28/11 · lịch **01/12 12:00** |
-| NPT-0005-S1 | Tháng Mười Hai Có Hẹn | Điệp khúc đầu «Tháng mười hai có hẹn» → «Nhẹ như hẹn ngày mai» (0:51–1:29,6) | đã dựng 28/11, Ông chủ duyệt 28/11 · lịch **29/11 12:00** |
+| NPT-0008-S2 | Em Thuộc Về Biển | Bridge «Ngày trước sóng ồn đến thế» → «Mà chẳng nghe anh gọi em» (1:39,8–2:06,4) + «Em đi xa dần tiếng sóng / Vẫn mong anh gọi lại» (2:41–2:52,2), bỏ gian tấu | ⏰ đã tải lên, hẹn giờ **01/12 12:00** · [link](https://www.youtube.com/shorts/wTpBB12Xm30) |
+| NPT-0005-S1 | Tháng Mười Hai Có Hẹn | Điệp khúc đầu «Tháng mười hai có hẹn» → «Nhẹ như hẹn ngày mai» (0:51–1:29,6) | ⏰ đã tải lên, hẹn giờ **29/11 12:00** · [link](https://www.youtube.com/shorts/3BWkn-Pf6Wk) |
 | NPT-0005-S2 | Tháng Mười Hai Có Hẹn | Bridge «Hôm ấy nếu anh im lặng» → «Em nhớ rồi em về» (2:24,4–3:03) | đã dựng 28/11, Ông chủ duyệt 28/11 · lịch **02/12 19:30** |
 | NPT-0010-S1 | Mưa Qua Ô Cửa Sổ | sau khi MV phát hành (tuần 2) | trong tuần phát hành |
 
