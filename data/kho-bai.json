@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "capNhat": "2026-11-28T06:20:00.000Z",
+  "capNhat": "2026-11-28T15:20:00.000Z",
   "nextId": 33,
   "bai": [
     {
@@ -668,8 +668,8 @@
       "series": "do-thi",
       "tuan": 3,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-28T06:20:00.000Z",
-      "trangThai": 4,
+      "ngayCapNhat": "2026-11-28T15:20:00.000Z",
+      "trangThai": 6,
       "lichSu": [
         {
           "tu": null,
@@ -700,6 +700,18 @@
           "den": 4,
           "luc": "2026-11-28T06:20:00.000Z",
           "ghiChu": "Tèo dựng preview (bản 2, 230,03 s, 1080p, 13 cảnh) bằng quy trình bàn giao chạy thử cục bộ, lưu Drive NPT-0005/video/preview.mp4. Cảnh 05B, 09B, 10A tạm cắt lại từ ảnh canh-01, canh-03, canh-09 → nên bổ sung 3 ảnh riêng. Chờ Ông chủ duyệt."
+        },
+        {
+          "tu": 4,
+          "den": 5,
+          "luc": "2026-11-28T14:41:00.000Z",
+          "ghiChu": "Ông chủ duyệt preview bản 2 (\"chốt đẩy lên\"). Tèo chép thành video/final.mp4, làm thumbnail 1280×720 từ canh-05 (anh/thumbnail.png), soạn tiêu đề, mô tả, 13 thẻ."
+        },
+        {
+          "tu": 5,
+          "den": 6,
+          "luc": "2026-11-28T15:20:00.000Z",
+          "ghiChu": "Tèo đăng YouTube công khai 28/11/2026 (Ông chủ chọn final.mp4 và thumbnail.png): https://www.youtube.com/watch?v=W_TeVjkJDd4. Tiếng Việt, danh mục Nhạc, nhãn AI = Có, không dành cho trẻ em. Tạo danh sách phát mới \"Chuyện Kể Đô Thị – Nhạc Phòng Trà\" (https://www.youtube.com/playlist?list=PLXpNhYQb1Ngs) cho series do-thi; Studio xác nhận danh sách có 1 video và trang chỉnh sửa ghi đúng 1 danh sách (không dính \"Đi xe\"). Thời lượng trên Studio 3:51, tên tệp final.mp4."
         }
       ],
       "loiVersions": [
@@ -761,13 +773,13 @@
         "giaiDieu": null,
         "banSac": null
       },
-      "thumbnail": "",
-      "tieude": "",
-      "mota": "",
+      "thumbnail": "Nhac_Phong_Tra/NPT-0005/anh/thumbnail.png",
+      "tieude": "Tháng Mười Hai Có Hẹn | Pop Jazz Ballad – Nhạc Phòng Trà",
+      "mota": "Phố vừa trở rét, cô đi ngang quán cà phê quen bên hồ, nơi ngày chia tay anh nói: tháng Mười Hai, mình gặp lại. Năm đầu cô vào quán đợi đến khi người ta dọn bàn. Năm sau cô đi ngang cửa, thấy người khác ngồi chỗ anh. Năm nay cô chỉ mua một cốc cà phê mang về, ra đến đầu phố mới nhớ hôm nay là ngày hẹn xưa. Một lời hẹn nhẹ như hẹn ngày mai, mà chỉ còn mình em nhớ.\n\nNhạc Phòng Trà – Mỗi bài hát, một câu chuyện đáng nghe.\n\nLời do kênh sáng tác. Nhạc và hình ảnh được tạo với sự hỗ trợ của AI.\n\n#ThangMuoiHaiCoHen #NhacPhongTra #PopJazz #NhacViet",
       "shorts": "S1 · Chỉ mình em nhớ thôi | Tháng Mười Hai Có Hẹn #Shorts\nMở: “Tháng mười hai có hẹn” · Kết: “Nhẹ như hẹn ngày mai” (điệp khúc đầu, 30–45 giây).\nCảnh: Cô nhìn qua kính quán, cắt sang ghế đối diện còn trống rồi trở lại ánh mắt cô.\n\nS2 · Em tin câu ấy qua mấy mùa đông | Tháng Mười Hai Có Hẹn #Shorts\nMở: “Hôm ấy nếu anh im lặng” · Kết: “Em nhớ rồi em về” (bridge sang nửa đầu điệp khúc cuối, 30–45 giây).\nCảnh: Hồi tưởng lúc chia tay, chuyển về phố lên đèn khi cô cầm cà phê bước qua quán.\nCăn mốc và thời lượng theo bản nhạc được chọn.",
-      "tag": "",
-      "linkYoutube": "",
-      "ngayPhatHanh": "",
+      "tag": "Tháng Mười Hai Có Hẹn, Thang Muoi Hai Co Hen, Nhạc Phòng Trà, nhạc phòng trà cà phê chill, pop jazz Việt, jazz ballad, nhạc Việt, nhạc tâm trạng, nhạc mùa đông, lời hẹn cũ, nhạc nữ, nhạc buồn nhẹ nhàng, nhạc Hà Nội",
+      "linkYoutube": "https://www.youtube.com/watch?v=W_TeVjkJDd4",
+      "ngayPhatHanh": "2026-11-28",
       "ghiChu": "Bài số 03 · Pop jazz ballad, nữ solo. Mỗi tháng Mười Hai, cô lại nhớ lời hẹn mùa đông với người đã chia tay.",
       "promptChatGPT": "",
       "caiDatSuno": {
