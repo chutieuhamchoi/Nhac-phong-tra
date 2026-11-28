@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "capNhat": "2026-11-28T15:50:00.000Z",
+  "capNhat": "2026-11-28T16:00:00.000Z",
   "nextId": 33,
   "bai": [
     {
@@ -494,7 +494,7 @@
       "series": "tinh-yeu",
       "tuan": 1,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-28T15:20:00.000Z",
+      "ngayCapNhat": "2026-11-28T16:00:00.000Z",
       "trangThai": 6,
       "lichSu": [
         {
@@ -654,10 +654,10 @@
           "tieude": "Hóa ra ngày ấy tới rồi | Em Đã Thôi Kể Về Anh #Shorts",
           "mota": "Em từng nghĩ đến một ngày nghe tên anh lòng chẳng đau. Hóa ra ngày ấy tới rồi – bình thường như bao ngày khác.\n\nNghe bản đầy đủ: https://www.youtube.com/watch?v=53CRqEMaMVg\n\nNhạc Phòng Trà – Mỗi bài hát, một câu chuyện đáng nghe.\nLời do kênh sáng tác. Nhạc và hình ảnh được tạo với sự hỗ trợ của AI.\n\n#Shorts #EmDaThoiKeVeAnh #NhacPhongTra",
           "lichDang": "2026-12-02T12:00",
-          "linkYoutube": "",
-          "ngayDang": "",
-          "ghiChu": "Tèo dựng 27/11/2026 bằng cong-cu/dung_short.py từ anh/NPT-0004/short-02.json · 1080×1920, 30.6 s, phụ đề lời. Mốc khớp giai điệu với điệp khúc S1 đã căn (hoặc mốc khóa trong storyboard). Chờ Ông chủ duyệt preview trước khi hẹn giờ.",
-          "luc": "2026-11-28T15:20:00.000Z"
+          "linkYoutube": "https://www.youtube.com/shorts/4DHvBGD88bA",
+          "ngayDang": "2026-12-02",
+          "ghiChu": "Tèo dựng 27/11/2026 bằng cong-cu/dung_short.py từ anh/NPT-0004/short-02.json · 1080×1920, 30.6 s, phụ đề lời. Mốc khớp giai điệu với điệp khúc S1 đã căn (hoặc mốc khóa trong storyboard). Chờ Ông chủ duyệt preview trước khi hẹn giờ. Tèo tải lên 28/11, hẹn giờ 2026-12-02 12:00.",
+          "luc": "2026-11-28T16:00:00.000Z"
         }
       ]
     },
