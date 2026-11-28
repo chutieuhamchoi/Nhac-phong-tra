@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "capNhat": "2026-11-28T15:20:00.000Z",
+  "capNhat": "2026-11-28T14:59:29.588Z",
   "nextId": 33,
   "bai": [
     {
@@ -1183,17 +1183,23 @@
       "id": "NPT-0010",
       "loai": "bai",
       "ten": "Mưa Qua Ô Cửa Sổ",
-      "series": "ca-phe-sang",
+      "series": "tinh-yeu",
       "tuan": 2,
       "ngayTao": "2026-11-22T06:27:01.567Z",
-      "ngayCapNhat": "2026-11-22T06:27:01.567Z",
-      "trangThai": 1,
+      "ngayCapNhat": "2026-11-28T14:59:29.588Z",
+      "trangThai": 2,
       "lichSu": [
         {
           "tu": null,
           "den": 1,
           "luc": "2026-11-22T06:27:01.567Z",
           "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 08. Chờ Ông chủ duyệt. Bản có lời để thử; lịch gốc chọn smooth jazz không lời."
+        },
+        {
+          "tu": 1,
+          "den": 2,
+          "luc": "2026-11-28T14:59:29.588Z",
+          "ghiChu": "Ông chủ chốt lời. Tí lưu lời đã duyệt và bộ Style, thông số Suno đề xuất."
         }
       ],
       "loiVersions": [
@@ -1203,9 +1209,16 @@
           "nguon": "chatgpt",
           "luc": "2026-11-22T06:27:01.567Z",
           "ghiChu": "Tí lưu lời nháp V1 và Style nháp V1 cho bài số 08. Chờ Ông chủ duyệt. Bản có lời để thử; lịch gốc chọn smooth jazz không lời."
+        },
+        {
+          "v": 2,
+          "loi": "[Verse 1]\nEm thấy anh bên người ấy\nDưới tán ô mình từng che\nAnh nghiêng ô về phía ấy\nNhư ngày còn sợ em ướt vai\n\n[Pre-Chorus]\nTối đó anh vẫn nhắn em\n“Ngủ đi, mai anh gọi”\nEm nhìn hai chữ “thương em”\nĐến sáng vẫn chưa trả lời\n\n[Chorus]\nMưa qua ô cửa sổ\nEm ước mình chưa nhìn thấy\nAnh che mưa cho người ấy\nRồi về vẫn nói thương em\n\nEm đã tin anh đến thế\nĐến giờ vẫn muốn anh về\nChỉ cần anh ôm em một lát\nChắc em lại tin anh thôi\n\n[Verse 2]\nBạn hỏi sao mình chia tay\nEm bảo hai đứa hết thương\nNói xong em quay mặt đi\nSợ bạn hỏi em còn thương không\n\n[Bridge]\nNhững lần em buồn đến khóc\nNgười em gọi trước là anh\nĐêm nay em cũng muốn gọi\nMà người làm em khóc… là anh\n\n[Final Chorus]\nMưa qua ô cửa sổ\nEm ước mình chưa nhìn thấy\nAnh che mưa cho người ấy\nRồi về vẫn nói thương em\n\nEm đã tin anh đến thế\nĐến giờ vẫn muốn anh về\nChỉ cần anh ôm em một lát\nChắc em lại tin anh thôi\n\n[Outro]\nMưa qua ô cửa sổ\nĐêm nay em tắt đèn rồi\nĐiện thoại em còn để tiếng\nLỡ đâu anh gọi thật thì sao",
+          "nguon": "chatgpt",
+          "luc": "2026-11-28T14:59:29.588Z",
+          "ghiChu": "Tí lưu lời Ông chủ đã chốt, dùng Bridge mới."
         }
       ],
-      "loiChon": 1,
+      "loiChon": 2,
       "styleVersions": [
         {
           "v": 1,
@@ -1213,10 +1226,17 @@
           "nguon": "chatgpt",
           "luc": "2026-11-22T06:27:01.567Z",
           "ghiChu": "Tí soạn Style nháp V1. Bản có lời để thử; lịch gốc chọn smooth jazz không lời."
+        },
+        {
+          "v": 2,
+          "style": "Vietnamese piano pop ballad with subtle jazz harmony, 68 BPM, 4/4. Solo female mezzo, close-miked, clear Vietnamese diction. Start with sparse felt piano and a low, conversational verse. Let the pre-chorus tighten over a rising piano figure. Give 'Mua qua o cua so' a distinct melodic lift, then hold the last vowel of 'anh thoi'. Bring in restrained brushed drums and soft bass at the chorus. Strip back to voice and piano for the bridge, with a brief rest before the final 'la anh'. Let the final chorus swell with cello and fuller piano, then end with a near-whisper and a short piano tail. Keep every lyric section in order, around 3:40.",
+          "nguon": "chatgpt",
+          "luc": "2026-11-28T14:59:29.588Z",
+          "ghiChu": "Tí đề xuất piano pop ballad giọng nữ với hòa âm jazz nhẹ."
         }
       ],
-      "styleChon": 1,
-      "promptSuno": "Vietnamese smooth jazz vocal alternate, 72 BPM. Felt piano, nylon guitar, upright bass and brushes. Soft close female alto for the labeled lyric, with a sparse melody and long spaces between lines. Develop a three-stage arc: light rain, fuller texture, brighter harmony. Give piano an extended middle passage and a short clear-sky outro.",
+      "styleChon": 2,
+      "promptSuno": "Vietnamese piano pop ballad with subtle jazz harmony, 68 BPM, 4/4. Solo female mezzo, close-miked, clear Vietnamese diction. Start with sparse felt piano and a low, conversational verse. Let the pre-chorus tighten over a rising piano figure. Give 'Mua qua o cua so' a distinct melodic lift, then hold the last vowel of 'anh thoi'. Bring in restrained brushed drums and soft bass at the chorus. Strip back to voice and piano for the bridge, with a brief rest before the final 'la anh'. Let the final chorus swell with cello and fuller piano, then end with a near-whisper and a short piano tail. Keep every lyric section in order, around 3:40.",
       "nhacVersions": [],
       "nhacChon": null,
       "diem": {
@@ -1232,8 +1252,18 @@
       "tag": "",
       "linkYoutube": "",
       "ngayPhatHanh": "",
-      "ghiChu": "Bài số 08 · Smooth jazz không lời. Piano đi qua ba sắc thái của một buổi sáng mưa. Bản có lời để thử; lịch gốc chọn smooth jazz không lời.",
-      "promptChatGPT": ""
+      "ghiChu": "Bài số 08 · Piano pop ballad, nữ solo. Cô gái tận mắt thấy người yêu che mưa cho người khác, rồi vẫn nhận lời thương từ anh.",
+      "promptChatGPT": "",
+      "caiDatSuno": {
+        "model": "v6",
+        "giong": "nu",
+        "thoiLuong": "auto",
+        "maxMode": false,
+        "weirdness": 35,
+        "styleInfluence": 80,
+        "variety": "Normal",
+        "personalize": false
+      }
     },
     {
       "id": "NPT-0011",
