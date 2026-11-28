@@ -80,6 +80,10 @@ Nhac_Phong_Tra/
 - Tí đối chiếu cả tên bài, tình huống, chủ đề và câu hook với kho bài để tránh trùng ý. Mỗi đề xuất nêu nhân vật, tình huống, chuyển biến cảm xúc và hướng hook để Ông chủ chọn. Chỉ tạo bản ghi khi Ông chủ yêu cầu sau khi chọn.
 
 ### Bước 2. Lời và prompt Suno (Tí, ông chủ duyệt)
+- **Chọn góc kể trước khi viết.** Tìm điều khó nói nhất của nhân vật và một tình huống cụ thể làm điều đó hiện ra. Viết thử ba hook thật sự khác góc nhìn hoặc cảm xúc. Tự loại câu có thể chuyển nguyên sang bài khác, rồi phát triển bản mạnh nhất.
+- **Viết theo nhịp hát.** Thử chỗ lấy hơi, tiếng rơi vào phách mạnh, thanh điệu và tiếng cần ngân. Khi có bản Suno thử, nghe lại các chỗ nuốt chữ, ép dấu hoặc ngắt sai nghĩa rồi sửa câu có vấn đề.
+- **Biên tập đường cảm xúc.** Verse đưa thêm tình huống hoặc thông tin. Điệp khúc nói điều nhân vật chưa nói được. Bridge chỉ dùng khi có bước ngoặt. Điệp khúc cuối giữ nguyên nếu diễn biến trước đó làm câu hát có thêm nghĩa, hoặc đổi có chủ đích khi nhân vật đã thay đổi.
+- **Học từ ca khúc tham khảo.** Ưu tiên MV, lyric video chính thức hoặc nguồn ca từ có cấp phép. Ghi tên bài, nguồn và một kỹ thuật có thể thử vào bản viết mới. Thử kỹ thuật bằng câu chuyện, hình ảnh và câu chữ riêng của kênh. Đối chiếu tựa, hook và mô-típ với các bài lân cận trong kho để tránh lặp.
 - Lời có nhãn cấu trúc `[Verse 1]`, `[Pre-Chorus]`, `[Chorus]`, `[Bridge]`, `[Final Chorus]`, `[Outro]`.
   - **Chốt 22/11/2026:** chọn các nhãn phù hợp cấu trúc thực tế của bài, chỉ dùng các phần giúp câu chuyện tiến triển và tạo cao trào. Vẫn bắt buộc ghi nhãn cho từng đoạn. Độ dài lời vừa với bài 3–4 phút để Suno không tự rút gọn (NPT-0002 bị rút gọn Chorus 2).
 - Prompt Suno (Style) bằng tiếng Anh, tả thể loại, tempo, giọng, nhạc cụ và cao trào từng đoạn.
